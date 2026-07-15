@@ -1,11 +1,11 @@
 {
-  "name": "advisory-sample",
+  "name": "CB-gulp-project-v9",
   "version": "1.0.0",
-  "description": "Sample corporate advisory landing page — Gulp build (Sass, autoprefixer, minification, BrowserSync).",
+  "description": "CB-gulp-project-v9 — Gulp build (Sass, autoprefixer, minification, BrowserSync).",
   "private": true,
   "scripts": {
     "start": "gulp serve",
-    "build": "gulp build"
+    "build": "npx gulp build"
   },
   "devDependencies": {
     "browser-sync": "^3.0.2",
