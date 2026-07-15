@@ -1,0 +1,51 @@
+
+// PAGINATION
+
+@use "../base/tokens" as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding-top: var(--space-6);
+}
+
+.pagination__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-size: var(--text-sm);
+  color: var(--text-on-paper-muted);
+  text-decoration: none;
+
+  &:hover { border-color: var(--line); color: var(--text-on-paper); }
+
+  &.is-current {
+    background: var(--navy);
+    color: var(--text-on-navy);
+  }
+
+  &.is-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  // Only current + prev/next are guaranteed visible on mobile; the rest of
+  // the number list is progressively revealed at md.
+  &--number {
+    display: none;
+    @include bp(md) { display: inline-flex; }
+  }
+}
+
+.pagination__ellipsis {
+  display: none;
+  color: var(--text-on-paper-muted);
+  @include bp(md) { display: inline-flex; }
+}

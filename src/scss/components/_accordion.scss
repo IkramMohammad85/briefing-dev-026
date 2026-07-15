@@ -1,0 +1,53 @@
+
+// ACCORDION
+
+@use "../base/tokens" as *;
+
+.accordion {
+  border-top: 1px solid var(--line);
+}
+
+.accordion__item {
+  border-bottom: 1px solid var(--line);
+}
+
+.accordion__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--space-4);
+  padding: var(--space-5) 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-on-paper);
+  cursor: pointer;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform var(--duration-fast) var(--ease-standard);
+  }
+
+  &[aria-expanded="true"] svg { transform: rotate(45deg); } // plus -> cross
+}
+
+.accordion__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--duration-base) var(--ease-standard);
+
+  > div { overflow: hidden; }
+
+  &.is-open { grid-template-rows: 1fr; }
+}
+
+.accordion__body {
+  padding-bottom: var(--space-5);
+  color: var(--text-on-paper-muted);
+  font-size: var(--text-sm);
+  max-width: 62ch;
+}

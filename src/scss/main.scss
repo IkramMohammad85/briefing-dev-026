@@ -1,0 +1,27 @@
+
+// MAIN
+
+@use "base/tokens";
+@use "base/fonts";
+@use "base/base";
+
+@use "vendors/splide";
+
+@use "layout/grid";
+@use "layout/header";
+@use "layout/footer";
+
+@use "components/buttons";
+@use "components/cards";
+@use "components/modal";
+@use "components/search";
+@use "components/testimonial";
+@use "components/accordion";
+@use "components/pagination";
+
+@use "pages/home";
+@use "pages/services";
+
+@use "utilities/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap");
