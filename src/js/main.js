@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTestimonialSplide();
   initAdvisoryCarousel();
   initAccordions();
+  initTabs();
   initExpertForm();
   initArticleToc();
   initBackToTop();
@@ -325,5 +326,66 @@ function initContactModal() {
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && overlay.classList.contains("is-open")) close();
+  });
+}
+/* ---- Tabs —  ----   */
+function initTabs() {
+  document.querySelectorAll(".tabs").forEach((tabs) => {
+    const tabList = tabs.querySelector('[role="tablist"]');
+    if (!tabList) return;
+
+    const tabButtons = Array.from(tabList.querySelectorAll('[role="tab"]'));
+    if (!tabButtons.length) return;
+
+    const noteEl = tabs.querySelector("[data-contact-note]");
+    const contextEl = tabs.querySelector("[data-contact-context]");
+    const typeEl = tabs.querySelector("[data-contact-type]");
+
+    function select(tab) {
+      tabButtons.forEach((btn) => {
+        const selected = btn === tab;
+        btn.setAttribute("aria-selected", String(selected));
+        btn.setAttribute("tabindex", selected ? "0" : "-1");
+      });
+
+      // Panels
+      const activeId = tab.getAttribute("aria-controls");
+      const panelIds = new Set(tabButtons.map((b) => b.getAttribute("aria-controls")));
+      panelIds.forEach((id) => {
+        const panel = document.getElementById(id);
+        if (panel) panel.hidden = id !== activeId;
+      });
+
+      const panel = document.getElementById(activeId);
+      if (panel) panel.setAttribute("aria-labelledby", tab.id);
+
+    
+      if (noteEl && tab.dataset.note) noteEl.innerHTML = tab.dataset.note;
+      if (contextEl && tab.dataset.context) contextEl.textContent = tab.dataset.context;
+      if (typeEl && tab.dataset.context) typeEl.value = tab.dataset.context;
+    }
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => select(btn));
+    });
+
+    tabList.addEventListener("keydown", (e) => {
+      const i = tabButtons.indexOf(document.activeElement);
+      if (i === -1) return;
+
+      let next = null;
+      if (e.key === "ArrowRight") next = tabButtons[(i + 1) % tabButtons.length];
+      else if (e.key === "ArrowLeft") next = tabButtons[(i - 1 + tabButtons.length) % tabButtons.length];
+      else if (e.key === "Home") next = tabButtons[0];
+      else if (e.key === "End") next = tabButtons[tabButtons.length - 1];
+      if (!next) return;
+
+      e.preventDefault();
+      select(next);
+      next.focus();
+    });
+
+    const initial = tabButtons.find((b) => b.getAttribute("aria-selected") === "true") || tabButtons[0];
+    select(initial);
   });
 }
