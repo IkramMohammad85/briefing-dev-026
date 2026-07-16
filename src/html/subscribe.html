@@ -37,18 +37,18 @@
               <p class="expert-form__intro">Subscribe now to receive our weekly China Edition newsletter. Its free with no strings attached.</p>
               <form novalidate>
                 <div class="grid grid--2">
-               
                 <div class="field">
                   <label class="field__label" for="modal-name">Full name*</label>  
-                  <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder="" required>
+                  <input type="text" class="required form-field-input input" value="" id="full_name" name="full_name" placeholder="Full Name" required="">
                 </div>
                 <div class="field">
                  <label class="field__label" for="modal-email">Email*</label>
-                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder="" required>
+                  <input type="email" class="required email form-field-input input" value="" id="lead_personemail" name="lead_personemail" placeholder="Email" required="">
                 </div>
                 <div class="field">
                    <label class="field__label" for="modal-country">Country*</label>
-                  <select class="required select" id="lead_companycountry" name="lead_companycountry" required="">
+
+                <select class="required form-select-input select" id="lead_companycountry" name="lead_companycountry" required="">
                   <option value="" selected="true" disabled="disabled">Country </option>
                                     <option value="Belt &amp; Road Initiative">Belt &amp; Road Initiative</option>
                                   <option value="Afghanistan, Islamic State">Afghanistan, Islamic State</option>
@@ -305,17 +305,25 @@
                 </div>
                 <div class="field">
                    <label class="field__label" for="modal-company">Company name*</label>
-                  <input class="input" type="text" id="eag-company" name="company" autocomplete="organization" placeholder="" required>
+                  <input type="text" class="required form-field-input input" value="" id="lead_companyname" name="lead_companyname" placeholder="Company name" required="">
+                </div>
+                <div class="field">
+                   <label class="field__label" for="modal-security">Security Check</label>
+                 <img id="siimage" src="https://www.china-briefing.com/showCaptcha?9r0918ykh4mypn5usvtrk" alt="captcha image" style="width: 110px;">
+                </div>
+                <div class="field">
+                   <input type="text" class="form-field-input required input" required="" value="" id="captcha_code" name="captcha_code" placeholder="Security Code" autocomplete="off">
                 </div>
 
 </div>
 
                 <div class="field text-xs mt-1">
                  <label class="margin-top-2" for="agree_privary_policy">
-            <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>I agree to receive communications from Dezan Shira &amp; Associates and accept the<a href="https://www.dezshira.com/privacy-policy"> Privacy Policy</a></span>
+            <input type="checkbox" name="lead_optout" id="lead_optout" required="" value="Y" class="margin-left-none" checked="checked">
+            <span>I agree to receive communications from Dezan Shira &amp; Associates and accept the<a href="https://www.dezshira.com/privacy-policy"> Privacy Policy</a></span>
         </label>
                 </div>
-                <button class="btn btn--primary mt-1" type="Subscribe">Subscribe</button>
+                <button class="btn btn--primary mt-1" type="submit" name="submit_contact" value="Submit" id="btn_start_download">Subscribe</button>
                 <p class="mt-2">Not convinced? <a href="https://www.china-briefing.com/subscription/newsletter" target="_blank">Click here</a> to see our recent edition of China Weekly.</p>
               </form>
             </div>
