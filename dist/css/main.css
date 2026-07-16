@@ -9,6 +9,7 @@
   --teal: #1F6E68;
   --teal-strong: #043835;
   --line: #DFE3E9;
+  --line-head:#DBDBDB;
   --line-dark: #29405E;
   --light-orange: #F3F4F2;
   --line-light-gray: #efefef;
@@ -399,6 +400,15 @@ ul[class], ol[class] {
     padding-block: var(--space-9);
   }
 }
+.section--bottom {
+  padding-bottom: 0;
+}
+.section--bottom-4 {
+  padding-bottom: 4.5rem;
+}
+.section--top-4 {
+  padding-top: 4.5rem;
+}
 
 .flex {
   display: flex;
@@ -550,7 +560,6 @@ ul[class], ol[class] {
   top: 0;
   z-index: 100;
   background: var(--paper);
-  border-bottom: 1px solid var(--line);
 }
 
 .contact-bar {
@@ -707,8 +716,6 @@ ul[class], ol[class] {
   .mega-panel {
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
     min-width: 480px;
     margin-top: 0;
     padding: var(--space-5);
@@ -1083,7 +1090,7 @@ ul[class], ol[class] {
 }
 .btn--secondary {
   background: transparent;
-  border-color: var(--line);
+  border-color: var(--black);
   color: var(--text-on-paper);
 }
 .btn--secondary:hover {

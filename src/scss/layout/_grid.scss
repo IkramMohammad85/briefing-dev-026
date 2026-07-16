@@ -16,6 +16,9 @@
   @include bp(md) {
     padding-block: var(--space-9);
   }
+  &--bottom { padding-bottom: 0; }
+  &--bottom-4 { padding-bottom: 4.5rem; }
+  &--top-4 { padding-top: 4.5rem; }
 }
 
 // ---- Flex ----

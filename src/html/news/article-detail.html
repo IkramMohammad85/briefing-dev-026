@@ -225,26 +225,56 @@
 
   <!--  contact model -->
   <div class="modal-overlay">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading" style="padding: 0;">
       <button class="modal__close" type="button" aria-label="Close contact form">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
-      <h2 id="modal-heading" class="text-2xl" style="margin-bottom: var(--space-5);">Talk to our team</h2>
-      <form class="stack" novalidate>
-        <div class="field">
-          <label class="field__label" for="modal-name">Full name*</label>
-          <input class="input" type="text" id="modal-name" name="name" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label class="field__label" for="modal-email">Work email*</label>
-          <input class="input" type="email" id="modal-email" name="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label class="field__label" for="modal-message">How can we help?*</label>
-          <textarea class="textarea" id="modal-message" name="message" rows="4" required></textarea>
-        </div>
-        <button class="btn btn--primary" type="submit">Submit request</button>
-      </form>
+      <!-- <h2 id="modal-heading" class="text-2xl" style="margin-bottom: var(--space-5);">Talk to our team</h2> -->
+          <details class="expert-form-wrap">
+            <summary class="expert-form-wrap__summary">
+              Get Expert Advice
+              <svg class="expert-form-wrap__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </summary>
+
+            <div class="expert-form">
+              <p class="expert-form__title">Get Expert Advice</p>
+              <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team across our global network.</p>
+              <form class="stack" novalidate>
+                <div class="field">
+                  <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder="Full name" required>
+                </div>
+                <div class="field">
+                 
+                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder="Email" required>
+                </div>
+                <div class="field">
+                  
+                  <input class="input" type="tel" id="eag-phone" name="phone" autocomplete="tel" placeholder="Phone number" required>
+                </div>
+                <div class="field">
+                  
+                  <input class="input" type="text" id="eag-company" name="company" autocomplete="organization" placeholder="Company" required>
+                </div>
+                                <div class="field">
+                  
+                  <input class="input" type="text" id="topic" name="topic" autocomplete="organization" placeholder="Topic" required>
+                </div>
+
+                                <div class="field">
+                  
+                 <select  class="select"  id="type_service_required" name="type_service_required" required="" data-touched="true"><option value="Accounting, Financial Reporting &amp; Review">Accounting, Financial Reporting</option><option value="Audit and Risk Advisory">Audit and Risk Advisory</option><option value="Corporate Establishment and Governance">Corporate Establishment and Governance</option><option value="Country Benchmarking / Location Selection">Country Benchmarking / Location Selection</option><option value="Due Diligence">Due Diligence</option><option value="ESG Sustainability Services">ESG Sustainability Services</option><option value="HR Global Mobility PEO / EOR">HR Global Mobility PEO / EOR</option><option value="HR Advisory and Payroll">HR Advisory and Payroll</option><option value="HR Payroll Software">HR Payroll Software</option><option value="HR Visa &amp; Work Permits">HR Visa &amp; Work Permits</option><option value="Intellectual Property">Intellectual Property</option><option value="Joint Ventures and Match making">Joint Ventures and Match making</option><option value="Legal Services">Legal Services</option><option value="M&amp;A - asiamerger portal">M&amp;A - asiamerger portal</option><option value="Market Research &amp; Business Intelligence">Market Research &amp; Business Intelligence</option><option value="Mergers and Acquisitions">Mergers and Acquisitions</option><option value="Recruitment">Recruitment</option><option value="Tax Advisory &amp; Planning">Tax Advisory &amp; Planning</option><option value="Tax International &amp; Transfer Pricing">Tax International &amp; Transfer Pricing</option><option value="Technology, Cyber / Data Privacy">Technology, Cyber / Data Privacy</option><option value="Technology, IT and ERP Services">Technology, IT and ERP Services</option><option value="Other">Other</option><option value="Other, Journalist Comment or Quote">Other, Journalist Comment or Quote</option><option value="Other, Asia Briefing Media/Ad Placement">Other, Asia Briefing Media/Ad Placement</option></select>
+                </div>
+                <div class="field text-xs">
+                  
+                 <label class="margin-top-2" for="agree_privary_policy">
+            <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>I agree to receive communications from Dezan Shira &amp;
+                Associates and accept the<a href="https://www.dezshira.com/privacy-policy"> Privacy Policy</a></span>
+        </label>
+                </div>
+                <button class="btn btn--primary" type="submit">Submit</button>
+              </form>
+            </div>
+          </details>
     </div>
   </div>
 
