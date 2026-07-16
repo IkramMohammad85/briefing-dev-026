@@ -370,7 +370,7 @@
   .field { margin-bottom: var(--space-1); 
   span{font-size: var(--text-xs); color: var(--gray-light); margin-left: var(--space-1);line-height:10px;}
   }
-  .btn { width: 100%; }
+  .btn { width: auto; }
   //.input{padding: var(--space-1) var(--space-3);}
   //.select{padding: var(--space-1) var(--space-3);}
   .stack>*+*{margin-top: var(--space-3);}
