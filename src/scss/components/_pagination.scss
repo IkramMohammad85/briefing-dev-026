@@ -39,7 +39,7 @@
   padding-inline: var(--space-2);
   border-radius: var(--radius-sm);
   font-size: var(--text-sm);
-  color: var(--cta-red);
+  color: var(--gold);
   text-decoration: none;
   transition: background var(--duration-fast) var(--ease-standard),
               color var(--duration-fast) var(--ease-standard);
@@ -74,7 +74,7 @@
   align-items: center;
   gap: var(--space-3);
   font-size: var(--text-sm);
-  color: var(--cta-red);
+  color: var(--gold);
 }
 
 .pagination__jump-input {
@@ -89,7 +89,7 @@
   border: 1px solid transparent;
   border-radius: var(--radius-sm);
 
-  &:focus { border-color: var(--cta-red); background: var(--paper); outline: none; }
+  &:focus { border-color: var(--gold); background: var(--paper); outline: none; }
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
   & { -moz-appearance: textfield; appearance: textfield; }

@@ -330,14 +330,9 @@
   &__next { @include bp(sm) { text-align: right; } }
 }
 
-// ---------------------------------------------------------------------- //
+
 // "Get Expert Advice" sidebar
-// Sticky must live on the element that is the DIRECT CHILD of the grid track.
-// That element is the <aside class="expert-aside">, NOT the inner <details>
-// wrapper — a sticky element travels within its parent, so it has to be the
-// grid item itself. --header-h is the live-measured header height so the
-// card parks just below the sticky site header.
-// ---------------------------------------------------------------------- //
+
 .expert-aside {
   @include bp(lg) {
     position: sticky;
@@ -376,8 +371,8 @@
   .stack>*+*{margin-top: var(--space-3);}
 }
 
-// Mobile: collapsible <details> summary is the toggle. Desktop: hidden, the
-// card shows directly (JS force-opens the <details>).
+
+// card shows directly.
 .expert-form-wrap__summary {
   display: flex;
   align-items: center;

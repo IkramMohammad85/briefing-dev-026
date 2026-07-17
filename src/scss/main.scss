@@ -19,9 +19,11 @@
 @use "components/accordion";
 @use "components/pagination";
 @use "components/tabs";
-
+@use "components/page-banner";
+@use "components/cta";
 @use "pages/home";
 @use "pages/services";
+
 
 @use "utilities/utilities";
 

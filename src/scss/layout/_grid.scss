@@ -77,3 +77,22 @@
 .text-center { text-align: center; }
 .mx-auto { margin-inline: auto; }
 .max-w-prose { max-width: 62ch; }
+
+.inner-page {
+  padding-block: var(--space-7);
+}
+
+.inner-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+
+  @include bp(lg) {
+    // Main column + fixed-ish sidebar track
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: var(--space-8);
+    align-items: start;
+  }
+}
+
+.inner-page__main { min-width: 0; }
