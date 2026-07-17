@@ -1,0 +1,391 @@
+@use "../base/tokens" as *;
+body{background:transparent !important;}
+    .hide {display: none !important;}
+    .title {color: #e2001a;}
+    .international {max-width: 100%;margin: auto;margin-top:4rem;}
+    .register-form .field-bg-block,.input-group-btn {margin:10px;}
+    .article-content.progress-bar-block{max-width: 100%;}
+    .form-block-three.more-filed-interest .field-bg-block{ margin-right: 5px;}
+    .field-bg-block.mr-0, .input-group-btn.mr-0{margin-right: 0 !important;}
+    input, select, textarea{font-size: 1rem;}
+    .checkbox label{ font-size: 14px;}
+    .checkbox label a{ color: #000; text-decoration: underline;}
+    .checkbox label a:hover{text-decoration: none;}
+    
+    .btn.btn-adjust{ margin-right: 0; width: 32px;}
+    @media screen and (max-width:600px){
+      .field-bg-block,.field-bg-block{width:100% !important;}
+    }
+    ul.subscribe_benefits {display: block;display: flex;justify-content: space-between;gap:70px;list-style: none;margin:0 auto;padding:0;flex-wrap: wrap; text-align: left;}
+    ul.subscribe_benefits li {display: block;list-style: none;width:40%;border-radius: 2px;background-color:#fff6f6;margin-bottom:0px;}
+    ul.subscribe_benefits li:nth-child(3n+1) {background: transparent;}
+    ul.subscribe_benefits li h4 {color:var(--gold);margin-top:1rem; margin-bottom: 1rem;}
+    ul.subscribe_benefits li:before{content:"";display: none;}
+    ul.subscribe_benefits li svg{fill:(--gold);transform: scale(0.8);}
+    
+      .register-form{padding-top:0; padding: 2rem;background-color: #fff8f8; margin-top: 2rem;}
+      .register-form .editable_field{margin:10px;}
+      .register-form .form-block-three .form-group:last-child{margin-right: 0;}
+      .register-form .form-block-three .editable_field{width:32%;}
+      .register-form .form-block-three .form-group .editable_field{width:100%;}
+      .register-form .editable_field .field-bg-block{margin:0;
+        //width:92%;
+    }
+      .register-form .editable_field span { position: relative; cursor: pointer; font-weight:100;}
+      .register-form .editable_field span strong{color:#a7a7a7;font-weight: bold;display: block;}
+      .register-form .editable_field span::after { content: attr(title); display: none; position: absolute; background-color: #333; color: #fff; padding: 5px 1rem; border-radius: 5px; bottom: 100%; left: 50%; transform: translateX(-50%); white-space: nowrap; }
+      .register-form .editable_field span:hover::after { display: block; }
+      .register-form .field-bg-block{padding:10px;background:white;border:1px solid #e8e8e8;}
+   .register-form .field-bg-block select {background:white; }
+      .register-form .field-bg-block input {background:white; color: #000; }
+      .register-form .input-group-btn .btn{font-size: 18px;width:32px;margin-right: 0;}
+      .form-block .labelText{padding-left:10px;}
+  
+      /* Progress Bars */
+      .progress-bar{display:block;margin-top:3rem; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; padding: 1.5rem; border-radius: 3px;}
+      .progress-bar .step-label{display: flex;justify-content: space-between;color:#878787;}
+      .progress-bar .step-label span.done{color:black;}
+      .progress-bar .progress-made{border:1px solid #dddddd;height:12px;margin-top:7px;border-radius: 10px;}
+      .progress-bar .progress-made span{display: block;background-color: #f3f3f3;width:60%;height:12px;border-radius: 5px;text-align: center;color:#fff;font-size: 9px;font-weight: bold;}
+      .progress-bar .step-label span .status{color:#ccc;padding: 0 4px;border-radius: 11px;font-size:12px;}
+      .progress-bar .step-label span.done .status{border: 1px solid green;color: green;}
+  
+      /* Ikram overwites */
+      .register-form button{font-weight: 600;}
+      .contact-form select, .register-form select{color: #000;}
+      button:focus{outline: none;}
+      .register-form .grid{ padding-left: 12px;}
+      ul.subscribe_benefits li h4{ margin-top: 2rem;}
+      ul.subscribe_benefits li p{ font-size: 15px;}
+      ul.subscribe_benefits li img{transition: all .3s;}
+      ul.subscribe_benefits li:hover img{transform: scale(1.1);}
+      .Knowledge-thumb{ height: auto;} /* height */
+      .Knowledge-thumb img{  margin: 0; box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;}
+      .db-guides-block{padding: 0rem 0rem 2rem 0rem; text-align: center; margin-top: 4rem; border-top: solid 1px #ececec;}
+      .sub-intro .db-guides-block h5{ margin-top: 3rem; margin-bottom: 2rem;}
+      .db-guides-block ul{padding: 0; margin: 0; list-style: none; display: flex; justify-content: center; margin-bottom: 0rem; margin-top: 1.5rem; flex-wrap: wrap;}
+      .db-guides-block ul li{margin-left: 1rem; margin-right: 1rem; font-weight: bold; margin-bottom: 0;}
+      .db-guides-block ul li:before{ display: none;}
+      .progress-bar .progress-made span {background-color: var(--gold);border-radius: 20px;}
+      .progress-bar .progress-made {border-radius: 10px;}
+      .international .btn { font-weight: 600; margin-top: 1.5rem;}
+      .international .btn-outline-theme{ font-size: 1rem;}
+      .sub-intro h5{text-align: center; font-size: 20px; margin-bottom: 3rem; margin-top: 4rem;}
+      ul.subscribe_benefits li:nth-child(3n+1) {background: white;}
+      ul.subscribe_benefits li {border-radius: 3px; background-color: #ffffff; width: 100%; }
+      ul.subscribe_benefits li svg{transition: all .3s;}
+      ul.subscribe_benefits li:hover svg{transform: scale(1.05);}
+      .sub-intro .flex-spacing img{transition: all .3s;}
+      .sub-intro .flex-spacing:hover img{transform: scale(1.05);}
+.flex-spacing #btn_create_account{transition: all .3s;}
+.sub-intro .flex-spacing:hover  #btn_create_account{transform: scale(1.02);}
+.sub-intro .flex-spacing.shadow-b{transition: box-shadow .2s ease,transform .2s ease;box-shadow: rgba(0, 0, 0, .1) 0 1px 2px 0;flex-direction: column !important;background: #fff8f8;padding: 2rem;border-radius: 3px;}
+.required::placeholder {color: #ec1c24;opacity: 1; }
+.required::-ms-input-placeholder {color: #ec1c24;}
+/* Set default styles */
+select:focus, input:focus{outline: none;}
+select.uncompletefield {color:#ec1c24;}
+
+/* Filled input */
+.filled_input.field-bg-block{ background-color: #f3f3f3 !important;}
+.filled_input.field-bg-block select{ background: transparent !important; color: #9e9e9e !important;}
+.filled_input.field-bg-block input{ background: transparent !important; color: #9e9e9e !important;}
+@media only screen and (min-width: 1024px){
+           .article-content.progress-bar-block{width: 800px;}
+           .international {  max-width: 800px; }
+           .Knowledge-thumb{ height: 140px;} /* height */
+           ul.subscribe_benefits li {width: 46%; }
+           .sub-intro .flex-spacing.shadow-b{flex-direction: initial !important;}
+           .article-content.center-content-block{ margin: 0 auto ;}
+           ul.subscribe_benefits {gap:20px;}
+    }
+.flex-spacing {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include bp(md) { flex-direction: row; }
+}
+
+.input-arrow {
+    appearance: none;
+    background-image: url(../images/select-field-arrow.png);
+    background-repeat: no-repeat;
+    background-position: right 1rem top 50%;
+    background-size: .65rem auto
+}
+
+.input-arrow:focus {
+    outline: 0; border: 0;
+}
+
+
+.form-select-input{outline: none;}
+
+
+
+
+
+button:hover {
+    background: #000
+}
+
+button.btn-auto-width {
+    width: auto
+}
+
+.form-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-direction: column
+}
+
+.form-block-single {
+    display: flex
+}
+
+.labelText {
+    font-weight: 700;
+    margin-bottom: .5rem
+}
+
+.form-group input[type=text] {
+    width: 100%
+}
+
+.form-group label {
+    font-weight: 700;
+    margin-bottom: .5rem
+}
+
+.form-group input[type=email] {
+    width: 100%
+}
+
+.form-group input[type=number] {
+    width: 100%
+}
+
+.form-group input[type=password] {
+    width: 100%
+}
+
+.form-block.form-block-three {
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.form-block.form-block-three .form-group {
+    width: 100%
+}
+
+.form-block.form-block-three .form-group input {
+    width: 91%
+}
+
+.register-form .field-bg-block {
+    width: 100%
+}
+
+.contact-form .field-bg-block {
+    width: auto
+}
+
+.contact-form .field-bg-block-full {
+    background: #f1f1f1
+}
+
+.contact-form,.register-form {
+    padding-top: 2rem
+}
+
+.contact-form .field-bg-block,.contact-form .field-bg-block-full,.register-form .field-bg-block,.register-form .field-bg-block-full {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 3px
+}
+
+.contact-form input,.register-form input {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0;
+    color: #757575;
+    padding-left: .2rem!important
+}
+
+.contact-form select,.register-form select {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0;
+    color: #757575
+}
+
+.contact-form textarea,.register-form textarea {
+    width: 100%;
+    margin-bottom: 1rem
+}
+
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus,.register-form input:focus,.register-form select:focus,.register-form textarea:focus {
+    background-color: #f1f1f1
+}
+
+.contact-form .form-block,.register-form .form-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    flex-direction: column;
+    @include bp(md) {  flex-direction: row }
+}
+
+.contact-form .form-block input,.register-form .form-block input {
+    width: auto;
+    margin-bottom: 0
+}
+
+.contact-form .form-block select,.register-form .form-block select {
+    width: 100%;
+    margin-bottom: 0
+}
+
+.contact-form .form-block.form-block-three .form-group input,.register-form .form-block.form-block-three .form-group input {
+    width: 100%; border: 0; background: transparent; color: #000;
+}
+
+.contact-form .form-block.form-block-three .form-group select,.register-form .form-block.form-block-three .form-group select {
+    width: 100%;border: 0; background: transparent; color: #000;
+}
+
+.contact-form .form-block.form-block-two-column,.register-form .form-block.form-block-two-column {
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.contact-form .form-block.form-block-two-column .labelText,.register-form .form-block.form-block-two-column .labelText {
+    margin-bottom: .5rem
+}
+
+.contact-form .form-block.form-block-two-column .form-group-column,.register-form .form-block.form-block-two-column .form-group-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between
+}
+
+.contact-form .form-block.form-block-two-column .form-group-column .form-group,.register-form .form-block.form-block-two-column .form-group-column .form-group {
+    width: 100%
+}
+
+.contact-form .form-block.form-block-two-column .form-group-column .form-group input,.register-form .form-block.form-block-two-column .form-group-column .form-group input {
+    width: 100%
+}
+
+.contact-form .form-block.form-block-two-column .form-group-column .form-group select,.register-form .form-block.form-block-two-column .form-group-column .form-group select {
+    width: 100%
+}
+
+.contact-form .form-block.form-block-two-column .form-group,.register-form .form-block.form-block-two-column .form-group {
+    width: 100%
+}
+
+.contact-form .form-block.form-block-two-column .form-group input,.register-form .form-block.form-block-two-column .form-group input {
+    width: 100%
+}
+
+.contact-form .form-block.form-block-two-column .form-group select,.register-form .form-block.form-block-two-column .form-group select {
+    width: 100%
+}
+
+.contact-form .form-block .checkbox input,.register-form .form-block .checkbox input {
+    width: auto
+}
+
+.contact-form .form-group,.register-form .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem
+}
+
+.contact-form .show-content,.register-form .show-content {
+    display: block!important
+}
+
+.contact-form .hide-content,.register-form .hide-content {
+    display: none
+}
+
+.contact-form button {
+    margin-top: 1rem
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    margin: 0
+}
+
+.search-box input[type=text] {
+    width: 90%;
+    padding: .9375rem;
+    color: #333;
+    outline: 0
+}
+
+.search-form {
+    height: 50px;
+    background-color: #f1f1f1;
+    overflow: hidden
+}
+
+.search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    color: #fff;
+    text-align: center;
+    border-width: 0;
+    background-color: #e2001a;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer
+}
+
+.search-more-options {
+    padding-top: 1rem;
+    padding-bottom: 1rem
+}
+
+.search-publications #more-field-btn {
+    padding: 0;
+    background-color: transparent;
+    color: #000;
+    outline: 0
+}
+
+.search-publications #more-field-btn:focus {
+    outline: 0
+}
+
+#more-field {
+    display: none
+}
+
+.input-group-btn .btn {
+    height: 57px;
+    background-color: #e2001a;
+    border-color: #e2001a;
+    font-weight: 700;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 9px;
+    border-radius: 0;
+    margin-left: .5rem;
+    width: 44px;
+    border-radius: 3px;
+    margin-top: 0rem;
+}
+
+.input-group-btn .btn:focus {
+    outline: 0
+}
