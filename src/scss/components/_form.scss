@@ -1,0 +1,72 @@
+// "Get Expert Advice" sidebar
+@use "../base/tokens" as *;
+.expert-aside {
+  @include bp(lg) {
+    position: sticky;
+    top: calc(var(--header-h, 120px) + var(--space-4));
+    align-self: start; // don't stretch the sticky grid item to full column height
+  }
+}
+
+.expert-form-wrap {
+  margin-bottom: var(--space-6);
+
+  &[open] .expert-form-wrap__summary .expert-form-wrap__chevron { transform: rotate(180deg); }
+
+  @include bp(lg) { margin-bottom: 0; }
+}
+
+.expert-form {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--light-orange);
+  padding: var(--space-6);
+  margin-top: var(--space-3);
+  box-shadow: var(--shadow-sm);
+
+  @include bp(lg) { margin-top: 0; }
+
+  &__title { font-size: var(--text-lg); margin-bottom: var(--space-2); font-weight: 600; }
+  &__intro { font-size: var(--text-sm); color: var(--gray-light); margin-bottom: var(--space-5); }
+
+  .field { margin-bottom: var(--space-1); 
+  span{font-size: var(--text-xs); color: var(--gray-light); margin-left: var(--space-1);line-height:10px;
+  &.rstar{color: var(--gold);}
+  }
+  }
+  .btn { width: auto; margin-top: 2rem !important; }
+  //.input{padding: var(--space-1) var(--space-3);}
+  //.select{padding: var(--space-1) var(--space-3);}
+  .stack>*+*{margin-top: var(--space-3);}
+
+}
+
+
+// card shows directly.
+.expert-form-wrap__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--navy);
+  color: var(--text-on-navy);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+
+  &::-webkit-details-marker { display: none; }
+  .expert-form-wrap__chevron { transition: transform var(--duration-fast) var(--ease-standard); }
+
+  @include bp(lg) { display: none; }
+}
+
+.article-gate__action {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-5);
+  .expert-form__title{ color: var(--gold); font-size: var(--text-2xl); font-weight: 600; margin: 0; }
+  .expert-form__intro{ font-size: 16px; font-style: italic; margin-top: 0.5rem;}
+  .expert-form{width: 100%;}
+}

@@ -24,7 +24,7 @@
   --footer-bg: #ECECEC;
   --cta-red: #F70000;
   --cta-red-strong: #F70000;
-  --text-on-paper: #000000;
+  --text-on-paper: #2B2C2C;
   --text-on-paper-muted: #5E6B82;
   --text-on-navy: #F7F8FA;
   --text-on-navy-muted: #A9B6CC;
@@ -38,6 +38,7 @@
   --font-body: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --text-xs: 0.75rem;
+  --text-xs1:0.813rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
@@ -62,6 +63,7 @@
   --space-8: 4rem;
   --space-9: 6rem;
   --space-10: 8rem;
+  --space-11: 10rem;
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;

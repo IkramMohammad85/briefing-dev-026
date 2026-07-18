@@ -6,7 +6,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(18, 33, 59, 0.6);
+  background: rgba(5, 5, 5, 0.8);
   display: none;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
 
 .modal {
   background: var(--paper);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   max-width: 480px;
   width: 100%;
   max-height: 90vh;
@@ -29,10 +29,14 @@
 
 .modal__close {
   position: absolute;
-  top: var(--space-4);
-  right: var(--space-4);
-  padding: var(--space-2);
+  //top: var(--space-3);
+  top:  calc(1 * var(--space-1));
+  //right: var(--space-2);
+  right:  calc(1 * var(--space-1));
+  
+  padding: var(--space-1);
   border-radius: var(--radius-sm);
+  &:focus-visible{outline: none;}
 }
 
 .field {
@@ -40,7 +44,7 @@
   flex-direction: column;
   gap: var(--space-2);
 
-  &__label { font-size: var(--text-sm); font-weight: 600; }
+  &__label { font-size: var(--text-sm); font-weight: 500; color: var(--text-on-paper); }
   &__hint { font-size: var(--text-xs); color: var(--text-on-paper-muted); }
 }
 
@@ -55,4 +59,72 @@
   width: 100%;
 
   &:hover { border-color: var(--text-on-paper-muted); }
+}
+
+
+// Promo modal
+
+.modal--promo {
+  max-width: 380px;
+  padding: 0;
+  overflow: hidden;
+
+  // The close button sits over the image, so it needs its own contrast.
+  .modal__close {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-full);
+    color: var(--text-on-paper);
+    &:hover { background: #fff; }
+  }
+}
+
+.modal-promo__media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--paper-soft);
+}
+
+.modal-promo__body {
+  padding: var(--space-5) var(--space-6) var(--space-6);
+}
+
+.modal-promo__title {
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-4);
+}
+
+.modal-promo__list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-5);
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--text-on-paper);
+    line-height: var(--leading-snug);
+  }
+
+  svg { flex-shrink: 0; margin-top: 3px; color: var(--text-on-paper-muted); }
+}
+
+.modal-promo__cta {
+  width: 100%;
+  justify-content: center;
+}
+
+.modal-promo__foot {
+  margin-top: var(--space-4);
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--text-on-paper-muted);
+
+  a { color: var(--gold); text-decoration: none; &:hover { text-decoration: underline; } }
 }

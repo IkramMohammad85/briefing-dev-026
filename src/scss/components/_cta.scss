@@ -10,7 +10,9 @@
   border-radius: var(--radius-md);
 
   &__text { min-width: 0;
-  strong { font-weight: 500; } }
+  strong { font-weight: 500; color:var(--black); } 
+p{font-size: var(--text-sm); font-weight: 400; margin-top: var(--space-3);}
+}
   &__eyebrow {
     font-family: var(--font-mono);
     font-size: var(--text-xs);

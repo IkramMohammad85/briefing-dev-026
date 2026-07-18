@@ -51,7 +51,7 @@ $bp-xl: 1280px;
   --cta-red-strong: #F70000;
 
   // ---- Color: text ----
-  --text-on-paper: #000000;
+  --text-on-paper: #2B2C2C;
   --text-on-paper-muted: #5E6B82;
   --text-on-navy: #F7F8FA;
   --text-on-navy-muted: #A9B6CC;
@@ -70,6 +70,7 @@ $bp-xl: 1280px;
   --font-mono: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --text-xs: 0.75rem;
+  --text-xs1:0.813rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
@@ -98,6 +99,7 @@ $bp-xl: 1280px;
   --space-8: 4rem;
   --space-9: 6rem;
   --space-10: 8rem;
+  --space-11: 10rem;
 
   // ---- Radius ----
   --radius-sm: 4px;

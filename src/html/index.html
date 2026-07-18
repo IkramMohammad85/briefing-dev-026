@@ -7,7 +7,6 @@
   <meta name="description" content="China Briefing hosts a wealth of business intelligence on legal, tax, and operational issues in China from a practical perspective.">
   <link rel="stylesheet" href="/css/main.min.css">
   <link rel="stylesheet" href="/css/mockups-css/home-insights.min.css">
-  <link rel="stylesheet" href="/css/mockups-css/article.min.css">
 </head>
 <body>
 
@@ -61,25 +60,25 @@
               <img class="insight-card__thumb" src="https://www.china-briefing.com/news/wp-content/uploads/2026/07/deregister-company-China.jpg" alt="" loading="lazy">
               <span class="insight-card__cat">Technology</span>
               <p class="insight-card__title">How to Deregister a Company in China: A Guide for Foreign Investors</p>
-              <p class="insight-card__meta">Jun 5 · 10 min read</p>
+              <p class="insight-card__meta">Jun 5</p>
             </a>
             <a class="insight-card" href="/news/article-detail.html">
               <img class="insight-card__thumb" src="https://www.china-briefing.com/news/wp-content/uploads/2026/07/BCI-Medical-Device-1.jpg" alt="" loading="lazy">
               <span class="insight-card__cat">HR &amp; Payroll</span>
               <p class="insight-card__title">China Clarifies Medical Device Classification for Brain-Computer Interfaces: A Guide for Foreign Investors</p>
-              <p class="insight-card__meta">Jun 5 · 10 min read</p>
+              <p class="insight-card__meta">Jun 5</p>
             </a>
             <a class="insight-card" href="/news/article-detail.html">
               <img class="insight-card__thumb" src="https://www.china-briefing.com/news/wp-content/uploads/2026/07/Hong-Kong-transfer-pricing-.jpg" alt="" loading="lazy">
               <span class="insight-card__cat">Tax &amp; Accounting</span>
               <p class="insight-card__title">Transfer Pricing in Hong Kong: BEPS 2.0, Documentation, and Trends</p>
-              <p class="insight-card__meta">Jun 5 · 10 min read</p>
+              <p class="insight-card__meta">Jun 5</p>
             </a>
             <a class="insight-card" href="/news/article-detail.html">
               <img class="insight-card__thumb" src="https://www.china-briefing.com/news/wp-content/uploads/2026/06/Where-to-Invest-in-China-in-2026-and-Beyond.jpg" alt="" loading="lazy">
               <span class="insight-card__cat">Legal &amp; Regulatory</span>
               <p class="insight-card__title">Where to Invest in China in 2026 and Beyond: A Guide for Foreign Investors</p>
-              <p class="insight-card__meta">Jun 5 · 8 min read</p>
+              <p class="insight-card__meta">Jun 5</p>
             </a>
           </div>
 
@@ -118,7 +117,7 @@
             <p>The analysts behind China Briefing are the same firm advising foreign investors on the ground. When an article raises a question about your own operations, take it to a professional.</p>
           </div>
           <div class="advisory-band__actions">
-            <button class="btn btn--primary" type="button" data-open-modal>Speak to Our Team</button>
+            <button class="btn btn--primary" type="button" data-open-modal="contactPopup">Speak to Our Team</button>
             <a class="btn btn--secondary" href="#">Download Our Guides</a>
           </div>
         </div>
@@ -135,63 +134,76 @@
 
         @@include('./sections/topic-regulatory.html')
 
+        @@include('./sections/Industries.html')
+
+        @@include('./sections/hr-payroll.html')
+
+        @@include('./sections/technology.html')
+
+        @@include('./sections/doing-business-in-china-guides.html')
+
+        
+
       </div>
     </section>
 
     <!-- ============ ADVISORY CAROUSEL ============ -->
-    <section class="section section--bottom section--top-4" aria-labelledby="advisory-carousel-heading">
+    <section class="section section--top-3 section--bottom-0" aria-labelledby="advisory-carousel-heading">
       <div class="container">
-        <h2 id="advisory-carousel-heading" class="visually-hidden">Our advisory services</h2>
-        <div class="splide advisory-carousel" aria-label="Advisory services carousel">
-          <div class="splide__track">
-            <ul class="splide__list">
+        <div class="advisory-carousel">
+          <div class="advisory-slide">
 
-              <li class="splide__slide">
-                <div class="advisory-slide">
-                  <div class="advisory-slide__intro">
-                    <h2>From market entry to daily operations, our China team handles the complexity.</h2>
-                    <p>We support foreign investors across China with a single integrated team.</p>
-                    <div class="advisory-slide__actions">
-                      <button class="btn btn--primary" type="button" data-open-modal>Schedule a Free Consultation </button>
-                      <a class="btn btn--secondary" href="/services/overview.html">Explore Services</a>
+            <div class="advisory-slide__intro">
+              <h2 id="advisory-carousel-heading">From market entry to daily operations, our China team handles the complexity.</h2>
+              <p>We support foreign investors across China with a single integrated team.</p>
+              <div class="advisory-slide__actions">
+                <button class="btn btn--primary" type="button" data-open-modal="contactPopup">Schedule a Free Consultation</button>
+                <a class="btn btn--secondary" href="/services/overview.html">Explore Services</a>
+              </div>
+            </div>
+
+            <div class="splide advisory-cards-slider" aria-label="Advisory services">
+              <div class="splide__track">
+                <ul class="splide__list">
+
+                  <li class="splide__slide">
+                    <div class="advisory-cards">
+                      <a class="advisory-card" href="/services/overview.html"><h3>Financial Advisory</h3><span class="advisory-card__link">Learn More</span></a>
+                      <a class="advisory-card" href="/services/overview.html"><h3>M&amp;A Advisory</h3><span class="advisory-card__link">Learn More</span></a>
+                      <a class="advisory-card" href="/services/overview.html"><h3>Sustainability &amp; ESG</h3><span class="advisory-card__link">Learn More</span></a>
+                      <a class="advisory-card" href="/services/overview.html"><h3>HR &amp; Payroll</h3><span class="advisory-card__link">Learn More</span></a>
                     </div>
-                  </div>
-                  <div class="advisory-cards">
-                    <a class="advisory-card" href="/services/overview.html"><h3>Financial Advisory</h3><span class="advisory-card__link">Learn More</span></a>
-                    <a class="advisory-card" href="/services/overview.html"><h3>M&amp;A Advisory</h3><span class="advisory-card__link">Learn More</span></a>
-                    <a class="advisory-card" href="/services/overview.html"><h3>Sustainability &amp; ESG</h3><span class="advisory-card__link">Learn More</span></a>
-                    <a class="advisory-card" href="/services/overview.html"><h3>HR &amp; Payroll</h3><span class="advisory-card__link">Learn More</span></a>
-                  </div>
-                </div>
-              </li>
+                  </li>
 
-              <li class="splide__slide">
-                <div class="advisory-slide">
-                  <div class="advisory-slide__intro">
-                    <h2>Structure, compliance, and incentives — planned together, not in silos.</h2>
-                    <p>The trade-offs between them are where value is won or lost. We help you see them before they're locked in.</p>
-                    <div class="advisory-slide__actions">
-                      <button class="btn btn--primary" type="button" data-open-modal>Schedule a Free Consultation</button>
-                      <a class="btn btn--secondary" href="/services/overview.html">Explore Services</a>
+                  <li class="splide__slide">
+                    <div class="advisory-cards">
+                      <a class="advisory-card" href="/services/overview.html"><h3>Investment Banking</h3><span class="advisory-card__link">Learn More</span></a>
+                      <a class="advisory-card" href="/services/overview.html"><h3>Risk Advisory</h3><span class="advisory-card__link">Learn More</span></a>
+                      <a class="advisory-card" href="/services/overview.html"><h3>Tax &amp; Structures</h3><span class="advisory-card__link">Learn More</span></a>
+                      <a class="advisory-card" href="/services/overview.html"><h3>Fund Services</h3><span class="advisory-card__link">Learn More</span></a>
                     </div>
-                  </div>
-                  <div class="advisory-cards">
-                    <a class="advisory-card" href="/services/overview.html"><h3>Investment Banking</h3><span class="advisory-card__link">Learn More</span></a>
-                    <a class="advisory-card" href="/services/overview.html"><h3>Risk Advisory</h3><span class="advisory-card__link">Learn More</span></a>
-                    <a class="advisory-card" href="/services/overview.html"><h3>Tax &amp; Structures</h3><span class="advisory-card__link">Learn More</span></a>
-                    <a class="advisory-card" href="/services/overview.html"><h3>Fund Services</h3><span class="advisory-card__link">Learn More</span></a>
-                  </div>
-                </div>
-              </li>
+                  </li>
 
-            </ul>
+                  <li class="splide__slide">
+                    <div class="advisory-cards">
+                      <a class="advisory-card" href="/services/overview.html"><h3>Regulatory Advisory</h3><span class="advisory-card__link">Learn More</span></a>
+                      <a class="advisory-card" href="/services/overview.html"><h3>Managed Services</h3><span class="advisory-card__link">Learn More</span></a>
+                      <a class="advisory-card" href="/services/overview.html"><h3>International Expansion</h3><span class="advisory-card__link">Learn More</span></a>
+                      <a class="advisory-card" href="/services/overview.html"><h3>Technology Advisory</h3><span class="advisory-card__link">Learn More</span></a>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============ PUBLICATIONS ============ -->
-    <section class="section section--top-4" aria-labelledby="pubs-heading">
+    <section class="section section--top-3" aria-labelledby="pubs-heading">
       <div class="container">
         <div class="section-head">
           <h2 id="pubs-heading">Publications</h2>
@@ -239,18 +251,13 @@
   @@include('./includes/footer.html')
 
   <!-- ============ CONTACT MODAL ============ -->
-  <div class="modal-overlay">
+  <div class="modal-overlay" id="contactPopup">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading" style="padding: 0;">
       <button class="modal__close" type="button" aria-label="Close contact form">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
       <!-- <h2 id="modal-heading" class="text-2xl" style="margin-bottom: var(--space-5);">Talk to our team</h2> -->
-          <details class="expert-form-wrap">
-            <summary class="expert-form-wrap__summary">
-              Get Expert Advice
-              <svg class="expert-form-wrap__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </summary>
-
+          <div class="contact-popup">
             <div class="expert-form">
               <p class="expert-form__title">Get Expert Advice</p>
               <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team across our global network.</p>
@@ -289,10 +296,43 @@
                 <button class="btn btn--primary" type="submit">Submit</button>
               </form>
             </div>
-          </details>
+          </div>
     </div>
   </div>
 
+  <!-- ============ PROMO POPUP ============  -->
+  <div class="modal-overlay" id="promoPopup" data-promo-popup data-promo-delay="10000" data-promo-scroll="45">
+    <div class="modal modal--promo" role="dialog" aria-modal="true" aria-labelledby="promo-heading">
+      <button class="modal__close" type="button" aria-label="Close" data-close-modal>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <img class="modal-promo__media" src="https://dp3rhc3eohw2j.cloudfront.net/assets/img/mm-images/locations/Asia.jpg" alt="" loading="lazy">
+
+      <div class="modal-promo__body">
+        <h2 class="modal-promo__title" id="promo-heading">Expert Support for Your Business</h2>
+
+        <ul class="modal-promo__list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Guidance from experienced local advisors
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Support across market entry, tax, HR, and compliance
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Practical advice tailored to your business needs
+          </li>
+        </ul>
+
+        <button class="btn btn--primary modal-promo__cta" type="button" data-open-modal="contactPopup">Contact Our Team</button>
+
+        <p class="modal-promo__foot">Not ready yet? <a href="#">Subscribe</a> for business insights.</p>
+      </div>
+    </div>
+  </div>
   <script src="/js/main.min.js"></script>
 </body>
 </html>

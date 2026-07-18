@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>China Briefing</title>
-  <meta name="description" content="China Briefing hosts a wealth of business intelligence on legal, tax, and operational issues in China from a practical perspective.">
+  <meta name="description"
+    content="China Briefing hosts a wealth of business intelligence on legal, tax, and operational issues in China from a practical perspective.">
   <link rel="stylesheet" href="/css/main.min.css">
   <link rel="stylesheet" href="/css/mockups-css/article.min.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
 <body>
 
   @@include('./includes/header.html')
@@ -17,7 +21,8 @@
       <div class="container article__grid">
         <div class="article__main">
           <header>
-            <h1 class="article__title">Entering China: The Most Important Setup Decisions for Manufacturing Businesses</h1>
+            <h1 class="article__title">Entering China: The Most Important Setup Decisions for Manufacturing Businesses
+            </h1>
             <div class="article__meta">
               <span>June 15, 2026</span>
               <span class="dot" aria-hidden="true"></span>
@@ -25,7 +30,7 @@
               <span class="dot" aria-hidden="true"></span>
               <span>Written by <a href="#">Allan Xu</a> and <a href="#">Qian Zhou</a></span>
               <span class="dot" aria-hidden="true"></span>
-              <span>8 minute read</span>
+              <!-- <span>8 minute read</span> -->
             </div>
           </header>
 
@@ -33,108 +38,280 @@
           <details class="article-toc" open>
             <summary class="article-toc__summary">
               <span class="article-toc__label">In this article</span>
-              <svg class="article-toc__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="article-toc__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
             </summary>
-            <ul class="article-toc__list">
-              <li><a class="is-current" href="#entity-structure">Entity structure: more decisions than it appears</a></li>
-              <li><a href="#jv-question">The JV question: when it still makes sense</a></li>
-              <li><a href="#compliance-traps">The top five compliance traps</a></li>
-              <li><a href="#incentive">Incentive negotiation: the value most entrants leave behind</a></li>
-              <li><a href="#setup">Getting the setup right</a></li>
-            </ul>
+            <ol class="article-toc__list" id="toc">
+              <li class="is-current" data-level="2"><a href="#entity-structure">Entity structure: more decisions than it
+                  appears</a></li>
+              <li data-level="2"><a href="#jv-question">The JV question: when it still makes sense</a></li>
+              <li data-level="2"><a href="#compliance-traps">The top five compliance traps</a></li>
+              <li data-level="2"><a href="#incentive">Incentive negotiation: the value most entrants leave behind</a>
+              </li>
+              <li data-level="2"><a href="#setup">Getting the setup right</a></li>
+            </ol>
           </details>
 
           <div class="article-body">
-           <p>  Every experienced China hand will tell you the same thing eventually: the decisions made in the first six months of setting up a China manufacturing operation have consequences that last for years. Entity structure, registered business scope, capital contribution plan, employment framework, tax registration sequencing – these are not administrative formalities but strategic decisions. And getting them wrong creates constraints that are expensive, time-consuming, and sometimes genuinely painful to undo.</p>
+            <p> Every experienced China hand will tell you the same thing eventually: the decisions made in the first
+              six months of setting up a China manufacturing operation have consequences that last for years. Entity
+              structure, registered business scope, capital contribution plan, employment framework, tax registration
+              sequencing – these are not administrative formalities but strategic decisions. And getting them wrong
+              creates constraints that are expensive, time-consuming, and sometimes genuinely painful to undo.</p>
 
-<p>The good news is that China’s foreign investment framework has become more transparent and, in important respects, more accessible in recent years. The 2024 revision to the Foreign Investment Negative List eliminated the last remaining restrictions on foreign investment in manufacturing, making 100 percent foreign ownership of operations now effectively available across most manufacturing subsectors. The Action Plan for Stabilizing Foreign Investment, released by the State Council in early 2025, reaffirmed Beijing’s commitment to expanding market access and treating foreign and domestic investors on equal terms in unrestricted sectors.</p>
+            <p>The good news is that China’s foreign investment framework has become more transparent and, in important
+              respects, more accessible in recent years. The 2024 revision to the Foreign Investment Negative
+              List eliminated the last remaining restrictions on foreign investment in manufacturing, making 100 percent
+              foreign ownership of operations now effectively available across most manufacturing subsectors. The Action
+              Plan for Stabilizing Foreign Investment, released by the State Council in early 2025, reaffirmed Beijing’s
+              commitment to expanding market access and treating foreign and domestic investors on equal terms in
+              unrestricted sectors.</p>
 
-<p>The challenge is not access – it is structure – and the difference between a well-structured entry and a poorly designed one is substantial.</p>
+            <p>The challenge is not access – it is structure – and the difference between a well-structured entry and a
+              poorly designed one is substantial.</p>
 
-            
+
             <div class="article-callout">
               <div class="article-callout__text">
                 <p class="article-callout__eyebrow">Planning to establish a business in China?</p>
-                <strong>We advise foreign investors on corporate establishment, structuring, and governance across China.</strong>
+                <strong>We advise foreign investors on corporate establishment, structuring, and governance across
+                  China.</strong>
               </div>
-              <button class="btn btn--primary" type="button" data-open-modal>Schedule a Free Consultation</button>
+              <button class="btn btn--primary" type="button" data-open-modal="contactPopup">Schedule a Free Consultation</button>
             </div>
 
             <h2 id="entity-structure">Entity structure: More decisions than it appears</h2>
-            
-<p>For foreign manufacturers entering China, the primary entity structure of choice typically comes down to a wholly foreign-owned enterprise (WFOE) or some form of joint venture (JV). In practice, the WFOE, established as a foreign-invested limited liability company (LLC) under China’s Company Law, has become the default choice for most manufacturers seeking operational control, clear intellectual property ownership, and straightforward profit repatriation. With manufacturing restrictions now eliminated from the Negative List, the WFOE path is cleaner and more accessible than it has ever been.</p>
 
-<p>However, the WFOE-versus-JV decision, while significant, is only part of the structural equation. Within the WFOE framework itself, a range of additional considerations require careful planning – yet are often treated as secondary details rather than the strategic variables they are.</p>
+            <p>For foreign manufacturers entering China, the primary entity structure of choice typically comes down to
+              a wholly foreign-owned enterprise (WFOE) or some form of joint venture (JV). In practice, the WFOE,
+              established as a foreign-invested limited liability company (LLC) under China’s Company Law, has become
+              the default choice for most manufacturers seeking operational control, clear intellectual property
+              ownership, and straightforward profit repatriation. With manufacturing restrictions now eliminated from
+              the Negative List, the WFOE path is cleaner and more accessible than it has ever been.</p>
 
-<img class="article-body__image" src="../img/WFOE-or-JV-and-What-Kind 1.jpg" alt="WFOE or JV: Which is right for your business?" loading="lazy">
+            <p>However, the WFOE-versus-JV decision, while significant, is only part of the structural equation. Within
+              the WFOE framework itself, a range of additional considerations require careful planning – yet are often
+              treated as secondary details rather than the strategic variables they are.</p>
+
+            <img class="article-body__image" src="../img/WFOE-or-JV-and-What-Kind- 1.webp"
+              alt="WFOE or JV: Which is right for your business?" loading="lazy">
 
             <h3>Registered capital and the five-year contribution rule</h3>
-            <p>The revised Company Law, effective July 2024, requires newly established LLCs, including manufacturing WFOEs, to fully contribute their subscribed registered capital within five years of establishment, with specific transitional arrangements applying to existing entities. This sounds straightforward, but the implications extend into cash flow planning, banking relationships, and the cost of capital. Under-capitalizing at the outset to minimize upfront commitment is a common mistake, while over-subscribing without a credible funding plan creates a different set of problems. The capital plan needs to be modeled properly before the Articles of Association are finalized.</p>
+            <p>The revised Company Law, effective July 2024, requires newly established LLCs, including manufacturing
+              WFOEs, to fully contribute their subscribed registered capital within five years of establishment, with
+              specific transitional arrangements applying to existing entities. This sounds straightforward, but the
+              implications extend into cash flow planning, banking relationships, and the cost of capital.
+              Under-capitalizing at the outset to minimize upfront commitment is a common mistake, while
+              over-subscribing without a credible funding plan creates a different set of problems. The capital plan
+              needs to be modeled properly before the Articles of Association are finalized.</p>
 
             <h3>Business scope</h3>
-            <p>The business scope registered with the market authority defines what activities the entity can legally conduct in China. Under-scoping, which means registering a narrow scope that fits the immediate need without anticipating future activities, is among the most common and avoidable setup errors. Expanding business scope post-registration is possible but requires regulatory engagement, creates administrative costs, and introduces delays at exactly the moment you want to be focused on operations. A well-advised setup process maps current activities, anticipated future activities, and any cross-border flows against the business scope from the beginning.</p>
+            <p>The business scope registered with the market authority defines what activities the entity can legally
+              conduct in China. Under-scoping, which means registering a narrow scope that fits the immediate need
+              without anticipating future activities, is among the most common and avoidable setup errors. Expanding
+              business scope post-registration is possible but requires regulatory engagement, creates administrative
+              costs, and introduces delays at exactly the moment you want to be focused on operations. A well-advised
+              setup process maps current activities, anticipated future activities, and any cross-border flows against
+              the business scope from the beginning.</p>
+
+            <h3>IP ownership and structure</h3>
+            <p>Determining where IP sits and how it is licensed, valued, and transferred across a corporate structure
+              that may include offshore entities, a China operating company, and potentially an overseas holding entity
+              in Hong Kong, Singapore, etc., is a decision that cuts across tax, legal, and operational considerations.
+              While China’s IP protection framework has strengthened significantly over the past decade, the level of
+              protection in practice differs materially between entities that are well structured and those that have
+              not addressed IP ownership strategically from the outset. This becomes especially critical in sectors
+              where manufacturing know-how, product design, or process technology form the core of competitive
+              advantage.</p>
+
+            <h3>Export versus domestic orientation</h3>
+            <p>A manufacturing WFOE structured primarily for export will have different customs registration
+              requirements, value-added tax (VAT) refund eligibility, and regulatory interactions than one oriented
+              toward domestic sales. This distinction matters more than many entrants realise, and a structure that
+              serves one orientation well may create friction or outright barriers for the other. Companies that
+              anticipate any meaningful domestic sales component should structure accordingly from the beginning, even
+              if export dominates the initial model.</p>
 
             <h2 id="jv-question">The JV question: when it still makes sense</h2>
-            <p>The joint venture has fallen somewhat out of fashion as China has liberalized manufacturing access, and for good reason. Compared to WFOEs, JVs introduce governance complexity, profit-sharing obligations, and the perpetual challenge of aligning the strategic interests of parties who may have fundamentally different time horizons and objectives.</p>
+            <p>The joint venture has fallen somewhat out of fashion as China has liberalized manufacturing access, and
+              for good reason. Compared to WFOEs, JVs introduce governance complexity, profit-sharing obligations, and
+              the perpetual challenge of aligning the strategic interests of parties who may have fundamentally
+              different time horizons and objectives.</p>
 
             <div class="article-callout">
               <div class="article-callout__text">
                 <p class="article-callout__eyebrow">Considering a joint venture in China?</p>
-                <strong>We handle partner due diligence, governance terms, and exit provisions so the deal holds up.</strong>
+                <strong>We handle partner due diligence, governance terms, and exit provisions so the deal holds
+                  up.</strong>
               </div>
-              <button class="btn btn--primary" type="button" data-open-modal>Talk to a JV Advisor</button>
+              <button class="btn btn--primary" type="button" data-open-modal="contactPopup">Talk to a JV Advisor</button>
+            </div>
+            <p>That case still exists, but it is narrower than it once was. A JV can make sense where a foreign
+              manufacturer lacks capabilities that are genuinely decisive to commercial success: entrenched market
+              access, privileged regulatory relationships, or established local supply chain control that cannot be
+              replicated within a reasonable timeframe. In certain regulated or relationship-driven environments, a
+              well-aligned Chinese partner can accelerate execution in ways a standalone WFOE may struggle to match.
+              Moreover, under the current geopolitical environment, many investors are increasingly cautious about
+              committing significant upfront capital, locking in long‑term balance sheet exposure, or building fully
+              standalone operations from day one.</p>
+            <p>Where a JV is pursued, the key discipline is honesty about what the partner actually brings, and rigor
+              about governance: exit mechanisms, deadlock provisions, IP protection clauses, and a clear-eyed view of
+              what happens if the relationship deteriorates. JVs that are structured poorly at the outset, in the hope
+              that goodwill and commercial alignment will resolve future conflicts, reliably produce difficult
+              restructuring situations down the road.</p>
+            <h2 id="compliance-traps">The top five compliance traps</h2>
+            <p>Even a well-structured entity can accumulate compliance problems quickly if day-to-day operations are not
+              aligned with PRC legal requirements from the beginning. Five areas account for a disproportionate share of
+              the compliance difficulties that foreign manufacturers encounter in the first two years of operation:</p>
+            <h3>Licenses, permits, and regulatory certificates</h3>
+            <p>Getting the entity registered is only the beginning. A manufacturing operation in China typically
+              requires a layered set of approvals beyond the basic business license: environmental impact assessment
+              sign-off before production commences, fire safety inspection, customs registration for any import or
+              export activity, and sector-specific production permits where applicable. Foreign manufacturers frequently
+              underestimate both the number of certificates required and the sequencing dependencies between them.
+              Certain permits cannot be applied for until others are in place, and production cannot legally begin until
+              the full set is obtained. The cost of getting this wrong ranges from operational delays to regulatory
+              penalties and, in serious cases, forced suspension of production.</p>
+
+            <h3>Facility strategy: lease, build-to-suit, or land acquisition</h3>
+            <p>Where and how you house your manufacturing operation is a decision with legal, financial, and operational
+              consequences that extend well beyond real estate. Leasing industrial space in an established development
+              zone offers speed and flexibility but typically limits customization and may carry restrictions on
+              permitted use that conflict with specific production activities. A build-to-suit arrangement, where a
+              developer constructs specifications on land they hold, provides more control over the facility without the
+              capital commitment of land acquisition, but contract terms require careful negotiation to protect the
+              tenant’s position over a multi-year horizon. Acquiring land use rights and constructing independently
+              offers the greatest long-term control and asset value, but involves a more complex approval process,
+              higher upfront capital, and a significantly longer lead time before operations can begin. Each model has
+              different implications for balance sheet treatment, repatriation of invested capital, and what happens to
+              the facility if the business model changes.</p>
+
+            <h3>Compliance policy</h3>
+            <p>Establishing a legal entity is only the beginning. A manufacturing operation in China must implement a
+              coherent set of internal compliance policies that align with PRC labor, environmental, workplace safety,
+              anti‑corruption, and procurement regulations. This typically includes factory‑specific employment and
+              working‑hour rules, health and safety and environmental protection systems tailored to production
+              activities, procedures for handling regulated materials and transportation, and documented supplier
+              selection, qualification, and ongoing evaluation mechanisms. Foreign manufacturers often underestimate
+              both the breadth of operational compliance requirements and the need to localize global manufacturing
+              standards to PRC‑specific rules. Missing or poorly adapted policies can lead to labor disputes on the shop
+              floor, environmental or safety penalties, supply chain disruptions, or heightened exposure during
+              regulatory and on‑site inspections.</p>
+            <h3>IP protection: registration, control over production use, and OEM authorization</h3>
+            <p>Manufacturing companies that rely on proprietary technology, production processes, tooling designs, or
+              brand assets must secure IP protection early, as China’s first‑to‑file system poses real risks once
+              manufacturing activities begin. Core manufacturing‑related IP, including patents, trademarks, industrial
+              designs, software embedded in equipment, and process know‑how, should be registered in China or protected
+              through enforceable contracts before production, outsourcing, or OEM arrangements are put in place.
+              Technology licensing, OEM authorizations, and tooling ownership arrangements must be carefully structured
+              to comply with PRC technology import/export and competition rules while clearly restricting use to
+              approved manufacturing purposes. Foreign manufacturers often underestimate both registration lead times
+              and the importance of aligning production‑focused IP arrangements with local regulatory and enforcement
+              practices. Missteps can result in loss of control over production know‑how, disputes over ownership of
+              process improvements, unauthorized parallel manufacturing, or limits on transferring manufacturing
+              technology into or out of China.</p>
+            <h3>Data localization and cross-border data requirements</h3>
+            <p>China’s Personal Information Protection Law (PIPL) and Data Security Law (DSL), together with the
+              associated regulations on cross-border data transfer, create obligations for manufacturing operations that
+              many foreign entrants underestimate. If your China manufacturing operation processes personal data,
+              including employee data, supplier contact data, or customer data of any kind, cross-border transfer of
+              that data requires either a security assessment, a standard contractual clause arrangement, or other
+              prescribed mechanisms. Companies that establish IT and data infrastructure without accounting for these
+              requirements often find themselves needing to restructure data flows after the fact.</p>
+            <div class="article-callout">
+              <div class="article-callout__text">
+                <p class="article-callout__eyebrow">Not sure which permits and policies apply to your plant?</p>
+                <strong>We map your licences, data, and compliance obligations before production begins.</strong>
+              </div>
+              <button class="btn btn--primary" type="button" data-open-modal="contactPopup">Request a Compliance Review</button>
             </div>
 
-            <h2 id="compliance-traps">The top five compliance traps</h2>
-            <p>That case still exists, but it is narrower than it once was. A JV can make sense where a foreign manufacturer lacks capabilities that are genuinely decisive to commercial success: entrenched market access, privileged regulatory relationships, or established local supply chain control that cannot be replicated within a reasonable timeframe. In certain regulated or relationship-driven environments, a well-aligned Chinese partner can accelerate execution in ways a standalone WFOE may struggle to match. Moreover, under the current geopolitical environment, many investors are increasingly cautious about committing significant upfront capital, locking in long‑term balance sheet exposure, or building fully standalone operations from day one.</p>
-            
+            <h2 id="incentive">Incentive negotiation: The value most entrants leave behind</h2>
+            <p>China’s industrial policy landscape offers a substantial menu of incentives to qualifying manufacturers:
+              reduced CIT rates, land use rights at below-market rates, workforce training subsidies, utility pricing
+              concessions, and, in some cases, direct grants. These incentives are real, they are material, and they are
+              negotiable, but they require active and informed engagement with local government counterparts to access.
+            </p>
+            <p>China’s current industrial policy environment has placed particular emphasis on green manufacturing,
+              advanced manufacturing, and sectors aligned with China’s strategic industrial priorities. Manufacturers in
+              these categories, broadly defined to include energy-efficient production processes, high-value-added
+              outputs, and sectors listed in the Foreign Investment Encouraged Industries Catalogue, have access to
+              preferential treatment that can meaningfully change the economics of a China investment.</p>
+            <p>Despite the National Unified Market initiative, local governments, particularly at the district and
+              development zone level, retain considerable discretion over incentive packages. Understanding the
+              negotiating landscape, such as what is available in which locations, what conditions apply, and how to
+              structure an approach that is credible to local officials, is a distinct skill. Most foreign manufacturers
+              underestimate both what is available and what it takes to access it. The difference between a negotiated
+              incentive package and a default arrangement can run to millions of dollars over the life of an investment.
+            </p>
+            <p>The incentive landscape is also a material input into the location decision itself. Two industrial parks
+              in the same province may offer substantially different conditions for a given investor profile. This
+              analysis needs to happen before location decisions are made, not after.</p>
+            <h2>Getting the setup right</h2>
 
-            <h2 id="incentive">Incentive negotiation: the value most entrants leave behind</h2>
-            <p>China’s industrial policy landscape offers a substantial menu of incentives to qualifying manufacturers: reduced CIT rates, land use rights at below-market rates, workforce training subsidies, utility pricing concessions, and, in some cases, direct grants. These incentives are real, they are material, and they are negotiable, but they require active and informed engagement with local government counterparts to access.</p>
+            <p>The picture that emerges from this review is not one of prohibitive complexity. China’s foreign
+              investment framework in 2026 is more transparent, more accessible, and better documented than it was a
+              decade ago. For manufacturers who approach the setup process with rigour, the pathway to a
+              well-functioning China manufacturing operation is clearer than it may appear from the outside.</p>
 
-<p>China’s current industrial policy environment has placed particular emphasis on green manufacturing, advanced manufacturing, and sectors aligned with China’s strategic industrial priorities. Manufacturers in these categories, broadly defined to include energy-efficient production processes, high-value-added outputs, and sectors listed in the Foreign Investment Encouraged Industries Catalogue, have access to preferential treatment that can meaningfully change the economics of a China investment.</p>
+            <p>What the picture does confirm is that the decisions made at setup have long tails. The business scope
+              registered today determines what the entity can do for years. The employment framework established for the
+              first 50 employees defines the obligations that accrue as the workforce grows. The repatriation structure
+              put in place at incorporation shapes what can be done with China-generated profits for the life of the
+              entity.</p>
 
-<p>Despite the National Unified Market initiative, local governments, particularly at the district and development zone level, retain considerable discretion over incentive packages. Understanding the negotiating landscape, such as what is available in which locations, what conditions apply, and how to structure an approach that is credible to local officials, is a distinct skill. Most foreign manufacturers underestimate both what is available and what it takes to access it. The difference between a negotiated incentive package and a default arrangement can run to millions of dollars over the life of an investment.</p>
+            <p>These decisions deserve the time, expertise, and multi-disciplinary thinking they require. The cost of
+              getting them right at the outset is a fraction of the cost of fixing them later.</p>
 
-<p>The incentive landscape is also a material input into the location decision itself. Two industrial parks in the same province may offer substantially different conditions for a given investor profile. This analysis needs to happen before location decisions are made, not after.</p>
 
-            <h2 id="setup">Getting the setup right</h2>
-            <p>The picture that emerges from this review is not one of prohibitive complexity. China’s foreign investment framework in 2026 is more transparent, more accessible, and better documented than it was a decade ago. For manufacturers who approach the setup process with rigor, the pathway to a well-functioning China manufacturing operation is clearer than it may appear from the outside.</p>
-            <p>What the picture does confirm is that the decisions made at setup have long tails. The business scope registered today determines what the entity can do for years. The employment framework established for the first 50 employees defines the obligations that accrue as the workforce grows. The repatriation structure put in place at incorporation shapes what can be done with China-generated profits for the life of the entity.</p>
-            <p>These decisions deserve the time, expertise, and multi-disciplinary thinking they require. The cost of getting them right at the outset is a fraction of the cost of fixing them later.</p>
           </div>
 
           <!-- Author bio -->
           <div class="author-bio">
-            <img class="author-bio__avatar" src="https://d2h56l9e5xqoi4.cloudfront.net/dsa/images/personnel/rect_1/allan-xu.webp" alt="" loading="lazy">
+            <img class="author-bio__avatar"
+              src="https://d2h56l9e5xqoi4.cloudfront.net/dsa/images/personnel/rect_1/allan-xu.webp" alt=""
+              loading="lazy">
             <div>
-              <p class="author-bio__quote">"As one of Asia’s leading business setup consultants, we help companies structure entities to meet strategic goals and maximize operational efficiency, including cross-border asset transfers, M&A transactions, and corporate relocations."</p>
+              <p class="author-bio__quote">"As one of Asia’s leading business setup consultants, we help companies
+                structure entities to meet strategic goals and maximise operational efficiency, including cross-border
+                asset transfers, M&A transactions, and corporate relocations."</p>
               <p class="author-bio__name">Allan Xu</p>
               <p class="author-bio__role">Assistant Manager, </br>Dezan Shira & Associates, An Ascentium Company</p>
-              <a class="author-bio__link" href="#">Talk to an expert at China@dezshira.com →</a>
+              <a class="author-bio__link" href="#">Contact Us →</a>
             </div>
           </div>
 
-          
+
           <section class="article-about" aria-labelledby="about-us-heading">
             <h2 id="about-us-heading">About Us</h2>
-            <p>India Briefing is one of five regional publications under the Asia Briefing brand. It is supported by <a href="#">Dezan Shira & Associates</a>, An <a href="#">Ascentium Company</a>, a pan-Asia, multi-disciplinary professional services firm that assists foreign investors throughout Asia, including through offices in Delhi, Mumbai, and Bengaluru in India. Dezan Shira also maintains offices or alliance partners assisting foreign investors in China, Hong Kong SAR, Vietnam, Indonesia, Singapore, Malaysia, and eight other countries.</a></p>
+            <p>India Briefing is one of five regional publications under the Asia Briefing brand. It is supported by <a
+                href="#">Dezan Shira & Associates</a>, An <a href="#">Ascentium Company</a>, a pan-Asia,
+              multi-disciplinary professional services firm that assists foreign investors throughout Asia, including
+              through offices in Delhi, Mumbai, and Bengaluru in India. Dezan Shira also maintains offices or alliance
+              partners assisting foreign investors in China, Hong Kong SAR, Vietnam, Indonesia, Singapore, Malaysia, and
+              eight other countries.</a></p>
           </section>
 
-         
+
           <section aria-labelledby="explore-heading">
-            <p class="article-toc__label" id="explore-heading" style="margin-bottom: var(--space-4);">Continue exploring</p>
+            <p class="article-toc__label" id="explore-heading" style="margin-bottom: var(--space-4);">Continue exploring
+            </p>
             <div class="explore-grid">
               <a class="explore-card" href="#">
                 <span class="explore-card__date"><strong>22</strong><span>Jul</span></span>
                 <div>
                   <p class="explore-card__label">Related event</p>
-                  <h3>India Market Entry Masterclass: Choosing the Right Business Structure for Expansion into India</h3>
-                  <p>Webinar |  Wednesday, July 22, 2026 | 2:30 PM India / 4:00 PM Vietnam / 5:00 PM China</p>
+                  <h3>India Market Entry Masterclass: Choosing the Right Business Structure for Expansion into India
+                  </h3>
+                  <p>Webinar | Wednesday, July 22, 2026 | 2:30 PM India / 4:00 PM Vietnam / 5:00 PM China</p>
                 </div>
               </a>
               <a class="explore-card" href="/news/article-detail.html">
-                <img class="explore-card__thumb" src="https://resource.dezshira.com/resize/280x395/Publications/10013/CB-2024-09-issue_cover.jpg" alt="" loading="lazy">
+                <img class="explore-card__thumb"
+                  src="https://resource.dezshira.com/resize/280x395/Publications/10013/CB-2024-09-issue_cover.jpg"
+                  alt="" loading="lazy">
                 <div>
                   <p class="explore-card__label">Related reading</p>
                   <h3>Data Compliance in China: A Roadmap for Foreign Investors</h3>
@@ -144,14 +321,16 @@
             </div>
           </section>
 
-        
+
           <section class="article-cta" aria-labelledby="article-cta-heading">
             <div>
               <h2 id="article-cta-heading">Get the setup decisions right the first time.</h2>
               <p>Our China corporate team offers a fully integrated establishment solution.</p>
-              <button class="btn btn--primary" type="button" data-open-modal>Schedule a Free Consultation</button>
+              <button class="btn btn--primary" type="button" data-open-modal="contactPopup">Schedule a Free Consultation</button>
             </div>
-            <img src="https://www.china-briefing.com/news/wp-content/uploads/2025/06/China-Transfer-Pricing-Documentation-Common-Pitfalls-Best-Practices-300x169.jpg" alt="" loading="lazy">
+            <img
+              src="https://www.china-briefing.com/news/wp-content/uploads/2025/06/China-Transfer-Pricing-Documentation-Common-Pitfalls-Best-Practices-300x169.jpg"
+              alt="" loading="lazy">
           </section>
 
           <!-- Prev / next -->
@@ -168,48 +347,61 @@
 
         </div>
 
-        
+
         <aside class="expert-aside" aria-label="Get expert advice">
           <details class="expert-form-wrap">
             <summary class="expert-form-wrap__summary">
               Get Expert Advice
-              <svg class="expert-form-wrap__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="expert-form-wrap__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
             </summary>
 
             <div class="expert-form">
               <p class="expert-form__title">Get Expert Advice</p>
-              <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team across our global network.</p>
+              <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team
+                across our global network.</p>
               <form class="stack" novalidate>
                 <div class="field">
-                  <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder="Full name" required>
+                  <label class="field__label" for="modal-name">First Name <span class="rstar">*</span></label>
+                  <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder=""
+                    required>
                 </div>
                 <div class="field">
-                 
-                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder="Email" required>
+                  <label class="field__label" for="modal-name">Last Name <span class="rstar">*</span></label>
+                  <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder=""
+                    required>
                 </div>
                 <div class="field">
-                  
-                  <input class="input" type="tel" id="eag-phone" name="phone" autocomplete="tel" placeholder="Phone number" required>
+                  <label class="field__label" for="modal-email">Email <span class="rstar">*</span></label>
+                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder=""
+                    required>
                 </div>
                 <div class="field">
-                  
-                  <input class="input" type="text" id="eag-company" name="company" autocomplete="organization" placeholder="Company" required>
+                  <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label>
+                  <input class="input" type="tel" id="eag-company" name="phone" autocomplete="tel" placeholder=""
+                    required>
                 </div>
-                                <div class="field">
-                  
-                  <input class="input" type="text" id="topic" name="topic" autocomplete="organization" placeholder="Topic" required>
+                <div class="field">
+                  <label class="field__label" for="modal-message">Message <span class="rstar">*</span></label>
+                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value=""
+                    placeholder="" required=""></textarea>
                 </div>
 
-                                <div class="field">
-                  
-                 <select  class="select"  id="type_service_required" name="type_service_required" required="" data-touched="true"><option value="Accounting, Financial Reporting &amp; Review">Accounting, Financial Reporting</option><option value="Audit and Risk Advisory">Audit and Risk Advisory</option><option value="Corporate Establishment and Governance">Corporate Establishment and Governance</option><option value="Country Benchmarking / Location Selection">Country Benchmarking / Location Selection</option><option value="Due Diligence">Due Diligence</option><option value="ESG Sustainability Services">ESG Sustainability Services</option><option value="HR Global Mobility PEO / EOR">HR Global Mobility PEO / EOR</option><option value="HR Advisory and Payroll">HR Advisory and Payroll</option><option value="HR Payroll Software">HR Payroll Software</option><option value="HR Visa &amp; Work Permits">HR Visa &amp; Work Permits</option><option value="Intellectual Property">Intellectual Property</option><option value="Joint Ventures and Match making">Joint Ventures and Match making</option><option value="Legal Services">Legal Services</option><option value="M&amp;A - asiamerger portal">M&amp;A - asiamerger portal</option><option value="Market Research &amp; Business Intelligence">Market Research &amp; Business Intelligence</option><option value="Mergers and Acquisitions">Mergers and Acquisitions</option><option value="Recruitment">Recruitment</option><option value="Tax Advisory &amp; Planning">Tax Advisory &amp; Planning</option><option value="Tax International &amp; Transfer Pricing">Tax International &amp; Transfer Pricing</option><option value="Technology, Cyber / Data Privacy">Technology, Cyber / Data Privacy</option><option value="Technology, IT and ERP Services">Technology, IT and ERP Services</option><option value="Other">Other</option><option value="Other, Journalist Comment or Quote">Other, Journalist Comment or Quote</option><option value="Other, Asia Briefing Media/Ad Placement">Other, Asia Briefing Media/Ad Placement</option></select>
-                </div>
+
                 <div class="field text-xs">
-                  
-                 <label class="margin-top-2" for="agree_privary_policy">
-            <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>I agree to receive communications from Dezan Shira &amp;
-                Associates and accept the<a href="https://www.dezshira.com/privacy-policy"> Privacy Policy</a></span>
-        </label>
+
+                  <label class="margin-top-2" for="agree_privary_policy">
+                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>
+                      I have read Ascentium's <a href="https://www.dezshira.com/privacy-policy"> Privacy Statement</a>
+                      and agree to Ascentium using my information provided to contact me about related content and
+                      services. <span class="rstar">*</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="g-recaptcha" data-sitekey="">
+                  <img src="../img/capcha.svg" alt="captcha" loading="lazy">
                 </div>
                 <button class="btn btn--primary" type="submit">Submit</button>
               </form>
@@ -224,60 +416,102 @@
   @@include('./includes/footer.html')
 
   <!--  contact model -->
-  <div class="modal-overlay">
+  <div class="modal-overlay" id="contactPopup">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading" style="padding: 0;">
       <button class="modal__close" type="button" aria-label="Close contact form">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
       </button>
       <!-- <h2 id="modal-heading" class="text-2xl" style="margin-bottom: var(--space-5);">Talk to our team</h2> -->
-          <details class="expert-form-wrap">
-            <summary class="expert-form-wrap__summary">
-              Get Expert Advice
-              <svg class="expert-form-wrap__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </summary>
+      <details class="expert-form-wrap">
+        <summary class="expert-form-wrap__summary">
+          Get Expert Advice
+          <svg class="expert-form-wrap__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            aria-hidden="true">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </summary>
 
-            <div class="expert-form">
-              <p class="expert-form__title">Get Expert Advice</p>
-              <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team across our global network.</p>
-              <form class="stack" novalidate>
-                <div class="field">
-                  <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder="Full name" required>
-                </div>
-                <div class="field">
-                 
-                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder="Email" required>
-                </div>
-                <div class="field">
-                  
-                  <input class="input" type="tel" id="eag-phone" name="phone" autocomplete="tel" placeholder="Phone number" required>
-                </div>
-                <div class="field">
-                  
-                  <input class="input" type="text" id="eag-company" name="company" autocomplete="organization" placeholder="Company" required>
-                </div>
-                                <div class="field">
-                  
-                  <input class="input" type="text" id="topic" name="topic" autocomplete="organization" placeholder="Topic" required>
-                </div>
-
-                                <div class="field">
-                  
-                 <select  class="select"  id="type_service_required" name="type_service_required" required="" data-touched="true"><option value="Accounting, Financial Reporting &amp; Review">Accounting, Financial Reporting</option><option value="Audit and Risk Advisory">Audit and Risk Advisory</option><option value="Corporate Establishment and Governance">Corporate Establishment and Governance</option><option value="Country Benchmarking / Location Selection">Country Benchmarking / Location Selection</option><option value="Due Diligence">Due Diligence</option><option value="ESG Sustainability Services">ESG Sustainability Services</option><option value="HR Global Mobility PEO / EOR">HR Global Mobility PEO / EOR</option><option value="HR Advisory and Payroll">HR Advisory and Payroll</option><option value="HR Payroll Software">HR Payroll Software</option><option value="HR Visa &amp; Work Permits">HR Visa &amp; Work Permits</option><option value="Intellectual Property">Intellectual Property</option><option value="Joint Ventures and Match making">Joint Ventures and Match making</option><option value="Legal Services">Legal Services</option><option value="M&amp;A - asiamerger portal">M&amp;A - asiamerger portal</option><option value="Market Research &amp; Business Intelligence">Market Research &amp; Business Intelligence</option><option value="Mergers and Acquisitions">Mergers and Acquisitions</option><option value="Recruitment">Recruitment</option><option value="Tax Advisory &amp; Planning">Tax Advisory &amp; Planning</option><option value="Tax International &amp; Transfer Pricing">Tax International &amp; Transfer Pricing</option><option value="Technology, Cyber / Data Privacy">Technology, Cyber / Data Privacy</option><option value="Technology, IT and ERP Services">Technology, IT and ERP Services</option><option value="Other">Other</option><option value="Other, Journalist Comment or Quote">Other, Journalist Comment or Quote</option><option value="Other, Asia Briefing Media/Ad Placement">Other, Asia Briefing Media/Ad Placement</option></select>
-                </div>
-                <div class="field text-xs">
-                  
-                 <label class="margin-top-2" for="agree_privary_policy">
-            <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>I agree to receive communications from Dezan Shira &amp;
-                Associates and accept the<a href="https://www.dezshira.com/privacy-policy"> Privacy Policy</a></span>
-        </label>
-                </div>
-                <button class="btn btn--primary" type="submit">Submit</button>
-              </form>
+        <div class="expert-form">
+          <p class="expert-form__title">Get Expert Advice</p>
+          <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team across
+            our global network.</p>
+          <form class="stack" novalidate>
+            <div class="field">
+              <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder="Full name"
+                required>
             </div>
-          </details>
+            <div class="field">
+
+              <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder="Email"
+                required>
+            </div>
+            <div class="field">
+
+              <input class="input" type="tel" id="eag-phone" name="phone" autocomplete="tel" placeholder="Phone number"
+                required>
+            </div>
+            <div class="field">
+
+              <input class="input" type="text" id="eag-company" name="company" autocomplete="organization"
+                placeholder="Company" required>
+            </div>
+            <div class="field">
+
+              <input class="input" type="text" id="topic" name="topic" autocomplete="organization" placeholder="Topic"
+                required>
+            </div>
+
+            <div class="field">
+
+              <select class="select" id="type_service_required" name="type_service_required" required=""
+                data-touched="true">
+                <option value="Accounting, Financial Reporting &amp; Review">Accounting, Financial Reporting</option>
+                <option value="Audit and Risk Advisory">Audit and Risk Advisory</option>
+                <option value="Corporate Establishment and Governance">Corporate Establishment and Governance</option>
+                <option value="Country Benchmarking / Location Selection">Country Benchmarking / Location Selection
+                </option>
+                <option value="Due Diligence">Due Diligence</option>
+                <option value="ESG Sustainability Services">ESG Sustainability Services</option>
+                <option value="HR Global Mobility PEO / EOR">HR Global Mobility PEO / EOR</option>
+                <option value="HR Advisory and Payroll">HR Advisory and Payroll</option>
+                <option value="HR Payroll Software">HR Payroll Software</option>
+                <option value="HR Visa &amp; Work Permits">HR Visa &amp; Work Permits</option>
+                <option value="Intellectual Property">Intellectual Property</option>
+                <option value="Joint Ventures and Match making">Joint Ventures and Match making</option>
+                <option value="Legal Services">Legal Services</option>
+                <option value="M&amp;A - asiamerger portal">M&amp;A - asiamerger portal</option>
+                <option value="Market Research &amp; Business Intelligence">Market Research &amp; Business Intelligence
+                </option>
+                <option value="Mergers and Acquisitions">Mergers and Acquisitions</option>
+                <option value="Recruitment">Recruitment</option>
+                <option value="Tax Advisory &amp; Planning">Tax Advisory &amp; Planning</option>
+                <option value="Tax International &amp; Transfer Pricing">Tax International &amp; Transfer Pricing
+                </option>
+                <option value="Technology, Cyber / Data Privacy">Technology, Cyber / Data Privacy</option>
+                <option value="Technology, IT and ERP Services">Technology, IT and ERP Services</option>
+                <option value="Other">Other</option>
+                <option value="Other, Journalist Comment or Quote">Other, Journalist Comment or Quote</option>
+                <option value="Other, Asia Briefing Media/Ad Placement">Other, Asia Briefing Media/Ad Placement</option>
+              </select>
+            </div>
+            <div class="field text-xs">
+
+              <label class="margin-top-2" for="agree_privary_policy">
+                <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>I agree to receive
+                  communications from Dezan Shira &amp;
+                  Associates and accept the<a href="https://www.dezshira.com/privacy-policy"> Privacy Policy</a></span>
+              </label>
+            </div>
+            <button class="btn btn--primary" type="submit">Submit</button>
+          </form>
+        </div>
+      </details>
     </div>
   </div>
 
   <script src="/js/main.min.js"></script>
 </body>
+
 </html>

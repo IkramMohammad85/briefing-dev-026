@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initExpertForm();
   initArticleToc();
   initBackToTop();
-  initContactModal();
+  initModals();
+  initPromoPopup();
 });
 
 /* ---- Mobile nav toggle ---- */
@@ -67,7 +68,7 @@ function initMegaMenus() {
   });
 }
 
-/* ---- Animated stat counters — trigger once when scrolled into view ---- */
+/* ---- Animated stat counters ---- */
 function initStatCounters() {
   const stats = document.querySelectorAll("[data-count-to]");
   if (!stats.length) return;
@@ -91,7 +92,7 @@ function initStatCounters() {
     const duration = 1200;
     const start = performance.now();
 
-    // Respect reduced-motion preference: show the final value immediately.
+    
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       el.textContent = target + suffix;
       return;
@@ -107,7 +108,7 @@ function initStatCounters() {
   }
 }
 
-/* ---- Search overlay — slides down from the header, opened by the search icon ---- */
+/* ---- Search overlay — slides down ---- */
 function initSearchOverlay() {
   const openers = document.querySelectorAll("[data-open-search]");
   const overlay = document.querySelector(".search-overlay");
@@ -120,7 +121,7 @@ function initSearchOverlay() {
   function open() {
     lastFocused = document.activeElement;
     overlay.hidden = false;
-    // Next frame so the transition runs from the hidden state, not instantly.
+    
     requestAnimationFrame(() => overlay.classList.add("is-open"));
     openers.forEach((o) => o.setAttribute("aria-expanded", "true"));
     input?.focus();
@@ -129,7 +130,7 @@ function initSearchOverlay() {
   function close() {
     overlay.classList.remove("is-open");
     openers.forEach((o) => o.setAttribute("aria-expanded", "false"));
-    // Wait for the slide-up transition before hiding from the a11y tree.
+   
     const hide = () => { overlay.hidden = true; overlay.removeEventListener("transitionend", hide); };
     overlay.addEventListener("transitionend", hide);
     lastFocused?.focus();
@@ -143,7 +144,7 @@ function initSearchOverlay() {
   });
 }
 
-/* ---- Back-to-top button: reveal after scrolling, smooth-scroll up on click ---- */
+/* ---- Back-to-top button: smooth-scroll up on click ---- */
 function initBackToTop() {
   const btn = document.querySelector(".to-top");
   if (!btn) return;
@@ -184,7 +185,7 @@ function initStickyOffsets() {
   window.addEventListener("resize", set);
 }
 
-/* ---- Expert-advice sidebar: collapsible <details> on mobile, always-open on desktop ---- */
+/* ---- Expert-advice sidebar: collapsible ---- */
 function initExpertForm() {
   const wraps = document.querySelectorAll(".expert-form-wrap");
   if (!wraps.length) return;
@@ -194,17 +195,17 @@ function initExpertForm() {
   function sync() {
     wraps.forEach((wrap) => {
       if (mq.matches) {
-        // Desktop: force open and disable the toggle so the sticky card just shows.
+        
         wrap.setAttribute("open", "");
       } else {
-        // Mobile: collapse by default so the article content leads.
+        
         wrap.removeAttribute("open");
       }
     });
   }
 
   sync();
-  // Re-sync on breakpoint cross (addEventListener is supported on modern MediaQueryList).
+
   mq.addEventListener ? mq.addEventListener("change", sync) : mq.addListener(sync);
 
   // On desktop, prevent the summary click from collapsing the forced-open panel.
@@ -225,7 +226,7 @@ function initArticleToc() {
   let userToggled = false;
 
   function sync() {
-    // Once the user has manually opened/closed
+    // manually opened/closed
     if (userToggled) return;
     tocs.forEach((toc) => {
       if (mq.matches) toc.setAttribute("open", "");
@@ -250,7 +251,7 @@ function initArticleToc() {
 
 /* ---- Advisory carousel — Splide with arrows + dots (homepage) ---- */
 function initAdvisoryCarousel() {
-  const el = document.querySelector(".advisory-carousel");
+  const el = document.querySelector(".advisory-cards-slider");
   if (!el || typeof Splide === "undefined") return;
 
   new Splide(el, {
@@ -299,35 +300,92 @@ function initAccordions() {
 }
 
 /* ---- Contact modal  ---- */
-function initContactModal() {
-  const openers = document.querySelectorAll("[data-open-modal]");
-  const overlay = document.querySelector(".modal-overlay");
-  if (!overlay) return;
+// function initContactModal() {
+//   const openers = document.querySelectorAll("[data-open-modal]");
+//   const overlay = document.querySelector(".modal-overlay");
+//   if (!overlay) return;
 
-  const closeBtn = overlay.querySelector(".modal__close");
-  let lastFocused = null;
+//   const closeBtn = overlay.querySelector(".modal__close");
+//   let lastFocused = null;
 
-  openers.forEach((btn) => {
+//   openers.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       lastFocused = document.activeElement;
+//       overlay.classList.add("is-open");
+//       closeBtn?.focus();
+//     });
+//   });
+
+//   function close() {
+//     overlay.classList.remove("is-open");
+//     lastFocused?.focus();
+//   }
+
+//   closeBtn?.addEventListener("click", close);
+//   overlay.addEventListener("click", (e) => {
+//     if (e.target === overlay) close();
+//   });
+//   document.addEventListener("keydown", (e) => {
+//     if (e.key === "Escape" && overlay.classList.contains("is-open")) close();
+//   });
+// }
+
+function initModals() {
+  const overlays = document.querySelectorAll(".modal-overlay");
+  if (!overlays.length) return;
+
+  // Remembers which element opened each modal so focus can go back to it.
+  const lastFocused = new WeakMap();
+
+  function open(overlay, trigger) {
+    if (!overlay) return;
+    lastFocused.set(overlay, trigger || document.activeElement);
+    overlay.classList.add("is-open");
+    // Prefer the close button; fall back to the first focusable control.
+    const target = overlay.querySelector("[data-close-modal], .modal__close") ||
+                   overlay.querySelector("input, select, textarea, button, a[href]");
+    target?.focus();
+  }
+
+  function close(overlay) {
+    if (!overlay) return;
+    overlay.classList.remove("is-open");
+    lastFocused.get(overlay)?.focus();
+    lastFocused.delete(overlay);
+  }
+
+
+ 
+  window.Modals = {
+    open(id) { open(id ? document.getElementById(id) : overlays[0]); },
+    close(id) { close(id ? document.getElementById(id) : overlays[0]); },
+  };
+
+  document.querySelectorAll("[data-open-modal]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      lastFocused = document.activeElement;
-      overlay.classList.add("is-open");
-      closeBtn?.focus();
+      const id = btn.getAttribute("data-open-modal");
+      open(id ? document.getElementById(id) : overlays[0], btn);
     });
   });
 
-  function close() {
-    overlay.classList.remove("is-open");
-    lastFocused?.focus();
-  }
+  overlays.forEach((overlay) => {
+    overlay.querySelectorAll("[data-close-modal], .modal__close").forEach((btn) => {
+      btn.addEventListener("click", () => close(overlay));
+    });
 
-  closeBtn?.addEventListener("click", close);
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) close();
+    // Backdrop click — only when the click lands on the overlay itself.
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) close(overlay);
+    });
   });
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && overlay.classList.contains("is-open")) close();
+    if (e.key !== "Escape") return;
+    const open = Array.from(overlays).filter((o) => o.classList.contains("is-open"));
+    close(open[open.length - 1]); // topmost only
   });
 }
+
 /* ---- Tabs —  ----   */
 function initTabs() {
   document.querySelectorAll(".tabs").forEach((tabs) => {
@@ -387,5 +445,63 @@ function initTabs() {
 
     const initial = tabButtons.find((b) => b.getAttribute("aria-selected") === "true") || tabButtons[0];
     select(initial);
+  });
+}
+
+/* ---- Promo popup  */
+function initPromoPopup() {
+  const popup = document.querySelector("[data-promo-popup]");
+  if (!popup || !window.Modals) return;
+
+  const id = popup.id;
+  const KEY = `promoSeen:${id || "default"}`;
+
+ 
+  try {
+    if (sessionStorage.getItem(KEY)) return;
+  } catch (e) {
+    
+  }
+
+  const delay = Number(popup.dataset.promoDelay) || 10000;
+  const scrollPct = Number(popup.dataset.promoScroll) || 45;
+
+  
+  const firstSection = document.querySelector("main > section") || document.querySelector("main");
+
+  let fired = false;
+  let timer = null;
+
+  function markSeen() {
+    try { sessionStorage.setItem(KEY, "1"); } catch (e) { /* ignore */ }
+  }
+
+  function fire() {
+    if (fired) return;
+    fired = true;
+    clearTimeout(timer);
+    window.removeEventListener("scroll", onScroll);
+    window.Modals.open(id);
+  }
+
+  function onScroll() {
+    if (!firstSection) return;
+    const rect = firstSection.getBoundingClientRect();
+    const height = rect.height || 1;
+    
+    const progress = Math.min(1, Math.max(0, -rect.top / height)) * 100;
+    if (progress >= scrollPct) fire();
+  }
+
+  timer = setTimeout(fire, delay);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll(); 
+
+  // Any close path marks.
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup || e.target.closest("[data-close-modal], .modal__close")) markSeen();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && popup.classList.contains("is-open")) markSeen();
   });
 }
