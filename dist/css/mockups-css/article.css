@@ -267,7 +267,7 @@
   color: #2B2C2C;
 }
 .article-body a {
-  color: var(--accent);
+  color: var(--gold);
   text-decoration: none;
 }
 .article-body a:hover {

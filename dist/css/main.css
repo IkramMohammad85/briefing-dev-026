@@ -1901,6 +1901,50 @@ ul[class], ol[class] {
   }
 }
 
+.portal-banner {
+  padding: var(--space-5) var(--space-6);
+  background: #F5F5F5;
+  border-radius: var(--radius-md);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.portal-banner__text {
+  min-width: 0;
+  line-height: 24px;
+  font-size: var(--text-base);
+}
+.portal-banner__text strong {
+  font-weight: 600;
+}
+.portal-banner__text a {
+  color: var(--black) !important;
+}
+.portal-banner p {
+  font-size: var(--text-base);
+  line-height: 24px;
+  padding: 1rem 0;
+  color: var(--black) !important;
+}
+.portal-banner .start-exploring a {
+  font-size: var(--text-sm);
+}
+@media (min-width: 768px) {
+  .portal-banner {
+    flex-wrap: nowrap;
+  }
+}
+.portal-banner a:hover {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .portal-banner--small {
+    width: 50%;
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .expert-aside {
     position: sticky;

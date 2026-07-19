@@ -26,3 +26,31 @@ p{font-size: var(--text-sm); font-weight: 400;;}
 
 @include bp(md) { flex-wrap: nowrap; }
 }
+
+// Inline lead-gen callout band inside the article body
+.portal-banner {
+  padding: var(--space-5) var(--space-6);
+  background: #F5F5F5; 
+  border-radius: var(--radius-md);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  &__text { min-width: 0;line-height:24px; font-size: var(--text-base);
+  strong { font-weight: 600; } 
+a{color: var(--black) !important;}
+}
+
+  p{font-size: var(--text-base); line-height: 24px; padding: 1rem 0; color: var(--black) !important;}
+
+  .start-exploring{
+a{font-size: var(--text-sm);}
+  }
+
+
+
+@include bp(md) { flex-wrap: nowrap; }
+  a:hover{text-decoration:none ;}
+  &--small{
+    @include bp(md) { width: 50%; float: left; margin-right: 2rem; margin-bottom: 1rem; }
+  }
+}
