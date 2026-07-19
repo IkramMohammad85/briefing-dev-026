@@ -3,7 +3,7 @@
 .expert-aside {
   @include bp(lg) {
     position: sticky;
-    top: calc(var(--header-h, 120px) + var(--space-4));
+    top: calc(var(--header-h, 172px) + (-120px));
     align-self: start; // don't stretch the sticky grid item to full column height
   }
 }
@@ -24,7 +24,11 @@
   margin-top: var(--space-3);
   box-shadow: var(--shadow-sm);
 
-  @include bp(lg) { margin-top: 0; }
+  @include bp(lg) { margin-top: 172px; }
+
+    &--m-top-none{margin-top: 0;
+  @include bp(lg) { margin-top: 0px; }
+}
 
   &__title { font-size: var(--text-lg); margin-bottom: var(--space-2); font-weight: 600; }
   &__intro { font-size: var(--text-sm); color: var(--gray-light); margin-bottom: var(--space-5); }
@@ -69,4 +73,8 @@
   .expert-form__title{ color: var(--gold); font-size: var(--text-2xl); font-weight: 600; margin: 0; }
   .expert-form__intro{ font-size: 16px; font-style: italic; margin-top: 0.5rem;}
   .expert-form{width: 100%;}
+}
+
+.captcha-card{
+    padding-top: 1rem;
 }

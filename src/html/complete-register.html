@@ -1207,40 +1207,52 @@
       </button>
       <!-- <h2 id="modal-heading" class="text-2xl" style="margin-bottom: var(--space-5);">Talk to our team</h2> -->
           <div class="contact-popup">
-            <div class="expert-form">
+            <div class="expert-form expert-form--m-top-none">
               <p class="expert-form__title">Get Expert Advice</p>
-              <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team across our global network.</p>
+              <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team
+                across our global network.</p>
               <form class="stack" novalidate>
                 <div class="field">
-                  <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder="Full name" required>
+                  <label class="field__label" for="modal-name">First Name <span class="rstar">*</span></label>
+                  <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder=""
+                    required>
                 </div>
                 <div class="field">
-                 
-                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder="Email" required>
+                  <label class="field__label" for="modal-name">Last Name <span class="rstar">*</span></label>
+                  <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder=""
+                    required>
                 </div>
                 <div class="field">
-                  
-                  <input class="input" type="tel" id="eag-phone" name="phone" autocomplete="tel" placeholder="Phone number" required>
+                  <label class="field__label" for="modal-email">Email <span class="rstar">*</span></label>
+                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder=""
+                    required>
                 </div>
                 <div class="field">
-                  
-                  <input class="input" type="text" id="eag-company" name="company" autocomplete="organization" placeholder="Company" required>
+                  <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label>
+                  <input class="input" type="tel" id="eag-company" name="phone" autocomplete="tel" placeholder=""
+                    required>
                 </div>
-                                <div class="field">
-                  
-                  <input class="input" type="text" id="topic" name="topic" autocomplete="organization" placeholder="Topic" required>
+                <div class="field">
+                  <label class="field__label" for="modal-message">Message <span class="rstar">*</span></label>
+                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value=""
+                    placeholder="" required=""></textarea>
                 </div>
 
-                                <div class="field">
-                  
-                 <select  class="select"  id="type_service_required" name="type_service_required" required="" data-touched="true"><option value="Accounting, Financial Reporting &amp; Review">Accounting, Financial Reporting</option><option value="Audit and Risk Advisory">Audit and Risk Advisory</option><option value="Corporate Establishment and Governance">Corporate Establishment and Governance</option><option value="Country Benchmarking / Location Selection">Country Benchmarking / Location Selection</option><option value="Due Diligence">Due Diligence</option><option value="ESG Sustainability Services">ESG Sustainability Services</option><option value="HR Global Mobility PEO / EOR">HR Global Mobility PEO / EOR</option><option value="HR Advisory and Payroll">HR Advisory and Payroll</option><option value="HR Payroll Software">HR Payroll Software</option><option value="HR Visa &amp; Work Permits">HR Visa &amp; Work Permits</option><option value="Intellectual Property">Intellectual Property</option><option value="Joint Ventures and Match making">Joint Ventures and Match making</option><option value="Legal Services">Legal Services</option><option value="M&amp;A - asiamerger portal">M&amp;A - asiamerger portal</option><option value="Market Research &amp; Business Intelligence">Market Research &amp; Business Intelligence</option><option value="Mergers and Acquisitions">Mergers and Acquisitions</option><option value="Recruitment">Recruitment</option><option value="Tax Advisory &amp; Planning">Tax Advisory &amp; Planning</option><option value="Tax International &amp; Transfer Pricing">Tax International &amp; Transfer Pricing</option><option value="Technology, Cyber / Data Privacy">Technology, Cyber / Data Privacy</option><option value="Technology, IT and ERP Services">Technology, IT and ERP Services</option><option value="Other">Other</option><option value="Other, Journalist Comment or Quote">Other, Journalist Comment or Quote</option><option value="Other, Asia Briefing Media/Ad Placement">Other, Asia Briefing Media/Ad Placement</option></select>
-                </div>
+
                 <div class="field text-xs">
-                  
-                 <label class="margin-top-2" for="agree_privary_policy">
-            <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>I agree to receive communications from Dezan Shira &amp;
-                Associates and accept the<a href="https://www.dezshira.com/privacy-policy"> Privacy Policy</a></span>
-        </label>
+
+                  <label class="margin-top-2" for="agree_privary_policy">
+                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>
+                      I have read Ascentium's <a href="https://www.dezshira.com/privacy-policy"> Privacy Statement</a>
+                      and agree to Ascentium using my information provided to contact me about related content and
+                      services. <span class="rstar">*</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="g-recaptcha" data-sitekey="">
+                  <div class="captcha-card">
+                  <img src="../img/capcha.svg" alt="captcha" loading="lazy">
+                  </div>
                 </div>
                 <button class="btn btn--primary" type="submit">Submit</button>
               </form>
