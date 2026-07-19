@@ -1746,7 +1746,7 @@ ul[class], ol[class] {
   transition: background var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
 }
 .tabs__tab:hover {
-  color: var(--cta-red);
+  color: var(--gold);
 }
 .tabs__tab[aria-selected=true] {
   background: var(--gold);
