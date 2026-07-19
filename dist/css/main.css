@@ -2200,6 +2200,147 @@ th {
   padding-top: 1rem;
 }
 
+table {
+  caption-side: bottom;
+  margin-bottom: 2rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+  border-collapse: collapse;
+}
+table.table {
+  overflow-x: auto; /* display: block; */
+  width: 100% !important;
+  height: auto !important;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+.table td, .table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border: none;
+  border-top: 1px solid #e9eaec;
+}
+
+th {
+  text-align: inherit;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-bottom: solid 1px #e9eaec;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table th {
+  color: white;
+  background-color: #E85D0F;
+  border-color: #E85D0F;
+}
+
+.table th {
+  vertical-align: bottom;
+  border-bottom: 1px solid #e9eaec;
+}
+
+.table .thead-sub th {
+  vertical-align: bottom;
+  border-bottom: 1px solid #e9eaec;
+  font-weight: 600;
+  color: #E85D0F;
+  background: transparent;
+}
+
+.table {
+  margin-bottom: 2rem;
+}
+.table tr {
+  background: #fff;
+}
+.table td {
+  color: #5c5b62;
+  padding: 10px;
+}
+.table td ul {
+  padding-left: 1rem !important;
+}
+.table td ol {
+  padding-left: 1rem !important;
+}
+.table td p {
+  color: unset;
+}
+.table p {
+  margin: 0;
+}
+
+.table.cb thead tr {
+  background: #E85D0F;
+}
+.table.cb thead td {
+  color: #ffffff;
+  font-weight: 600;
+}
+.table.cb th {
+  background: #E85D0F;
+  color: #ffffff;
+  font-weight: 600;
+}
+.table.cb tr.primary-bg {
+  background: #E85D0F;
+  color: #ffffff;
+}
+.table.cb td.primary-bg {
+  background: #E85D0F;
+  color: #ffffff;
+}
+.table.cb tr.grey-bg {
+  background: #dddddd;
+}
+.table.cb td.grey-bg {
+  background: #dddddd;
+}
+.table.cb tr.grey-bg-dark {
+  background: #666666;
+}
+.table.cb td.grey-bg-dark {
+  background: #666666;
+}
+
+.table.cb thead tr.light-bg {
+  color: var(--gold);
+  background-color: transparent;
+}
+
+.table.cb thead tr.light-bg td {
+  color: var(--gold);
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
 .stat {
   text-align: center;
 }

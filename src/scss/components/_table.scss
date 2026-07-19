@@ -122,3 +122,9 @@ th {
   color: var(--gold); background-color: transparent;
 }
 .table.cb thead tr.light-bg td{color: var(--gold);}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
