@@ -820,7 +820,8 @@ ul[class], ol[class] {
   }
 }
 .mega-panel .section-head {
-  border-bottom: 1px solid var(--dark-gray);
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: var(--space-2);
 }
 .mega-panel .section-head h2 {
   color: #000000;

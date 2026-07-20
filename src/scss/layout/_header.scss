@@ -229,7 +229,7 @@
   
   &--right { @include bp(lg) { left: auto; right: 0; } }
 
-  .section-head{border-bottom: 1px solid var(--dark-gray);
+  .section-head{border-bottom: 1px solid #dcdcdc;padding-bottom: var(--space-2);
     h2{color: #000000; font-size: var(--text-md); }
   }
   .pub-card{
