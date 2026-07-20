@@ -463,8 +463,8 @@ function initPromoPopup() {
     
   }
 
-  const delay = Number(popup.dataset.promoDelay) || 10000;
-  const scrollPct = Number(popup.dataset.promoScroll) || 45;
+  const delay = Number(popup.dataset.promoDelay) || 20000;
+  const scrollPct = Number(popup.dataset.promoScroll) || 60;
 
   
   const firstSection = document.querySelector("main > section") || document.querySelector("main");

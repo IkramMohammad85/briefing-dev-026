@@ -338,7 +338,7 @@
 }
 @media (min-width: 768px) {
   .topic__grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 30% 67%;
   }
 }
 
@@ -371,8 +371,13 @@
 
 .topic-list {
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-6);
   align-content: start;
+}
+@media (min-width: 768px) {
+  .topic-list {
+    grid-template-columns: 48% 48%;
+  }
 }
 
 .topic-list__item {
@@ -381,7 +386,7 @@
   padding-bottom: var(--space-4);
   border-bottom: 1px solid var(--line);
 }
-.topic-list__item:last-child {
+.topic-list__item:last-child, .topic-list__item:nth-child(3) {
   border-bottom: none;
 }
 .topic-list__item p {
