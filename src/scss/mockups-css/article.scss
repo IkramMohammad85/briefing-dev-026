@@ -364,7 +364,7 @@
 
 
 blockquote{position: relative;
-  border-left: solid 4px #e9ecef;
+  border-left: solid 4px var(--line-light-gray);
     padding:40px 20px 30px 20px;
     font-size: 17px;
     &:before{
