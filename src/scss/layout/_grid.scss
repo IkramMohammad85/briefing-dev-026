@@ -40,7 +40,7 @@
 .margin-top-2 { margin-top: var(--space-2); }
 
 
-// ---- Grid: mobile stacks, wider viewports gain columns ----
+// ---- Grid ----
 .grid {
   display: grid;
   gap: var(--space-5);
@@ -58,7 +58,7 @@
   @include bp(lg) { grid-template-columns: repeat(5, 1fr); }
 }
 
-// ---- Split: hero-style two-column, stacks on mobile ----
+// ---- Split hero----
 .split {
   display: grid;
   gap: var(--space-6);
@@ -90,7 +90,7 @@
   gap: var(--space-7);
 
   @include bp(lg) {
-    // Main column + fixed-ish sidebar track
+  
     grid-template-columns: minmax(0, 1fr) 340px;
     gap: var(--space-8);
     align-items: start;

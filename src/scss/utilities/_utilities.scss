@@ -37,10 +37,17 @@
 
 .hide-mobile { display: none; }
 .hide-desktop { display: initial; }
+.contact-bar.hide-desktop{
+  .container{
+    padding-inline: 0;
+    .btn{ border-radius: 0;}
+  }
+}
 
 @include bp(lg) {
   .hide-mobile { display: initial; }
   .hide-desktop { display: none; }
+  
 }
 
 
@@ -81,4 +88,32 @@ img{width: 156px;}
   display: grid;
   gap: var(--space-5);
   grid-template-columns: repeat(2, 1fr);
+}
+
+.advisory-card__link {
+    align-items: center;
+    color: var(--text-base);
+    display: inline-block !important;
+    font-weight: 500;
+    position: relative;
+    transition: all .3s ease;
+}
+.advisory-card__link:after {
+    background-color: var(--gold);
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: .2rem;
+    transition: all .3s ease;
+    width: 1.5rem;
+}
+.advisory-card:hover{
+  .advisory-card__link:after {
+    width: 100%;
+}
+}
+
+.inner-page__main, .newsletter{
+  h2, h3, p {margin-bottom: var(--space-5); font-weight: 600;}
+  p{font-weight: 400;}
 }

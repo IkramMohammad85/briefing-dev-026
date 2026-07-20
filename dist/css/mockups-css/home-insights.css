@@ -2,10 +2,11 @@
   --navy: #12213B;
   --navy-soft: #1B2E4D;
   --paper: #F7F8FA;
-  --paper-soft: #ffe4d4;
+  --paper-soft: #f6f1ee;
   --gold: #E85D0F;
   --gold-strong: #E85D0F;
   --gold-light: #FFF0E7;
+  --gold-primary-light: #fba46e;
   --teal: #E85D0F;
   --teal-strong: #043835;
   --line: #DFE3E9;
@@ -119,7 +120,7 @@
   line-height: var(--leading-tight);
   font-family: var(--font-display);
   font-weight: 500;
-  max-width: 46ch;
+  max-width: 52ch;
 }
 
 .home-hero__lead {
@@ -207,7 +208,7 @@
 .insight-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-5);
+  gap: var(--space-6);
 }
 @media (min-width: 480px) {
   .insight-grid {
@@ -233,7 +234,7 @@
 .insight-card__cat {
   color: var(--accent);
   font-size: var(--text-xs);
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   margin-top: var(--space-5);
 }
@@ -241,6 +242,8 @@
   font-size: var(--text-base);
   line-height: var(--leading-snug);
   margin-top: var(--space-2);
+  color: var(--black);
+  font-weight: 600;
 }
 .insight-card__meta {
   font-size: var(--text-xs);
@@ -293,6 +296,7 @@
 .section.advisory-band-section {
   background: var(--light-orange);
   padding: 0px;
+  margin-bottom: 2rem;
 }
 
 .advisory-band {
@@ -324,7 +328,7 @@
 }
 
 .topic {
-  padding-block: var(--space-5);
+  padding-block: var(--space-6);
 }
 
 .topic__grid {
@@ -383,6 +387,7 @@
 .topic-list__item p {
   font-size: var(--text-sm);
   line-height: var(--leading-snug);
+  color: #000000;
 }
 .topic-list__item span {
   font-size: var(--text-xs);
@@ -494,7 +499,7 @@
 .advisory-slide__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-3);
+  gap: var(--space-5);
 }
 
 .advisory-cards {
@@ -517,6 +522,7 @@
 }
 .advisory-card h3 {
   font-size: var(--text-base);
+  font-weight: 500;
 }
 .advisory-card__link {
   display: inline-block;
@@ -524,7 +530,6 @@
   font-size: var(--text-xs);
   font-weight: 500;
   color: var(--text-on-paper);
-  border-bottom: 2px solid var(--accent);
   padding-bottom: 2px;
 }
 .advisory-card:hover .advisory-card__link {

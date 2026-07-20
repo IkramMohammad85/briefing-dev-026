@@ -2,10 +2,11 @@
   --navy: #12213B;
   --navy-soft: #1B2E4D;
   --paper: #F7F8FA;
-  --paper-soft: #ffe4d4;
+  --paper-soft: #f6f1ee;
   --gold: #E85D0F;
   --gold-strong: #E85D0F;
   --gold-light: #FFF0E7;
+  --gold-primary-light: #fba46e;
   --teal: #E85D0F;
   --teal-strong: #043835;
   --line: #DFE3E9;
@@ -395,7 +396,6 @@
 .article-about {
   background: var(--bg-light-gray);
   border-radius: var(--radius-md);
-  border: 1px solid var(--line-light-gray);
   padding: var(--space-6);
   margin-block: var(--space-7);
 }

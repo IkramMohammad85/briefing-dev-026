@@ -1,6 +1,6 @@
 // "Get Expert Advice" sidebar
 @use "../base/tokens" as *;
-.expert-aside {
+.expert-aside, .consultation {
   @include bp(lg) {
     position: sticky;
     top: calc(var(--header-h, 172px) + (-120px));
@@ -14,6 +14,13 @@
   &[open] .expert-form-wrap__summary .expert-form-wrap__chevron { transform: rotate(180deg); }
 
   @include bp(lg) { margin-bottom: 0; }
+}
+.consultation{
+      @include bp(lg) { margin-top: 172px; }
+
+    &--m-top-none{margin-top: 0;
+  @include bp(lg) { margin-top: 0px; }
+}
 }
 
 .expert-form {
@@ -44,6 +51,7 @@
   .stack>*+*{margin-top: var(--space-3);}
 
 }
+
 
 
 // card shows directly.

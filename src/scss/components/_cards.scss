@@ -82,6 +82,7 @@
     align-items: flex-start;
     gap: var(--space-6);
   }
+  
 
   .card__media {
     width: 100%;
@@ -97,6 +98,8 @@
       margin-bottom: 0;
     }
   }
+
+
 
   .card__content {
     display: flex;
@@ -136,3 +139,19 @@
   text-decoration: none;
 }
 
+  .mega-webinars{
+     @include bp(sm) {
+    .card__media{width: 120px;}
+     }
+     .card__heading{font-size: 16px;}
+  }
+
+  .mega-events{
+    .event-link{ padding: 0;
+      &:hover{
+        background-color: transparent;
+      }
+
+    }
+  }
+  

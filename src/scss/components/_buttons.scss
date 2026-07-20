@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: var(--space-3) var(--space-5);
+  padding: var(--space-3) var(--space-4);
   font-size: var(--text-sm);
   font-weight: 500;
   border-radius: var(--radius-sm);
@@ -59,3 +59,101 @@
   &--lg { padding: var(--space-4) var(--space-6); font-size: var(--text-base); }
 }
 
+.cta-button {
+    align-items: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(90deg, var(--gold) 50%, var(--gold) 50% 100%) !important;
+    background-position: 100% !important;
+    background-repeat: no-repeat !important;
+    background-size: 201% auto !important;
+    border: 0;
+    border-radius: var(--button-radius);
+    color: var(--color-danger) !important;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--base-font);
+    font-size: .875rem !important;
+    font-weight: 500 !important;
+    gap: .5rem;
+    justify-content: center;
+    line-height: 1.5;
+    padding: .675rem 1rem !important;
+    position: relative;
+    transition: all .3s ease !important;
+}
+
+ .cta-button:not(.no-link):hover{
+  
+    background-position: 0 !important;
+    background-repeat: no-repeat !important;
+    color: var(--l) !important;
+}
+
+
+.primary-animation, .secondary-animation, .cb-btn {
+  display: inline-block;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--gold);
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    //background-color: darken(var, 15%);
+    background-color: var(--gold-primary-light) ;
+    transition: all .3s;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+
+}
+.secondary-animation{
+  &:after {
+    background-color:transparent;
+  }
+  &:before {
+    background-color: var(--black) ;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+.cb-btn{
+  &:after {
+    background-color:var(--cta-red);
+  }
+  &:before {
+    background-color: #e36b6b ;
+    border-color:#e36b6b  ;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}
