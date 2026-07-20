@@ -1474,6 +1474,20 @@ ul[class], ol[class] {
 }
 .mega-webinars .card__heading {
   font-size: 16px;
+  font-weight: 400;
+}
+.mega-webinars .card--article {
+  padding: 0 0 1rem 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: solid 1px #ddd;
+}
+.mega-webinars .card--article:last-child {
+  border-bottom: none;
+}
+.mega-webinars .card--article .card__byline {
+  color: #58585b;
 }
 
 .mega-events .event-link {
@@ -1481,6 +1495,18 @@ ul[class], ol[class] {
 }
 .mega-events .event-link:hover {
   background-color: transparent;
+}
+.mega-events .event-link .event-title {
+  font-weight: 400;
+}
+.mega-events .event-time {
+  font-size: 14px;
+}
+.mega-events .event-list-row {
+  padding-bottom: 1rem;
+}
+.mega-events .event-list-row:last-child {
+  border-bottom: none;
 }
 
 .modal-overlay {
