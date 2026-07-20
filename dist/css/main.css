@@ -2149,6 +2149,16 @@ ul[class], ol[class] {
   }
 }
 
+.highlighted-cta {
+  padding: 1.5rem;
+  background-color: #fdf5ed;
+  border-radius: var(--radius-md);
+}
+.highlighted-cta p {
+  padding: 0;
+  margin: 0;
+}
+
 @media (min-width: 1024px) {
   .expert-aside, .consultation {
     position: sticky;
