@@ -51,7 +51,13 @@
   .stack>*+*{margin-top: var(--space-3);}
 
 }
-
+@media (max-height: 1100px) {
+    .expert-aside .expert-form {
+        max-height: calc(100vh - 10rem);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+}
 
 
 // card shows directly.
