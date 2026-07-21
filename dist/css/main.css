@@ -418,6 +418,10 @@ ul[class], ol[class] {
   align-items: center;
 }
 
+.items-top {
+  align-items: flex-start;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -2256,6 +2260,10 @@ ul[class], ol[class] {
 .expert-form .field span a:hover {
   text-decoration: none;
 }
+.expert-form .field--two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .expert-form .btn {
   width: auto;
   margin-top: 2rem !important;
@@ -2277,7 +2285,7 @@ ul[class], ol[class] {
   justify-content: space-between;
   gap: var(--space-3);
   padding: var(--space-4) var(--space-5);
-  background: var(--navy);
+  background: var(--teal-strong);
   color: var(--text-on-navy);
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -2318,6 +2326,37 @@ ul[class], ol[class] {
 
 .captcha-card {
   padding-top: 1rem;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.field-placeholder {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--gray-light) !important;
+  font-size: var(--text-sm) !important;
+}
+
+.field-placeholder .required {
+  color: #d32f2f !important;
+}
+
+.input-wrap input:not(:-moz-placeholder) + .field-placeholder {
+  display: none;
+}
+
+.input-wrap input:focus + .field-placeholder,
+.input-wrap input:not(:placeholder-shown) + .field-placeholder {
+  display: none;
+}
+
+.agree_privary_policy {
+  margin-top: 3px;
 }
 
 table {
