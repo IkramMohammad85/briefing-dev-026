@@ -2346,12 +2346,12 @@ ul[class], ol[class] {
   color: #d32f2f !important;
 }
 
-.input-wrap input:not(:-moz-placeholder) + .field-placeholder {
+.input-wrap input:not(:-moz-placeholder) + .field-placeholder, .input-wrap textarea:not(:-moz-placeholder) + .field-placeholder {
   display: none;
 }
 
-.input-wrap input:focus + .field-placeholder,
-.input-wrap input:not(:placeholder-shown) + .field-placeholder {
+.input-wrap input:focus + .field-placeholder, .input-wrap textarea:focus + .field-placeholder,
+.input-wrap input:not(:placeholder-shown) + .field-placeholder, .input-wrap textarea:not(:placeholder-shown) + .field-placeholder {
   display: none;
 }
 
@@ -2717,4 +2717,10 @@ aside .article-callout {
 }
 .inner-page__main p, .newsletter p {
   font-weight: 400;
+}
+
+.hidden {
+  display: none;
+  color: var(--gold-strong);
+  font-size: var(--text-xs);
 }
