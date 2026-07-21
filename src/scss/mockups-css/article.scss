@@ -186,7 +186,7 @@
     font-family: var(--font-mono);
     font-size: var(--text-xs);
     text-transform: uppercase;
-    color: var(--teal-strong);
+    color: var(--teal-strong) !important;
     margin-bottom: var(--space-1);
     font-weight: 500;
     

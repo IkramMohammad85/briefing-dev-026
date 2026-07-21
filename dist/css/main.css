@@ -31,7 +31,7 @@
   --text-on-navy: #F7F8FA;
   --text-on-navy-muted: #A9B6CC;
   --color-danger: #B3402B;
-  --color-focus: #E0663B;
+  --color-focus: #ddd;
   --subscribe: #1D9A5B;
   --subscribe-strong: #16793F;
   --accent: #FF8541;
@@ -206,26 +206,7 @@ ul[class], ol[class] {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 3px;
-  border-radius: var(--radius-sm);
-}
-
-.skip-link {
-  position: absolute;
-  top: -100%;
-  left: var(--space-4);
-  z-index: 1000;
-  padding: var(--space-3) var(--space-5);
-  background: var(--navy);
-  color: var(--text-on-navy);
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  border-radius: var(--radius-sm);
-  transition: top var(--duration-base) var(--ease-standard);
-}
-.skip-link:focus-visible {
-  top: var(--space-4);
+  outline: 1px solid var(--color-focus);
 }
 
 .sr-only {
@@ -877,9 +858,11 @@ ul[class], ol[class] {
 .nav.is-open .nav__link:hover,
 .nav.is-open .nav__link[aria-expanded=true] {
   color: var(--black);
+  font-weight: 500;
 }
 .nav.is-open .nav__link[aria-expanded=false] {
   color: #464646;
+  font-weight: 500;
 }
 .nav.is-open .mega-panel a:hover {
   background: rgba(255, 255, 255, 0.06);
@@ -1293,7 +1276,7 @@ ul[class], ol[class] {
   z-index: -1;
 }
 .primary-animation:hover, .secondary-animation:hover, .cb-btn:hover {
-  color: #fff;
+  color: var(--black);
 }
 .primary-animation:hover:before, .secondary-animation:hover:before, .cb-btn:hover:before {
   width: 100%;
@@ -1320,7 +1303,7 @@ ul[class], ol[class] {
   border-color: #e36b6b;
 }
 .cb-btn:hover {
-  color: #fff;
+  color: var(--black);
 }
 .cb-btn:hover:before {
   width: 100%;
@@ -1572,7 +1555,7 @@ ul[class], ol[class] {
   width: 100%;
 }
 .input:hover, .textarea:hover, .select:hover {
-  border-color: var(--text-on-paper-muted);
+  border-color: var(--line);
 }
 
 .modal--promo {
@@ -2260,9 +2243,18 @@ ul[class], ol[class] {
   color: var(--gray-light);
   margin-left: var(--space-1);
   line-height: 10px;
+  line-height: 16px;
 }
 .expert-form .field span.rstar {
   color: var(--gold);
+  margin-right: 0;
+  margin-left: 0;
+}
+.expert-form .field span a {
+  color: var(--gold);
+}
+.expert-form .field span a:hover {
+  text-decoration: none;
 }
 .expert-form .btn {
   width: auto;
@@ -2467,6 +2459,13 @@ th {
   display: block;
   width: 100%;
   overflow-x: auto;
+}
+
+thead th {
+  position: sticky;
+  top: 80px;
+  background: #fff;
+  z-index: 10;
 }
 
 .stat {

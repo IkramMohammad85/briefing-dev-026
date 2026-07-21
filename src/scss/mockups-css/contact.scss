@@ -65,7 +65,7 @@
   background: var(--paper-soft);
   border-color: transparent;
 
-  &:focus { border-color: var(--cta-red); background: var(--paper); }
+  &:focus, &:focus-visible { border-color: var(--bg-light-gray); background: var(--paper); }
 }
 
 .contact-form .textarea { min-height: 140px; resize: vertical; }

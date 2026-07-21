@@ -285,8 +285,8 @@
 
     .nav__item { border-bottom: 1px solid #E3E3E3;  }
     .nav__link:hover,
-    .nav__link[aria-expanded="true"] { color: var(--black); }
-    .nav__link[aria-expanded="false"] { color: #464646 }
+    .nav__link[aria-expanded="true"] { color: var(--black); font-weight: 500; }
+    .nav__link[aria-expanded="false"] { color: #464646; font-weight: 500; }
     .mega-panel a:hover { background: rgba(255, 255, 255, 0.06); }
     .container{padding-left: 0; padding-left: 0;}
     .mega-panel a{ color: #000000;}

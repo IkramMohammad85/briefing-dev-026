@@ -41,8 +41,11 @@
   &__intro { font-size: var(--text-sm); color: var(--gray-light); margin-bottom: var(--space-5); }
 
   .field { margin-bottom: var(--space-1); 
-  span{font-size: var(--text-xs); color: var(--gray-light); margin-left: var(--space-1);line-height:10px;
-  &.rstar{color: var(--gold);}
+  span{font-size: var(--text-xs); color: var(--gray-light); margin-left: var(--space-1);line-height:10px; line-height: 16px;
+  &.rstar{color: var(--gold); margin-right: 0; margin-left: 0;}
+  a{color: var(--gold);
+  &:hover{text-decoration: none;}
+  }
   }
   }
   .btn { width: auto; margin-top: 2rem !important; }

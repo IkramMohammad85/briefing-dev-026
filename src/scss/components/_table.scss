@@ -128,3 +128,9 @@ th {
   width: 100%;
   overflow-x: auto;
 }
+thead th {
+    position: sticky;
+    top: 80px;
+    background: #fff;
+    z-index: 10;
+}

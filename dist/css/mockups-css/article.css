@@ -32,7 +32,7 @@
   --text-on-navy: #F7F8FA;
   --text-on-navy-muted: #A9B6CC;
   --color-danger: #B3402B;
-  --color-focus: #E0663B;
+  --color-focus: #ddd;
   --subscribe: #1D9A5B;
   --subscribe-strong: #16793F;
   --accent: #FF8541;
@@ -310,7 +310,7 @@
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   text-transform: uppercase;
-  color: var(--teal-strong);
+  color: var(--teal-strong) !important;
   margin-bottom: var(--space-1);
   font-weight: 500;
 }
