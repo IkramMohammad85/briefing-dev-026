@@ -10,7 +10,6 @@ var n,t;n=this,t=function(){"use strict";var v="(prefers-reduced-motion: reduce)
 
 /*
    main.js
-   Vanilla JS, no dependencies.
    */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,8 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initStatCounters();
   initTestimonialSplide();
   initAdvisoryCarousel();
+  initMobileSliders();
   initAccordions();
   initTabs();
+  initDropdowns();
   initExpertForm();
   initArticleToc();
   initBackToTop();
@@ -40,12 +41,12 @@ function initMobileNav() {
     const isOpen = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(isOpen));
     // Icon swap (hamburger <-> X) 
-    // aria-expanded attribute;
+   
     toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 }
 
-/* ---- Mega menu dropdowns (click to open, click outside / Escape to close) ---- */
+/* ---- Mega menu dropdowns  ---- */
 function initMegaMenus() {
   const items = document.querySelectorAll(".nav__item");
 
@@ -161,7 +162,7 @@ function initBackToTop() {
 
   function onScroll() {
     const show = window.scrollY > 400;
-    btn.hidden = false; // keep in DOM; visibility handled by class
+    btn.hidden = false; 
     btn.classList.toggle("is-visible", show);
   }
 
@@ -173,7 +174,7 @@ function initBackToTop() {
   });
 }
 
-/* ---- Expose sticky offsets as CSS vars ----     */
+/* ---- Expose sticky offsets as CSS ----     */
 function initStickyOffsets() {
   const header = document.querySelector(".site-header");
   if (!header) return;
@@ -227,7 +228,7 @@ function initExpertForm() {
   });
 }
 
-/* ---- Article TOC: open on desktop, collapsed by default on mobile (stays toggleable) ---- */
+/* ---- Article TOC: open on desktop, collapsed  ---- */
 function initArticleToc() {
   const tocs = document.querySelectorAll(".article-toc");
   if (!tocs.length) return;
@@ -259,36 +260,7 @@ function initArticleToc() {
   });
 }
 
-/* ---- Advisory carousel — Splide with arrows + dots (homepage) ---- */
-function initAdvisoryCarousel() {
-  const el = document.querySelector(".advisory-cards-slider");
-  if (!el || typeof Splide === "undefined") return;
 
-  new Splide(el, {
-    type: "loop",
-    perPage: 1,
-    arrows: true,
-    pagination: true,
-    speed: 500,
-  }).mount();
-}
-
-/* ---- Testimonial slider — Splide.js */
-function initTestimonialSplide() {
-  const el = document.querySelector(".testimonial-slider");
-  if (!el || typeof Splide === "undefined") return;
-
-  new Splide(el, {
-    type: "loop",
-    perPage: 1,
-    arrows: false,
-    pagination: true,
-    autoplay: true,
-    interval: 6000,
-    pauseOnHover: true,
-    speed: 500,
-  }).mount();
-}
 
 /* ---- Accordion — collapsible  ---- */
 function initAccordions() {
@@ -344,7 +316,7 @@ function initModals() {
   const overlays = document.querySelectorAll(".modal-overlay");
   if (!overlays.length) return;
 
-  // Remembers which element opened each modal so focus can go back to it.
+  
   const lastFocused = new WeakMap();
 
   function open(overlay, trigger) {
@@ -513,5 +485,133 @@ function initPromoPopup() {
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && popup.classList.contains("is-open")) markSeen();
+  });
+}
+
+function initMobileSliders() {
+  const els = document.querySelectorAll("[data-mobile-slider]");
+  if (!els.length || typeof Splide === "undefined") return;
+
+  els.forEach((el) => {
+    const breakpoint = Number(el.dataset.sliderBreakpoint) || 1000;
+    const peek = el.dataset.sliderPeek || "";
+    const perPage = Number(el.dataset.sliderPerpage) || 1;
+
+    new Splide(el, {
+      mediaQuery: "min",
+      perPage,
+      gap: "1rem",
+      arrows: false,
+      pagination: true,
+      padding: { right: peek }, 
+      breakpoints: {
+        [breakpoint]: { destroy: true }, 
+      },
+    }).mount();
+  });
+}
+
+function initAdvisoryCarousel() {
+  const el = document.querySelector(".advisory-cards-slider");
+  if (!el || typeof Splide === "undefined") return;
+
+  new Splide(el, {
+    type: "loop",
+    perPage: 1,
+    arrows: true,
+    pagination: true,
+    speed: 500,
+  }).mount();
+}
+
+/* ---- Testimonial slider ---- */
+function initTestimonialSplide() {
+  const el = document.querySelector(".testimonial-slider");
+  if (!el || typeof Splide === "undefined") return;
+
+  new Splide(el, {
+    type: "loop",
+    perPage: 1,
+    arrows: false,
+    pagination: true,
+    autoplay: true,
+    interval: 6000,
+    pauseOnHover: true,
+    speed: 500,
+  }).mount();
+}
+
+function initDropdowns() {
+  const dropdowns = document.querySelectorAll("[data-dropdown]");
+  if (!dropdowns.length) return;
+
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+  dropdowns.forEach((dd) => {
+    const trigger = dd.querySelector(".dropdown__trigger");
+    const menu = dd.querySelector(".dropdown__menu");
+    if (!trigger || !menu) return;
+
+    const mode = dd.dataset.dropdownMode || "nav";
+    const items = Array.from(menu.querySelectorAll(".dropdown__item"));
+
+    function open() {
+      dd.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+    }
+    function close() {
+      dd.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+    function toggle() {
+      dd.classList.contains("is-open") ? close() : open();
+    }
+
+    // Click/tap
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      toggle();
+    });
+
+    // Select mode:
+    if (mode === "select") {
+      const label = trigger.querySelector(".dropdown__label");
+      items.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (label) label.textContent = (item.textContent || "").trim();
+          dd.dataset.dropdownValue = item.dataset.value || (item.textContent || "").trim();
+          items.forEach((i) => i.setAttribute("aria-current", String(i === item)));
+          close();
+          trigger.focus();
+        });
+      });
+    }
+
+    // Keyboard: open move 
+    trigger.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        open();
+        items[0]?.focus();
+      }
+    });
+
+    menu.addEventListener("keydown", (e) => {
+      const i = items.indexOf(document.activeElement);
+      if (e.key === "ArrowDown") { e.preventDefault(); items[(i + 1) % items.length]?.focus(); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); items[(i - 1 + items.length) % items.length]?.focus(); }
+      else if (e.key === "Home") { e.preventDefault(); items[0]?.focus(); }
+      else if (e.key === "End") { e.preventDefault(); items[items.length - 1]?.focus(); }
+      else if (e.key === "Escape") { close(); trigger.focus(); }
+    });
+
+    // Click outside closes
+    document.addEventListener("click", (e) => {
+      if (!dd.contains(e.target)) close();
+    });
+    dd.addEventListener("mouseleave", () => {
+      if (finePointer.matches) close();
+    });
   });
 }

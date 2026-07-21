@@ -31,7 +31,7 @@
   --text-on-navy: #F7F8FA;
   --text-on-navy-muted: #A9B6CC;
   --color-danger: #B3402B;
-  --color-focus: #ddd;
+  --color-focus: #E85D0F;
   --subscribe: #1D9A5B;
   --subscribe-strong: #16793F;
   --accent: #FF8541;
@@ -258,6 +258,8 @@
 }
 
 .related-reading {
+  max-width: 326px;
+  margin: 0 auto;
   background: var(--light-orange);
   border-radius: var(--radius-md);
   padding: var(--space-5) var(--space-5) var(--space-3) var(--space-5);
@@ -429,8 +431,26 @@
   text-decoration: underline;
 }
 
+/* 
 .pub-grid {
   display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  @include bp(sm) { grid-template-columns: 1fr 1fr; }
+  @include bp(lg) { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.pub-card {
+  display: flex;
+  gap: var(--space-4);
+
+  &__cover { width: 146px; height: 202px; object-fit: cover;  flex-shrink: 0; background: var(--line); }
+  p { font-size: var(--text-md); line-height: var(--leading-relaxed); color: var(--light-gray); margin: 0; }
+  &__date { font-size: var(--text-xs); color: var(--text-on-paper-muted); margin-block: var(--space-2); }
+  .btn{max-width: 104px;padding: var(--space-3) var(--space-3);}
+}
+*/
+.pub-grid {
   grid-template-columns: 1fr;
   gap: var(--space-5);
 }
@@ -445,6 +465,10 @@
   }
 }
 
+.pub-grid:not(.splide__list) {
+  display: grid;
+}
+
 .pub-card {
   display: flex;
   gap: var(--space-4);
@@ -454,14 +478,20 @@
   height: 202px;
   -o-object-fit: cover;
   object-fit: cover;
+  border-radius: var(--radius-sm);
   flex-shrink: 0;
   background: var(--line);
 }
 .pub-card p {
-  font-size: var(--text-md);
-  line-height: var(--leading-relaxed);
-  color: var(--light-gray);
-  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
+.pub-card p a {
+  color: var(--black);
+  text-decoration: none;
+}
+.pub-card p a:hover {
+  color: var(--gold);
 }
 .pub-card__date {
   font-size: var(--text-xs);
@@ -471,6 +501,9 @@
 .pub-card .btn {
   max-width: 104px;
   padding: var(--space-3) var(--space-3);
+}
+.pub-card .mag-detail {
+  width: 58%;
 }
 
 .advisory-carousel {
