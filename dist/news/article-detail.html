@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="/css/main.min.css">
   <link rel="stylesheet" href="/css/mockups-css/article.min.css">
   <link rel="stylesheet" href="/css/mockups-css/home-insights.min.css">
+  <link rel="stylesheet" href="/css/mockups-css/audio.min.css">
+  
 </head>
 
 <body>
@@ -472,13 +474,21 @@
     <svg class="dropdown__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
   </button>
   <div class="dropdown__menu" role="menu">
-    <a class="dropdown__item" role="menuitem" href="#">Invest in Hong Kong <span class="dropdown__arrow">→</span></a>
-    <a class="dropdown__item" role="menuitem" href="#">Invest in China <span class="dropdown__arrow">→</span></a>
+    <a class="dropdown__item" role="menuitem" href="#hongkong">Invest in Hong Kong <span class="dropdown__arrow">→</span></a>
+    <a class="dropdown__item" role="menuitem" href="#China">Invest in China <span class="dropdown__arrow">→</span></a>
   </div>
 </div>
 <div class="border-bottom"></div>
           
-                <div class="grid grid--3 grid--gap-2">
+              <div class="grid grid--3 grid--gap-2" id="hongkong">
+              <a href="#" class="link">Why China</a>
+              <a href="#" class="link">Where to Invest</a>
+              <a href="#" class="link">Sector Insights</a>
+              <a href="#" class="link">Company Establishment</a>
+              <a href="#" class="link">Taxation and Accounting</a>
+              <a href="#" class="link">Human Resources and Payroll</a>
+              </div>
+              <div class="grid grid--3 grid--gap-2" id="China">
               <a href="#" class="link">Why China</a>
               <a href="#" class="link">Where to Invest</a>
               <a href="#" class="link">Sector Insights</a>
@@ -557,6 +567,29 @@
               <span>Written by <a href="#">Allan Xu</a> and <a href="#">Qian Zhou</a></span>
               <!-- <span class="dot" aria-hidden="true"></span> -->
               <!-- <span>8 minute read</span> -->
+            </div>
+
+            <div class="listen-language">
+              <div class="listen">
+
+                <div class="audio-block">
+    <button class="audio-play-btn" id="audioPlayBtn" aria-label="Play audio"><span class="icon-play"></span></button>
+    <div class="audio-detail">
+        <span class="audio-text">Listen to article summary</span>
+        <span class="audio-show-time" id="audioCurrentTime" style="display:none;">0:00</span>
+    </div>
+
+    <audio id="tts-player" src="https://d2h56l9e5xqoi4.cloudfront.net/article-audio-summery/2026/04/CB/GAC%20New%20Overseas%20Food%20Manufacturer%20Registration%20Rules%20Effective%20June%201%20A%20Guide%20for%20Exporters.mp3" type="type="audio/mpeg""></audio>
+    </div>
+              </div>
+              <div class="language">
+                <div class="available-language" >
+                  <strong>Available language</strong>
+                  <ul class="choose-language">
+                      <li id="switcher_20" data-tooltip="italian" data-language="20"><a href="https://www.china-briefing.com/news/nuove-regole-gac-per-la-registrazione-dei-produttori-alimentari-esteri-in-vigore-dal-1-giugno-guida-per-gli-esportatori/" ><img class="" src="/img/icons/eng-flag.svg" alt=""></a></li>
+                      <li id="switcher_20"  data-tooltip="English" data-language="20"><a href="https://www.china-briefing.com/news/gac-overseas-food-manufacturer-registration-china-new-rules-2026/"><img class="" src="/img/icons/italian-flag.svg" alt=""></a></li>                  </ul>
+              </div>
+              </div>
             </div>
           </header>
 
@@ -1198,6 +1231,42 @@
   </div>
 
   <script src="/js/main.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var audio = document.getElementById("tts-player");
+        if (!audio) return;
+
+        var audioPlayBtn = document.getElementById("audioPlayBtn");
+        var audioCurrentTimeLabel = document.getElementById("audioCurrentTime");
+
+        audioCurrentTimeLabel.style.display = "none";
+
+        audioPlayBtn.addEventListener("click", function () {
+            if (audio.paused) {
+                audio.play();
+                audioPlayBtn.classList.add("playing"); 
+                audioCurrentTimeLabel.style.display = "inline-block";
+
+                dataLayer.push({
+                    'event': 'tts_listen'
+                });
+
+            } else {
+                audio.pause();
+                audioPlayBtn.classList.remove("playing"); 
+            }
+        });
+
+        audio.addEventListener("timeupdate", function () {
+            var current = Math.floor(audio.currentTime);
+            var minutes = Math.floor(current / 60);
+            var seconds = current % 60;
+            audioCurrentTimeLabel.textContent = 
+                minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+        });
+
+    });
+    </script>
 </body>
 
 </html>
