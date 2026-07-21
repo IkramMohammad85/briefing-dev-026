@@ -2583,7 +2583,7 @@ thead th {
 .dropdown--right .dropdown__menu {
   left: 0;
   right: 0;
-  top: 30px;
+  top: 24px;
 }
 
 .dropdown.is-open .dropdown__menu {

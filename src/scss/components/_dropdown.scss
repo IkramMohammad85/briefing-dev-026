@@ -49,10 +49,10 @@
   transform: translateY(-6px);
   pointer-events: none;
   transition: opacity var(--duration-fast) var(--ease-standard),
-              transform var(--duration-fast) var(--ease-standard),
-              visibility 0s linear var(--duration-fast);
+  transform var(--duration-fast) var(--ease-standard),
+  visibility 0s linear var(--duration-fast);
 
-  .dropdown--right & { left: 0; right: 0; top: 30px; }
+  .dropdown--right & { left: 0; right: 0; top: 24px; }
 }
 
 .dropdown.is-open .dropdown__menu {
