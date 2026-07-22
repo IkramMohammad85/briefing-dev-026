@@ -2389,12 +2389,10 @@ ul[class], ol[class] {
   color: #d32f2f !important;
 }
 
-.input-wrap input:not(:-moz-placeholder) + .field-placeholder, .input-wrap textarea:not(:-moz-placeholder) + .field-placeholder {
-  display: none;
-}
-
-.input-wrap input:focus + .field-placeholder, .input-wrap textarea:focus + .field-placeholder,
-.input-wrap input:not(:placeholder-shown) + .field-placeholder, .input-wrap textarea:not(:placeholder-shown) + .field-placeholder {
+.input-wrap input:focus + .field-placeholder,
+.input-wrap textarea:focus + .field-placeholder,
+.input-wrap input:valid + .field-placeholder,
+.input-wrap textarea:valid + .field-placeholder {
   display: none;
 }
 
