@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAccordions();
   initTabs();
   initDropdowns();
+  initContentSwitch();
   initExpertForm();
   initArticleToc();
   initBackToTop();
@@ -769,4 +770,44 @@ function initContinueReading() {
 
   sync();
   mq.addEventListener ? mq.addEventListener("change", sync) : mq.addListener(sync);
+}
+
+
+function initContentSwitch() {
+  const groups = document.querySelectorAll("[data-switch]");
+  if (!groups.length) return;
+
+  groups.forEach((group) => {
+    const panels = Array.from(group.querySelectorAll("[data-switch-panel]"));
+    const triggers = Array.from(group.querySelectorAll("[data-switch-target]"));
+    const label = group.querySelector(".dropdown__label");
+    if (!panels.length) return;
+
+    function show(key, labelText) {
+      panels.forEach((p) => p.classList.toggle("is-active", p.dataset.switchPanel === key));
+      if (label && labelText) label.textContent = labelText;
+      // Mark the chosen trigger for styling / a11y.
+      triggers.forEach((t) => t.setAttribute("aria-current", String(t.dataset.switchTarget === key)));
+    }
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        show(trigger.dataset.switchTarget, trigger.dataset.switchLabel);
+
+        // If the trigger lives in a dropdown, close it — it acted as a pick,
+        // not a navigation link, so the menu shouldn't stay open.
+        const dd = trigger.closest("[data-dropdown]");
+        if (dd) {
+          dd.classList.remove("is-open");
+          dd.querySelector(".dropdown__trigger")?.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+
+    // Initial panel: the group's default, or the first panel.
+    const initial = group.dataset.switchDefault || panels[0].dataset.switchPanel;
+    const initialTrigger = triggers.find((t) => t.dataset.switchTarget === initial);
+    show(initial, initialTrigger ? initialTrigger.dataset.switchLabel : null);
+  });
 }

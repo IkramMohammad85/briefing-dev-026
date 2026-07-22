@@ -2760,7 +2760,7 @@ thead th {
   color: var(--cta-red);
 }
 .dropdown__item[aria-current=true] {
-  color: var(--cta-red);
+  color: var(--gold);
 }
 
 .dropdown__arrow {
@@ -2914,6 +2914,28 @@ thead th {
   transform: rotate(45deg);
   color: var(--cta-red);
   border-color: var(--cta-red);
+}
+
+.switch-panel {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--duration-base, 250ms) var(--ease-standard), visibility 0s linear var(--duration-base, 250ms);
+}
+.switch-panel:not(.is-active) {
+  position: absolute;
+  inset-inline: 0;
+}
+.switch-panel.is-active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity var(--duration-base, 250ms) var(--ease-standard), visibility 0s;
+}
+
+[data-switch] {
+  position: relative;
 }
 
 .stat {

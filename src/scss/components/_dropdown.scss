@@ -87,7 +87,7 @@
   &:hover,
   &:focus-visible { background: var(--paper-soft); color: var(--cta-red); }
 
-  &[aria-current="true"] { color: var(--cta-red); }
+  &[aria-current="true"] { color: var(--gold); }
 }
 
 .dropdown__arrow {

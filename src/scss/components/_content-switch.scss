@@ -1,0 +1,30 @@
+
+// CONTENT SWITCH
+
+@use "../base/tokens" as *;
+
+.switch-panel {
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--duration-base, 250ms) var(--ease-standard),
+              visibility 0s linear var(--duration-base, 250ms);
+              
+  &:not(.is-active) {
+    position: absolute;
+    inset-inline: 0;
+  }
+
+  &.is-active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity var(--duration-base, 250ms) var(--ease-standard),
+                visibility 0s;
+  }
+}
+
+[data-switch] { position: relative; }
+
