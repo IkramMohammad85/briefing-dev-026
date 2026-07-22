@@ -604,8 +604,12 @@ function initDropdowns() {
 }
 /* ---- Testimonial slider ---- */
 function initTestimonialSplide() {
-  const el = document.querySelector(".testimonial-slider");
+  const el = document.querySelector("data-guide-slider");
   if (!el || typeof Splide === "undefined") return;
+    els.forEach((el) => {
+    const perView = Number(el.dataset.guidePerview) || 3;
+    const perTablet = Number(el.dataset.guideTablet) || 3;
+    const autoplay = el.dataset.guideAutoplay === "1";
 
   new Splide(el, {
     type: "loop",
@@ -616,7 +620,14 @@ function initTestimonialSplide() {
     interval: 6000,
     pauseOnHover: true,
     speed: 500,
+          breakpoints: {
+        1024: { perPage: perTablet },
+        768: { perPage: 2 },
+        560: { perPage: 1 },
+      },
+    
   }).mount();
+   });
 }
 
 function initGuideSliders() {
