@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBackToTop();
   initModals();
   initPromoPopup();
+  initContinueReading();
 });
 
 /* ---- Mobile nav toggle ---- */
@@ -687,4 +688,95 @@ function initFeatureToggle() {
       apply(btn.getAttribute("aria-expanded") !== "true");
     });
   });
+}
+
+
+function initContinueReading() {
+  const body = document.querySelector(".article-body");
+  if (!body) return;
+
+  const mq = window.matchMedia("(max-width: 1023px)");
+
+  // How many sections are visible before the button appears, and how many
+  // each tap reveals after that.
+  const INITIAL = 2;
+  const STEP = 2;
+
+  // Group the body's direct children into sections that each start at an <h2>.
+  // (Anything before the first <h2> — the intro paragraphs — is section 0.)
+  function buildSections() {
+    const sections = [];
+    let current = [];
+    Array.from(body.children).forEach((el) => {
+      if (el.tagName === "H2" && current.length) {
+        sections.push(current);
+        current = [];
+      }
+      current.push(el);
+    });
+    if (current.length) sections.push(current);
+    return sections;
+  }
+
+  let button = null;
+
+  function teardown() {
+    body.classList.remove("is-collapsed");
+    body.querySelectorAll(".continue-hidden, .continue-fade").forEach((el) => {
+      el.classList.remove("continue-hidden", "continue-fade");
+    });
+    if (button) { button.remove(); button = null; }
+  }
+
+  function collapse() {
+    const sections = buildSections();
+    // Not long enough to bother hiding anything.
+    if (sections.length <= INITIAL + 1) { teardown(); return; }
+
+    let shown = INITIAL;
+
+    function apply() {
+      const hiddenCount = sections.length - shown;
+      sections.forEach((section, i) => {
+        section.forEach((el) => {
+          el.classList.toggle("continue-hidden", i >= shown);
+          el.classList.remove("continue-fade");
+        });
+        // Fade the last currently-visible section.
+        if (i === shown - 1) section.forEach((el) => el.classList.add("continue-fade"));
+      });
+
+      body.classList.toggle("is-collapsed", hiddenCount > 0);
+
+      if (hiddenCount <= 0) { teardown(); return; }
+      button.querySelector(".continue-reading__count").textContent =
+        `${hiddenCount} more section${hiddenCount === 1 ? "" : "s"}`;
+    }
+
+    if (!button) {
+      button = document.createElement("div");
+      button.className = "continue-reading is-active";
+      button.innerHTML =
+        '<button class="continue-reading__btn" type="button">Continue Reading' +
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+        '<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' +
+        '</button><p class="continue-reading__count"></p>';
+      body.after(button);
+
+      button.querySelector(".continue-reading__btn").addEventListener("click", () => {
+        shown += STEP;
+        apply();
+      });
+    }
+
+    apply();
+  }
+
+  function sync() {
+    if (mq.matches) collapse();
+    else teardown();
+  }
+
+  sync();
+  mq.addEventListener ? mq.addEventListener("change", sync) : mq.addListener(sync);
 }

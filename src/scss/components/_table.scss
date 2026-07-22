@@ -4,9 +4,9 @@
   table {
     caption-side: bottom; margin-bottom: 2rem;font-family:var(--font-body); font-weight: 300;
     border-collapse: collapse;
-    &.table{overflow-x: auto; display: block;  height: auto;
+    &.table{overflow-x: auto; display: block;  height: auto !important;
 			@include bp(lg) {	display: inherit;
-	overflow-x: inherit; }
+	overflow-x: inherit; height: 100% !important;}
 	}
   }
   

@@ -2412,12 +2412,13 @@ table {
 table.table {
   overflow-x: auto;
   display: block;
-  height: auto;
+  height: auto !important;
 }
 @media (min-width: 1024px) {
   table.table {
     display: inherit;
     overflow-x: inherit;
+    height: 100% !important;
   }
 }
 
