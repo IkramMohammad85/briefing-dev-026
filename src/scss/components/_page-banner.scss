@@ -92,3 +92,20 @@
   border-radius: var(--radius-full);
   overflow: hidden;
 }
+
+.home-hero {
+  position: relative;   /* zaroori — overlay ko contain karne ke liye */
+
+  /* 50% black overlay */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  /* content overlay ke upar rahe */
+  > * { position: relative; z-index: 1; }
+}

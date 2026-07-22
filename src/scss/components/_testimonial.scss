@@ -3,6 +3,7 @@
 
 @use "../base/tokens" as *;
 
+.testimonial-section{background-color:#f3f4f2;}
 .testimonial-slider {
   position: relative;
 }
@@ -10,11 +11,17 @@
 .testimonial {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-1);
   padding: var(--space-6);
   max-width: 640px;
   margin-inline: auto;
   text-align: center;
+  blockquote{
+    border: none; font-size: var(--text-base); text-align: left; padding-left: 0; padding-right: 0; line-height: 24px; font-weight: 300;
+    &::before{
+      left: 0;
+    }
+  }
 
   &__quote {
     font-family: var(--font-display);
@@ -27,6 +34,7 @@
     flex-direction: column;
     font-size: var(--text-sm);
     color: var(--text-on-paper-muted);
+    text-align: left;
 
     strong { color: var(--text-on-paper); }
   }
@@ -51,7 +59,7 @@
 
   &.is-active {
     background: var(--gold);
-    width: 24px;
+    width: 8px;
     transform: none; 
   }
 }

@@ -29,8 +29,15 @@
   grid-template-columns: 1fr;
   gap: var(--space-8);
   padding-block: var(--space-8);
+  z-index: 5;
 
-  @include bp(lg) { grid-template-columns: 1.5fr 1fr; align-items: center;gap: var(--space-6); }
+  @include bp(lg) { grid-template-columns: 1.5fr 1fr; align-items: center;gap: 0; }
+  &.db-banner{
+     @include bp(lg) { grid-template-columns: 1fr; align-items: center; }
+     .home-hero__lead, .home-hero__title{max-width: 78%; text-align: center; margin-left: auto; margin-right: auto;}
+     .home-hero__lead{margin-bottom: 0;}
+
+  }
 }
 
 .home-hero__title { font-size: var(--text-3xl); color: #fff; line-height: var(--leading-tight); font-family: var(--font-display); font-weight: 500; max-width: 52ch; }

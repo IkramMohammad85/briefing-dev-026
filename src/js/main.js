@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initSearchOverlay();
   initStatCounters();
   initTestimonialSplide();
+  initGuideSliders();
+  initFeatureToggle();
   initAdvisoryCarousel();
   initMobileSliders();
   initAccordions();
@@ -514,22 +516,7 @@ function initAdvisoryCarousel() {
   }).mount();
 }
 
-/* ---- Testimonial slider ---- */
-function initTestimonialSplide() {
-  const el = document.querySelector(".testimonial-slider");
-  if (!el || typeof Splide === "undefined") return;
 
-  new Splide(el, {
-    type: "loop",
-    perPage: 1,
-    arrows: false,
-    pagination: true,
-    autoplay: true,
-    interval: 6000,
-    pauseOnHover: true,
-    speed: 500,
-  }).mount();
-}
 
 function initDropdowns() {
   const dropdowns = document.querySelectorAll("[data-dropdown]");
@@ -602,6 +589,81 @@ function initDropdowns() {
     });
     dd.addEventListener("mouseleave", () => {
       if (finePointer.matches) close();
+    });
+  });
+}
+/* ---- Testimonial slider ---- */
+function initTestimonialSplide() {
+  const el = document.querySelector(".testimonial-slider");
+  if (!el || typeof Splide === "undefined") return;
+
+  new Splide(el, {
+    type: "loop",
+    perPage: 2,
+    arrows: false,
+    pagination: true,
+    autoplay: true,
+    interval: 6000,
+    pauseOnHover: true,
+    speed: 500,
+  }).mount();
+}
+
+function initGuideSliders() {
+  const els = document.querySelectorAll("[data-guide-slider]");
+  if (!els.length || typeof Splide === "undefined") return;
+
+  els.forEach((el) => {
+    const perView = Number(el.dataset.guidePerview) || 3;
+    const perTablet = Number(el.dataset.guideTablet) || 3;
+    const autoplay = el.dataset.guideAutoplay === "1";
+
+    new Splide(el, {
+      type: "loop",
+      perPage: perView,
+      perMove: 1,
+      gap: "1.5rem",
+      arrows: false,
+      pagination: true,
+      autoplay,
+      interval: 5000,
+      pauseOnHover: true,
+      speed: 500,
+      breakpoints: {
+        1024: { perPage: perTablet },
+        768: { perPage: 2 },
+        560: { perPage: 1 },
+      },
+    }).mount();
+  });
+}
+
+function initFeatureToggle() {
+  const lists = document.querySelectorAll(".feature-links");
+  if (!lists.length) return;
+
+  lists.forEach((list) => {
+    const items = Array.from(list.querySelectorAll(".feature-links__item"));
+    const btn = list.querySelector(".feature-links__more");
+    const visible = Number(list.dataset.visible) || 8;
+    if (!btn || items.length <= visible) {
+      // Nothing to hide — drop the toggle so it doesn't dangle.
+      btn?.remove();
+      return;
+    }
+
+    const hidden = items.slice(visible);
+
+    function apply(expanded) {
+      hidden.forEach((el) => el.classList.toggle("is-hidden", !expanded));
+      btn.setAttribute("aria-expanded", String(expanded));
+      btn.setAttribute("aria-label", expanded ? "Show fewer" : "Show more");
+    }
+
+    apply(false); // start collapsed
+
+    btn.addEventListener("click", () => {
+      apply(btn.getAttribute("aria-expanded") !== "true");
     });
   });
 }
