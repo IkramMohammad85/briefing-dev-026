@@ -2692,7 +2692,7 @@ thead th {
   border-radius: var(--radius-sm);
 }
 .dropdown__trigger:hover {
-  color: var(--cta-red);
+  color: var(--gold);
 }
 
 .dropdown__chevron {
