@@ -4,7 +4,10 @@
   table {
     caption-side: bottom; margin-bottom: 2rem;font-family:var(--font-body); font-weight: 300;
     border-collapse: collapse;
-    &.table{overflow-x: auto; /* display: block; */ width: 100%!important; height: auto !important;}
+    &.table{overflow-x: auto; display: block;  height: auto;
+			@include bp(lg) {	display: inherit;
+	overflow-x: inherit; }
+	}
   }
   
   th {
@@ -134,3 +137,6 @@ thead th {
     background: #fff;
     z-index: 10;
 }
+
+
+    
