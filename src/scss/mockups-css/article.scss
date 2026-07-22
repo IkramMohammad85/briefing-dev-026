@@ -115,7 +115,7 @@
     left: -38px;
     position: relative;
   }
-  a{font-weight: 600;
+  a{font-weight: 500;
   &:hover{ color: var(--black);}
   }
 }
@@ -127,6 +127,16 @@
    
 
   @include bp(md) { grid-template-columns: 1fr 1fr; gap: var(--space-3) var(--space-6); }
+}
+
+.article-toc__list li ::before{
+      color: var(--gold); font-weight: 600; padding-left: 2px; content: "";
+    width: 2px;
+    height: 40px;
+    margin: var(--space-3) auto 0;
+    background: var(--gold-light);
+    left: -38px;
+    position: relative;
 }
 
 .article-toc__list a {
