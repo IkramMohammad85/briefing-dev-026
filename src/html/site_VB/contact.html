@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business, Legal, Tax, Accounting, HR, Payroll News | China Briefing</title>
+  <meta name="description" content="China Briefing hosts a wealth of business intelligence on legal, tax, and operational issues in China from a practical perspective.">
+  <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="/css/vb-main.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/mockups-css/contact.min.css">
+  <link rel="stylesheet" href="/css/mockups-css/home-insights.min.css">
+  <link rel="stylesheet" href="/css/mockups-css/events.min.css">
+</head>
+<body>
+
+
+ @@include('./site_VB/includes/header.html')
+  
+  <main id="main">
+    <section class="contact">
+      <div class="container">
+
+        <div class="contact__head">
+          <h1 class="contact__title">Contact us</h1>
+          <p class="contact__sub">How can we help you?</p>
+        </div>
+
+        <!-- Tabbed enquiry forms — one shared form, copy swapped per tab -->
+        <div class="tabs contact-tabs">
+          <div class="tabs__list" role="tablist" aria-label="Enquiry type">
+            <button class="tabs__tab" role="tab" id="tab-general" aria-controls="panel-enquiry" aria-selected="true" type="button"
+                    data-note="For general questions about our services, please contact us at &lt;a href=mailto:media@asiabriefing.com"
+                    data-context="General Enquiries">General Enquiries</button>
+            <button class="tabs__tab" role="tab" id="tab-bookstore" aria-controls="panel-enquiry" aria-selected="false" type="button"
+                    data-note="For orders, invoices, or publication access, please contact us at &lt;a href=sales@asiabriefing.com"
+                    data-context="Bookstore Sales Enquiries">Bookstore Sales Enquiries</button>
+            <button class="tabs__tab" role="tab" id="tab-editorial" aria-controls="panel-enquiry" aria-selected="false" type="button"
+                    data-note="If you would like to reach our editorial staff, please contact us at &lt;a href=mailto:editor@asiabriefing.com"
+                    data-context="Editorial Enquiries">Editorial Enquiries</button>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-enquiry" aria-labelledby="tab-general">
+            @@include('./sections/enquiry-form.html')
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  @@include('./site_VB/includes/footer.html')
+
+  <!-- ============ CONTACT MODAL ============ -->
+  <div class="modal-overlay" id="contactPopup">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading" style="padding: 0;">
+      <button class="modal__close" type="button" aria-label="Close contact form">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <!-- <h2 id="modal-heading" class="text-2xl" style="margin-bottom: var(--space-5);">Talk to our team</h2> -->
+          <div class="contact-popup">
+            <div class="expert-form expert-form--m-top-none">
+              <p class="expert-form__title">Get Expert Advice</p>
+              <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team
+                across our global network.</p>
+              <form class="stack" novalidate>
+                <div class="field">
+                  <label class="field__label" for="modal-name">First Name <span class="rstar">*</span></label>
+                  <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-name">Last Name <span class="rstar">*</span></label>
+                  <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-email">Email <span class="rstar">*</span></label>
+                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label>
+                  <input class="input" type="tel" id="eag-company" name="phone" autocomplete="tel" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-message">Message <span class="rstar">*</span></label>
+                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value=""
+                    placeholder="" required=""></textarea>
+                </div>
+
+
+                <div class="field text-xs">
+
+                  <label class="margin-top-2" for="agree_privary_policy">
+                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>
+                      I have read Ascentium's <a href="https://www.dezshira.com/privacy-policy"> Privacy Statement</a>
+                      and agree to Ascentium using my information provided to contact me about related content and
+                      services. <span class="rstar">*</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="g-recaptcha" data-sitekey="">
+                  <div class="captcha-card">
+                  <img src="../img/capcha.svg" alt="captcha" loading="lazy">
+                  </div>
+                </div>
+                <button class="btn btn--primary" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <script src="/js/main.min.js"></script>
+</body>
+</html>
