@@ -149,8 +149,8 @@
     background-color:var(--brief-theme-color);
   }
   &:before {
-    background-color: #e36b6b ;
-    border-color:#e36b6b  ;
+    background-color: var(--brief-theme-color-light) ;
+    border-color:var(--brief-theme-color-light) ;
   }
   &:hover {
     color: var(--black);

@@ -32,7 +32,7 @@ function clean() {
 
 function styles() {
   return gulp
-    .src([...paths.scssEntry, paths.scssMockups], { base: "src/scss"})
+    .src([paths.scssEntry, paths.scssMockups], { base: "src/scss"})
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(autoprefixer({ cascade: false }))

@@ -26,6 +26,7 @@
   --nav-bar-line: #52524F;
   --footer-bg: #ECECEC;
   --brief-theme-color:#F70000;
+  --brief-theme-color-light:#e36b6b;
   --text-on-paper: #2B2C2C;
   --text-on-paper-muted: #5E6B82;
   --text-on-navy: #F7F8FA;
@@ -1308,8 +1309,8 @@ ul[class], ol[class] {
   background-color: var(--brief-theme-color);
 }
 .cb-btn:before {
-  background-color: #e36b6b;
-  border-color: #e36b6b;
+  background-color: var(--brief-theme-color-light);
+  border-color: var(--brief-theme-color-light);
 }
 .cb-btn:hover {
   color: var(--black);
