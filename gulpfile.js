@@ -13,12 +13,13 @@ const browserSync = require("browser-sync").create();
 
 const paths = {
   scss: "src/scss/**/*.scss",
-  scssEntry: "src/scss/main.scss",
+  scssEntry: ["src/scss/main.scss", "src/scss/vb-main.scss"],
   scssMockups: "src/scss/mockups-css/**/*.scss",
   js: ["src/js/vendor/**/*.js", "src/js/main.js"],
   img: "src/assets/img/**/*",
   fonts: "src/assets/fonts/**/*",
-  html: ["src/html/**/*.html", "!src/html/includes/**", "!src/html/sections/**", "!src/html/site_VB/**", "!src/html/site_VB/includes/**"],
+  // html: ["src/html/**/*.html", "!src/html/includes/**", "!src/html/sections/**", "!src/html/site_VB/**", "!src/html/site_VB/includes/**"],
+  html: ["src/html/**/*.html", "!src/html/**/includes/**", "!src/html/**/sections/**"],
   dist: "dist",
 };
 
@@ -28,9 +29,10 @@ function clean() {
 }
 
 /* ---- Styles: Sass -> autoprefix -> sourcemap -> minify -> dist/css ---- */
+
 function styles() {
   return gulp
-    .src([paths.scssEntry, paths.scssMockups], { base: "src/scss" })
+    .src([...paths.scssEntry, paths.scssMockups], { base: "src/scss"})
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(autoprefixer({ cascade: false }))

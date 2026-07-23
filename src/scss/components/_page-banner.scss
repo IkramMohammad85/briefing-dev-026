@@ -80,7 +80,7 @@
   &:hover { color: var(--text-on-paper); }
 
   &[aria-pressed="true"] {
-    color: var(--cta-red);
+    color: var(--brief-theme-color);
     font-weight: 600;
   }
 }

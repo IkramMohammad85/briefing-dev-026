@@ -50,9 +50,9 @@
   }
 
   &--contact {
-    background: var(--cta-red);
+    background: var(--brief-theme-color);
     color: #fff;
-    &:hover { background: var(--cta-red-strong); color: #fff; }
+    &:hover { background: var(--brief-theme-color); color: #fff; }
   }
 
   &--sm { padding: var(--space-2) var(--space-4); font-size: var(--text-xs); }
@@ -146,7 +146,7 @@
 }
 .cb-btn{
   &:after {
-    background-color:var(--cta-red);
+    background-color:var(--brief-theme-color);
   }
   &:before {
     background-color: #e36b6b ;

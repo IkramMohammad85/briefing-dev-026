@@ -127,7 +127,7 @@
   gap: var(--space-3);
   font-size: var(--text-sm);
 
-  a { color: var(--text-on-paper-muted); text-decoration: none; &:hover { color: var(--cta-red); } }
+  a { color: var(--text-on-paper-muted); text-decoration: none; &:hover { color: var(--brief-theme-color); } }
 }
 
 // Center social row

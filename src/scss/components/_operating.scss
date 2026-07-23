@@ -112,8 +112,8 @@
               color var(--duration-fast) var(--ease-standard),
               border-color var(--duration-fast) var(--ease-standard);
 
-  &:hover { color: var(--cta-red); border-color: var(--cta-red); }
+  &:hover { color: var(--brief-theme-color); border-color: var(--brief-theme-color); }
 
 
-  &[aria-expanded="true"] { transform: rotate(45deg); color: var(--cta-red); border-color: var(--cta-red); }
+  &[aria-expanded="true"] { transform: rotate(45deg); color: var(--brief-theme-color); border-color: var(--brief-theme-color); }
 }

@@ -1,0 +1,7 @@
+// Variable overwrite for vB
+
+@use "../scss/base/tokens";
+
+:root {
+  --brief-theme-color:#7d64ab !important;
+}
