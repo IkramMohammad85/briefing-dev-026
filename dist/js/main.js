@@ -175,20 +175,20 @@ function initSearchSuggest() {
   try {
     index = JSON.parse(indexTag.textContent) || [];
   } catch (e) {
-    return; // malformed index — leave search as a plain input
+    return; 
   }
 
   const LIMIT = 8;
   let timer = null;
 
-  // Escape user input before it goes near innerHTML.
+ 
   function esc(s) {
     return s.replace(/[&<>"']/g, (c) => (
       { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
     ));
   }
 
-  // Wrap the matched run in <mark>, leaving the rest escaped.
+ 
   function highlight(title, query) {
     const at = title.toLowerCase().indexOf(query.toLowerCase());
     if (at < 0) return esc(title);
@@ -226,7 +226,7 @@ function initSearchSuggest() {
     timer = setTimeout(() => render(input.value), 150);
   });
 
-  // Arrow keys walk the results; Escape hands back to the input.
+ 
   overlay.addEventListener("keydown", (e) => {
     const links = Array.from(list.querySelectorAll(".search-results__link"));
     if (!links.length) return;
@@ -242,7 +242,7 @@ function initSearchSuggest() {
     }
   });
 
-  // Clear results when the overlay closes so it reopens empty.
+  
   const closeBtns = overlay.querySelectorAll("[data-close-search]");
   closeBtns.forEach((b) => b.addEventListener("click", () => {
     input.value = "";
@@ -262,7 +262,7 @@ function initSearchOverlay() {
   function open() {
     lastFocused = document.activeElement;
     overlay.hidden = false;
-    // Next frame so the transition runs from the hidden state, not instantly.
+   
     requestAnimationFrame(() => overlay.classList.add("is-open"));
     openers.forEach((o) => o.setAttribute("aria-expanded", "true"));
     input?.focus();
@@ -271,7 +271,7 @@ function initSearchOverlay() {
   function close() {
     overlay.classList.remove("is-open");
     openers.forEach((o) => o.setAttribute("aria-expanded", "false"));
-    // Wait for the slide-up transition before hiding from the a11y tree.
+    
     const hide = () => { overlay.hidden = true; overlay.removeEventListener("transitionend", hide); };
     overlay.addEventListener("transitionend", hide);
     lastFocused?.focus();
