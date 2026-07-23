@@ -339,7 +339,7 @@ function initExpertForm() {
 
   mq.addEventListener ? mq.addEventListener("change", sync) : mq.addListener(sync);
 
-  // On desktop, prevent the summary click from collapsing the forced-open panel.
+
   wraps.forEach((wrap) => {
     const summary = wrap.querySelector(".expert-form-wrap__summary");
     summary?.addEventListener("click", (e) => {
@@ -371,7 +371,7 @@ function initArticleToc() {
   tocs.forEach((toc) => {
     const summary = toc.querySelector(".article-toc__summary");
     summary?.addEventListener("click", () => { userToggled = true; });
-    // Collapse the sticky TOC after tapping a link so it doesn't cover content.
+   
     toc.querySelectorAll(".article-toc__list a").forEach((link) => {
       link.addEventListener("click", () => {
         if (!mq.matches) toc.removeAttribute("open");
@@ -436,14 +436,20 @@ function initModals() {
   const overlays = document.querySelectorAll(".modal-overlay");
   if (!overlays.length) return;
 
-  
+
   const lastFocused = new WeakMap();
 
   function open(overlay, trigger) {
     if (!overlay) return;
+
+
+    document.querySelectorAll("[data-promo-popup].is-open").forEach((promo) => {
+      if (promo !== overlay) close(promo);
+    });
+
     lastFocused.set(overlay, trigger || document.activeElement);
     overlay.classList.add("is-open");
-    // Prefer the close button; fall back to the first focusable control.
+
     const target = overlay.querySelector("[data-close-modal], .modal__close") ||
                    overlay.querySelector("input, select, textarea, button, a[href]");
     target?.focus();
@@ -457,7 +463,6 @@ function initModals() {
   }
 
 
- 
   window.Modals = {
     open(id) { open(id ? document.getElementById(id) : overlays[0]); },
     close(id) { close(id ? document.getElementById(id) : overlays[0]); },
@@ -475,7 +480,7 @@ function initModals() {
       btn.addEventListener("click", () => close(overlay));
     });
 
-    // Backdrop click — only when the click lands on the overlay itself.
+  
     overlay.addEventListener("click", (e) => {
       if (e.target === overlay) close(overlay);
     });
@@ -551,6 +556,7 @@ function initTabs() {
 }
 
 /* ---- Promo popup  */
+   
 function initPromoPopup() {
   const popup = document.querySelector("[data-promo-popup]");
   if (!popup || !window.Modals) return;
@@ -558,17 +564,17 @@ function initPromoPopup() {
   const id = popup.id;
   const KEY = `promoSeen:${id || "default"}`;
 
- 
+
   try {
     if (sessionStorage.getItem(KEY)) return;
   } catch (e) {
-    
+
   }
 
-  const delay = Number(popup.dataset.promoDelay) || 20000;
-  const scrollPct = Number(popup.dataset.promoScroll) || 60;
+  const delay = Number(popup.dataset.promoDelay) || 10000;
+  const scrollPct = Number(popup.dataset.promoScroll) || 45;
 
-  
+
   const firstSection = document.querySelector("main > section") || document.querySelector("main");
 
   let fired = false;
@@ -578,8 +584,22 @@ function initPromoPopup() {
     try { sessionStorage.setItem(KEY, "1"); } catch (e) { /* ignore */ }
   }
 
+ 
+  function otherModalOpen() {
+    return Array.from(document.querySelectorAll(".modal-overlay.is-open"))
+      .some((o) => o !== popup);
+  }
+
   function fire() {
     if (fired) return;
+
+
+    if (otherModalOpen()) {
+      clearTimeout(timer);
+      timer = setTimeout(fire, 1000);
+      return;
+    }
+
     fired = true;
     clearTimeout(timer);
     window.removeEventListener("scroll", onScroll);
@@ -599,7 +619,7 @@ function initPromoPopup() {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll(); 
 
-  // Any close path marks.
+
   popup.addEventListener("click", (e) => {
     if (e.target === popup || e.target.closest("[data-close-modal], .modal__close")) markSeen();
   });
@@ -607,7 +627,6 @@ function initPromoPopup() {
     if (e.key === "Escape" && popup.classList.contains("is-open")) markSeen();
   });
 }
-
 function initMobileSliders() {
   const els = document.querySelectorAll("[data-mobile-slider]");
   if (!els.length || typeof Splide === "undefined") return;

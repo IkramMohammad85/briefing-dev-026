@@ -1100,7 +1100,7 @@ ul[class], ol[class] {
   text-decoration: none;
 }
 .footer-links a:hover {
-  color: var(--brief-theme-color);
+  color: var(--gold);
 }
 
 .footer-social {
