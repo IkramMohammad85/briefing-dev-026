@@ -536,6 +536,32 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
       </div>
+      <div class="container">
+        <div class="search-results" id="search-results" role="region" aria-live="polite" hidden>
+          <p class="search-results__label"></p>
+          <ul class="search-results__list"></ul>
+        </div>
+      </div>
+
+      <!-- The page index the search filters. It lives in markup so pages can
+           be added/removed without touching JS. On a real site this would be
+           generated at build time from the page list. -->
+      <script type="application/json" data-search-index>
+        [
+          { "title": "Tax Advisory and Consultancy Services", "url": "/services/overview.html" },
+          { "title": "Tax Reporting & Compliance", "url": "/services/overview.html" },
+          { "title": "Indirect Tax — Corporate", "url": "/services/overview.html" },
+          { "title": "Transfer Pricing Documentation", "url": "/news/article-detail.html" },
+          { "title": "Corporate Establishment and Structuring", "url": "/services/overview.html" },
+          { "title": "HR & Payroll Administration", "url": "/services/overview.html" },
+          { "title": "Audit and Financial Review", "url": "/services/overview.html" },
+          { "title": "Regulatory and Compliance Advisory", "url": "/services/overview.html" },
+          { "title": "China Outbound — Outbound Direct Investment", "url": "/china-outbound/index.html" },
+          { "title": "News & Insights", "url": "/news/index.html" },
+          { "title": "About Us — Overview", "url": "/about-us/overview.html" },
+          { "title": "Contact Us", "url": "/contact/index.html" }
+        ]
+      </script>
     </div>
 
   </header>

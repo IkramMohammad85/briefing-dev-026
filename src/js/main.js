@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initStickyOffsets();
   initMegaMenus();
   initSearchOverlay();
+  initSearchSuggest();
   initStatCounters();
   initTestimonialSplide();
   initGuideSliders();
@@ -114,6 +115,131 @@ function initStatCounters() {
 }
 
 /* ---- Search overlay — slides down ---- */
+// function initSearchOverlay() {
+//   const openers = document.querySelectorAll("[data-open-search]");
+//   const overlay = document.querySelector(".search-overlay");
+//   if (!overlay || !openers.length) return;
+
+//   const input = overlay.querySelector(".search-overlay__input");
+//   const closeBtn = overlay.querySelector("[data-close-search]");
+//   let lastFocused = null;
+
+//   function open() {
+//     lastFocused = document.activeElement;
+//     overlay.hidden = false;
+    
+//     requestAnimationFrame(() => overlay.classList.add("is-open"));
+//     openers.forEach((o) => o.setAttribute("aria-expanded", "true"));
+//     input?.focus();
+//   }
+
+//   function close() {
+//     overlay.classList.remove("is-open");
+//     openers.forEach((o) => o.setAttribute("aria-expanded", "false"));
+   
+//     const hide = () => { overlay.hidden = true; overlay.removeEventListener("transitionend", hide); };
+//     overlay.addEventListener("transitionend", hide);
+//     lastFocused?.focus();
+//   }
+
+//   openers.forEach((btn) => btn.addEventListener("click", open));
+//   closeBtn?.addEventListener("click", close);
+
+//   document.addEventListener("keydown", (e) => {
+//     if (e.key === "Escape" && overlay.classList.contains("is-open")) close();
+//   });
+// }
+
+function initSearchSuggest() {
+  const overlay = document.querySelector(".search-overlay");
+  const results = document.querySelector(".search-results");
+  if (!overlay || !results) return;
+
+  const input = overlay.querySelector(".search-overlay__input");
+  const indexTag = overlay.querySelector("[data-search-index]");
+  const label = results.querySelector(".search-results__label");
+  const list = results.querySelector(".search-results__list");
+  if (!input || !indexTag || !list) return;
+
+  let index = [];
+  try {
+    index = JSON.parse(indexTag.textContent) || [];
+  } catch (e) {
+    return; // malformed index — leave search as a plain input
+  }
+
+  const LIMIT = 8;
+  let timer = null;
+
+  // Escape user input before it goes near innerHTML.
+  function esc(s) {
+    return s.replace(/[&<>"']/g, (c) => (
+      { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+    ));
+  }
+
+  // Wrap the matched run in <mark>, leaving the rest escaped.
+  function highlight(title, query) {
+    const at = title.toLowerCase().indexOf(query.toLowerCase());
+    if (at < 0) return esc(title);
+    return esc(title.slice(0, at)) +
+           "<mark>" + esc(title.slice(at, at + query.length)) + "</mark>" +
+           esc(title.slice(at + query.length));
+  }
+
+  function render(query) {
+    const q = query.trim();
+
+    if (!q) {
+      results.hidden = true;
+      list.innerHTML = "";
+      return;
+    }
+
+    const matches = index
+      .filter((item) => item.title.toLowerCase().includes(q.toLowerCase()))
+      .slice(0, LIMIT);
+
+    label.textContent = matches.length
+      ? `Results for “${q}”`
+      : `No results for “${q}”`;
+
+    list.innerHTML = matches
+      .map((m) => `<li><a class="search-results__link" href="${esc(m.url)}">${highlight(m.title, q)}</a></li>`)
+      .join("");
+
+    results.hidden = false;
+  }
+
+  input.addEventListener("input", () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => render(input.value), 150);
+  });
+
+  // Arrow keys walk the results; Escape hands back to the input.
+  overlay.addEventListener("keydown", (e) => {
+    const links = Array.from(list.querySelectorAll(".search-results__link"));
+    if (!links.length) return;
+    const i = links.indexOf(document.activeElement);
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      links[i < 0 ? 0 : (i + 1) % links.length].focus();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      if (i <= 0) input.focus();
+      else links[i - 1].focus();
+    }
+  });
+
+  // Clear results when the overlay closes so it reopens empty.
+  const closeBtns = overlay.querySelectorAll("[data-close-search]");
+  closeBtns.forEach((b) => b.addEventListener("click", () => {
+    input.value = "";
+    render("");
+  }));
+}
+
 function initSearchOverlay() {
   const openers = document.querySelectorAll("[data-open-search]");
   const overlay = document.querySelector(".search-overlay");
@@ -126,7 +252,7 @@ function initSearchOverlay() {
   function open() {
     lastFocused = document.activeElement;
     overlay.hidden = false;
-    
+    // Next frame so the transition runs from the hidden state, not instantly.
     requestAnimationFrame(() => overlay.classList.add("is-open"));
     openers.forEach((o) => o.setAttribute("aria-expanded", "true"));
     input?.focus();
@@ -135,7 +261,7 @@ function initSearchOverlay() {
   function close() {
     overlay.classList.remove("is-open");
     openers.forEach((o) => o.setAttribute("aria-expanded", "false"));
-   
+    // Wait for the slide-up transition before hiding from the a11y tree.
     const hide = () => { overlay.hidden = true; overlay.removeEventListener("transitionend", hide); };
     overlay.addEventListener("transitionend", hide);
     lastFocused?.focus();

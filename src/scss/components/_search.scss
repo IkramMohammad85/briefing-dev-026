@@ -67,3 +67,49 @@
 
   &:hover { background: var(--paper-soft); }
 }
+
+.search-results {
+  border-top: 1px solid var(--line);
+  padding-block: var(--space-4) var(--space-5);
+  max-height: 60vh;
+  overflow-y: auto;
+
+  &[hidden] { display: none; }
+}
+
+.search-results__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-on-paper);
+  margin-bottom: var(--space-4);
+}
+
+.search-results__list {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search-results__link {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--accent);
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible { text-decoration: underline; }
+
+  // Highlight the matched substring so it's obvious why a result appeared.
+  mark {
+    background: none;
+    color: inherit;
+    font-weight: 700;
+  }
+}
+
+.search-results__empty {
+  font-size: var(--text-sm);
+  color: var(--text-on-paper-muted);
+}

@@ -1710,6 +1710,51 @@ ul[class], ol[class] {
   background: var(--paper-soft);
 }
 
+.search-results {
+  border-top: 1px solid var(--line);
+  padding-block: var(--space-4) var(--space-5);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.search-results[hidden] {
+  display: none;
+}
+
+.search-results__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-on-paper);
+  margin-bottom: var(--space-4);
+}
+
+.search-results__list {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search-results__link {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--accent);
+  text-decoration: none;
+}
+.search-results__link:hover, .search-results__link:focus-visible {
+  text-decoration: underline;
+}
+.search-results__link mark {
+  background: none;
+  color: inherit;
+  font-weight: 700;
+}
+
+.search-results__empty {
+  font-size: var(--text-sm);
+  color: var(--text-on-paper-muted);
+}
+
 .testimonial-section {
   background-color: #f3f4f2;
 }
