@@ -5,8 +5,9 @@
 
 .switch-panel {
 
-  opacity: 0;
-  visibility: hidden;
+  //opacity: 0;
+  //visibility: hidden;
+  display: none;
   pointer-events: none;
   transition: opacity var(--duration-base, 250ms) var(--ease-standard),
               visibility 0s linear var(--duration-base, 250ms);
@@ -18,8 +19,9 @@
 
   &.is-active {
     position: relative;
-    opacity: 1;
-    visibility: visible;
+    //opacity: 1;
+    display: grid;
+    //visibility: visible;
     pointer-events: auto;
     transition: opacity var(--duration-base, 250ms) var(--ease-standard),
                 visibility 0s;
