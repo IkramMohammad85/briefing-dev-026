@@ -1558,7 +1558,7 @@ ul[class], ol[class] {
   padding: var(--space-2) var(--space-2);
   font-size: var(--text-sm);
   color: var(--gray-light);
-  background: var(--paper);
+  background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   transition: border-color var(--duration-fast) var(--ease-standard);
