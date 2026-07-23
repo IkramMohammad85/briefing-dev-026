@@ -1,7 +1,7 @@
 @use "../base/tokens" as *;
 body{background:transparent !important;}
     .hide {display: none !important;}
-    .title {color: #e2001a;}
+    .title {color: var(--gold);}
     .international {max-width: 100%;margin: auto;margin-top:4rem;}
     .register-form .field-bg-block,.input-group-btn {margin:10px;}
     .article-content.progress-bar-block{max-width: 100%;}
@@ -344,7 +344,7 @@ button.btn-auto-width {
     color: #fff;
     text-align: center;
     border-width: 0;
-    background-color: #e2001a;
+    background-color: var(--gold);
     -webkit-border-radius: 0 3px 3px 0;
     -moz-border-radius: 0 3px 3px 0;
     border-radius: 0 3px 3px 0;
@@ -373,8 +373,8 @@ button.btn-auto-width {
 
 .input-group-btn .btn {
     height: 57px;
-    background-color: #e2001a;
-    border-color: #e2001a;
+    background-color: var(--gold);
+    border-color: var(--gold);
     font-weight: 700;
     color: #fff;
     padding-left: 10px;
