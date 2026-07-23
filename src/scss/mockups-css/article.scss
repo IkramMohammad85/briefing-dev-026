@@ -231,6 +231,38 @@
 
 
 
+.access-full-article {
+  position: relative;
+  margin-top: var(--space-5);
+}
+
+// The last visible paragraph fades out under the gate button
+.access-full-article__fade {
+  position: relative;
+  max-height: 6.5em;
+  overflow: hidden;
+  color: var(--text-on-paper-muted);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent, var(--paper) 92%);
+  }
+    @include bp(md) { 
+      max-height: 100%;
+      overflow: visible;
+      &::after{
+        background:none;
+      }
+     }
+}
+
+.access-full-article__action{
+  display: block;
+   @include bp(md) { display: none; }
+}
+
 // Author bio
 
 .author-bio {

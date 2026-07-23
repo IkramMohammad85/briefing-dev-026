@@ -8,6 +8,10 @@
   --gold-strong: #E85D0F;
   --gold-light: #FFF0E7;
   --gold-primary-light: #fba46e;
+  --primary-color: #E85D0F;
+  --primary-strong-color: #E85D0F;
+  --primary-primary-light: #fba46e;
+  --primary-light: #FFF0E7;
   --teal: #E85D0F;
   --teal-strong: #043835;
   --line: #DFE3E9;
@@ -353,6 +357,42 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent, var(--paper) 92%);
+}
+
+.access-full-article {
+  position: relative;
+  margin-top: var(--space-5);
+}
+
+.access-full-article__fade {
+  position: relative;
+  max-height: 6.5em;
+  overflow: hidden;
+  color: var(--text-on-paper-muted);
+}
+.access-full-article__fade::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, var(--paper) 92%);
+}
+@media (min-width: 768px) {
+  .access-full-article__fade {
+    max-height: 100%;
+    overflow: visible;
+  }
+  .access-full-article__fade::after {
+    background: none;
+  }
+}
+
+.access-full-article__action {
+  display: block;
+}
+@media (min-width: 768px) {
+  .access-full-article__action {
+    display: none;
+  }
 }
 
 .author-bio {

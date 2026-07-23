@@ -4,7 +4,7 @@
 @use "../base/tokens" as *;
 
 .contact-tabs{
-    @include bp(md) { width: 60%; margin-inline: auto; }
+    @include bp(md) { width: 100%; margin-inline: auto; }
 }
 
 .contact {
@@ -14,27 +14,38 @@
 .contact__head {
   text-align: center;
   margin-bottom: var(--space-7);
+  
+  margin: 0 auto;
+      @include bp(md) { width: 46%; }
 }
 
 .contact__title {
   font-size: var(--text-3xl);
+  font-weight: 600;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 64px;
-    height: 2px;
-    margin: var(--space-3) auto 0;
-    background: var(--text-on-paper);
-  }
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   width: 64px;
+  //   height: 2px;
+  //   margin: var(--space-3) auto 0;
+  //   background: var(--text-on-paper);
+  // }
 }
 
 .contact__sub {
-  margin-top: var(--space-6);
-  font-size: var(--text-lg);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-base);
   color: var(--text-on-paper);
 }
+.contact__small{
+    margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--primary-color);
+  text-transform: uppercase;
 
+}
 .contact-note {
   font-size: var(--text-sm);
   color: var(--text-on-paper-muted);
