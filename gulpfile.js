@@ -18,7 +18,7 @@ const paths = {
   js: ["src/js/vendor/**/*.js", "src/js/main.js"],
   img: "src/assets/img/**/*",
   fonts: "src/assets/fonts/**/*",
-  html: ["src/html/**/*.html", "!src/html/includes/**", "!src/html/sections/**"],
+  html: ["src/html/**/*.html", "!src/html/includes/**", "!src/html/sections/**", "!src/html/site_VB/**", "!src/html/site_VB/includes/**"],
   dist: "dist",
 };
 
