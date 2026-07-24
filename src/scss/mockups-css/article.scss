@@ -41,7 +41,7 @@
   color: var(--text-on-paper-muted);
   margin-bottom: var(--space-7);
 
-  a { color: var(--gold); text-decoration: none; &:hover { text-decoration: underline; } }
+  a { color: var(--primary-color); text-decoration: none; &:hover { text-decoration: underline; } }
   .dot { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.5; }
 }
 
@@ -107,11 +107,11 @@
   li{ margin-left: 26px; line-height: 16px; margin-bottom: 1rem;
 &.is-current, &:hover{
   ::before { 
-    color: var(--gold); font-weight: 600; padding-left: 2px; content: "";
+    color: var(--primary-color); font-weight: 600; padding-left: 2px; content: "";
     width: 2px;
     height: 40px;
     margin: var(--space-3) auto 0;
-    background: var(--gold);
+    background: var(--primary-color);
     left: -38px;
     position: relative;
   }
@@ -130,7 +130,7 @@
 }
 
 .article-toc__list li ::before{
-      color: var(--gold); font-weight: 600; padding-left: 2px; content: "";
+      color: var(--primary-color); font-weight: 600; padding-left: 2px; content: "";
     width: 2px;
     height: 40px;
     margin: var(--space-3) auto 0;
@@ -170,7 +170,7 @@
   h3 { font-size: 17px; margin-top: var(--space-6); font-weight: 600;color: #2B2C2C; }
   p{color: #2B2C2C;}
 
-  a { color: var(--gold); text-decoration: none; &:hover { text-decoration: underline; } }
+  a { color: var(--primary-color); text-decoration: none; &:hover { text-decoration: underline; } }
 
   img { border-radius: var(--radius-md); width: 100%; height: auto; }
 
@@ -229,14 +229,16 @@
   }
 }
 
-
+.article-body> .access-full-article *+* {
+    margin-top: var(--space-5);
+}
 
 .access-full-article {
   position: relative;
   margin-top: var(--space-5);
 }
 
-// The last visible paragraph fades out under the gate button
+// The last visible paragraph fades out under the gate button.
 .access-full-article__fade {
   position: relative;
   max-height: 6.5em;
@@ -248,20 +250,41 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, transparent, var(--paper) 92%);
+    // The scrim is decorative — never let it swallow taps on the text.
+    pointer-events: none;
   }
-    @include bp(md) { 
-      max-height: 100%;
-      overflow: visible;
-      &::after{
-        background:none;
-      }
-     }
+
+  @include bp(md) {
+    max-height: 100%;
+    overflow: visible;
+    &::after { background: none; }
+  }
 }
 
-.access-full-article__action{
-  display: block;
-   @include bp(md) { display: none; }
+// Expanded (after the button is tapped): let the content run to its full
+// height and drop the scrim. Scoped to the parent's state class so the two
+// halves of the gate stay in sync.
+.access-full-article.is-expanded {
+  .access-full-article__fade {
+    max-height: 100%;
+    overflow: visible;
+
+    &::after {
+      inset: auto;
+      background: none;
+    }
+  }
+
+  // The button has done its job — it goes away with the gate.
+  .access-full-article__action { display: none; }
 }
+
+.access-full-article__action {
+  display: block;
+
+  @include bp(md) { display: none; }
+}
+
 
 // Author bio
 

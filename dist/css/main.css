@@ -183,7 +183,7 @@ button {
 }
 
 a {
-  color: var(--gold);
+  color: var(--primary-color);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
 }
@@ -228,12 +228,12 @@ ul[class], ol[class] {
 }
 
 ::-moz-selection {
-  background: var(--gold);
+  background: var(--primary-color);
   color: var(--navy);
 }
 
 ::selection {
-  background: var(--gold);
+  background: var(--primary-color);
   color: var(--navy);
 }
 
@@ -944,7 +944,7 @@ ul[class], ol[class] {
   display: inline-flex;
 }
 .nav-toggle svg, .nav-toggle path {
-  stroke: var(--gold);
+  stroke: var(--primary-color);
 }
 
 .site-footer {
@@ -1104,7 +1104,7 @@ ul[class], ol[class] {
   text-decoration: none;
 }
 .footer-links a:hover {
-  color: var(--gold);
+  color: var(--primary-color);
 }
 
 .footer-social {
@@ -1181,7 +1181,7 @@ ul[class], ol[class] {
   transform: translateY(1px);
 }
 .btn--primary {
-  background: var(--gold);
+  background: var(--primary-color);
   color: var(--white);
 }
 .btn--primary:hover {
@@ -1235,7 +1235,7 @@ ul[class], ol[class] {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background: linear-gradient(90deg, var(--gold) 50%, var(--gold) 50% 100%) !important;
+  background: linear-gradient(90deg, var(--primary-color) 50%, var(--primary-color) 50% 100%) !important;
   background-position: 100% !important;
   background-repeat: no-repeat !important;
   background-size: 201% auto !important;
@@ -1275,7 +1275,7 @@ ul[class], ol[class] {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--gold);
+  background-color: var(--primary-color);
   z-index: -2;
 }
 .primary-animation:before, .secondary-animation:before, .cb-btn:before {
@@ -1437,7 +1437,7 @@ ul[class], ol[class] {
   color: var(--text-on-paper);
 }
 .card--article:hover .card__heading {
-  color: var(--gold);
+  color: var(--primary-color);
 }
 .card--article .card__meta {
   display: flex;
@@ -1454,7 +1454,7 @@ ul[class], ol[class] {
   text-decoration: underline;
 }
 .card--article .card__byline {
-  color: var(--gold);
+  color: var(--primary-color);
 }
 .card--article .card__excerpt {
   font-size: var(--text-sm);
@@ -1638,7 +1638,7 @@ ul[class], ol[class] {
   color: var(--text-on-paper-muted);
 }
 .modal-promo__foot a {
-  color: var(--gold);
+  color: var(--primary-color);
   text-decoration: none;
 }
 .modal-promo__foot a:hover {
@@ -1820,7 +1820,7 @@ ul[class], ol[class] {
   transition: width var(--duration-base) var(--ease-standard), background var(--duration-fast) var(--ease-standard);
 }
 .splide__pagination__page.is-active {
-  background: var(--gold);
+  background: var(--primary-color);
   width: 8px;
   transform: none;
 }
@@ -1917,7 +1917,7 @@ ul[class], ol[class] {
   padding-inline: var(--space-2);
   border-radius: var(--radius-sm);
   font-size: var(--text-sm);
-  color: var(--gold);
+  color: var(--primary-color);
   text-decoration: none;
   transition: background var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
 }
@@ -1925,7 +1925,7 @@ ul[class], ol[class] {
   background: rgba(224, 31, 31, 0.1);
 }
 .pagination__item.is-current {
-  background: var(--gold);
+  background: var(--primary-color);
   color: #fff;
   font-weight: 600;
 }
@@ -1950,7 +1950,7 @@ ul[class], ol[class] {
   align-items: center;
   gap: var(--space-3);
   font-size: var(--text-sm);
-  color: var(--gold);
+  color: var(--primary-color);
 }
 
 .pagination__jump-input {
@@ -1966,7 +1966,7 @@ ul[class], ol[class] {
   border-radius: var(--radius-sm);
 }
 .pagination__jump-input:focus {
-  border-color: var(--gold);
+  border-color: var(--primary-color);
   background: var(--paper);
   outline: none;
 }
@@ -2363,12 +2363,12 @@ ul[class], ol[class] {
   line-height: 16px;
 }
 .expert-form .field span.rstar {
-  color: var(--gold);
+  color: var(--primary-color);
   margin-right: 0;
   margin-left: 0;
 }
 .expert-form .field span a {
-  color: var(--gold);
+  color: var(--primary-color);
 }
 .expert-form .field span a:hover {
   text-decoration: none;
@@ -2423,7 +2423,7 @@ ul[class], ol[class] {
   padding-top: var(--space-5);
 }
 .article-gate__action .expert-form__title {
-  color: var(--gold);
+  color: var(--primary-color);
   font-size: var(--text-2xl);
   font-weight: 600;
   margin: 0;
@@ -2604,12 +2604,12 @@ th {
 }
 
 .table.cb thead tr.light-bg {
-  color: var(--gold);
+  color: var(--primary-color);
   background-color: transparent;
 }
 
 .table.cb thead tr.light-bg td {
-  color: var(--gold);
+  color: var(--primary-color);
 }
 
 .table-responsive {
@@ -2641,7 +2641,7 @@ thead th {
   border: none;
 }
 [data-mobile-slider] .splide__pagination__page.is-active {
-  background: var(--gold);
+  background: var(--primary-color);
   width: 8px;
   border-radius: var(--radius-full);
   transform: none;
@@ -2697,7 +2697,7 @@ thead th {
   margin-top: auto;
   font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--gold);
+  color: var(--primary-color);
   text-decoration: none;
 }
 .guide-card__link:hover {
@@ -2735,7 +2735,7 @@ thead th {
   border: none;
 }
 .guide-slider .splide__pagination__page.is-active {
-  background: var(--gold);
+  background: var(--primary-color);
   width: 8px;
   border-radius: var(--radius-full);
   transform: none;
@@ -2761,7 +2761,7 @@ thead th {
   border-radius: var(--radius-sm);
 }
 .dropdown__trigger:hover {
-  color: var(--gold);
+  color: var(--primary-color);
 }
 
 .dropdown__chevron {
@@ -2828,7 +2828,7 @@ thead th {
   color: var(--brief-theme-color);
 }
 .dropdown__item[aria-current=true] {
-  color: var(--gold);
+  color: var(--primary-color);
 }
 
 .dropdown__arrow {
@@ -2922,7 +2922,7 @@ thead th {
   bottom: 0;
   width: 48px;
   height: 3px;
-  background: var(--gold);
+  background: var(--primary-color);
 }
 
 .feature-block__intro {
@@ -3426,7 +3426,7 @@ aside .article-callout {
 }
 
 .rstar {
-  color: var(--gold);
+  color: var(--primary-color);
 }
 
 .article-body .g-recaptcha {
@@ -3453,7 +3453,7 @@ aside .article-callout {
 }
 
 .advisory-card__link:after {
-  background-color: var(--gold);
+  background-color: var(--primary-color);
   content: "";
   display: block;
   height: 2px;

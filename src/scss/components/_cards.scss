@@ -116,7 +116,7 @@
     
   }
 
-  &:hover .card__heading { color: var(--gold); }
+  &:hover .card__heading { color: var(--primary-color); }
 
   .card__meta {
     display: flex;
@@ -129,7 +129,7 @@
   }
 
 
-  .card__byline { color: var(--gold); }
+  .card__byline { color: var(--primary-color); }
 
   .card__excerpt {
     font-size: var(--text-sm);

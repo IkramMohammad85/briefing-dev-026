@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initBackToTop();
   initModals();
   initPromoPopup();
-  initContinueReading();
+  //initContinueReading();
+  initAccessFullArticle()
 });
 
 /* ---- Mobile nav toggle ---- */
@@ -951,5 +952,16 @@ function initContentSwitch() {
     const initial = group.dataset.switchDefault || panels[0].dataset.switchPanel;
     const initialTrigger = triggers.find((t) => t.dataset.switchTarget === initial);
     show(initial, initialTrigger ? initialTrigger.dataset.switchLabel : null);
+  });
+}
+
+function initAccessFullArticle() {
+  document.querySelectorAll(".access-full-article").forEach((gate) => {
+    const btn = gate.querySelector(".access-full-article__action button");
+    if (!btn) return;
+
+    btn.addEventListener("click", () => {
+      gate.classList.add("is-expanded");
+    });
   });
 }

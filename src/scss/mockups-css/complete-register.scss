@@ -1,7 +1,7 @@
 @use "../base/tokens" as *;
 body{background:transparent !important;}
     .hide {display: none !important;}
-    .title {color: var(--gold);}
+    .title {color: var(--primary-color);}
     .international {max-width: 100%;margin: auto;margin-top:4rem;}
     .register-form .field-bg-block,.input-group-btn {margin:10px;}
     .article-content.progress-bar-block{max-width: 100%;}
@@ -19,9 +19,9 @@ body{background:transparent !important;}
     ul.subscribe_benefits {display: block;display: flex;justify-content: space-between;gap:70px;list-style: none;margin:0 auto;padding:0;flex-wrap: wrap; text-align: left;}
     ul.subscribe_benefits li {display: block;list-style: none;width:40%;border-radius: 2px;background-color:#fff6f6;margin-bottom:0px;}
     ul.subscribe_benefits li:nth-child(3n+1) {background: transparent;}
-    ul.subscribe_benefits li h4 {color:var(--gold);margin-top:1rem; margin-bottom: 1rem;}
+    ul.subscribe_benefits li h4 {color:var(--primary-color);margin-top:1rem; margin-bottom: 1rem;}
     ul.subscribe_benefits li:before{content:"";display: none;}
-    ul.subscribe_benefits li svg{fill:(--gold);transform: scale(0.8);}
+    ul.subscribe_benefits li svg{fill:(--primary-color);transform: scale(0.8);}
     
       .register-form{padding-top:0; padding: 2rem;background-color: #fff8f8; margin-top: 2rem;}
       .register-form .editable_field{margin:10px;}
@@ -66,7 +66,7 @@ body{background:transparent !important;}
       .db-guides-block ul{padding: 0; margin: 0; list-style: none; display: flex; justify-content: center; margin-bottom: 0rem; margin-top: 1.5rem; flex-wrap: wrap;}
       .db-guides-block ul li{margin-left: 1rem; margin-right: 1rem; font-weight: bold; margin-bottom: 0;}
       .db-guides-block ul li:before{ display: none;}
-      .progress-bar .progress-made span {background-color: var(--gold);border-radius: 20px;}
+      .progress-bar .progress-made span {background-color: var(--primary-color);border-radius: 20px;}
       .progress-bar .progress-made {border-radius: 10px;}
       .international .btn { font-weight: 600; margin-top: 1.5rem;}
       .international .btn-outline-theme{ font-size: 1rem;}
@@ -344,7 +344,7 @@ button.btn-auto-width {
     color: #fff;
     text-align: center;
     border-width: 0;
-    background-color: var(--gold);
+    background-color: var(--primary-color);
     -webkit-border-radius: 0 3px 3px 0;
     -moz-border-radius: 0 3px 3px 0;
     border-radius: 0 3px 3px 0;
@@ -373,8 +373,8 @@ button.btn-auto-width {
 
 .input-group-btn .btn {
     height: 57px;
-    background-color: var(--gold);
-    border-color: var(--gold);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
     font-weight: 700;
     color: #fff;
     padding-left: 10px;

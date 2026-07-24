@@ -19,7 +19,7 @@
     border: none;
 
     &.is-active {
-      background: var(--gold);
+      background: var(--primary-color);
       width: 8px;
       border-radius: var(--radius-full);
       transform: none;
@@ -83,7 +83,7 @@
     margin-top: auto;
     font-size: var(--text-sm);
     font-weight: 600;
-    color: var(--gold);
+    color: var(--primary-color);
     text-decoration: none;
 
     &:hover { text-decoration: underline; }
@@ -107,5 +107,5 @@
 .guide-slider .splide__pagination { margin-top: var(--space-5); }
 .guide-slider .splide__pagination__page {
   width: 8px; height: 8px; background: var(--line); border: none;
-  &.is-active { background: var(--gold); width: 8px; border-radius: var(--radius-full); transform: none; }
+  &.is-active { background: var(--primary-color); width: 8px; border-radius: var(--radius-full); transform: none; }
 }

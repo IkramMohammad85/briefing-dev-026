@@ -57,7 +57,7 @@ button {
 }
 
 a {
-  color: var(--gold);
+  color: var( --primary-color);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
 
@@ -124,6 +124,6 @@ ul[class], ol[class] {
 }
 
 ::selection {
-  background: var(--gold);
+  background: var(--primary-color);
   color: var(--navy);
 }

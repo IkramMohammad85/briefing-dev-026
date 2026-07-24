@@ -184,7 +184,7 @@
   border-top: none;
 }
 .top-articles__item .top-articles__cat {
-  color: var(--gold);
+  color: var(--primary-color);
   font-size: var(--text-xs);
   font-weight: 400;
   text-transform: uppercase;
@@ -516,7 +516,7 @@
   text-decoration: none;
 }
 .pub-card p a:hover {
-  color: var(--gold);
+  color: var(--primary-color);
 }
 .pub-card__date {
   font-size: var(--text-xs);
@@ -630,7 +630,7 @@
   padding: 0;
 }
 .advisory-carousel .splide__pagination__page.is-active {
-  background: var(--gold);
+  background: var(--primary-color);
   transform: none;
   width: 8px;
 }

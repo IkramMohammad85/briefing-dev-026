@@ -39,7 +39,7 @@
   padding-inline: var(--space-2);
   border-radius: var(--radius-sm);
   font-size: var(--text-sm);
-  color: var(--gold);
+  color: var(--primary-color);
   text-decoration: none;
   transition: background var(--duration-fast) var(--ease-standard),
               color var(--duration-fast) var(--ease-standard);
@@ -47,7 +47,7 @@
   &:hover { background: rgba(224, 31, 31, 0.1); }
 
   &.is-current {
-    background: var(--gold);
+    background: var(--primary-color);
     color: #fff;
     font-weight: 600;
   }
@@ -74,7 +74,7 @@
   align-items: center;
   gap: var(--space-3);
   font-size: var(--text-sm);
-  color: var(--gold);
+  color: var(--primary-color);
 }
 
 .pagination__jump-input {
@@ -89,7 +89,7 @@
   border: 1px solid transparent;
   border-radius: var(--radius-sm);
 
-  &:focus { border-color: var(--gold); background: var(--paper); outline: none; }
+  &:focus { border-color: var(--primary-color); background: var(--paper); outline: none; }
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
   & { -moz-appearance: textfield; appearance: textfield; }

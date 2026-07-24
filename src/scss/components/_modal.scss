@@ -126,5 +126,5 @@
   font-size: var(--text-xs);
   color: var(--text-on-paper-muted);
 
-  a { color: var(--gold); text-decoration: none; &:hover { text-decoration: underline; } }
+  a { color: var(--primary-color); text-decoration: none; &:hover { text-decoration: underline; } }
 }

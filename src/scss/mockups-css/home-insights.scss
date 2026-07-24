@@ -73,7 +73,7 @@
 
   &:first-of-type { border-top: none; }
 
-  .top-articles__cat { color: var(--gold); font-size: var(--text-xs); font-weight: 400; text-transform: uppercase; }
+  .top-articles__cat { color: var(--primary-color); font-size: var(--text-xs); font-weight: 400; text-transform: uppercase; }
   p { font-size: var(--text-base); margin-top: var(--space-1); }
   &:hover p { color: var(--accent); }
 }
@@ -272,7 +272,7 @@
   &__cover { width: 146px; height: 202px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0; background: var(--line); }
   p { font-size: var(--text-sm); line-height: var(--leading-snug); 
   a{color: var(--black); text-decoration: none;
-  &:hover{color: var(--gold);}
+  &:hover{color: var(--primary-color);}
   }
 
   }
@@ -358,7 +358,7 @@
 .advisory-carousel .splide__pagination__page {
   width: 8px; height: 8px; border-radius: var(--radius-full);
   background: rgba(0,0,0,0.2); border: none; padding: 0;
-  &.is-active { background: var(--gold); transform: none; width: 8px; }
+  &.is-active { background: var(--primary-color); transform: none; width: 8px; }
 }
 
 .advisory-carousel .splide__arrows {

@@ -22,7 +22,7 @@
   cursor: pointer;
   border-radius: var(--radius-sm);
 
-  &:hover { color: var(--gold); }
+  &:hover { color: var(--primary-color); }
 }
 
 .dropdown__chevron {
@@ -87,7 +87,7 @@
   &:hover,
   &:focus-visible { background: var(--paper-soft); color: var(--brief-theme-color); }
 
-  &[aria-current="true"] { color: var(--gold); }
+  &[aria-current="true"] { color: var( --primary-color); }
 }
 
 .dropdown__arrow {
