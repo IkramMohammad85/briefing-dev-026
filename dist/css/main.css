@@ -569,7 +569,7 @@ ul[class], ol[class] {
 
 .contact-bar {
   position: sticky;
-  top: 64px;
+  top: 63px;
   z-index: 99;
   background: var(--paper);
   border-bottom: 1px solid var(--line);
@@ -926,9 +926,11 @@ ul[class], ol[class] {
 }
 
 .whatsapp-btn {
-  position: relative;
-  width: 26px;
-  height: 26px;
+  position: fixed;
+  right: 20px;
+  bottom: 86px;
+  width: 46px;
+  height: 46px;
   background: #25D366;
   color: #fff;
   border-radius: 50%;
@@ -937,6 +939,15 @@ ul[class], ol[class] {
   text-decoration: none;
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
   z-index: 999;
+}
+@media (min-width: 768px) {
+  .whatsapp-btn {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    right: inherit;
+    bottom: inherit;
+  }
 }
 
 .whatsapp-btn::before {
@@ -951,8 +962,14 @@ ul[class], ol[class] {
 .whatsapp-btn svg {
   position: relative;
   z-index: 2;
-  width: 16px;
-  height: 16px;
+  width: 26px;
+  height: 26px;
+}
+@media (min-width: 768px) {
+  .whatsapp-btn svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 @keyframes pulse {
