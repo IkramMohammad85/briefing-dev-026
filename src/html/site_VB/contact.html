@@ -19,29 +19,212 @@
   <main id="main">
     <section class="contact">
       <div class="container">
-
         <div class="contact__head">
+          <p class="contact__small">CONTACT US</p>
           <h1 class="contact__title">Connect with our advisors</h1>
           <p class="contact__sub">Submit your enquiry or schedule a consultation with our advisors.
-We're here to support your business at every stage.</p>
+            We're here to support your business at every stage.</p>
         </div>
 
         <!-- Tabbed enquiry forms — one shared form, copy swapped per tab -->
         <div class="tabs contact-tabs">
           <div class="tabs__list" role="tablist" aria-label="Enquiry type">
-            <button class="tabs__tab" role="tab" id="tab-general" aria-controls="panel-enquiry" aria-selected="true" type="button"
-                    data-note="For general questions about our services, please contact us at &lt;a href=mailto:media@asiabriefing.com"
-                    data-context="General Enquiries">General Enquiries</button>
-            <button class="tabs__tab" role="tab" id="tab-bookstore" aria-controls="panel-enquiry" aria-selected="false" type="button"
-                    data-note="For orders, invoices, or publication access, please contact us at &lt;a href=sales@asiabriefing.com"
-                    data-context="Bookstore Sales Enquiries">Bookstore Sales Enquiries</button>
-            <button class="tabs__tab" role="tab" id="tab-editorial" aria-controls="panel-enquiry" aria-selected="false" type="button"
-                    data-note="If you would like to reach our editorial staff, please contact us at &lt;a href=mailto:editor@asiabriefing.com"
-                    data-context="Editorial Enquiries">Editorial Enquiries</button>
+           <button class="tabs__tab" role="tab" id="tab-enquiry"
+            aria-controls="panel-enquiry" aria-selected="false" type="button">
+      Send an enquiry
+    </button>
+            <button class="tabs__tab" role="tab" id="tab-consult"
+            aria-controls="panel-consult" aria-selected="true" type="button">
+      Schedule a consultation
+    </button>
+
           </div>
 
-          <div class="tabs__panel" role="tabpanel" id="panel-enquiry" aria-labelledby="tab-general">
-            @@include('./sections/enquiry-form.html')
+<div class="tabs__panel" role="tabpanel" id="panel-enquiry" aria-labelledby="tab-enquiry" hidden>
+            <div class="expert-form expert-form--m-top-none">
+              <h2 class="expert-form__title">Get Expert Advice</h2>
+              <p class="expert-form__intro">Tell us where you wish to grow, and we'll connect you with the right team
+                across our global network.</p>
+              <form class="stack" novalidate>
+                <div class="field-two-column">
+                  <div class="field">
+                    <label class="field__label" for="modal-name">First Name <span class="rstar">*</span></label>
+                    <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder=""
+                      required="">
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="modal-name">Last Name <span class="rstar">*</span></label>
+                    <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder=""
+                      required="">
+                  </div>
+                </div>
+                <div class="field-two-column">
+                  <div class="field">
+                    <label class="field__label" for="modal-email">Email <span class="rstar">*</span></label>
+                    <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder=""
+                      required="">
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label>
+                    <input class="input" type="tel" id="eag-company" name="phone" autocomplete="tel" placeholder=""
+                      required="">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-message">Message <span class="rstar">*</span></label>
+                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value=""
+                    placeholder="" required=""></textarea>
+                </div>
+                <div class="field text-xs">
+
+                  <label class="margin-top-2 flex items-top" for="agree_privary_policy">
+                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>I agree to
+                      receive
+                      communications from Dezan Shira &amp;
+                      Associates and accept the<a href="https://www.dezshira.com/privacy-policy"> Privacy
+                        Policy</a></span>
+                  </label>
+                </div>
+                <div class="g-recaptcha" data-sitekey="">
+                  <div class="captcha-card">
+                    <img src="../img/capcha.svg" alt="captcha" loading="lazy">
+                  </div>
+                </div>
+                <button class="btn btn--primary primary-animation" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+<div class="tabs__panel" role="tabpanel" id="panel-consult" aria-labelledby="tab-consult">
+
+            <div class="panel-consult">
+              <h2 id="scheduler-static-heading" class="scheduler-heading">Schedule a
+                discovery call<span style="color: var(--primary-color);">.</span></h2>
+
+              <div class="scheduler">
+
+                <!-- Left: who you're meeting -->
+                <div>
+                  <div class="scheduler__advisor">
+                    <img class="scheduler__avatar"
+                      src="https://d2h56l9e5xqoi4.cloudfront.net/dsa/images/personnel/rect_1/naina-bhardwaj.webp" alt=""
+                      loading="lazy">
+                    <div>
+                      <p class="scheduler__name">Naina Bhardwaj</p>
+                      <p class="scheduler__role">International Business Advisor</p>
+                    </div>
+                  </div>
+
+                  <p class="scheduler__intro">Book a free 30-minute no-obligation discovery call with Viktor. During the
+                    session, we will discuss your business plans and can advise you on the following:</p>
+
+                  <ul class="scheduler__points">
+                    <li>Starting and managing your company in China</li>
+                    <li>Setting up and managing your accounting &amp; tax</li>
+                    <li>Working and living legally in China</li>
+                  </ul>
+
+                  <p class="scheduler__intro">…or answer any other business-related questions you may have.</p>
+
+                  <p class="scheduler__aside">We can talk online on <strong>MS Teams</strong> or meet you in our office
+                    in China.</p>
+                </div>
+
+                <!-- Right: date and time (display only) -->
+                <div>
+                  <p class="scheduler__heading">Select a date and time</p>
+
+                  <div class="scheduler__picker">
+                    <div class="calendar">
+                      <div class="calendar__head">
+                        <span class="calendar__month">October 2026</span>
+                        <div class="calendar__nav">
+                          <button class="calendar__nav-btn" type="button" aria-label="Previous month">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                              <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <button class="calendar__nav-btn" type="button" aria-label="Next month">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- October 2026 starts on a Thursday; weeks run Monday-first. -->
+                      <div class="calendar__grid">
+                        <div class="calendar__dow" aria-hidden="true">M</div>
+                        <div class="calendar__dow" aria-hidden="true">T</div>
+                        <div class="calendar__dow" aria-hidden="true">W</div>
+                        <div class="calendar__dow" aria-hidden="true">T</div>
+                        <div class="calendar__dow" aria-hidden="true">F</div>
+                        <div class="calendar__dow" aria-hidden="true">S</div>
+                        <div class="calendar__dow" aria-hidden="true">S</div>
+
+                        <!-- week 1 — leading blanks, then Oct 1-4 -->
+                        <button class="calendar__day is-muted" type="button" disabled>28</button>
+                        <button class="calendar__day is-muted" type="button" disabled>29</button>
+                        <button class="calendar__day is-muted" type="button" disabled>30</button>
+                        <button class="calendar__day" type="button">1</button>
+                        <button class="calendar__day" type="button">2</button>
+                        <button class="calendar__day" type="button">3</button>
+                        <button class="calendar__day" type="button">4</button>
+
+                        <!-- week 2 -->
+                        <button class="calendar__day" type="button">5</button>
+                        <button class="calendar__day" type="button">6</button>
+                        <button class="calendar__day" type="button">7</button>
+                        <button class="calendar__day" type="button">8</button>
+                        <button class="calendar__day" type="button">9</button>
+                        <button class="calendar__day" type="button">10</button>
+                        <button class="calendar__day" type="button">11</button>
+
+                        <!-- week 3 — 12 is "today", 17 is the selected day -->
+                        <button class="calendar__day is-today" type="button">12</button>
+                        <button class="calendar__day" type="button">13</button>
+                        <button class="calendar__day" type="button">14</button>
+                        <button class="calendar__day" type="button">15</button>
+                        <button class="calendar__day" type="button">16</button>
+                        <button class="calendar__day is-selected" type="button" aria-current="date">17</button>
+                        <button class="calendar__day" type="button">18</button>
+
+                        <!-- week 4 -->
+                        <button class="calendar__day" type="button">19</button>
+                        <button class="calendar__day" type="button">20</button>
+                        <button class="calendar__day" type="button">21</button>
+                        <button class="calendar__day" type="button">22</button>
+                        <button class="calendar__day" type="button">23</button>
+                        <button class="calendar__day" type="button">24</button>
+                        <button class="calendar__day" type="button">25</button>
+
+                        <!-- week 5 -->
+                        <button class="calendar__day" type="button">26</button>
+                        <button class="calendar__day" type="button">27</button>
+                        <button class="calendar__day" type="button">28</button>
+                        <button class="calendar__day" type="button">29</button>
+                        <button class="calendar__day" type="button">30</button>
+                        <button class="calendar__day" type="button">31</button>
+                        <button class="calendar__day is-muted" type="button" disabled>1</button>
+                      </div>
+                    </div>
+
+                    <form class="scheduler__slots" novalidate>
+                      <p class="scheduler__slot-date">Thursday, Oct 12, 2026</p>
+
+                      <p style="font-size: var(--text-xs); color: var(--text-on-paper-muted);">China Standard Time</p>
+
+                      <button class="slot" type="button">9:30 AM</button>
+                      <button class="slot is-selected" type="button">11:00 AM</button>
+                      <button class="slot" type="button">02:00 PM</button>
+                      <button class="slot" type="button">04:00 PM</button>
+
+                      <button class="btn btn--primary scheduler__submit" type="submit">Schedule</button>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
 

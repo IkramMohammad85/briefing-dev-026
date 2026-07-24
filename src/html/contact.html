@@ -33,17 +33,17 @@
         <div class="tabs contact-tabs">
           <div class="tabs__list" role="tablist" aria-label="Enquiry type">
            <button class="tabs__tab" role="tab" id="tab-enquiry"
-            aria-controls="panel-enquiry" aria-selected="true" type="button">
+            aria-controls="panel-enquiry" aria-selected="false" type="button">
       Send an enquiry
     </button>
             <button class="tabs__tab" role="tab" id="tab-consult"
-            aria-controls="panel-consult" aria-selected="false" type="button">
+            aria-controls="panel-consult" aria-selected="true" type="button">
       Schedule a consultation
     </button>
 
           </div>
 
-<div class="tabs__panel" role="tabpanel" id="panel-enquiry" aria-labelledby="tab-enquiry">
+<div class="tabs__panel" role="tabpanel" id="panel-enquiry" aria-labelledby="tab-enquiry" hidden>
             <div class="expert-form expert-form--m-top-none">
               <h2 class="expert-form__title">Get Expert Advice</h2>
               <p class="expert-form__intro">Tell us where you wish to grow, and we'll connect you with the right team
@@ -97,7 +97,7 @@
               </form>
             </div>
           </div>
-          <div class="tabs__panel" role="tabpanel" id="panel-consult" aria-labelledby="tab-consult" hidden>
+<div class="tabs__panel" role="tabpanel" id="panel-consult" aria-labelledby="tab-consult">
 
             <div class="panel-consult">
               <h2 id="scheduler-static-heading" class="scheduler-heading">Schedule a
