@@ -358,7 +358,7 @@ function initExpertForm() {
   });
 }
 
-/* ---- Article TOC: open on desktop, collapsed  ---- 
+/* ---- Article TOC: open on desktop, collapsed  ---- */
 function initArticleToc() {
   const tocs = document.querySelectorAll(".article-toc");
   if (!tocs.length) return;
@@ -389,7 +389,7 @@ function initArticleToc() {
     });
   });
 }
-*/
+
 
 
 /* ---- Accordion — collapsible  ---- */
