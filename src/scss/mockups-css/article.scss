@@ -99,7 +99,7 @@
   list-style: decimal !important;
   margin: var(--space-4) 0 0;
   padding: 0;
-  column-count: 2;
+  column-count: 1;
   //display: grid;
   gap: var(--space-3);
   margin-left: 12px;
@@ -127,6 +127,7 @@
    
 
   @include bp(md) { grid-template-columns: 1fr 1fr; gap: var(--space-3) var(--space-6); }
+   @include bp(sm) { column-count: 2; }
 }
 
 .article-toc__list li ::before{

@@ -199,8 +199,8 @@
   list-style: decimal !important;
   margin: var(--space-4) 0 0;
   padding: 0;
-  -moz-column-count: 2;
-  column-count: 2;
+  -moz-column-count: 1;
+  column-count: 1;
   gap: var(--space-3);
   margin-left: 12px;
   font-size: 13px;
@@ -236,6 +236,12 @@
   .article-toc__list {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-3) var(--space-6);
+  }
+}
+@media (min-width: 480px) {
+  .article-toc__list {
+    -moz-column-count: 2;
+    column-count: 2;
   }
 }
 
