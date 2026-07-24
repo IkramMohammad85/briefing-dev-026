@@ -836,20 +836,17 @@ function initFeatureToggle() {
   });
 }
 
-
+/**
 function initContinueReading() {
   const body = document.querySelector(".article-body");
   if (!body) return;
 
   const mq = window.matchMedia("(max-width: 1023px)");
 
-  // How many sections are visible before the button appears, and how many
-  // each tap reveals after that.
   const INITIAL = 2;
   const STEP = 2;
 
-  // Group the body's direct children into sections that each start at an <h2>.
-  // (Anything before the first <h2> — the intro paragraphs — is section 0.)
+
   function buildSections() {
     const sections = [];
     let current = [];
@@ -876,7 +873,7 @@ function initContinueReading() {
 
   function collapse() {
     const sections = buildSections();
-    // Not long enough to bother hiding anything.
+    
     if (sections.length <= INITIAL + 1) { teardown(); return; }
 
     let shown = INITIAL;
@@ -926,7 +923,7 @@ function initContinueReading() {
   sync();
   mq.addEventListener ? mq.addEventListener("change", sync) : mq.addListener(sync);
 }
-
+*/
 
 function initContentSwitch() {
   const groups = document.querySelectorAll("[data-switch]");
