@@ -1,18 +1,12 @@
 @charset "UTF-8";
 :root {
   --navy: #12213B;
-  --navy-soft: #1B2E4D;
   --paper: #F7F8FA;
   --paper-soft: #f6f1ee;
-  --gold: #E85D0F;
-  --gold-strong: #E85D0F;
-  --gold-light: #FFF0E7;
-  --gold-primary-light: #fba46e;
   --primary-color: #E85D0F;
   --primary-strong-color: #E85D0F;
-  --primary-primary-light: #fba46e;
+  --primary-color-light: #fba46e;
   --primary-light: #FFF0E7;
-  --teal: #E85D0F;
   --teal-strong: #043835;
   --line: #DFE3E9;
   --line-head:#DBDBDB;
@@ -145,7 +139,7 @@
 }
 
 .article-toc {
-  background: var(--gold-light);
+  background: var(--primary-light);
   border-radius: var(--radius-md);
   padding: var(--space-4) var(--space-5);
   margin-bottom: var(--space-6);
@@ -253,7 +247,7 @@
   width: 2px;
   height: 40px;
   margin: var(--space-3) auto 0;
-  background: var(--gold-light);
+  background: var(--primary-light);
   left: -38px;
   position: relative;
 }
@@ -544,7 +538,7 @@
 }
 .explore-card__date strong {
   font-size: var(--text-lg);
-  color: var(--gold-strong);
+  color: var(--primary-strong-color);
   margin-bottom: var(--space-1);
 }
 .explore-card__date span {

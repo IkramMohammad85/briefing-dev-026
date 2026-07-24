@@ -47,7 +47,7 @@
 
 
 .article-toc {
-  background: var(--gold-light);
+  background: var(--primary-light);
   border-radius: var(--radius-md);
   padding: var(--space-4) var(--space-5);
   margin-bottom: var(--space-6);
@@ -135,7 +135,7 @@
     width: 2px;
     height: 40px;
     margin: var(--space-3) auto 0;
-    background: var(--gold-light);
+    background: var(--primary-light);
     left: -38px;
     position: relative;
 }
@@ -380,7 +380,7 @@
     line-height: 1;
     box-shadow: var(--shadow-sm);
 
-    strong { font-size: var(--text-lg); color: var(--gold-strong); margin-bottom: var(--space-1); }
+    strong { font-size: var(--text-lg); color: var(--primary-strong-color); margin-bottom: var(--space-1); }
     span { font-size: var(--text-xs); text-transform: uppercase; color: var(--text-on-paper-muted); }
   }
   &__thumb { width: 140px; height: 90px; border-radius: var(--radius-md); object-fit: cover; flex-shrink: 0; }

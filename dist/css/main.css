@@ -1,18 +1,12 @@
 @charset "UTF-8";
 :root {
   --navy: #12213B;
-  --navy-soft: #1B2E4D;
   --paper: #F7F8FA;
   --paper-soft: #f6f1ee;
-  --gold: #E85D0F;
-  --gold-strong: #E85D0F;
-  --gold-light: #FFF0E7;
-  --gold-primary-light: #fba46e;
   --primary-color: #E85D0F;
   --primary-strong-color: #E85D0F;
-  --primary-primary-light: #fba46e;
+  --primary-color-light: #fba46e;
   --primary-light: #FFF0E7;
-  --teal: #E85D0F;
   --teal-strong: #043835;
   --line: #DFE3E9;
   --line-head:#DBDBDB;
@@ -591,7 +585,7 @@ ul[class], ol[class] {
 
 .contact-bar {
   position: sticky;
-  top: var(--header-h, 81px);
+  top: 64px;
   z-index: 99;
   background: var(--paper);
   border-bottom: 1px solid var(--line);
@@ -774,7 +768,7 @@ ul[class], ol[class] {
   }
   .mega-panel a:hover {
     background: var(--paper-soft);
-    color: var(--teal);
+    color: var(--primary-color);
   }
   .mega-panel .topic {
     max-width: var(--container-max);
@@ -1185,7 +1179,7 @@ ul[class], ol[class] {
   color: var(--white);
 }
 .btn--primary:hover {
-  background: var(--gold-strong);
+  background: var(--primary-strong-color);
   color: var(--navy);
 }
 .btn--secondary {
@@ -1285,7 +1279,7 @@ ul[class], ol[class] {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: var(--gold-primary-light);
+  background-color: var(--primary-color-light);
   transition: all 0.3s;
   z-index: -1;
 }
@@ -1340,7 +1334,7 @@ ul[class], ol[class] {
 .card__icon {
   width: 40px;
   height: 40px;
-  color: var(--teal);
+  color: var(--primary-color);
 }
 .card__title {
   font-size: var(--text-lg);
@@ -3232,7 +3226,7 @@ thead th {
   cursor: pointer;
 }
 .slot:hover {
-  border-color: var(--teal);
+  border-color: var(--primary-color);
 }
 .slot.is-selected {
   background: #0D6A64;
@@ -3372,7 +3366,7 @@ thead th {
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--gold-strong);
+  color: var(--primary-strong-color);
 }
 .eyebrow::before {
   content: "";
@@ -3476,7 +3470,7 @@ aside .article-callout {
 
 .hidden {
   display: none;
-  color: var(--gold-strong);
+  color: var(--primary-strong-color);
   font-size: var(--text-xs);
 }
 

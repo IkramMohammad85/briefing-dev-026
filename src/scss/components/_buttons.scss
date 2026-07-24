@@ -25,7 +25,7 @@
   &--primary {
     background: var(--primary-color);
     color: var(--white);
-    &:hover { background: var(--gold-strong); color: var(--navy); }
+    &:hover { background: var(--primary-strong-color); color: var(--navy); }
   }
 
   &--secondary {
@@ -116,7 +116,7 @@
     width: 0%;
     height: 100%;
     //background-color: darken(var, 15%);
-    background-color: var(--gold-primary-light) ;
+    background-color: var(--primary-color-light) ;
     transition: all .3s;
     z-index: -1;
     

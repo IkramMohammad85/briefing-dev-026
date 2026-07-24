@@ -191,7 +191,7 @@
   text-align: center;
   cursor: pointer;
 
-  &:hover { border-color: var(--teal); }
+  &:hover { border-color: var(--primary-color); }
 
   &.is-selected {
     background: #0D6A64;

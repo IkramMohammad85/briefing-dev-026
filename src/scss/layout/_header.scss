@@ -29,7 +29,8 @@
 
 .contact-bar {
   position: sticky;
-  top: var(--header-h, 81px);
+  //top: var(--header-h, 81px);
+  top: 64px;
   z-index: 99; // just under the header
   background: var(--paper);
   border-bottom: 1px solid var(--line);
@@ -189,7 +190,7 @@
     a {
       color: var(--text-on-paper);
       opacity: 1;
-      &:hover { background: var(--paper-soft); color: var(--teal); }
+      &:hover { background: var(--paper-soft); color: var(--primary-color); }
     }
 
  
