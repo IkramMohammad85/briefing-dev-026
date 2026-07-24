@@ -411,9 +411,9 @@
   img { border-radius: var(--radius-md); width: 100%; height: auto; }
 }
 
-// ---------------------------------------------------------------------- //
+
 // Prev / next nav
-// ---------------------------------------------------------------------- //
+
 .article-nav {
   display: grid;
   grid-template-columns: 1fr;
@@ -448,8 +448,7 @@ blockquote{position: relative;
 
 
 .article-body.is-collapsed {
-  // The last still-visible section fades into the page so the cut doesn't
-  // look like the article simply ended.
+ 
   .continue-fade {
     position: relative;
     max-height: 12em;
@@ -464,12 +463,12 @@ blockquote{position: relative;
     }
   }
 
-  // Everything past the fade is hidden outright until revealed.
+
   .continue-hidden { display: none; }
 }
 
 .continue-reading {
-  display: none; // only shown when the JS actually collapses something
+  display: none; 
   margin-top: var(--space-6);
   text-align: center;
 

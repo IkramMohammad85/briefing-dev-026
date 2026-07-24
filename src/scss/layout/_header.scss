@@ -4,20 +4,7 @@
 
 @use "../base/tokens" as *;
 
-.announce-bar {
-  background: var(--navy);
-  color: var(--text-on-navy-muted);
-  font-size: var(--text-xs);
 
-  &__row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: var(--space-2);
-  }
-
-  a { color: var(--text-on-navy); text-decoration: none; }
-}
 
 .site-header {
   position: sticky;
@@ -245,9 +232,6 @@
   .nav__item:has(> .mega-panel--single),
   .nav__item:has(> .mega-panel--right) { position: relative; }
 
-  // Open state: fade + settle into place, and re-enable pointer events. The
-  // visibility transition delay is cancelled here so it becomes visible
-  // immediately while opacity animates in.
   .nav__item:hover > .mega-panel,
   .nav__item:focus-within > .mega-panel {
     opacity: 1;
