@@ -537,7 +537,6 @@
   background: var(--line);
 }
 .pub-card p {
-  font-size: var(--text-sm);
   line-height: var(--leading-normal);
 }
 .pub-card p a {

@@ -290,7 +290,8 @@
   gap: var(--space-4);
 
   &__cover { width: 146px; height: 202px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0; background: var(--line); }
-  p { font-size: var(--text-sm); line-height: var(--leading-normal); 
+  p { 
+    line-height: var(--leading-normal); 
   a{color: var(--black); text-decoration: none;
   &:hover{color: var(--primary-color);}
   }
