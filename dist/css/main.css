@@ -2397,7 +2397,6 @@ ul[class], ol[class] {
 .expert-form .field span {
   font-size: var(--text-xs);
   color: var(--gray-light);
-  margin-left: var(--space-1);
   line-height: 10px;
   line-height: 16px;
 }

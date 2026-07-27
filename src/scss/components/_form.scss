@@ -41,7 +41,7 @@
   &__intro { font-size: var(--text-sm); color: var(--gray-light); margin-bottom: var(--space-5); }
 
   .field { margin-bottom: var(--space-1); 
-  span{font-size: var(--text-xs); color: var(--gray-light); margin-left: var(--space-1);line-height:10px; line-height: 16px;
+  span{font-size: var(--text-xs); color: var(--gray-light); line-height:10px; line-height: 16px;
   &.rstar{color: var(--primary-color); margin-right: 0; margin-left: 0;}
   a{color: var(--primary-color);
   &:hover{text-decoration: none;}
