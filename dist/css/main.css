@@ -945,13 +945,17 @@ ul[class], ol[class] {
     bottom: inherit;
   }
 }
+.whatsapp-btn:hover {
+  color: #fff;
+  background-color: rgb(0, 126, 46);
+}
 
 .whatsapp-btn::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: rgba(37, 211, 102, 0.45);
+  background: rgba(0, 11, 4, 0.45);
   animation: pulse 2s infinite;
 }
 
