@@ -138,7 +138,9 @@
 }
 
 .reading-item {
-  display: flex;
+  //display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-3);
   padding-block: var(--space-4);
   //border-top: 1px solid var(--line);
@@ -146,7 +148,11 @@
 
   &:first-of-type { border-top: none; padding-top: 0; }
   &__cover { width: 116px; height: 162px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0; background: var(--line); box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 4px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; ; }
-  p { font-size: var(--text-xs); }
+  p { font-size: var(--text-xs); 
+  a{color: #000; text-decoration: none;
+  &:hover{color: var(--primary-color);}
+  }
+  }
   .btn { margin-top: var(--space-4); }
 }
 

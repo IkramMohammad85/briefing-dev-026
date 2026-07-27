@@ -293,7 +293,8 @@
 }
 
 .reading-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-3);
   padding-block: var(--space-4);
 }
@@ -313,6 +314,13 @@
 }
 .reading-item p {
   font-size: var(--text-xs);
+}
+.reading-item p a {
+  color: #000;
+  text-decoration: none;
+}
+.reading-item p a:hover {
+  color: var(--primary-color);
 }
 .reading-item .btn {
   margin-top: var(--space-4);
