@@ -629,6 +629,9 @@
     text-align: right;
   }
 }
+.article-nav__next {
+  line-height: 18px;
+}
 
 blockquote {
   position: relative;
