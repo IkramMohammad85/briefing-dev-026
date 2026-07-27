@@ -721,7 +721,6 @@ ul[class], ol[class] {
 }
 .mega-panel a:hover {
   opacity: 1;
-  background: rgba(0, 0, 0, 0.04);
 }
 @media (min-width: 1024px) {
   .mega-panel {
@@ -749,7 +748,6 @@ ul[class], ol[class] {
     opacity: 1;
   }
   .mega-panel a:hover {
-    background: var(--paper-soft);
     color: var(--primary-color);
   }
   .mega-panel .topic {
@@ -3529,6 +3527,10 @@ a.link {
   font-weight: 500;
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-sm);
+}
+a.link:hover {
+  background: var(--paper-soft);
+  color: var(--primary-color);
 }
 a.link:after {
   content: "→";
