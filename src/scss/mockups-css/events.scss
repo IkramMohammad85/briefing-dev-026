@@ -72,6 +72,10 @@ footer {
     font-size:var(--text-base);
     font-weight:600;
     margin-bottom: .5rem;
+    a{
+        font-weight: 400;
+        font-size:var(--text-base);
+    }
 }
 .event-time {
     color: #58585b;

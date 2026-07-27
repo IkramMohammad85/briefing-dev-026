@@ -714,8 +714,6 @@ ul[class], ol[class] {
 }
 .mega-panel a {
   display: block;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-sm);
   font-size: var(--text-sm);
   color: inherit;
   text-decoration: none;
@@ -3529,6 +3527,8 @@ aside .article-callout {
 
 a.link {
   font-weight: 500;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
 }
 a.link:after {
   content: "→";

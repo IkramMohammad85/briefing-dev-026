@@ -126,7 +126,8 @@ img{width: 156px;}
 
 
 a{
-  &.link{font-weight: 500;
+  &.link{font-weight: 500;    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
   &:after {
     content: "→";
     font-weight: 500;
