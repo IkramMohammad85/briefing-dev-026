@@ -454,6 +454,10 @@ ul[class], ol[class] {
   gap: var(--space-7);
 }
 
+.gap-0 {
+  gap: 0;
+}
+
 .margin-top-2 {
   margin-top: var(--space-2);
 }
@@ -1609,6 +1613,29 @@ ul[class], ol[class] {
 }
 .input:hover, .textarea:hover, .select:hover {
   border-color: var(--line);
+}
+
+.select.border-t-r {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input.border-t-l {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-radio-display {
+  display: flex;
+  align-items: centers;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-on-paper);
+}
+
+.form-radio {
+  margin-bottom: 0.5rem;
 }
 
 .modal--promo {
@@ -3492,6 +3519,9 @@ aside .article-callout {
   .field-two-column {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.field-two-column.gap-0 {
+  gap: 0px;
 }
 
 .advisory-card__link {

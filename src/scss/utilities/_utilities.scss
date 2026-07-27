@@ -93,6 +93,8 @@ img{width: 156px;}
   gap: var(--space-5);
   grid-template-columns: repeat(1, 1fr);
     @include bp(md) {  grid-template-columns: repeat(2, 1fr); }
+    &.gap-0{gap: 0px;}
+
 }
 
 .advisory-card__link {
