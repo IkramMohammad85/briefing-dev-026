@@ -104,3 +104,14 @@
 }
 
 .inner-page__main { min-width: 0; }
+.widget-type-block{
+  h3{font-weight: 600; font-size: var(--text-lg); margin-bottom: 1rem;}
+ul{padding: 0; margin: 2rem 0 0 0; list-style: none;
+li{ margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: solid 1px #ddd;
+&:last-child{border: none;}
+a{text-decoration: none; color: var(--gray-light);
+&:hover{color: var(--primary-color);}
+}
+}
+}
+}

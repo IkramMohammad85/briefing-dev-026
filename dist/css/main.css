@@ -564,6 +564,32 @@ ul[class], ol[class] {
   min-width: 0;
 }
 
+.widget-type-block h3 {
+  font-weight: 600;
+  font-size: var(--text-lg);
+  margin-bottom: 1rem;
+}
+.widget-type-block ul {
+  padding: 0;
+  margin: 2rem 0 0 0;
+  list-style: none;
+}
+.widget-type-block ul li {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: solid 1px #ddd;
+}
+.widget-type-block ul li:last-child {
+  border: none;
+}
+.widget-type-block ul li a {
+  text-decoration: none;
+  color: var(--gray-light);
+}
+.widget-type-block ul li a:hover {
+  color: var(--primary-color);
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -2100,7 +2126,6 @@ ul[class], ol[class] {
 }
 @media (min-width: 768px) {
   .tabs__panel .expert-form {
-    width: 68%;
     margin: 2rem auto;
   }
 }

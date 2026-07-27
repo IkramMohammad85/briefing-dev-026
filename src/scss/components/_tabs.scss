@@ -48,7 +48,7 @@
   &[hidden] { display: none; }
 
   .expert-form{
-      @include bp(md) {  width: 68%; margin: 2rem auto; }
+      @include bp(md) {  margin: 2rem auto; }
   }
     .panel-consult{
       @include bp(md) {  width: 78%; margin: 2rem auto; }
