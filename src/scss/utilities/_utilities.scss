@@ -91,7 +91,8 @@ img{width: 156px;}
 .field-two-column{
   display: grid;
   gap: var(--space-5);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+    @include bp(md) {  grid-template-columns: repeat(2, 1fr); }
 }
 
 .advisory-card__link {

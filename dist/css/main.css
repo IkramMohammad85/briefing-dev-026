@@ -3486,7 +3486,12 @@ aside .article-callout {
 .field-two-column {
   display: grid;
   gap: var(--space-5);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .field-two-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .advisory-card__link {
