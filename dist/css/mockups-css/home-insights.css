@@ -381,7 +381,7 @@
 }
 .topic-lead__title {
   font-weight: 600;
-  line-height: var(--leading-snug);
+  line-height: var(--leading-normal);
   margin-top: var(--space-3);
 }
 .topic-lead__meta {
@@ -417,7 +417,7 @@
 }
 .topic-list__item p {
   font-size: var(--text-base);
-  line-height: var(--leading-snug);
+  line-height: var(--leading-normal);
   color: #000000;
 }
 .topic-list__item span {
@@ -503,7 +503,7 @@
 }
 .pub-card p {
   font-size: var(--text-sm);
-  line-height: var(--leading-snug);
+  line-height: var(--leading-normal);
 }
 .pub-card p a {
   color: var(--black);
