@@ -502,6 +502,7 @@ function initTabs() {
 
     const tabButtons = Array.from(tabList.querySelectorAll('[role="tab"]'));
     if (!tabButtons.length) return;
+
     const noteEl = tabs.querySelector("[data-contact-note]");
     const contextEl = tabs.querySelector("[data-contact-context]");
     const typeEl = tabs.querySelector("[data-contact-type]");
@@ -510,6 +511,7 @@ function initTabs() {
       tabButtons.forEach((btn) => {
         const selected = btn === tab;
         btn.setAttribute("aria-selected", String(selected));
+        // Roving tabindex: only the active tab is in the tab order.
         btn.setAttribute("tabindex", selected ? "0" : "-1");
       });
 
@@ -522,9 +524,11 @@ function initTabs() {
 
       const panel = document.getElementById(activeId);
       if (panel) panel.setAttribute("aria-labelledby", tab.id);
+
       if (noteEl && tab.dataset.note) noteEl.innerHTML = tab.dataset.note;
       if (contextEl && tab.dataset.context) contextEl.textContent = tab.dataset.context;
       if (typeEl && tab.dataset.context) typeEl.value = tab.dataset.context;
+
       if (updateHash && history.replaceState) {
         history.replaceState(null, "", "#" + tab.id);
       }
@@ -563,15 +567,33 @@ function initTabs() {
       initial = tabButtons.find((b) => b.getAttribute("aria-selected") === "true") || tabButtons[0];
     }
     select(initial, false);
+
     if (matchedHash) {
       if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-      const toTop = () => window.scrollTo(0, 0);
-      toTop();
-      requestAnimationFrame(toTop);
-      requestAnimationFrame(() => requestAnimationFrame(toTop));
+
+      const savedHash = window.location.hash;
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+      window.scrollTo(0, 0);
+
+      const smoothToTab = () => {
+        const headerH = parseInt(
+          getComputedStyle(document.documentElement).getPropertyValue("--header-h"), 10
+        ) || 90;
+        const gap = 16;
+
+        const rectTop = initial.getBoundingClientRect().top; 
+        const absoluteTop = window.scrollY + rectTop;       
+        const target = Math.max(0, absoluteTop - headerH - gap);
+
+        if (rectTop >= headerH + gap && rectTop <= window.innerHeight) return;
+
+        window.scrollTo({ top: target, behavior: "smooth" });
+      };
       window.addEventListener("load", () => {
-        toTop();
-        requestAnimationFrame(toTop);
+        requestAnimationFrame(() => {
+          smoothToTab();
+          history.replaceState(null, "", savedHash);
+        });
       }, { once: true });
     }
   });
