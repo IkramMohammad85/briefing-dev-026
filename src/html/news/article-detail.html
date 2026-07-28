@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/css/mockups-css/home-insights.min.css">
   <link rel="stylesheet" href="/css/mockups-css/audio.min.css">
   <link rel="stylesheet" href="/css/mockups-css/events.min.css">
+
   
 </head>
 
@@ -511,20 +512,27 @@
               </svg>
             </summary>
 
-            <div class="expert-form">
+<div class="expert-form">
               <p class="expert-form__title">Get Expert Advice</p>
               <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team
                 across our global network.</p>
-              <form class="stack" novalidate>
+              <form class="stack" novalidate="">
                 <div class="field field--two-column">
                   <!-- <label class="field__label" for="modal-name">First Name <span class="rstar">*</span></label> -->
-                   <div class="col input-wrap"><input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder=" "
-                    required>
-                  <span class="field-placeholder">First Name<span class="required">*</span></span>
-                  </div>
+                    <div class="input-wrap">
+            <input
+                type="text"
+                id="first-name"
+                class="input"
+                placeholder=" "
+                required
+            >
+            <label for="first-name" class="field-placeholder">
+                First Name <span class="required">*</span>
+            </label>
+        </div>
                   <div class="col input-wrap">
-                    <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder=" "
-                    required>
+                    <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder=" " required="">
                   <span class="field-placeholder">Last Name<span class="required">*</span></span>
                   </div>
                     
@@ -536,19 +544,17 @@
                 </div>-->
                 <div class="field input-wrap">
                   <!-- <label class="field__label" for="modal-email">Email <span class="rstar">*</span></label> -->
-                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder=""
-                    required>
+                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder="" required="">
                     <span class="field-placeholder">Email<span class="required">*</span></span>
                 </div>
                 <div class="field input-wrap">
                   <!-- <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label> -->
-                  <input class="input" type="text" id="eag-company" name="company" autocomplete="text" placeholder="" required>
+                  <input class="input" type="text" id="eag-company" name="company" autocomplete="text" placeholder="" required="">
                 <span class="field-placeholder">Company<span class="required">*</span></span>
                 </div>
                 <div class="field input-wrap">
                   <!-- <label class="field__label" for="modal-message">Message <span class="rstar">*</span></label> -->
-                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value=""
-                    placeholder="" required=""></textarea>
+                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value="" placeholder="" required=""></textarea>
                     <span class="field-placeholder">Message<span class="required">*</span></span>
                 </div>
 
@@ -557,7 +563,7 @@
 
                   <label class="margin-top-2 flex items-top gap-2" for="agree_privary_policy">
                     <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>
-                      I have read Ascentium's <a href="https://www.dezshira.com/privacy-policy"> Privacy Statement</a>
+                      I have read Ascentium's&nbsp;<a href="https://www.dezshira.com/privacy-policy"> Privacy Statement</a>
                       and agree to Ascentium using my information provided to contact me about related content and
                       services. <span class="rstar">*</span>
                     </span>

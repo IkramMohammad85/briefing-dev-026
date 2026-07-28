@@ -47,8 +47,8 @@ th {
 }
 .table th {
     color: white;
-    background-color: #E85D0F;
-    border-color: #E85D0F;
+    background-color: var(--primary-color);;
+    border-color: var(--primary-color);;
 }
 .table th {
     vertical-align: bottom;
@@ -58,7 +58,7 @@ th {
     vertical-align: bottom;
     border-bottom: 1px solid #e9eaec;
 	font-weight:600;
-	color: #E85D0F;
+	color: var(--primary-color);;
 	background: transparent;
 }
 
@@ -87,7 +87,7 @@ th {
 .table.cb {
 	thead {
 		tr {
-			background: #E85D0F;
+			background: var(--primary-color);;
 		}
 		td {
 			color: #ffffff;
@@ -95,16 +95,16 @@ th {
 		}
 	}
 	th {
-		background: #E85D0F;
+		background: var(--primary-color);;
 		color: #ffffff;
 		font-weight: 600;
 	}
 	tr.primary-bg {
-		background: #E85D0F;
+		background: var(--primary-color);;
 		color: #ffffff;
 	}
 	td.primary-bg {
-		background: #E85D0F;
+		background: var(--primary-color);;
 		color: #ffffff;
 	}
 
@@ -121,10 +121,10 @@ th {
 		background: #666666;
 	}
 }
-.table.cb thead tr.light-bg{
+.table.cb thead tr.light-bg, .table.vb thead tr.light-bg{
   color: var(--primary-color); background-color: transparent;
 }
-.table.cb thead tr.light-bg td{color: var(--primary-color);}
+.table.cb thead tr.light-bg td, .table.cb thead tr.light-bg td{color: var(--primary-color);}
 
 .table-responsive {
   display: block;

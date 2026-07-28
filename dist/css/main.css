@@ -1631,7 +1631,7 @@ ul[class], ol[class] {
 }
 
 .input, .textarea, .select {
-  padding: var(--space-2) var(--space-2);
+  padding: 1rem 0.75rem 0.5rem 0.75rem;
   font-size: var(--text-sm);
   color: var(--gray-light);
   background: var(--white);
@@ -2552,15 +2552,46 @@ ul[class], ol[class] {
   color: #d32f2f !important;
 }
 
+/**
 .input-wrap input:focus + .field-placeholder,
 .input-wrap textarea:focus + .field-placeholder,
 .input-wrap input:valid + .field-placeholder,
 .input-wrap textarea:valid + .field-placeholder {
-  display: none;
-}
-
+    display: none;
+}**/
 .agree_privary_policy {
   margin-top: 3px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+}
+
+.field-placeholder {
+  position: absolute;
+  left: 12px;
+  top: 24px;
+  background: #fff;
+  padding: 0 4px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  padding: 0;
+  line-height: 10px !important;
+}
+
+/* Floating Label */
+.input:focus + .field-placeholder,
+.input:valid + .field-placeholder {
+  top: 10px;
+  font-size: 10px !important;
+  color: var(--primary-color);
 }
 
 table {
@@ -2623,8 +2654,8 @@ th {
 
 .table th {
   color: white;
-  background-color: #E85D0F;
-  border-color: #E85D0F;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .table th {
@@ -2636,7 +2667,7 @@ th {
   vertical-align: bottom;
   border-bottom: 1px solid #e9eaec;
   font-weight: 600;
-  color: #E85D0F;
+  color: var(--primary-color);
   background: transparent;
 }
 
@@ -2664,23 +2695,23 @@ th {
 }
 
 .table.cb thead tr {
-  background: #E85D0F;
+  background: var(--primary-color);
 }
 .table.cb thead td {
   color: #ffffff;
   font-weight: 600;
 }
 .table.cb th {
-  background: #E85D0F;
+  background: var(--primary-color);
   color: #ffffff;
   font-weight: 600;
 }
 .table.cb tr.primary-bg {
-  background: #E85D0F;
+  background: var(--primary-color);
   color: #ffffff;
 }
 .table.cb td.primary-bg {
-  background: #E85D0F;
+  background: var(--primary-color);
   color: #ffffff;
 }
 .table.cb tr.grey-bg {
@@ -2696,12 +2727,12 @@ th {
   background: #666666;
 }
 
-.table.cb thead tr.light-bg {
+.table.cb thead tr.light-bg, .table.vb thead tr.light-bg {
   color: var(--primary-color);
   background-color: transparent;
 }
 
-.table.cb thead tr.light-bg td {
+.table.cb thead tr.light-bg td, .table.cb thead tr.light-bg td {
   color: var(--primary-color);
 }
 

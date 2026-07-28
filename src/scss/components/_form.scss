@@ -118,12 +118,41 @@
 // .input-wrap input:not(:placeholder-shown) + .field-placeholder, .input-wrap textarea:not(:placeholder-shown) + .field-placeholder {
 //     display: none;
 // }
-
+/**
 .input-wrap input:focus + .field-placeholder,
 .input-wrap textarea:focus + .field-placeholder,
 .input-wrap input:valid + .field-placeholder,
 .input-wrap textarea:valid + .field-placeholder {
     display: none;
-}
+}**/
 
 .agree_privary_policy{margin-top: 3px;}
+
+.input-wrap {
+    position: relative;
+}
+.input:focus {
+    border-color: var(--primary-color);
+}
+.field-placeholder {
+    position: absolute;
+    left: 12px;
+    top: 24px;
+    background: #fff;
+    padding: 0 4px;
+    color: #666;
+    font-size: 16px;
+    line-height: 1;
+    pointer-events: none;
+    transition: all .25s ease;
+    padding: 0;
+    line-height: 10px !important;
+}
+
+/* Floating Label */
+.input:focus + .field-placeholder,
+.input:valid + .field-placeholder {
+    top: 10px;
+    font-size: 10px !important;
+    color: var(--primary-color);
+}
