@@ -253,6 +253,9 @@
 
 .site-header__nav {
   @include bp(lg) { background: var(--nav-bar); }
+  .container{
+    max-width: 100%;
+  }
 }
 
 .nav {
@@ -295,6 +298,7 @@
     background: transparent;
     box-shadow: none;
     color: var(--text-on-navy-muted);
+  
 
     .nav__item { border-bottom: none; }
     .nav__link { width: auto; padding-block: var(--space-4); }

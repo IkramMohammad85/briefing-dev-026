@@ -850,6 +850,9 @@ ul[class], ol[class] {
     background: var(--nav-bar);
   }
 }
+.site-header__nav .container {
+  max-width: 100%;
+}
 
 .nav {
   display: none;
