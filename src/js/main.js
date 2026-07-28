@@ -502,19 +502,17 @@ function initTabs() {
 
     const tabButtons = Array.from(tabList.querySelectorAll('[role="tab"]'));
     if (!tabButtons.length) return;
-
     const noteEl = tabs.querySelector("[data-contact-note]");
     const contextEl = tabs.querySelector("[data-contact-context]");
     const typeEl = tabs.querySelector("[data-contact-type]");
 
-    function select(tab) {
+    function select(tab, updateHash) {
       tabButtons.forEach((btn) => {
         const selected = btn === tab;
         btn.setAttribute("aria-selected", String(selected));
         btn.setAttribute("tabindex", selected ? "0" : "-1");
       });
 
-      // Panels
       const activeId = tab.getAttribute("aria-controls");
       const panelIds = new Set(tabButtons.map((b) => b.getAttribute("aria-controls")));
       panelIds.forEach((id) => {
@@ -524,15 +522,16 @@ function initTabs() {
 
       const panel = document.getElementById(activeId);
       if (panel) panel.setAttribute("aria-labelledby", tab.id);
-
-    
       if (noteEl && tab.dataset.note) noteEl.innerHTML = tab.dataset.note;
       if (contextEl && tab.dataset.context) contextEl.textContent = tab.dataset.context;
       if (typeEl && tab.dataset.context) typeEl.value = tab.dataset.context;
+      if (updateHash && history.replaceState) {
+        history.replaceState(null, "", "#" + tab.id);
+      }
     }
 
     tabButtons.forEach((btn) => {
-      btn.addEventListener("click", () => select(btn));
+      btn.addEventListener("click", () => select(btn, true));
     });
 
     tabList.addEventListener("keydown", (e) => {
@@ -547,12 +546,34 @@ function initTabs() {
       if (!next) return;
 
       e.preventDefault();
-      select(next);
+      select(next, true);
       next.focus();
     });
 
-    const initial = tabButtons.find((b) => b.getAttribute("aria-selected") === "true") || tabButtons[0];
-    select(initial);
+    let initial = null;
+    const hash = window.location.hash.slice(1);
+    let matchedHash = false;
+    if (hash) {
+      initial = tabButtons.find((b) =>
+        b.id === hash || b.getAttribute("aria-controls") === hash
+      );
+      matchedHash = Boolean(initial);
+    }
+    if (!initial) {
+      initial = tabButtons.find((b) => b.getAttribute("aria-selected") === "true") || tabButtons[0];
+    }
+    select(initial, false);
+    if (matchedHash) {
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+      const toTop = () => window.scrollTo(0, 0);
+      toTop();
+      requestAnimationFrame(toTop);
+      requestAnimationFrame(() => requestAnimationFrame(toTop));
+      window.addEventListener("load", () => {
+        toTop();
+        requestAnimationFrame(toTop);
+      }, { once: true });
+    }
   });
 }
 
