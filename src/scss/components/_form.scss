@@ -130,8 +130,7 @@
 
 .input-wrap {
     position: relative;
-}
-.input:focus {
+    .input:focus {
     border-color: var(--primary-color);
 }
 .field-placeholder {
@@ -148,6 +147,8 @@
     padding: 0;
     line-height: 10px !important;
 }
+.input, .textarea, .select {
+  padding: 1rem .75rem 0.5rem .75rem;}
 
 /* Floating Label */
 .input:focus + .field-placeholder,
@@ -155,4 +156,5 @@
     top: 10px;
     font-size: 10px !important;
     color: var(--primary-color);
+}
 }

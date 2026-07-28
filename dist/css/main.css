@@ -1631,7 +1631,7 @@ ul[class], ol[class] {
 }
 
 .input, .textarea, .select {
-  padding: 1rem 0.75rem 0.5rem 0.75rem;
+  padding: var(--space-2) var(--space-2);
   font-size: var(--text-sm);
   color: var(--gray-light);
   background: var(--white);
@@ -2566,12 +2566,10 @@ ul[class], ol[class] {
 .input-wrap {
   position: relative;
 }
-
-.input:focus {
+.input-wrap .input:focus {
   border-color: var(--primary-color);
 }
-
-.field-placeholder {
+.input-wrap .field-placeholder {
   position: absolute;
   left: 12px;
   top: 24px;
@@ -2585,10 +2583,14 @@ ul[class], ol[class] {
   padding: 0;
   line-height: 10px !important;
 }
-
-/* Floating Label */
-.input:focus + .field-placeholder,
-.input:valid + .field-placeholder {
+.input-wrap .input, .input-wrap .textarea, .input-wrap .select {
+  padding: 1rem 0.75rem 0.5rem 0.75rem;
+}
+.input-wrap {
+  /* Floating Label */
+}
+.input-wrap .input:focus + .field-placeholder,
+.input-wrap .input:valid + .field-placeholder {
   top: 10px;
   font-size: 10px !important;
   color: var(--primary-color);

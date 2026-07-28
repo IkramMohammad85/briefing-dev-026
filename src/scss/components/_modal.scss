@@ -49,8 +49,7 @@
 }
 
 .input, .textarea, .select {
-  //padding: var(--space-2) var(--space-2);
-  padding: 1rem .75rem 0.5rem .75rem;
+  padding: var(--space-2) var(--space-2);
   font-size: var(--text-sm);
   color: var(--gray-light);
   background: var(--white);
