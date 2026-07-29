@@ -1,0 +1,386 @@
+.sprite {
+  &:before {
+    content: "";
+    display: inline-block;
+    background-image: url(../img/sprite.svg);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+  }
+  &.sprite-language {
+    &:before {
+      background-size: 360px;
+      width: 30px;
+      height: 30px;
+    }
+
+  }
+
+  &.sprite-head-icons {
+    &:before {
+      background-size: 450px;
+      width: 24px;
+      height: 24px;
+    }
+
+  }
+  &.social-icons {
+    &:before {
+      background-size: 438px;
+      width: 37px;
+      height: 38px;
+    }
+  }
+
+  &.country-icons {
+    &:before {
+      background-size: 290px;
+      width: 24px;
+      height: 25px; margin-right: 7px;
+    }
+  }
+
+  &.sprit-briefing-icons {
+    &:before {
+      background-size: 432px;
+      width: 38px;;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+    &.b-news{
+        &:before {
+          transform: scale(.7);
+        }
+    }
+
+  }
+  &.sprite-icons {
+    &:before {
+      background-size: 416px;
+    }
+  }
+
+  &.sprite-icons-small {
+    &:before {
+      background-size: 460px;
+      width: 25px;
+      height: 22px;
+    }
+    &.sprite-f:before {
+      background-position: -190px -89px;
+      width: 21px;
+      height: 24px;
+    }
+    &.sprite-y:before {
+      background-position: -263px -88px;
+      height: 24px;
+    }
+  }
+
+  &.sprite-icons-big {
+    &:before {
+      background-size: 1067px;
+    }
+  }
+
+  &.sprite-icons-help {
+    &:before {
+      background-size: 360px;
+      width: 20px;
+      height: 20px;
+    }
+
+  }
+}
+
+/* header sprite */
+.sprite-language-show-all {
+  &:before {
+    background-position: -208px -2px;
+  }
+}
+.sprite-language-english {
+  &:before {
+    background-position: -2px -2px;
+  }
+}
+.sprite-language-french {
+  &:before {
+    background-position: -31px -2px;
+  }
+}
+.sprite-language-german {
+  &:before {
+    background-position: -61px -2px;
+  }
+}
+.sprite-language-italian:before {
+  background-position: -90px -2px;
+}
+.sprite-language-russian {
+  &::before {
+    background-position: -120px -2px;
+  }
+}
+.sprite-language-spanish {
+  &::before {
+    background-position: -149px -2px;
+  }
+}
+.sprite-language-chinese {
+  &::before {
+    background-position: -179px -2px;
+  }
+}
+.sprite-language-portugal {
+  &::before {
+    background-position: -299px -34px;
+  }
+}
+.sprite-language-hongkong {
+  &::before {
+    background-position: -269px -2px;
+  }
+}
+.sprite-language-india {
+  &::before {
+    background-position: -329px -2px;
+  }
+}
+.sprite-language-vietnam {
+  &::before {
+    background-position: -329px -35px;
+  }
+}
+.sprite-language-indonesia {
+  &::before {
+    background-position: -299px -2px;
+  }
+}
+.sprite-language-singapore {
+  &::before {
+    background-position: -238px -2px;
+  }
+}
+
+ul.choose-language {
+  li {
+    a {
+      span.sprite-language {
+        &::before {
+          opacity: 0.3;
+          transition: 0.2s;
+          border: solid 2px #fff;
+          border-radius: 50%;
+        }
+      }
+      &:hover,
+      &.active {
+        span.sprite-language::before {
+          opacity: 1;
+          border: solid 2px #bb2127;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+/* top header */
+
+.sprite-hamburger:before {
+  background-position: -158px -89px;
+}
+.sprite-search:before {
+  background-position: -3px -87px;
+}
+.sprite-searchW:before {
+  background-position: -1px -83px;
+}
+.sprite-user:before {
+  background-position: -35px -87px;
+}
+.sprite-country-globe:before {
+  background-position:-257px -169px;
+}
+.sprite-e-contact:before {
+  background-position:-278px -169px;
+}
+.sprite-w-search:before {
+  background-position:-301px -169px;
+}
+.sprite-m-close:before {
+  background-position:-235px -169px;
+}
+.sprite-m-topics:before {
+  background-position:-210px -169px;
+}
+.sprite-ab-logo:before {
+  background-position: -62px -76px;
+  width: 40px;
+  height: 28px;
+  transform: scale(0.8);
+}
+.sprite-globe:before {
+  background-position: -231px -169px;
+  width: 39px;
+  height: 30px;
+
+}
+.sprite-contact:before {
+  background-position: -102px -75px;
+  width: 39px;
+  height: 30px;
+  transform: scale(0.8);
+}
+/* social */
+.sprite-facebook:before {
+  background-position: -2px -40px;
+}
+.sprite-twitter:before {
+  background-position: -327px -40px;
+}
+.sprite-youtube:before {
+  background-position: -147px -40px;
+}
+.sprite-linkedin:before {
+  background-position: -74px -40px;
+}
+.sprite-google-plus:before {
+  background-position: -38px -40px;
+}
+
+/* countrt */
+.sprite-cf:before {
+  background-position: -144px -1px
+}
+.sprite-if:before {
+  background-position: -265px -1px;
+}
+.sprite-vf:before {
+  background-position: -265px -28px;
+}
+.sprite-inf:before {
+  background-position: -241px -1px;
+}
+.sprite-sf:before {
+  background-position: -193px -1px;
+}
+.sprite-hf:before {
+  background-position:  -217px -1px;
+}
+/* briefing */
+.sprite-cb:before {
+  background-position: -52px -107px;
+}
+.sprite-ib:before {
+  background-position: -90px -107px;
+}
+.sprite-rb:before {
+  background-position: -177px -107px;
+}
+.sprite-vb:before {
+  background-position: -129px -107px;
+}
+.sprite-aseanb:before {
+  background-position: -218px -107px;
+}
+.sprite-srb:before {
+  background-position: -256px -107px;
+}
+.sprite-meb:before {
+  background-position: -339px -107px;
+}
+.sprite-air:before {
+  background-position: -296px -107px;
+}
+
+
+/* end */
+.sprite-dsa:before {
+  background-position: -2px -101px;
+  height: 50px;
+  width: 50px;
+}
+.sprite-ab:before {
+  background-position: -176px -37px;
+  height: 44px;
+  width: 52px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+/* social media left side bar */
+
+.sprite-t:before {
+  background-position: -210px -88px;
+}
+.sprite-l:before {
+  background-position: -237px -91px;
+}
+
+.sprite-g:before {
+  background-position: -377px -83px;
+  transform: scale(1.3);
+}
+.sprite-e:before {
+  background-position: -406px -83px;
+}
+
+/* big size icons */
+.sprite-calendar:before {
+  background-position: -743px -204px;
+  width: 60px;
+  height: 54px;
+}
+
+.sprite-news:before {
+  background-position: -809px -204px;
+  width: 60px;
+  height: 45px;
+}
+
+.sprite-headphones:before {
+  background-position: -669px -204px;
+  width: 60px;
+  height: 54px;
+}
+.sprite-download:before {
+  background-position: -1003px -201px;
+  width: 60px;
+  height: 54px;
+}
+/* help icons */
+.sprite-heart:before {
+  background-position: -2px -135px;
+}
+.sprite-share:before {
+  background-position: -25px -135px;
+}
+.sprite-friend:before {
+  background-position: -45px -135px;
+}
+.sprite-tag:before {
+  background-position: -66px -135px;
+}
+.sprite-note:before {
+  background-position: -118px -135px;
+}
+.sprite-arrowUp:before {
+  background-position: -162px -135px;
+  transform: scale(1.5);
+}
+.sprite-arrowDown:before {
+  background-position: -142px -135px;
+  transform: scale(1.5);
+}
+
+.sprite-icons:before
+
+ {
+    transform: scale(.8);
+    width: 47px;
+}
