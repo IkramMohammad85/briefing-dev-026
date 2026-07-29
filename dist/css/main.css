@@ -2734,7 +2734,7 @@ th {
   background-color: transparent;
 }
 
-.table.cb thead tr.light-bg td, .table.cb thead tr.light-bg td {
+.table.cb thead tr.light-bg td, .table.vb thead tr.light-bg td {
   color: var(--primary-color);
 }
 
