@@ -152,7 +152,7 @@
 
 /* Floating Label */
 .input:focus + .field-placeholder,
-.input:valid + .field-placeholder {
+.input.has-value + .field-placeholder {
     top: 10px;
     font-size: 10px !important;
     color: var(--primary-color);

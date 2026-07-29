@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initModals();
   initPromoPopup();
   //initContinueReading();
-  initAccessFullArticle()
+  initAccessFullArticle();
+  initFloatingLabels();
 });
 
 /* ---- Mobile nav toggle ---- */
@@ -1016,5 +1017,19 @@ function initAccessFullArticle() {
     btn.addEventListener("click", () => {
       gate.classList.add("is-expanded");
     });
+  });
+}
+
+function initFloatingLabels() {
+  const fields = document.querySelectorAll(".input");
+  if (!fields.length) return;
+
+  fields.forEach((field) => {
+    function updateLabel() {
+      field.classList.toggle("has-value", field.value.trim() !== "");
+    }
+    updateLabel();
+    field.addEventListener("input", updateLabel);
+    field.addEventListener("blur", updateLabel);
   });
 }

@@ -1153,7 +1153,7 @@
             </label>
         </div>
                   <div class="col input-wrap">
-                    <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder=" " required="">
+                    <input class="input" type="text" id="lname" name="name" autocomplete="name" placeholder=" " required>
                   <span class="field-placeholder">Last Name<span class="required">*</span></span>
                   </div>
                     
@@ -1165,17 +1165,17 @@
                 </div>-->
                 <div class="field input-wrap">
                   <!-- <label class="field__label" for="modal-email">Email <span class="rstar">*</span></label> -->
-                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder="" required="">
-                    <span class="field-placeholder">Email<span class="required">*</span></span>
+                  <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder=" " required>
+                    <label  class="field-placeholder">Email<span class="required">*</span></label>
                 </div>
                 <div class="field input-wrap">
                   <!-- <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label> -->
-                  <input class="input" type="text" id="eag-company" name="company" autocomplete="text" placeholder="" required="">
+                  <input class="input" type="text" id="company" name="company" autocomplete="text" placeholder=" " required>
                 <span class="field-placeholder">Company<span class="required">*</span></span>
                 </div>
                 <div class="field input-wrap">
                   <!-- <label class="field__label" for="modal-message">Message <span class="rstar">*</span></label> -->
-                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value="" placeholder="" required=""></textarea>
+                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value="" placeholder=" " required></textarea>
                     <span class="field-placeholder">Message<span class="required">*</span></span>
                 </div>
 
@@ -1381,6 +1381,7 @@
   </div>
 
   <script src="/js/main.min.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
         var audio = document.getElementById("tts-player");
