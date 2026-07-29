@@ -1770,7 +1770,7 @@ ul[class], ol[class] {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 120;
+  z-index: 1000;
   background: var(--paper);
   border-bottom: 1px solid var(--line);
   box-shadow: var(--shadow-lg);
@@ -2729,7 +2729,7 @@ th {
   font-weight: 600;
 }
 .table.cb thead strong, .table.vb thead strong {
-  font-weight: 400;
+  font-weight: 500;
 }
 .table.cb th, .table.vb th {
   background: var(--primary-color);
