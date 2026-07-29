@@ -908,6 +908,7 @@ ul[class], ol[class] {
     background: transparent;
     box-shadow: none;
     color: var(--text-on-navy-muted);
+    justify-content: center;
   }
   .nav .nav__item {
     border-bottom: none;
