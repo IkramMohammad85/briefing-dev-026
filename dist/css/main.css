@@ -2728,6 +2728,9 @@ th {
   color: #ffffff;
   font-weight: 600;
 }
+.table.cb thead strong, .table.vb thead strong {
+  font-weight: 400;
+}
 .table.cb th, .table.vb th {
   background: var(--primary-color);
   color: #ffffff;
