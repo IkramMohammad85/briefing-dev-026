@@ -9,8 +9,8 @@
   &.sprite-language {
     &:before {
       background-size: 360px;
-      width: 30px;
-      height: 30px;
+      width: 33px;
+      height: 33px;
     }
 
   }
@@ -170,7 +170,7 @@ ul.choose-language {
     a {
       span.sprite-language {
         &::before {
-          opacity: 0.3;
+          opacity: 0.5;
           transition: 0.2s;
           border: solid 2px #fff;
           border-radius: 50%;
@@ -180,10 +180,10 @@ ul.choose-language {
       &.active {
         span.sprite-language::before {
           opacity: 1;
-          border: solid 2px #bb2127;
+          //border: solid 2px #bb2127;
           border-radius: 50%;
-          width: 30px;
-          height: 30px;
+          width: 33px;
+          height: 33px;
         }
       }
     }
@@ -301,12 +301,12 @@ ul.choose-language {
 
 /* end */
 .sprite-dsa:before {
-  background-position: -2px -101px;
+  background-position: -1px -101px;
   height: 50px;
   width: 50px;
 }
 .sprite-ab:before {
-  background-position: -176px -37px;
+  background-position: -174px -37px;
   height: 44px;
   width: 52px;
   margin-top: 3px;
@@ -378,9 +378,14 @@ ul.choose-language {
   transform: scale(1.5);
 }
 
-.sprite-icons:before
-
- {
+.sprite-icons:before {
     transform: scale(.8);
-    width: 47px;
 }
+.sprite.sprit-briefing-icons:before {
+    background-size: 432px;
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    transform: scale(0.8);
+}
+.briefing-drop .sprite.sprit-briefing-icons{margin-right: 1rem;}

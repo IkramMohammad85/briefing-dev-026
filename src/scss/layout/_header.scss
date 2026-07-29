@@ -332,6 +332,14 @@
   svg, path{stroke: var(--primary-color);}
 }
 
+.briefing-drop{
+  a{
+    border-bottom: solid 1px #e4e4e4;
+    padding: 7px 0;
+    border-radius: 0;
+    &:last-child{border-bottom: 0; padding-bottom: 0;}
+  }
+}
 .whatsapp-btn {
     position: fixed;
     right: 20px;
