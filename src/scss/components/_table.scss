@@ -5,9 +5,9 @@
     caption-side: bottom; margin-bottom: 2rem;font-family:var(--font-body); font-weight: 300;
     border-collapse: collapse;
     &.table{overflow-x: auto; 
-		//display: block;  
+		display: block;  
 		height: auto !important;
-			@include bp(lg) {	display: inherit;
+			@include bp(lg) {	display:table;
 	overflow-x: inherit; height: 100% !important;}
 	}
   }
