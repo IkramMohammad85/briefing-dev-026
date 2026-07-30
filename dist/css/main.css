@@ -903,7 +903,7 @@ ul[class], ol[class] {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1.4rem;
+    gap: 1.2rem;
     position: static;
     max-height: none;
     overflow: visible;
@@ -1038,7 +1038,7 @@ ul[class], ol[class] {
     gap: 0.3rem;
   }
   .nav__link {
-    font-size: 0.69rem;
+    font-size: 0.67rem;
   }
 }
 @media screen and (min-width: 1161px) and (max-width: 1280px) {
