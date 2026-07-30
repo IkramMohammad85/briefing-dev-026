@@ -4246,6 +4246,10 @@ a.link:after {
   position: relative;
 }
 
+.hide {
+  display: none !important;
+}
+
 .events {
   padding-block: var(--space-7);
 }

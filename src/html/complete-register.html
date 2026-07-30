@@ -1262,5 +1262,32 @@
   </div>
 
   <script src="/js/main.min.js"></script>
+  <script>
+function add_interest_fields(){
+    var fields = document.querySelectorAll('.more-filed-interest.hide');
+    if(fields.length){
+        fields[0].classList.remove('hide');
+    }
+}
+function remove_interest_fields(i){
+    var el = document.getElementById('topic_of_interest_' + i);
+    if(el){ el.classList.add('hide'); }
+}
+function add_country_city_interest(){
+    // agla hidden country-city field dikhata hai
+    var fields = document.querySelectorAll('.more-country-city-interest.hide');
+    if(fields.length){
+        fields[0].classList.remove('hide');
+    }
+}
+function remove_country_city_interest(i){
+    var el = document.getElementById('country_city_interest_' + i);
+    if(el){ el.classList.add('hide'); }
+}
+document.addEventListener('DOMContentLoaded', function(){
+    var warn = document.getElementById('javascipt_warn');
+    if(warn){ warn.style.display = 'none'; }
+});
+</script>
 </body>
 </html>
