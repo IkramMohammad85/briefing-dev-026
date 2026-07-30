@@ -1,10 +1,15 @@
 // "Get Expert Advice" sidebar
 @use "../base/tokens" as *;
-.expert-aside, .consultation {
+.expert-aside, .consultation, .right-aside-cta {
   @include bp(lg) {
     position: sticky;
     top: calc(var(--header-h, 172px) + (-120px));
     align-self: start; // don't stretch the sticky grid item to full column height
+  }
+}
+.right-aside-cta{
+    @include bp(lg) {
+    top: calc(var(--header-h, 172px) - (-48px));
   }
 }
 

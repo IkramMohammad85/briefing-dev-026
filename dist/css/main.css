@@ -2547,10 +2547,16 @@ ul[class], ol[class] {
 }
 
 @media (min-width: 1024px) {
-  .expert-aside, .consultation {
+  .expert-aside, .consultation, .right-aside-cta {
     position: sticky;
     top: calc(var(--header-h, 172px) - 120px);
     align-self: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .right-aside-cta {
+    top: calc(var(--header-h, 172px) + 48px);
   }
 }
 
