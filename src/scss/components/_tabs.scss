@@ -10,9 +10,11 @@
   //border-bottom: 1px solid var(--line);
   background-color: #E3F1F0;
   border-radius: 30px;
+  padding: 1rem;
+  flex-direction: column;
  
   margin: 0 auto;
-  @include bp(md) {  width: 36%; }
+  @include bp(md) {  width: 36%; padding: 0; flex-direction: row;}
 
   &::-webkit-scrollbar { display: none; }
 }
@@ -40,6 +42,11 @@
     color: #fff;
     border-radius: 30px;
   }
+    &[aria-selected="false"] {
+   border: solid 1px #b0b0b0;
+    @include bp(md) { border: none;  }
+  }
+  
 }
 
 .tabs__panel {

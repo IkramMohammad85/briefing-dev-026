@@ -729,3 +729,7 @@ blockquote:before {
     right: 0;
   }
 }
+
+.inner-page__main .news-list .card__content h3 {
+  margin-bottom: 0 !important;
+}

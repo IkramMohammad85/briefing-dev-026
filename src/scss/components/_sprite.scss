@@ -54,7 +54,16 @@
           transform: scale(.7);
         }
     }
-
+&.sprite-ab{ width: 34px; height: 28px; margin-right: 0.5; display: inline-block;}
+&.sprite-ab:before{
+  background-position: -185px -38px;
+    height: 40px !important;
+    width: 48px !important;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    transform: scale(0.7) !important;
+    margin-right: 0;
+}
   }
   &.sprite-icons {
     &:before {
@@ -219,11 +228,13 @@ ul.choose-language {
   background-position:-210px -169px;
 }
 .sprite-ab-logo:before {
-  background-position: -62px -76px;
-  width: 40px;
-  height: 28px;
+  background-position: -77px -92px;
+  width: 43px;
+  height: 33px;
   transform: scale(0.8);
+ 
 }
+.sprite-ab-logo.mr{margin-right: 12px;}
 .sprite-globe:before {
   background-position: -231px -169px;
   width: 39px;

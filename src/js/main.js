@@ -302,20 +302,66 @@ function initStickyOffsets() {
   if (!header) return;
   const contactBar = document.querySelector(".contact-bar");
 
-  function set() {
+ 
+  const topBar = header.querySelector(".site-header__top");
+  const baseTrigger = topBar ? topBar.offsetHeight : 10;
+  const TOP_ZONE = baseTrigger + 40; 
+  const INTENT = 36;                 
+  const LOCK_MS = 550;             
+
+  let lastY = window.scrollY;
+  let accum = 0;
+  let ticking = false;
+  let lockedUntil = 0;
+
+  function apply() {
+    ticking = false;
+
     const headerBottom = Math.max(0, header.getBoundingClientRect().bottom);
     document.documentElement.style.setProperty("--header-h", `${Math.round(headerBottom)}px`);
-
-
     let stack = headerBottom;
     if (contactBar && getComputedStyle(contactBar).display !== "none") {
       stack += contactBar.offsetHeight;
     }
     document.documentElement.style.setProperty("--stack-top", `${Math.round(stack)}px`);
+
+    const y = window.scrollY;
+    const delta = y - lastY;
+    lastY = y;
+
+    if (y <= TOP_ZONE) {
+      header.classList.remove("is-stuck");
+      accum = 0;
+      return;
+    }
+
+    if (performance.now() < lockedUntil) { accum = 0; return; }
+
+    if (delta === 0) return;
+    if ((delta > 0) !== (accum > 0)) accum = 0; 
+    accum += delta;
+
+    if (accum > INTENT && !header.classList.contains("is-stuck")) {
+      header.classList.add("is-stuck");    
+      accum = 0;
+      lockedUntil = performance.now() + LOCK_MS;
+    } else if (accum < -INTENT && header.classList.contains("is-stuck")) {
+      header.classList.remove("is-stuck");  
+      accum = 0;
+      lockedUntil = performance.now() + LOCK_MS;
+    }
   }
-  set();
-  window.addEventListener("scroll", set, { passive: true });
-  window.addEventListener("resize", set);
+
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(apply);
+    }
+  }
+
+  apply();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
 }
 
 /* ---- Expert-advice sidebar: collapsible ---- */
