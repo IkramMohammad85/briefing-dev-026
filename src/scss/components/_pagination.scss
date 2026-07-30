@@ -102,11 +102,8 @@
 
 
 .page {
-    border-bottom: solid 1px #e6e7e8;
-    border-top: solid 1px #e6e7e8;
-    background-color: #f1f2f2;
     padding: 0px 0px;
-    margin-top: 20px;
+    margin-top: 3rem;
     overflow: hidden;
     color: #939598;
     font-size: 12px;
@@ -114,6 +111,7 @@
     line-height: 28px;
     display: flex;
     justify-content: space-between;
+    span{background-color: var(--paper-soft); padding: 7px 12px; line-height: normal; color: var(--primary-color);}
 }
 
 /*pagination*/
@@ -130,18 +128,21 @@
 .page-numbers {
     padding-left: 12px;
     padding-right: 12px;
-    color: #e2001a;
+    color: var(--primary-color);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: bold;
     padding-top: 7px;
     padding-bottom: 7px;
     text-decoration: none;
+    background-color: var(--paper-soft);
+    &:hover{background: var(--primary-color) ; color: var(--white);}
+
 }
 
 .pagination .current {
-    background: #d1d3d4;
-    color: #939598;
+    background: var(--primary-color);
+    color:var(--white);
 }
 
 .pagination > li > a, .pagination > li > span {
