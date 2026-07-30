@@ -56,6 +56,7 @@
   flex-shrink: 0;
 
   &:hover { color: var(--text-on-paper); }
+  &:focus-visible{outline: none;}
 
   &__mark {
     width: 30px;

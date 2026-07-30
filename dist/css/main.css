@@ -642,6 +642,9 @@ ul[class], ol[class] {
 .brand:hover {
   color: var(--text-on-paper);
 }
+.brand:focus-visible {
+  outline: none;
+}
 .brand__mark {
   width: 30px;
   height: 30px;
