@@ -518,11 +518,14 @@ blockquote{position: relative;
     padding: 2px 10px;
     border: solid 1px #ddd;
     border-radius: 3px;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
     max-width: 130px;
+    line-height: 22px;
+  
     @include bp(md) { 
     position: absolute;
-    top: 96px;
+    margin-top: 0;
+    top: 0px;
     right: 0;
     }
 }
