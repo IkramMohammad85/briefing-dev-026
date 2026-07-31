@@ -606,6 +606,7 @@
   gap: var(--space-5);
   padding-top: var(--space-6);
   border-top: 1px solid var(--line);
+  line-height: var(--leading-snug);
 }
 @media (min-width: 480px) {
   .article-nav {

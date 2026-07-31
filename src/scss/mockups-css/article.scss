@@ -422,6 +422,7 @@ header{position: relative;}
   gap: var(--space-5);
   padding-top: var(--space-6);
   border-top: 1px solid var(--line);
+  line-height: var(--leading-snug);
 
   @include bp(sm) { grid-template-columns: 1fr 1fr; }
 
