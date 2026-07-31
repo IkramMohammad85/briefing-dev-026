@@ -4258,6 +4258,7 @@ a.link:after {
   text-align: center;
   font-weight: normal;
   font-size: 12px;
+  border-radius: 3px;
 }
 
 .error {
@@ -4268,6 +4269,7 @@ a.link:after {
   text-align: center;
   font-weight: normal;
   font-size: 12px;
+  border-radius: 3px;
 }
 
 .events {
