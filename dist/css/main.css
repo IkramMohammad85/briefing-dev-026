@@ -176,6 +176,10 @@ button {
   border: none;
 }
 
+strong {
+  font-weight: 600;
+}
+
 a {
   color: var(--primary-color);
   text-decoration-thickness: 1px;
