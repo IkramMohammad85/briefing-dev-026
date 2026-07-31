@@ -4250,6 +4250,18 @@ a.link:after {
   display: none !important;
 }
 
+.error {
+  color: #0a3622;
+  background-color: #d1e7dd;
+  border: solid 1px #a3cfbb;
+}
+
+.success {
+  color: #58151c;
+  background-color: #f8d7da;
+  border: solid 1px #f1aeb5;
+}
+
 .events {
   padding-block: var(--space-7);
 }
