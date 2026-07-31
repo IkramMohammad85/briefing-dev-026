@@ -50,7 +50,7 @@
                   <h3 style="margin-bottom: 1rem;">Want access to our latest publications and media knowledge hub?</h3>
                   <p style="margin-bottom: 1rem;">Our knowledge hub contains hundreds of guides, reports, videos, and magazines about doing business in Asia.</p> 
                   <p>It is all in one place and is free. Just login and search.</p>
-                  <p style="margin-bottom: 0; margin-top: 1.5rem;"><a href="https://www.asiabriefing.com/store" target="_blank" class="btn btn--primary" style="width:fit-content;margin:auto;">Yes, I’d like access.</a></p>
+                  <p style="margin-bottom: 0; margin-top: 1.5rem;"><a href="https://www.asiabriefing.com/store" target="_blank" class="btn btn--primary primary-animation" style="width:fit-content;margin:auto;">Yes, I’d like access.</a></p>
                 </div>
   
               </div>
@@ -67,7 +67,7 @@
                         </div>
                           <h4>Publication Downloads</h4>    
                           <p>Asia Briefing produces several monthly publications of topic deep dives per year. Produced in collaboration with the business experts of Dezan Shira &amp; Associates, these guides and reports focus on investing in and doing business in Asia.</p>
-                          <a href="https://www.asiabriefing.com/store" target="_blank" class="btn btn--secondary">Browse Publications</a>
+                          <a href="https://www.asiabriefing.com/store" target="_blank" class="btn btn--sm btn--secondary secondary-animation">Browse Publications</a>
                       </li>
                       <li>
                         <div class="Knowledge-thumb">
@@ -75,7 +75,7 @@
                     </div>
                           <h4>Webinar and Video Archives</h4>    
                           <p>Get access to Dezan Shira &amp; Associates webinar and video archive, which includes real-time access to dozens replays of webinars and new videos each year into region-specific legal, tax, accounting, technology and business intelligence matters.</p>
-                          <a href="https://www.dezshira.com/library/search?type=multimedia&amp;ENTRY=%252Fcomplete-register" class="btn btn--secondary" target="_blank">Browse Webinars and Videos</a>
+                          <a href="https://www.dezshira.com/library/search?type=multimedia&amp;ENTRY=%252Fcomplete-register" class="btn btn--sm btn--secondary secondary-animation" target="_blank">Browse Webinars and Videos</a>
                       </li>
                       
                   </ul>
@@ -90,7 +90,7 @@
                         <li>Singapore</li>
                         <li>Vietnam</li>
                     </ul>
-                    <button class="btn btn--primary">Yes, I’d like access.</button>
+                    <button class="btn btn--primary primary-animation">Yes, I’d like access.</button>
     
                     </div>
                     <div class="subscriptionForm">
@@ -1123,7 +1123,7 @@
                                                                 <option value="Visa &amp; Work Permits">Visa &amp; Work Permits</option>
                                                             </select>
                             </div>
-                            <div class="input-group-btn mr-0"><button class="btn" type="button" onclick="remove_interest_fields(3)"> - </button></div>
+                            <div class="input-group-btn mr-0"><button class="btn btn--primary primary-animation" type="button" onclick="remove_interest_fields(3)"> - </button></div>
                         </div>
                         </div>
                         <!-- end -->
@@ -1186,7 +1186,7 @@
     
                         <div class="col-md-12 col-lg-12 mt-2rem">
                         <!-- <button class="btn btn-secondary btn-lg" type="submit">Subscribe</button> -->
-                        <button class="btn btn--primary" type="submit" name="submit_contact" value="Submit">Create My Account</button>
+                        <button class="btn btn--primary primary-animation" type="submit" name="submit_contact" value="Submit">Create My Account</button>
                         </div>
                     </div>
                     </form>
@@ -1264,5 +1264,31 @@
   </div>
 
   <script src="/js/main.min.js"></script>
+  <script>
+function add_interest_fields(){
+    var fields = document.querySelectorAll('.more-filed-interest.hide');
+    if(fields.length){
+        fields[0].classList.remove('hide');
+    }
+}
+function remove_interest_fields(i){
+    var el = document.getElementById('topic_of_interest_' + i);
+    if(el){ el.classList.add('hide'); }
+}
+function add_country_city_interest(){
+    var fields = document.querySelectorAll('.more-country-city-interest.hide');
+    if(fields.length){
+        fields[0].classList.remove('hide');
+    }
+}
+function remove_country_city_interest(i){
+    var el = document.getElementById('country_city_interest_' + i);
+    if(el){ el.classList.add('hide'); }
+}
+document.addEventListener('DOMContentLoaded', function(){
+    var warn = document.getElementById('javascipt_warn');
+    if(warn){ warn.style.display = 'none'; }
+});
+</script>
 </body>
 </html>
