@@ -151,7 +151,7 @@ function initStatCounters() {
 //     if (e.key === "Escape" && overlay.classList.contains("is-open")) close();
 //   });
 // }
-
+/* 
 function initSearchSuggest() {
   const overlay = document.querySelector(".search-overlay");
   const results = document.querySelector(".search-results");
@@ -240,6 +240,170 @@ function initSearchSuggest() {
     input.value = "";
     render("");
   }));
+}
+*/
+
+function initSearchSuggest() {
+    const overlay = document.querySelector(".search-overlay");
+    const results = document.querySelector(".search-results");
+    if (!overlay || !results) return;
+
+    const input = overlay.querySelector(".search-overlay__input");
+    const label = results.querySelector(".search-results__label");
+    const list = results.querySelector(".search-results__list");
+    if (!input || !label || !list) return;
+
+    const regionInput = overlay.querySelector(".search-region, #search-region, [name='search-region']");
+
+    // --- PRODUCTION CONFIGURATION ---
+    const LIMIT = 8;
+    const MIN_CHARS = 3;
+    const DEBOUNCE_MS = 800;    // Increased to 800ms
+
+    let timer = null;
+    let abortController = null;
+    let lastQuery = "";
+    let isComposing = false;
+    const cache = new Map();
+
+    input.addEventListener("compositionstart", () => { isComposing = true; });
+    input.addEventListener("compositionend", () => {
+        isComposing = false;
+        input.dispatchEvent(new Event("input"));
+    });
+
+    function esc(s) {
+        return s.replace(/[&<>"']/g, (c) => (
+            { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+        ));
+    }
+
+    function highlight(title, query) {
+        const at = title.toLowerCase().indexOf(query.toLowerCase());
+        if (at < 0) return esc(title);
+        return esc(title.slice(0, at)) +
+            "<mark>" + esc(title.slice(at, at + query.length)) + "</mark>" +
+            esc(title.slice(at + query.length));
+    }
+
+    // --- NEW: Helper to show instant loading feedback ---
+    function showLoading(query) {
+        label.textContent = `Searching for â€œ${query}â€...`;
+        list.innerHTML = ""; // Optional: Clear old results while searching
+        results.hidden = false;
+    }
+
+    function render(matches, query) {
+        const q = query.trim();
+
+        if (!q || (matches.length === 0 && q.length < MIN_CHARS)) {
+            results.hidden = true;
+            list.innerHTML = "";
+            return;
+        }
+
+        label.textContent = matches.length
+            ? `Results for â€œ${q}â€`
+            : `No results for â€œ${q}â€`;
+
+        list.innerHTML = matches
+            .slice(0, LIMIT)
+            .map((m) => `<li><a class="search-results__link" href="${esc(m.post_link)}">${highlight(m.post_title, q)}</a></li>`)
+            .join("");
+
+        results.hidden = false;
+    }
+
+    input.addEventListener("input", () => {
+        if (isComposing) return;
+
+        const query = input.value.trim();
+        const region = regionInput ? regionInput.value.trim() : "";
+        const cacheKey = `${region}:::${query}`;
+
+        if (query.length < MIN_CHARS) {
+            clearTimeout(timer);
+            if (abortController) abortController.abort();
+            lastQuery = "";
+            render([], "");
+            return;
+        }
+
+        if (query === lastQuery) return;
+        lastQuery = query;
+
+        clearTimeout(timer);
+
+        // 1. If cached, render instantly (skip "Searching..." and skip 800ms delay)
+        if (cache.has(cacheKey)) {
+            if (abortController) abortController.abort();
+            render(cache.get(cacheKey), query);
+            return;
+        }
+
+        // 2. Show "Searching..." IMMEDIATELY on typing so the UI doesn't feel frozen
+        showLoading(query);
+
+        // 3. Wait 800ms before firing the network request
+        timer = setTimeout(async () => {
+            if (abortController) abortController.abort();
+            abortController = new AbortController();
+
+            const params = new URLSearchParams({
+                region: region,
+                q: query,
+                switch_site: "cb"
+            });
+
+            try {
+                const response = await fetch(`/searchALL_JSON?${params.toString()}`, {
+                    signal: abortController.signal
+                });
+
+                if (!response.ok) throw new Error("Network response was not ok");
+                const data = await response.json();
+
+                if (cache.size >= 50) {
+                    const oldestKey = cache.keys().next().value;
+                    cache.delete(oldestKey);
+                }
+                cache.set(cacheKey, data);
+
+                render(data, query);
+            } catch (err) {
+                if (err.name !== "AbortError") {
+                    console.error("Search API error:", err);
+                    label.textContent = "An error occurred while searching.";
+                    list.innerHTML = "";
+                    results.hidden = false;
+                }
+            }
+        }, DEBOUNCE_MS);
+    });
+
+    overlay.addEventListener("keydown", (e) => {
+        const links = Array.from(list.querySelectorAll(".search-results__link"));
+        if (!links.length) return;
+        const i = links.indexOf(document.activeElement);
+
+        if (e.key === "ArrowDown") {
+            e.preventDefault();
+            links[i < 0 ? 0 : (i + 1) % links.length].focus();
+        } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            if (i <= 0) input.focus();
+            else links[i - 1].focus();
+        }
+    });
+
+    const closeBtns = overlay.querySelectorAll("[data-close-search]");
+    closeBtns.forEach((b) => b.addEventListener("click", () => {
+        if (abortController) abortController.abort();
+        clearTimeout(timer);
+        lastQuery = "";
+        input.value = "";
+        render([], "");
+    }));
 }
 
 function initSearchOverlay() {
