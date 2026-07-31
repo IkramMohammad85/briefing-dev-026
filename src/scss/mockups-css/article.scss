@@ -61,6 +61,7 @@ header{position: relative;}
 
 
   @media (max-width: 1023px) {
+    position: -webkit-sticky;
     position: sticky;
     top: var(--stack-top, 140px);
     z-index: 80;
