@@ -298,7 +298,7 @@ function initSearchSuggest() {
 
     // --- NEW: Helper to show instant loading feedback ---
     function showLoading(query) {
-        label.textContent = `Searching for â€œ${query}â€...`;
+        label.textContent = `Searching for "${query}"...`;
         list.innerHTML = ""; // Optional: Clear old results while searching
         results.hidden = false;
     }
@@ -313,8 +313,8 @@ function initSearchSuggest() {
         }
 
         label.textContent = matches.length
-            ? `Results for â€œ${q}â€`
-            : `No results for â€œ${q}â€`;
+            ? `Results for "${q}"`
+            : `No results for "${q}"`;
 
         list.innerHTML = matches
             .slice(0, LIMIT)
