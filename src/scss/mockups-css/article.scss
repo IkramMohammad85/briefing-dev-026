@@ -23,15 +23,7 @@
 
 .article__main { min-width: 0; 
 header{position: relative;}
-@media (max-width: 768px){
-    img,
-    figure,
-    figure img {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-    }
-}
+
 
 }
 
@@ -188,6 +180,16 @@ header{position: relative;}
   img { border-radius: var(--radius-md); width: 100%; height: auto; }
 
   ul, ol { padding-left: var(--space-6); display: grid; gap: var(--space-2); }
+
+  @media (max-width: 768px){
+    img,
+    figure,
+    figure img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
 }
 
 // Inline lead-gen callout band inside the article body
