@@ -110,6 +110,15 @@
 .article__main header {
   position: relative;
 }
+@media (max-width: 768px) {
+  .article__main img,
+  .article__main figure,
+  .article__main figure img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
 
 .article__title {
   font-size: var(--text-2xl);

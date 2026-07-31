@@ -23,6 +23,16 @@
 
 .article__main { min-width: 0; 
 header{position: relative;}
+@media (max-width: 768px){
+    img,
+    figure,
+    figure img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
 }
 
 // ---------------------------------------------------------------------- //
