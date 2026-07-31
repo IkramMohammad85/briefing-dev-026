@@ -178,7 +178,7 @@ header{position: relative;}
 
   a { color: var(--primary-color); text-decoration: none; &:hover { text-decoration: underline; } }
 
-  img { border-radius: var(--radius-md); width: 100%; height: auto; }
+  img { border-radius: var(--radius-md); max-width: 100%; height: auto; }
 
   ul, ol { padding-left: var(--space-6); display: grid; gap: var(--space-2); }
 
@@ -575,7 +575,7 @@ blockquote{position: relative;
     margin: 0;
     }
     .audio-play-btn:hover{background: #f1f1f1; border: none;}
-    .audio-detail {display: flex; align-items: center; font-size: 14px; gap: 10px;}
+    .audio-detail {display: flex; align-items: center; font-size: 14px; gap: 10px; width: 230px;}
     .audio-text {font-weight: 600;}
     .audio-show-time {opacity: 0.7; border-left: solid 1px #ddd; padding-left: 0.5rem;}
     .meta .rt-reading-time { margin-left: 0 !important;}

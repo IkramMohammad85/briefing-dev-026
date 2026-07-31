@@ -299,7 +299,7 @@
 }
 .article-body img {
   border-radius: var(--radius-md);
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 .article-body ul, .article-body ol {
@@ -779,6 +779,7 @@ blockquote:before {
   align-items: center;
   font-size: 14px;
   gap: 10px;
+  width: 230px;
 }
 
 .audio-text {
