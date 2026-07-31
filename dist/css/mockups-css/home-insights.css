@@ -562,6 +562,7 @@
 .pub-card .btn {
   max-width: 104px;
   padding: var(--space-3) var(--space-3);
+  text-align: center;
 }
 .pub-card .mag-detail {
   width: 58%;
