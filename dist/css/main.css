@@ -2855,7 +2855,7 @@ th {
   background: #fff;
 }
 .table td {
-  color: #5c5b62;
+  color: var(--gray-light);
   padding: 10px;
 }
 .table td ul {
@@ -4484,7 +4484,7 @@ a.link:after {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-4);
+  gap: var(--space-8);
   padding-block: var(--space-8);
   z-index: 5;
 }

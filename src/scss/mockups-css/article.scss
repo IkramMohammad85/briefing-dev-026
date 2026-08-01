@@ -336,7 +336,7 @@ header{position: relative;}
 
 .author-bio__name { font-weight: 600; }
 .author-bio__role { font-size: var(--text-sm); color: var(--text-on-paper-muted); }
-.author-bio__link { display: inline-block; margin-top: var(--space-3); color: var(--accent); text-decoration: none; font-size: var(--text-sm); &:hover { text-decoration: underline; } }
+.author-bio__link { display: inline-block; margin-top: var(--space-3); color: var(--primary-color); text-decoration: none; font-size: var(--text-sm); &:hover { text-decoration: underline; } }
 
 
 // "About Us" block + Continue exploring
@@ -350,7 +350,7 @@ header{position: relative;}
 
   h2 { font-size: var(--text-lg); margin-bottom: var(--space-3); font-weight: 600; }
   p { color: var(--black); font-size: var(--text-base);line-height: var(--leading-normal); font-weight:300; }
-  a { color: var(--accent); text-decoration: none; &:hover { text-decoration: underline; } }
+  a { color: var(--primary-color); text-decoration: none; &:hover { text-decoration: underline; } }
 }
 
 .explore-grid {
