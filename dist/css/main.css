@@ -3396,16 +3396,13 @@ thead th {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 
+/* 
 .scheduler__picker {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-5);
-}
-@media (min-width: 480px) {
-  .scheduler__picker {
-    grid-template-columns: 1.4fr 1fr;
-    gap: 0;
-  }
+
+  @include bp(sm) { grid-template-columns: 1.4fr 1fr; gap: 0; }
 }
 
 .scheduler__heading {
@@ -3418,6 +3415,7 @@ thead th {
 .calendar {
   padding: var(--space-5);
   background: var(--paper);
+  //box-shadow: var(--shadow-md);
   border-radius: var(--radius-sm);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -3429,16 +3427,9 @@ thead th {
   margin-bottom: var(--space-4);
 }
 
-.calendar__month {
-  font-size: var(--text-sm);
-  font-weight: 600;
-  color: var(--text-on-paper-muted);
-}
+.calendar__month { font-size: var(--text-sm); font-weight: 600; color: var(--text-on-paper-muted); }
 
-.calendar__nav {
-  display: flex;
-  gap: var(--space-1);
-}
+.calendar__nav { display: flex; gap: var(--space-1); }
 
 .calendar__nav-btn {
   display: inline-flex;
@@ -3451,14 +3442,11 @@ thead th {
   border-radius: var(--radius-sm);
   color: var(--text-on-paper);
   cursor: pointer;
+
+  &:hover { background: var(--paper-soft); }
+  &:disabled { opacity: 0.3; cursor: default; }
 }
-.calendar__nav-btn:hover {
-  background: var(--paper-soft);
-}
-.calendar__nav-btn:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
+
 
 .calendar__grid {
   display: grid;
@@ -3485,32 +3473,28 @@ thead th {
   font-size: var(--text-sm);
   color: var(--text-on-paper);
   cursor: pointer;
+
+  &:hover:not(:disabled) { background: var(--paper-soft); }
+
+
+  &.is-muted { color: var(--text-on-paper-muted); opacity: 0.45; }
+  &:disabled { color: var(--text-on-paper-muted); opacity: 0.35; cursor: default; }
+
+  // Today gets a ring; the chosen day gets a filled chip.
+  &.is-today { box-shadow: inset 0 0 0 1px var(--line-dark); }
+  &.is-selected {
+    background: #0D6A64;
+    color: #fff;
+    font-weight: 400;
+    box-shadow: none;
+  }
 }
-.calendar__day:hover:not(:disabled) {
-  background: var(--paper-soft);
-}
-.calendar__day.is-muted {
-  color: var(--text-on-paper-muted);
-  opacity: 0.45;
-}
-.calendar__day:disabled {
-  color: var(--text-on-paper-muted);
-  opacity: 0.35;
-  cursor: default;
-}
-.calendar__day.is-today {
-  box-shadow: inset 0 0 0 1px var(--line-dark);
-}
-.calendar__day.is-selected {
-  background: #0D6A64;
-  color: #fff;
-  font-weight: 400;
-  box-shadow: none;
-}
+
 
 .scheduler__slots {
   padding: var(--space-5);
   background: var(--paper);
+  //box-shadow: var(--shadow-md);
   border-radius: var(--radius-sm);
   display: flex;
   flex-direction: column;
@@ -3518,10 +3502,7 @@ thead th {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.scheduler__slot-date {
-  font-size: var(--text-sm);
-  font-weight: 400;
-}
+.scheduler__slot-date { font-size: var(--text-sm); font-weight: 400; }
 
 .slot {
   padding: var(--space-1);
@@ -3534,14 +3515,14 @@ thead th {
   color: var(--text-on-paper);
   text-align: center;
   cursor: pointer;
-}
-.slot:hover {
-  border-color: var(--primary-color);
-}
-.slot.is-selected {
-  background: #0D6A64;
-  border-color: #0D6A64;
-  color: #fff;
+
+  &:hover { border-color: var(--primary-color); }
+
+  &.is-selected {
+    background: #0D6A64;
+    border-color: #0D6A64;
+    color: #fff;
+  }
 }
 
 .scheduler__submit {
@@ -3549,7 +3530,7 @@ thead th {
   width: 100%;
   justify-content: center;
 }
-
+*/
 .sprite:before {
   content: "";
   display: inline-block;
