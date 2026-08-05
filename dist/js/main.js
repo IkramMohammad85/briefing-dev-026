@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAdvisoryCarousel();
   initMobileSliders();
   initAccordions();
+  initCalculator();
   initTabs();
   initDropdowns();
   initContentSwitch();
@@ -616,12 +617,95 @@ function initAccordions() {
 
       trigger.addEventListener("click", () => {
         const isOpen = panel.classList.contains("is-open");
-        trigger.setAttribute("aria-expanded", String(!isOpen));
-        panel.classList.toggle("is-open", !isOpen);
+
+        // Single-open: close every item in this accordion first, so only one
+        // stays open at a time.
+        items.forEach((other) => {
+          const t = other.querySelector(".accordion__trigger");
+          const p = other.querySelector(".accordion__panel");
+          if (!t || !p) return;
+          t.setAttribute("aria-expanded", "false");
+          p.classList.remove("is-open");
+        });
+
+        // Then open the clicked one — unless it was already open (so clicking an
+        // open item closes it).
+        if (!isOpen) {
+          trigger.setAttribute("aria-expanded", "true");
+          panel.classList.add("is-open");
+        }
       });
     });
   });
 }
+
+/* ---- Calculator — multi-step form ----*/
+function initCalculator() {
+  document.querySelectorAll("[data-calculator]").forEach((calc) => {
+    const steps = Array.from(calc.querySelectorAll("[data-step]"));
+    const total = steps.length;
+    if (!total) return;
+
+    const bar = calc.querySelector("[data-calc-bar]");
+    const count = calc.querySelector("[data-calc-count]");
+    const backBtn = calc.querySelector("[data-calc-back]");
+    const nextBtn = calc.querySelector("[data-calc-next]");
+    const form = calc.querySelector("form") || calc;
+    const result = calc.querySelector("[data-calc-result]");
+    const formBody = calc.querySelector("[data-calc-body]");
+
+    let current = 1;
+
+    function render() {
+      steps.forEach((s) => {
+        s.classList.toggle("is-active", Number(s.dataset.step) === current);
+      });
+      if (count) count.textContent = `${current}/${total}`;
+      if (bar) bar.style.width = `${(current / total) * 100}%`;
+      if (backBtn) backBtn.hidden = current === 1;
+      if (nextBtn) nextBtn.textContent = current === total ? "Get my estimate" : "Continue";
+    }
+
+    // Validate only the fields inside the current step.
+    function stepValid() {
+      const panel = steps.find((s) => Number(s.dataset.step) === current);
+      if (!panel) return true;
+      const fields = panel.querySelectorAll("[required]");
+      for (const f of fields) {
+        if (!f.value || !f.value.trim()) {
+          f.focus();
+          f.classList.add("is-invalid");
+          return false;
+        }
+        f.classList.remove("is-invalid");
+      }
+      return true;
+    }
+
+    function next() {
+      if (!stepValid()) return;
+      if (current < total) {
+        current += 1;
+        render();
+      } else {
+        // Last step done → show the result panel.
+        if (formBody) formBody.hidden = true;
+        if (result) result.classList.add("is-active");
+      }
+    }
+
+    function back() {
+      if (current > 1) { current -= 1; render(); }
+    }
+
+    nextBtn?.addEventListener("click", (e) => { e.preventDefault(); next(); });
+    backBtn?.addEventListener("click", (e) => { e.preventDefault(); back(); });
+    form.addEventListener("submit", (e) => { e.preventDefault(); next(); });
+
+    render();
+  });
+}
+
 
 /* ---- Contact modal  ---- */
 // function initContactModal() {

@@ -38,6 +38,29 @@
 
     strong { color: var(--text-on-paper); }
   }
+  &--testi-cal{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: var(--space-6) var(--space-6) var(--space-6) var(--space-8);
+    margin: .3rem;
+    margin-top: var(--space-2);
+    min-height: 360px;
+
+    
+    
+    blockquote{font-size: var(--text-base);  font-weight: 400; font-style: italic; color: #666; line-height: 24px;}
+&:before
+ {
+    color: #FF8541;
+    content: "“";
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    font-size: 5rem;
+    line-height: 0;
+    font-family: Georgia, serif;
+   
+}
+  }
 }
 
 // Pagination dots 
@@ -64,3 +87,29 @@
   }
 }
 
+.client-logo{ 
+  display: flex; 
+  //justify-content: center; 
+  align-items: center; 
+  margin-bottom: var(--space-5);
+  margin-top: var(--space-5);
+  img{max-width:230px;max-height:60px;}
+}
+
+.testimonial-slider--calculator {
+    width: 319px !important;
+    max-width: 319px !important;
+    box-sizing: border-box !important;
+    @include bp(md) {
+    width:768px !important;
+    max-width: 768px !important;
+  }
+    @include bp(lg) {
+    width:500px !important;
+    max-width: 500px !important;
+  }
+    @include bp(xl) {
+    width:572px !important;
+    max-width: 572px !important;
+  }
+}

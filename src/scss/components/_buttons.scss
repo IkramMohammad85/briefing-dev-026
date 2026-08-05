@@ -27,6 +27,11 @@
     color: var(--white);
     &:hover { background: var(--primary-strong-color); color: var(--navy); }
   }
+    &--primary-soft {
+    background: var(--primary-color-light);
+    color: var(--black);
+
+  }
 
   &--secondary {
     background: transparent;
@@ -92,7 +97,7 @@
 }
 
 
-.primary-animation, .secondary-animation, .cb-btn {
+.primary-animation, .secondary-animation, .primary-soft-animation, .cb-btn {
   display: inline-block;
   transition: all .3s;
   position: relative;
@@ -136,6 +141,21 @@
   }
   &:before {
     background-color: var(--black) ;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+.primary-soft-animation{
+  &:after {
+    background-color:#FDBA95;
+  }
+  &:before {
+    background-color: var(--primary-color) ;
   }
   &:hover {
     color: #fff;

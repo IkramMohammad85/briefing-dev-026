@@ -16,7 +16,8 @@
   margin-bottom: var(--space-7);
   
   margin: 0 auto;
-      @include bp(md) { width: 46%; }
+      @include bp(md) { width: 59%; }
+      @include bp(lg) { width: 46%; }
 }
 
 .contact__title {
