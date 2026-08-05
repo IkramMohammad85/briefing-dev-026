@@ -14,8 +14,8 @@
   flex-direction: column;
  
   margin: 0 auto;
-  @include bp(md) {  width: 59%; padding: 0; flex-direction: row;}
-  @include bp(lg) {  width: 35.9%;}
+  @include bp(md) {  width: 424px; padding: 0; flex-direction: row;}
+  @include bp(xl) {  width: 35.9%;}
 
   &::-webkit-scrollbar { display: none; }
 }

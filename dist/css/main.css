@@ -2342,12 +2342,12 @@ ul[class], ol[class] {
 }
 @media (min-width: 768px) {
   .tabs__list {
-    width: 59%;
+    width: 424px;
     padding: 0;
     flex-direction: row;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .tabs__list {
     width: 35.9%;
   }
