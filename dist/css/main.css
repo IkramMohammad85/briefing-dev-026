@@ -2869,6 +2869,10 @@ ul[class], ol[class] {
   color: var(--primary-color);
 }
 
+.captcha-container .cf-turnstile iframe {
+  width: 100% !important;
+}
+
 table {
   caption-side: bottom;
   margin-bottom: 2rem;

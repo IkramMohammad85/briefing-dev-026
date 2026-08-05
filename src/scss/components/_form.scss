@@ -163,3 +163,11 @@
     color: var(--primary-color);
 }
 }
+
+.captcha-container{
+  .cf-turnstile{
+    iframe{
+      width: 100% !important;
+    }
+  }
+}
