@@ -4263,6 +4263,19 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
   }
 }
 
+.calc__result .advisor {
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  margin-bottom: var(--space-6);
+}
+.calc__result .advisor__note {
+  background: var(--white);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+}
+
 /* 
 // Stats row
 

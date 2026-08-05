@@ -264,3 +264,10 @@
     @include bp(md) { min-width: auto; }
 
 }
+
+.calc__result{
+  .advisor{
+    background: transparent; padding: 0; border: none; box-shadow: none; margin-bottom: var(--space-6);
+  }
+  .advisor__note{background:var(--white); padding: var(--space-6); border-radius: var(--radius-md); }
+}
