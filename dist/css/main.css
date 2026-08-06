@@ -1487,6 +1487,19 @@ ul[class], ol[class] {
   width: 100%;
 }
 
+.cta-link {
+  color: var(--primary-color) !important;
+  text-decoration: underline;
+  font-weight: 400 !important;
+}
+.cta-link:hover {
+  color: var(--primary-strong-color) !important;
+}
+.cta-link span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -4268,12 +4281,98 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
   padding: 0;
   border: none;
   box-shadow: none;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-7);
 }
 .calc__result .advisor__note {
   background: var(--white);
   padding: var(--space-6);
   border-radius: var(--radius-md);
+}
+.calc__result .calc__title {
+  margin-bottom: var(--space-6);
+}
+
+.result-summary {
+  background-color: var(--primary-color-light);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  height: 100%;
+}
+
+.result-summary__title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin: 0 0 var(--space-3);
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #f2e3d8;
+  overflow: hidden; /* rounded corners table pe apply karne ke liye */
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  color: #2b2b2b;
+}
+
+.info-table th,
+.info-table td {
+  padding: 16px 22px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #f2e3d8;
+}
+
+/* aakhri row ki bottom line hata do */
+.info-table tr:last-child th,
+.info-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* left column — peach background + bold label */
+.info-table th {
+  background: #fceee4;
+  font-weight: 500;
+  width: 34%;
+  border-right: 1px solid #f2e3d8;
+  white-space: nowrap;
+}
+
+/* right column — white value */
+.info-table td {
+  background: #fff;
+  font-weight: 400;
+}
+
+/* icon styling */
+.info-table th svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #2b2b2b;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* mobile pe font thoda chhota + padding adjust */
+@media (max-width: 600px) {
+  .info-table {
+    font-size: 15px;
+  }
+  .info-table th,
+  .info-table td {
+    padding: 12px 14px;
+  }
+  .info-table th {
+    width: 42%;
+  }
+}
+.info-table__icon {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
 /* 
@@ -4421,6 +4520,10 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
 
 .align-center {
   text-align: center;
+}
+
+.align-right {
+  text-align: right;
 }
 
 .mt-2 {

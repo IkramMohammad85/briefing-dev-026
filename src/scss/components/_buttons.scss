@@ -179,3 +179,16 @@
     }
   }
 }
+
+.cta-link{
+  color: var(--primary-color)!important;
+  text-decoration: underline;
+  font-weight: 400 !important;
+  &:hover{
+    color: var(--primary-strong-color)!important;
+  }
+  span{
+    font-weight: 600;
+    font-size: 18px;
+  }
+}

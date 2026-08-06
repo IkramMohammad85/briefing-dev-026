@@ -45,6 +45,8 @@ function initMobileNav() {
 }
 
 /* ---- Mega menu dropdowns  ---- */
+
+/* ----  
 function initMegaMenus() {
   const items = document.querySelectorAll(".nav__item");
 
@@ -59,6 +61,30 @@ function initMegaMenus() {
       if (!isOpen) {
         panel.classList.add("is-open");
         trigger.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+  ---- */
+  function initMegaMenus() {
+  const items = document.querySelectorAll(".nav__item");
+  const isMobile = () =>
+    window.matchMedia("(max-width: 1023px)").matches ||
+    window.matchMedia("(hover: none)").matches;
+
+  items.forEach((item) => {
+    const trigger = item.querySelector(".nav__link");
+    const panel = item.querySelector(".mega-panel");
+    if (!trigger || !panel) return;
+
+    trigger.addEventListener("click", (e) => {
+      if (isMobile()) {
+        e.preventDefault();
+        const isOpen = panel.classList.contains("is-open");
+        closeAllPanels();
+        if (!isOpen) {
+          panel.classList.add("is-open");
+          trigger.setAttribute("aria-expanded", "true");
+        }
       }
     });
   });
