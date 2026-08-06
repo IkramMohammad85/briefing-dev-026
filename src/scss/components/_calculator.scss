@@ -57,17 +57,17 @@
 
 .calc__title {
   font-size: var(--text-xl);
-  margin-bottom: var(--space-5);
-  font-weight: 600;
+  margin-bottom: var(--space-4);
+  font-weight: 500;
 }
 
 .calc__field {
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 
 .calc__label {
   display: block;
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   margin-bottom: var(--space-2);
 
   .req { color: var(--accent); }
@@ -288,6 +288,7 @@ background-color: var(--primary-color-light); padding: var(--space-4); border-ra
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     font-size: 1rem;
     color: #2b2b2b;
+    margin-bottom: 0px;
 }
 
 .info-table th,
@@ -330,7 +331,11 @@ background-color: var(--primary-color-light); padding: var(--space-4); border-ra
     stroke-linejoin: round;
 
 }
-
+.calc__field_two-column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
 /* mobile pe font thoda chhota + padding adjust */
 @media (max-width: 600px){
     .info-table {
