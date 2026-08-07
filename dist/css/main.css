@@ -1645,6 +1645,7 @@ ul[class], ol[class] {
 @media (min-width: 480px) {
   .mega-webinars .card__media {
     width: 120px;
+    min-width: 120px;
   }
 }
 .mega-webinars .card__heading {

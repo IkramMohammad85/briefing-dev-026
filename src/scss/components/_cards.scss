@@ -141,7 +141,7 @@
 
   .mega-webinars{
      @include bp(sm) {
-    .card__media{width: 120px;}
+    .card__media{width: 120px; min-width: 120px; }
      }
      .card__heading{font-size: 16px; font-weight: 400;}
      .card--article{ padding: 0 0 1rem 0; background: none; border-radius: 0; box-shadow:none; border-bottom: solid 1px #ddd;
