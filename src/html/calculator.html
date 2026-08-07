@@ -131,6 +131,46 @@
                 <!-- Step 2 -->
                 <div class="calc__step" data-step="2">
                   <h2 class="calc__title">Business Setup</h2>
+                   <label class="calc__label">How many owners / shareholders will your company have?</label>
+                  <div class="calc__field_two-column">
+                  <!-- <label class="field__label" for="modal-name">First Name <span class="rstar">*</span></label> -->
+
+                             <div class="calc__field">
+                    <label class="calc__label" for="individual_owners">Individual Owners / Shareholders (A natural person)*<span class="req">*</span></label>
+                    <select class="calc__control" id="individual_owners" name="directors" required>
+                      <option value="">Select…</option>
+                      <option>1</option>
+                      <option>2-5</option>
+                      <option>6-11</option>
+                      <option>11+</option>
+                    </select>
+                  </div>
+                  <div class="calc__field">
+                    <label class="calc__label" for="corporate_owners">Corporate Owners / Shareholders (A registered corporate entity)*
+<span class="req">*</span></label>
+                    <select class="calc__control" id="corporate_owners" name="corporate_owners" required>
+                       <option value="">Select…</option>
+                      <option>1</option>
+                      <option>2-5</option>
+                      <option>6-11</option>
+                      <option>11+</option>
+                      
+                    </select>
+                  </div>
+    
+                    
+                </div>
+                <div class="calc__field">
+                    <label class="calc__label" for="q-banking">Are any of your owners / shareholders a trust?*<span class="req">*</span></label>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" id="shareholders" value="shareholders1">
+  <label class="form-check-label" for="shareholders">Yes</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" id="shareholders2" value="shareholders2" checked>
+  <label class="form-check-label" for="shareholders2">No</label>
+</div>
+                  </div>
                   <div class="calc__field">
                     <label class="calc__label" for="directors">How many directors?<span class="req">*</span></label>
                     <select class="calc__control" id="directors" name="directors" required>
@@ -169,33 +209,33 @@
                   <div class="calc__field">
                     <label class="calc__label" for="q-banking">Do you need payroll services?<span class="req">*</span></label>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
   <label class="form-check-label" for="inlineCheckbox1">Yes</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2">
   <label class="form-check-label" for="inlineCheckbox2">No</label>
 </div>
                   </div>
                   <div class="calc__field">
                     <label class="calc__label" for="q-accounting">Do you need employment visas?<span class="req">*</span></label>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+  <input class="form-check-input" type="radio" id="inlineCheckbox3" value="option3">
   <label class="form-check-label" for="inlineCheckbox3">Yes</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+  <input class="form-check-input" type="radio" id="inlineCheckbox4" value="option4">
   <label class="form-check-label" for="inlineCheckbox4">No</label>
 </div>
                   </div>
                                     <div class="calc__field">
                     <label class="calc__label" for="q-accounting">Do you need dependent visas?​<span class="req">*</span></label>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option5">
+  <input class="form-check-input" type="radio" id="inlineCheckbox5" value="option5">
   <label class="form-check-label" for="inlineCheckbox5">Yes</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+  <input class="form-check-input" type="radio" id="inlineCheckbox6" value="option6">
   <label class="form-check-label" for="inlineCheckbox6">No</label>
 </div>
                   </div>
@@ -207,40 +247,77 @@
                   <div class="calc__field">
                     <label class="calc__label" for="q-timeline">Do you need tax support?<span class="req">*</span></label>
                     <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+  <input class="form-check-input" type="radio" id="inlineCheckbox7" value="option7">
   <label class="form-check-label" for="inlineCheckbox7">Yes</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
+  <input class="form-check-input" type="radio" id="inlineCheckbox8" value="option8">
   <label class="form-check-label" for="inlineCheckbox8">No</label>
 </div>
                   </div>
                   <div class="calc__field">
                     <label class="calc__label" for="q-budget">Do you need accounting support?<span class="req">*</span></label>
                     <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+  <input class="form-check-input" type="radio" id="inlineCheckbox9" value="option9">
+  <label class="form-check-label" for="inlineCheckbox9">Yes</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">No</label>
+  <input class="form-check-input" type="radio" id="inlineCheckbox10" value="option10">
+  <label class="form-check-label" for="inlineCheckbox10">No</label>
 </div>
                   </div>
                 </div>
 
                 <!-- Step 5 — contact details -->
                 <div class="calc__step" data-step="5">
+                    
                   <h2 class="calc__title">Your business setup estimate is ready!
 </h2>
+<div class="calc__field_two-column">
                   <div class="calc__field">
-                    <label class="calc__label" for="q-name">Your name<span class="req">*</span></label>
-                    <input class="calc__control" id="q-name" name="name" type="text" required>
+                    <label class="calc__label" for="f-name">Your name<span class="req">*</span></label>
+                    <input class="calc__control" id="f-name" name="name" type="text" required>
                   </div>
                   <div class="calc__field">
-                    <label class="calc__label" for="q-email">Work email<span class="req">*</span></label>
-                    <input class="calc__control" id="q-email" name="email" type="email" required>
+                    <label class="calc__label" for="l-email">Last name<span class="req">*</span></label>
+                    <input class="calc__control" id="l-email" name="name-last" type="text" required>
                   </div>
                 </div>
+              
+              <div class="calc__field">
+                    <label class="calc__label" for="email">Email<span class="req">*</span></label>
+                    <input class="calc__control" id="email" name="email" type="email" required>
+                  </div>
+                    <div class="calc__field">
+                    <label class="calc__label" for="phone">Phone<span class="req">*</span></label>
+                    <input class="calc__control" id="phone" name="phone" type="tel" required>
+                  </div>
+                  <div class="calc__field">
+                    <label class="calc__label" for="company">Company<span class="req">*</span></label>
+                    <input class="calc__control" id="company" name="company" type="text" required>
+                  </div>
+                  <div class="calc__field">
+                    <label class="calc__label" for="nationality">Nationality<span class="req">*</span></label>
+                    <select class="calc__control" id="nationality" name="nationality" required>
+                      <option value="">Select…</option>
+                      <option>China</option>
+                      <option>India</option>
+                      <option>Vietnam</option>
+                      <option>Singapore</option>
+                    </select>
+                  </div>
+                  
+                  <div class="calc__field">
+
+                  <label class="margin-top-2 flex items-top gap-2" for="agree_privary_policy">
+                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span style="font-size: text-xs;">
+                      I have read Ascentium's&nbsp;<a href="https://www.dezshira.com/privacy-policy"> Privacy Statement</a>
+                      and agree to Ascentium using my information provided to contact me about related content and
+                      services. <span class="rstar">*</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
 
                 <!-- Progress -->
                 <div class="calc__progress">
@@ -258,9 +335,37 @@
 
             <!-- Result panel, after step 5 -->
             <div class="calc__result" data-calc-result>
+                
+                <!-- Advisor card -->
+                <!-- <div class="advisor">
+                  <div class="advisor__head">
+                    <img class="advisor__photo" src="https://www.asiabriefing.com/site-mgmt-v2/new/userfiles/personnel/SSL_2023_BW.png" alt="Shanshan Liu" width="72" height="72">
+                    <div>
+                      <p class="advisor__name">Shanshan Liu</p>
+                      <p class="advisor__role">International Business Advisor</p>
+                      <div class="advisor__actions">
+                        <a class="advisor__btn btn--primary-soft primary-soft-animation" href="#">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-4-4.6-4.2-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.4l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+                          Whatsapp
+                        </a>
+                        <a class="advisor__btn btn btn--primary primary-animation" href="mailto:advisor@meridianadvisory.com">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                          Email
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="advisor__note">Hi, I've reviewed your requirements for a company in Hong Kong. I have some great options for you — let's connect and I'll walk you through everything.</p>
+                </div> -->
+              
               <h2 class="calc__title" style="color: var(--teal);">Your estimate is ready</h2>
               <p style="margin-bottom: var(--space-4);">Thanks — we've got what we need. Book a free 15-minute call to receive your personalised setup estimate with detailed costs and timelines.</p>
-              <a class="btn btn--contact " href="/contact/index.html">Book your call</a>
+              
+              <!-- Calendly inline widget begin -->
+                <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/digitalmarketing-dezshira/test-meeting?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0d6a64" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+                <!-- Calendly inline widget end -->
+             <div class="text-center"><a class="btn--contact mt-2 btn btn--primary primary-animation" href="calculator-ready.html">Book your call</a></div> 
             </div>
             
           </div>
