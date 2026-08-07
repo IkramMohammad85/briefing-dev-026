@@ -1339,6 +1339,10 @@ ul[class], ol[class] {
   background: var(--primary-color-light);
   color: var(--black);
 }
+.btn--primary-soft:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
 .btn--secondary {
   background: transparent;
   border-color: var(--black);
@@ -1367,6 +1371,7 @@ ul[class], ol[class] {
 .btn--contact {
   background: var(--brief-theme-color);
   color: #fff;
+  border: none;
 }
 .btn--contact:hover {
   background: var(--brief-theme-color);
@@ -4030,10 +4035,18 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
   background: none;
   border: none;
   padding: 0;
-  font: inherit;
-  color: var(--accent);
-  text-decoration: underline;
+  font-size: var(--text-sm);
+  color: var(--black);
+  text-decoration: none;
   cursor: pointer;
+}
+.link-button a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: 500;
+}
+.link-button a:hover {
+  text-decoration: none;
 }
 
 .calc {
@@ -4134,16 +4147,19 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
 }
 
 .calc__back {
-  background: none;
+  background: var(--primary-color-light);
   border: none;
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  color: var(--text-on-paper-muted);
+  color: var(--black);
   cursor: pointer;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  line-height: 1;
 }
 .calc__back:hover {
-  color: var(--text-on-paper);
+  color: var(--white);
 }
 .calc__back[hidden] {
   visibility: hidden;
@@ -4381,6 +4397,14 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
   display: flex;
   align-items: center;
   gap: var(--space-3);
+}
+
+.notsure__text {
+  margin-top: var(--space-4);
+  color: var(--text-on-paper-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 /* 

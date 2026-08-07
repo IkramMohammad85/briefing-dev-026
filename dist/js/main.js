@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileSliders();
   initAccordions();
   initCalculator();
+  initCalcReadyName();
   initTabs();
   initDropdowns();
   initContentSwitch();
@@ -666,6 +667,13 @@ function initAccordions() {
 }
 
 /* ---- Calculator — multi-step form ----*/
+function initCalcReadyName() {
+  const slot = document.querySelector("[data-ready-name]");
+  if (!slot) return;
+  const name = new URLSearchParams(window.location.search).get("name");
+  if (name) slot.textContent = `${name.trim()}, Your`;
+}
+
 function initCalculator() {
   document.querySelectorAll("[data-calculator]").forEach((calc) => {
     const steps = Array.from(calc.querySelectorAll("[data-step]"));
@@ -679,6 +687,7 @@ function initCalculator() {
     const form = calc.querySelector("form") || calc;
     const result = calc.querySelector("[data-calc-result]");
     const formBody = calc.querySelector("[data-calc-body]");
+    const redirectTo = calc.dataset.calcRedirect;
 
     let current = 1;
 
@@ -707,7 +716,7 @@ function initCalculator() {
       }
       return true;
     }
-
+/* 
     function next() {
       if (!stepValid()) return;
       if (current < total) {
@@ -719,7 +728,29 @@ function initCalculator() {
         if (result) result.classList.add("is-active");
       }
     }
+*/
+function next() {
+      if (!stepValid()) return;
+      if (current < total) {
+        current += 1;
+        render();
+      } else {
+        const nameField = calc.querySelector('[name="name"]');
+        const first = (nameField?.value || "").trim().split(/\s+/)[0];
 
+        if (redirectTo) {
+          const url = new URL(redirectTo, window.location.href);
+          if (first) url.searchParams.set("name", first);
+          window.location.href = url.toString();
+          return;
+        }
+
+        const nameSlot = calc.querySelector("[data-calc-name]");
+        if (nameSlot) nameSlot.textContent = first ? `${first}, Your` : "Your";
+        if (formBody) formBody.hidden = true;
+        if (result) result.classList.add("is-active");
+      }
+    }
     function back() {
       if (current > 1) { current -= 1; render(); }
     }

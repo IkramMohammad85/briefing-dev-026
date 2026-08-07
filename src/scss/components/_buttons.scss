@@ -30,6 +30,7 @@
     &--primary-soft {
     background: var(--primary-color-light);
     color: var(--black);
+    &:hover { background: var(--primary-color); color: var(--white); }
 
   }
 
@@ -56,7 +57,7 @@
 
   &--contact {
     background: var(--brief-theme-color);
-    color: #fff;
+    color: #fff; border: none;
     &:hover { background: var(--brief-theme-color); color: #fff; }
   }
 

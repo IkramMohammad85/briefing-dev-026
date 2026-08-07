@@ -86,7 +86,7 @@
 
           <!-- 5-step calculator form -->
            <div>
-          <div class="calc" data-calculator>
+          <div class="calc" data-calculator data-calc-redirect="calculator-ready.html">
             <div data-calc-body>
               
 
@@ -96,7 +96,7 @@
                 <div class="calc__step" data-step="1">
                   <h2 class="calc__title">Business Setup</h2>
                   <div class="calc__field">
-                    <label class="calc__label" for="q-industry">Which industry best describes your business?*<span class="req">*</span></label>
+                    <label class="calc__label" for="q-industry">Which industry best describes your business?<span class="req">*</span></label>
                     <select class="calc__control" id="q-industry" name="industry" required>
                       <option value="">Select…</option>
                       <option>Technology &amp; Software</option>
@@ -110,20 +110,22 @@
                     <label class="calc__label" for="q-type">Which company type best describes your business?<span class="req">*</span></label>
                     <select class="calc__control" id="q-type" name="company_type" required>
                       <option value="">Select…</option>
-                      <option>Private Limited Company</option>
-                      <option>Branch Office</option>
+                      <option>Trading</option>
+                      <option>Holding</option>
+                      <option>Manufacturing</option>
+                      <option>Services</option>
+                      <option>Other</option>
                       <option>Representative Office</option>
-                      <option>Sole Proprietorship</option>
                     </select>
                   </div>
                   <div class="calc__field">
-                    <label class="calc__label" for="q-reason">What is your main reason for setting up a company in Hong Kong?<span class="req">*</span></label>
+                    <label class="calc__label" for="q-reason">What is your main reason for setting up a company in Vietnam?<span class="req">*</span></label>
                     <select class="calc__control" id="q-reason" name="reason" required>
                       <option value="">Select…</option>
-                      <option>Access to Asian markets</option>
-                      <option>Favourable tax regime</option>
-                      <option>Banking and finance hub</option>
-                      <option>Regional headquarters</option>
+                      <option>New company formation </option>
+                      <option>Expansion plans</option>
+                      <option>Company relocation </option>
+                      <option>Tax benefits </option>
                     </select>
                   </div>
                 </div>
@@ -136,41 +138,57 @@
                   <!-- <label class="field__label" for="modal-name">First Name <span class="rstar">*</span></label> -->
 
                              <div class="calc__field">
-                    <label class="calc__label" for="individual_owners">Individual Owners / Shareholders (A natural person)*<span class="req">*</span></label>
+                    <label class="calc__label" for="individual_owners">Individual Owners / Shareholders (A natural person)<span class="req">*</span></label>
                     <select class="calc__control" id="individual_owners" name="directors" required>
                       <option value="">Select…</option>
                       <option>1</option>
-                      <option>2-5</option>
-                      <option>6-11</option>
-                      <option>11+</option>
+                      <option>3-5</option>
+                      <option>6-10</option>
+                      <option>11-50</option>
                     </select>
                   </div>
                   <div class="calc__field">
-                    <label class="calc__label" for="corporate_owners">Corporate Owners / Shareholders (A registered corporate entity)*
+                    <label class="calc__label" for="corporate_owners">Corporate Owners / Shareholders (A registered corporate entity)
 <span class="req">*</span></label>
                     <select class="calc__control" id="corporate_owners" name="corporate_owners" required>
                        <option value="">Select…</option>
                       <option>1</option>
-                      <option>2-5</option>
-                      <option>6-11</option>
-                      <option>11+</option>
+                      <option>1-2</option>
+                      <option>3-5</option>
+                      <option>6-10</option>
+                      <option>11-50</option>
                       
                     </select>
                   </div>
     
                     
                 </div>
-                <div class="calc__field">
-                    <label class="calc__label" for="q-banking">Are any of your owners / shareholders a trust?*<span class="req">*</span></label>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="shareholders" value="shareholders1">
-  <label class="form-check-label" for="shareholders">Yes</label>
+<div class="calc__field">
+  <label class="calc__label" for="q-banking">
+    Are any of your owners / shareholders a trust?<span class="req">*</span>
+  </label>
+
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="shareholdersTrust"
+      id="shareholders"
+      value="Yes">
+    <label class="form-check-label" for="shareholders">Yes</label>
+  </div>
+
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="shareholdersTrust"
+      id="shareholders2"
+      value="No"
+      checked>
+    <label class="form-check-label" for="shareholders2">No</label>
+  </div>
 </div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="shareholders2" value="shareholders2" checked>
-  <label class="form-check-label" for="shareholders2">No</label>
-</div>
-                  </div>
                   <div class="calc__field">
                     <label class="calc__label" for="directors">How many directors?<span class="req">*</span></label>
                     <select class="calc__control" id="directors" name="directors" required>
@@ -185,8 +203,8 @@
                     <label class="calc__label" for="office-space">What type of office space do you need?<span class="req">*</span></label>
                     <select class="calc__control" id="office-space" name="Office Space" required>
                       <option value="">Select…</option>
-                      <option>Virtual Office</option>
-                      <option>Physical Office</option>
+                      <option>Virtual</option>
+                      <option>Physical</option>
                       <option>None</option>
                       
                     </select>
@@ -195,10 +213,10 @@
                     <label class="calc__label" for="plan-start">When do you plan to start?<span class="req">*</span></label>
                     <select class="calc__control" id="plan-start" name="plan" required>
                       <option value="">Select…</option>
-                      <option>Next month</option>
-                      <option>3 months</option>
-                      <option>6 months</option>
-                      <option>1 year+</option>
+                      <option>ASAP</option>
+                      <option>Next month </option>
+                      <option>3 months </option>
+                      <option>6 months </option>
                     </select>
                   </div>
                 </div>
@@ -206,70 +224,127 @@
                 <!-- Step 3 -->
                 <div class="calc__step" data-step="3">
                   <h2 class="calc__title">Payroll & Visas​</h2>
-                  <div class="calc__field">
-                    <label class="calc__label" for="q-banking">Do you need payroll services?<span class="req">*</span></label>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+<div class="calc__field">
+  <label class="calc__label">
+    Do you need payroll services?<span class="req">*</span>
+  </label>
+
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="payrollServices" id="payrollServicesYes" value="Yes">
+    <label class="form-check-label" for="payrollServicesYes">Yes</label>
+  </div>
+
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="payrollServices" id="payrollServicesNo" value="No">
+    <label class="form-check-label" for="payrollServicesNo">No</label>
+  </div>
 </div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">No</label>
+
+<div class="calc__field">
+  <label class="calc__label" for="plan-start">
+    If yes, how many employees do you have?
+  </label>
+
+  <select class="calc__control" id="plan-start" name="plan">
+    <option value="">Select…</option>
+    <option>1-5</option>
+    <option>6-10</option>
+    <option>11-20</option>
+    <option>21-50</option>
+    <option>51+</option>
+  </select>
 </div>
-                  </div>
-                  <div class="calc__field">
-                    <label class="calc__label" for="q-accounting">Do you need employment visas?<span class="req">*</span></label>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox3" value="option3">
-  <label class="form-check-label" for="inlineCheckbox3">Yes</label>
+
+<div class="calc__field">
+  <label class="calc__label">
+    Do you need employment visas?<span class="req">*</span>
+  </label>
+
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="employmentVisas" id="employmentVisasYes" value="Yes">
+    <label class="form-check-label" for="employmentVisasYes">Yes</label>
+  </div>
+
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="employmentVisas" id="employmentVisasNo" value="No">
+    <label class="form-check-label" for="employmentVisasNo">No</label>
+  </div>
 </div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox4" value="option4">
-  <label class="form-check-label" for="inlineCheckbox4">No</label>
+
+<div class="calc__field">
+  <label class="calc__label">
+    Do you need dependent visas?<span class="req">*</span>
+  </label>
+
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="dependentVisas" id="dependentVisasYes" value="Yes">
+    <label class="form-check-label" for="dependentVisasYes">Yes</label>
+  </div>
+
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="dependentVisas" id="dependentVisasNo" value="No">
+    <label class="form-check-label" for="dependentVisasNo">No</label>
+  </div>
 </div>
-                  </div>
-                                    <div class="calc__field">
-                    <label class="calc__label" for="q-accounting">Do you need dependent visas?​<span class="req">*</span></label>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox5" value="option5">
-  <label class="form-check-label" for="inlineCheckbox5">Yes</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox6" value="option6">
-  <label class="form-check-label" for="inlineCheckbox6">No</label>
-</div>
-                  </div>
                 </div>
 
                 <!-- Step 4 -->
                 <div class="calc__step" data-step="4">
                 <h2 class="calc__title">Tax & Accounting​​</h2>
-                  <div class="calc__field">
-                    <label class="calc__label" for="q-timeline">Do you need tax support?<span class="req">*</span></label>
-                    <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox7" value="option7">
-  <label class="form-check-label" for="inlineCheckbox7">Yes</label>
+<div class="calc__field">
+  <label class="calc__label" for="q-timeline">
+    Do you need tax support?<span class="req">*</span>
+  </label>
+
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="taxSupport"
+      id="inlineCheckbox7"
+      value="Yes">
+    <label class="form-check-label" for="inlineCheckbox7">Yes</label>
+  </div>
+
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="taxSupport"
+      id="inlineCheckbox8"
+      value="No">
+    <label class="form-check-label" for="inlineCheckbox8">No</label>
+  </div>
 </div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox8" value="option8">
-  <label class="form-check-label" for="inlineCheckbox8">No</label>
+<div class="calc__field">
+  <label class="calc__label" for="q-budget">
+    Do you need accounting support?<span class="req">*</span>
+  </label>
+
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="accountingSupport"
+      id="accountingSupportyes"
+      value="Yes">
+    <label class="form-check-label" for="accountingSupportyes">Yes</label>
+  </div>
+
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="accountingSupport"
+      id="accountingSupportno"
+      value="No">
+    <label class="form-check-label" for="accountingSupportno">No</label>
+  </div>
 </div>
-                  </div>
-                  <div class="calc__field">
-                    <label class="calc__label" for="q-budget">Do you need accounting support?<span class="req">*</span></label>
-                    <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox9" value="option9">
-  <label class="form-check-label" for="inlineCheckbox9">Yes</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox10" value="option10">
-  <label class="form-check-label" for="inlineCheckbox10">No</label>
-</div>
-                  </div>
                 </div>
 
                 <!-- Step 5 — contact details -->
-                <div class="calc__step" data-step="5">
+                <div class="calc__step" data-step="5" data-calculator data-calc-redirect="calculator-ready.html">
                     
                   <h2 class="calc__title">Your business setup estimate is ready!
 </h2>
@@ -310,7 +385,7 @@
                   <div class="calc__field">
 
                   <label class="margin-top-2 flex items-top gap-2" for="agree_privary_policy">
-                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span style="font-size: text-xs;">
+                    <input type="checkbox" name="agree_privary_policy" style="margin-top: var(--space-1);" id="agree_privary_policy"><span style="font-size:var(--text-xs1);">
                       I have read Ascentium's&nbsp;<a href="https://www.dezshira.com/privacy-policy"> Privacy Statement</a>
                       and agree to Ascentium using my information provided to contact me about related content and
                       services. <span class="rstar">*</span>
@@ -327,8 +402,8 @@
 
                 <!-- Actions -->
                 <div class="calc__actions">
-                  <button class="btn btn--secondary secondary-animation" type="button" data-calc-back hidden>&larr; Back</button>
-                  <button class="btn btn btn--primary primary-animation" type="submit" data-calc-next>Continue &rarr;</button>
+                  <button class="calc__back primary-soft-animation" type="button" data-calc-back hidden>&larr; Back</button>
+                  <button class="btn btn--contact primary-animation" type="submit" data-calc-next>Continue &rarr;</button>
                 </div>
               </form>
             </div>
@@ -365,11 +440,11 @@
                 <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/digitalmarketing-dezshira/test-meeting?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0d6a64" style="min-width:320px;height:700px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
                 <!-- Calendly inline widget end -->
-             <div class="text-center"><a class="btn--contact mt-2 btn btn--primary primary-animation" href="calculator-ready.html">Book your call</a></div> 
+             <div class="text-center"><a class="mt-2 btn btn--primary primary-animation" href="calculator-ready.html">Book your call</a></div> 
             </div>
             
           </div>
-<p style="margin-top: var(--space-4); color: var(--text-on-paper-muted);">Not sure yet? We can guide you. <a class="link-button" href="/contact/index.html" style="font-weight:600;">Contact us now</a>.</p></div>
+<p class="notsure__text"> <img src="/img/icons/icon-info.svg" alt="China Business Setup" loading="lazy">Not sure yet? We can guide you. <a class="link-button" href="/contact/index.html" style="font-weight:600;">Contact us now</a>.</p></div>
         </div>
 
        
