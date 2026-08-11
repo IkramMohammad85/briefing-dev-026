@@ -88,11 +88,8 @@
            <div>
           <div class="calc" data-calculator data-calc-redirect="calculator-ready.html">
             <div data-calc-body>
-              
-
-              <form novalidate>
+            <form novalidate>
                 <!-- Step 1 -->
-                 
                 <div class="calc__step" data-step="1">
                   <h2 class="calc__title">Business Setup</h2>
                   <div class="calc__field">
@@ -129,7 +126,6 @@
                     </select>
                   </div>
                 </div>
-
                 <!-- Step 2 -->
                 <div class="calc__step" data-step="2">
                   <h2 class="calc__title">Business Setup</h2>
@@ -163,31 +159,19 @@
     
                     
                 </div>
-<div class="calc__field">
-  <label class="calc__label" for="q-banking">
-    Are any of your owners / shareholders a trust?<span class="req">*</span>
-  </label>
-
-  <div class="form-check form-check-inline">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="shareholdersTrust"
-      id="shareholders"
-      value="Yes">
-    <label class="form-check-label" for="shareholders">Yes</label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="shareholdersTrust"
-      id="shareholders2"
-      value="No">
-    <label class="form-check-label" for="shareholders2">No</label>
-  </div>
-</div>
+                  <div class="calc__field">
+                    <label class="calc__label">Are any of your owners / shareholders a trust?<span class="req">*</span></label>
+                                        <div class="calc__choices">
+                      <span class="calc__choice">
+                        <input type="radio" id="q-trust-yes" name="trust" value="Yes" required>
+                        <label for="q-trust-yes">Yes</label>
+                      </span>
+                      <span class="calc__choice">
+                        <input type="radio" id="q-trust-no" name="trust" value="No" required>
+                        <label for="q-trust-no">No</label>
+                      </span>
+                    </div>
+                  </div>
                   <div class="calc__field">
                     <label class="calc__label" for="directors">How many directors?<span class="req">*</span></label>
                     <select class="calc__control" id="directors" name="directors" required>
@@ -219,135 +203,99 @@
                     </select>
                   </div>
                 </div>
-
                 <!-- Step 3 -->
                 <div class="calc__step" data-step="3">
                   <h2 class="calc__title">Payroll & Visas​</h2>
-<div class="calc__field">
-  <label class="calc__label">
-    Do you need payroll services?<span class="req">*</span>
-  </label>
+                  <div class="calc__field">
+                    <label class="calc__label">Do you need payroll services?<span class="req">*</span></label>
+                    <div class="calc__choices">
+                      <span class="calc__choice">
+                        <input type="radio" id="q-payroll-yes" name="payroll" value="Yes" required>
+                        <label for="q-payroll-yes">Yes</label>
+                      </span>
+                      <span class="calc__choice">
+                        <input type="radio" id="q-payroll-no" name="payroll" value="No" required>
+                        <label for="q-payroll-no">No</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="calc__field">
+                    <label class="calc__label" for="plan-start">
+                      If yes, how many employees do you have?
+                    </label>
 
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="payrollServices" id="payrollServicesYes" value="Yes">
-    <label class="form-check-label" for="payrollServicesYes">Yes</label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="payrollServices" id="payrollServicesNo" value="No">
-    <label class="form-check-label" for="payrollServicesNo">No</label>
-  </div>
-</div>
-
-<div class="calc__field">
-  <label class="calc__label" for="plan-start">
-    If yes, how many employees do you have?
-  </label>
-
-  <select class="calc__control" id="plan-start" name="plan">
-    <option value="">Select…</option>
-    <option>1-5</option>
-    <option>6-10</option>
-    <option>11-20</option>
-    <option>21-50</option>
-    <option>51+</option>
-  </select>
-</div>
-
-<div class="calc__field">
-  <label class="calc__label">
-    Do you need employment visas?<span class="req">*</span>
-  </label>
-
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="employmentVisas" id="employmentVisasYes" value="Yes">
-    <label class="form-check-label" for="employmentVisasYes">Yes</label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="employmentVisas" id="employmentVisasNo" value="No">
-    <label class="form-check-label" for="employmentVisasNo">No</label>
-  </div>
-</div>
-
-<div class="calc__field">
-  <label class="calc__label">
-    Do you need dependent visas?<span class="req">*</span>
-  </label>
-
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="dependentVisas" id="dependentVisasYes" value="Yes">
-    <label class="form-check-label" for="dependentVisasYes">Yes</label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="dependentVisas" id="dependentVisasNo" value="No">
-    <label class="form-check-label" for="dependentVisasNo">No</label>
-  </div>
-</div>
+                    <select class="calc__control" id="plan-start" name="plan">
+                      <option value="">Select…</option>
+                      <option>1-5</option>
+                      <option>6-10</option>
+                      <option>11-20</option>
+                      <option>21-50</option>
+                      <option>51+</option>
+                    </select>
+                  </div>
+                  <div class="calc__field">
+                    <label class="calc__label">Do you need employment visas?<span class="req">*</span></label>
+                    <div class="calc__choices">
+                      <span class="calc__choice">
+                        <input type="radio" id="q-empvisa-yes" name="employment_visas" value="Yes" required>
+                        <label for="q-empvisa-yes">Yes</label>
+                      </span>
+                      <span class="calc__choice">
+                        <input type="radio" id="q-empvisa-no" name="employment_visas" value="No" required>
+                        <label for="q-empvisa-no">No</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="calc__field">
+                    <label class="calc__label">Do you need dependent visas?<span class="req">*</span></label>
+                    <div class="calc__choices">
+                      <span class="calc__choice">
+                        <input type="radio" id="q-depvisa-yes" name="dependent_visas" value="Yes" required>
+                        <label for="q-depvisa-yes">Yes</label>
+                      </span>
+                      <span class="calc__choice">
+                        <input type="radio" id="q-depvisa-no" name="dependent_visas" value="No" required>
+                        <label for="q-depvisa-no">No</label>
+                      </span>
+                    </div>
+                  </div>
                 </div>
-
                 <!-- Step 4 -->
                 <div class="calc__step" data-step="4">
                 <h2 class="calc__title">Tax & Accounting​​</h2>
-<div class="calc__field">
-  <label class="calc__label" for="q-timeline">
-    Do you need tax support?<span class="req">*</span>
-  </label>
+                  <div class="calc__field">
+                    <label class="calc__label">Do you need tax support?<span class="req">*</span></label>
+                    <div class="calc__choices">
+                      <span class="calc__choice">
+                        <input type="radio" id="q-tax-yes" name="tax_support" value="Yes" required>
+                        <label for="q-tax-yes">Yes</label>
+                      </span>
+                      <span class="calc__choice">
+                        <input type="radio" id="q-tax-no" name="tax_support" value="No" required>
+                        <label for="q-tax-no">No</label>
+                      </span>
+                    </div>
+                  </div>
 
-  <div class="form-check form-check-inline">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="taxSupport"
-      id="inlineCheckbox7"
-      value="Yes">
-    <label class="form-check-label" for="inlineCheckbox7">Yes</label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="taxSupport"
-      id="inlineCheckbox8"
-      value="No">
-    <label class="form-check-label" for="inlineCheckbox8">No</label>
-  </div>
-</div>
-<div class="calc__field">
-  <label class="calc__label" for="q-budget">
-    Do you need accounting support?<span class="req">*</span>
-  </label>
-
-  <div class="form-check form-check-inline">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="accountingSupport"
-      id="accountingSupportyes"
-      value="Yes">
-    <label class="form-check-label" for="accountingSupportyes">Yes</label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="accountingSupport"
-      id="accountingSupportno"
-      value="No">
-    <label class="form-check-label" for="accountingSupportno">No</label>
-  </div>
-</div>
+                  <div class="calc__field">
+                    <label class="calc__label">Do you need accounting support?<span class="req">*</span></label>
+                    <div class="calc__choices">
+                      <span class="calc__choice">
+                        <input type="radio" id="q-acct-yes" name="accounting_support" value="Yes" required>
+                        <label for="q-acct-yes">Yes</label>
+                      </span>
+                      <span class="calc__choice">
+                        <input type="radio" id="q-acct-no" name="accounting_support" value="No" required>
+                        <label for="q-acct-no">No</label>
+                      </span>
+                    </div>
+                  </div>
                 </div>
-
                 <!-- Step 5 — contact details -->
                 <div class="calc__step" data-step="5" data-calculator data-calc-redirect="calculator-ready.html">
                     
-                  <h2 class="calc__title">Your business setup estimate is ready!
-</h2>
-<div class="calc__field_two-column">
+                <h2 class="calc__title">Your business setup estimate is ready!</h2>
+                <div class="calc__field_two-column">
                   <div class="calc__field">
                     <label class="calc__label" for="f-name">Your name<span class="req">*</span></label>
                     <input class="calc__control" id="f-name" name="name" type="text" required>
@@ -357,7 +305,6 @@
                     <input class="calc__control" id="l-email" name="name-last" type="text" required>
                   </div>
                 </div>
-              
               <div class="calc__field">
                     <label class="calc__label" for="email">Email<span class="req">*</span></label>
                     <input class="calc__control" id="email" name="email" type="email" required>
