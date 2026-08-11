@@ -701,12 +701,32 @@ function initCalculator() {
       if (nextBtn) nextBtn.textContent = current === total ? "Get my estimate" : "Continue";
     }
 
-    // Validate only the fields inside the current step.
     function stepValid() {
       const panel = steps.find((s) => Number(s.dataset.step) === current);
       if (!panel) return true;
+
+      const seenRadioGroups = new Set();
+
       const fields = panel.querySelectorAll("[required]");
       for (const f of fields) {
+        // Radio group checked.
+        if (f.type === "radio") {
+          if (seenRadioGroups.has(f.name)) continue; // check each group once
+          seenRadioGroups.add(f.name);
+
+          const group = panel.querySelectorAll(`input[name="${f.name}"]`);
+          const checked = Array.from(group).some((r) => r.checked);
+          const wrap = f.closest(".calc__field");
+          if (!checked) {
+            wrap?.classList.add("is-invalid");
+            group[0]?.focus();
+            return false;
+          }
+          wrap?.classList.remove("is-invalid");
+          continue;
+        }
+
+        // Text / select inputs.
         if (!f.value || !f.value.trim()) {
           f.focus();
           f.classList.add("is-invalid");
@@ -716,25 +736,14 @@ function initCalculator() {
       }
       return true;
     }
-/* 
+
     function next() {
       if (!stepValid()) return;
       if (current < total) {
         current += 1;
         render();
       } else {
-        // Last step done → show the result panel.
-        if (formBody) formBody.hidden = true;
-        if (result) result.classList.add("is-active");
-      }
-    }
-*/
-function next() {
-      if (!stepValid()) return;
-      if (current < total) {
-        current += 1;
-        render();
-      } else {
+        // Last step done. 
         const nameField = calc.querySelector('[name="name"]');
         const first = (nameField?.value || "").trim().split(/\s+/)[0];
 
@@ -745,12 +754,14 @@ function next() {
           return;
         }
 
+        // Otherwise reveal the inline result panel.
         const nameSlot = calc.querySelector("[data-calc-name]");
         if (nameSlot) nameSlot.textContent = first ? `${first}, Your` : "Your";
         if (formBody) formBody.hidden = true;
         if (result) result.classList.add("is-active");
       }
     }
+
     function back() {
       if (current > 1) { current -= 1; render(); }
     }

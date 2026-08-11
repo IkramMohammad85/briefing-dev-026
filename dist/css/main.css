@@ -4380,7 +4380,54 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
   gap: var(--space-4);
 }
 
-/* mobile pe font thoda chhota + padding adjust */
+.calc__choices {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.calc__choice {
+  position: relative;
+}
+.calc__choice input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+.calc__choice label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  padding: var(--space-3) var(--space-5);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-base);
+  color: var(--text-on-paper);
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-standard), background var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
+}
+.calc__choice input:checked + label {
+  border-color: var(--primary-color);
+  font-weight: 600;
+  background: var(--primary-color);
+  color: var(--white);
+  font-weight: 500;
+}
+.calc__choice input:focus-visible + label {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 1px;
+}
+.calc__choice:hover label {
+  border-color: var(--teal-strong);
+}
+
+.calc__field.is-invalid .calc__choice label {
+  border-color: var(--primary-color);
+}
+
 @media (max-width: 600px) {
   .info-table {
     font-size: 15px;
