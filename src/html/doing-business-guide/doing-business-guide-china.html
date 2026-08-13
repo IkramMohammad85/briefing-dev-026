@@ -409,13 +409,9 @@
     </div>
   </div>
 <script>
-/* ============================================================
+/* 
    Parallax controller
-   - transform-only (compositor thread), no background-attachment
-   - iOS Safari safe
-   - runs only while the hero is on screen
-   - reads depth from CSS, so breakpoints stay in the stylesheet
-   ============================================================ */
+ */
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
 
