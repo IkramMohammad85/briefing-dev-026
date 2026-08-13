@@ -123,7 +123,7 @@
 
 @media (min-width:64em){          /* 1024px — desktop */
   .hero{
-    min-height:min(30rem, 88svh);
+    min-height:min(34rem, 88svh);
     --parallax-depth:10;
   }
   .hero__media img{ object-position:50% 58%; }
@@ -141,14 +141,8 @@
     min-height:min(42rem, 88svh);
     --parallax-depth:12;
   }
-  .hero__media img{ object-position:50% 58%; }
-  .hero__lede{ max-width:66ch; }
-  .hero__scrim{
-    background:linear-gradient(to bottom,
-      rgba(11,26,66,.34) 0%,
-      rgba(11,26,66,.12) 50%,
-      rgba(11,26,66,0) 100%);
-  }
+
+
 }
 @media (prefers-reduced-motion:reduce){
   .hero{ --parallax-depth:0; }
