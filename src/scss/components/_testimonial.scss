@@ -3,7 +3,9 @@
 
 @use "../base/tokens" as *;
 
-.testimonial-section{background-color:#f3f4f2;}
+.testimonial-section{background-color:#f3f4f2;
+blockquote::before{color:#ffa776}
+}
 .testimonial-slider {
   position: relative;
 }
