@@ -206,6 +206,10 @@ ul[class], ol[class] {
   padding: 0;
 }
 
+ul, ol {
+  margin-bottom: 1.5rem;
+}
+
 :focus {
   outline: none;
 }

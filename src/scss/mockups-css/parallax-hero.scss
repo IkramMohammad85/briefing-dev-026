@@ -505,6 +505,8 @@
 #article-cta-heading{
     a{color: var(--white); text-decoration: none;}
 }
+.explore-card h3, .explore-card p, .explore-card-outer__label, .author-bio__name{margin-bottom: var(--space-2) !important;}
+.author-bio{ margin-top: var(--space-4); margin-bottom: var(--space-8);}
 @media (min-width: 1024px) {
     .consultation, .expert-aside, .right-aside-cta {
         position: sticky;

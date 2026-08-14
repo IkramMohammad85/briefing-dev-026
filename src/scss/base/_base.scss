@@ -80,7 +80,12 @@ p {
 ul[class], ol[class] {
   list-style: none;
   padding: 0;
+  
+  
 }
+ul, ol{margin-bottom: 1.5rem;}
+
+
 
 // ---- Accessibility: focus states ----
 :focus {
