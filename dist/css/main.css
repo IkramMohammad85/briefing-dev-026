@@ -1434,14 +1434,14 @@ ul[class], ol[class] {
   color: var(--l) !important;
 }
 
-.primary-animation, .secondary-animation, .primary-soft-animation, .cb-btn {
+.primary-animation, .secondary-animation, .primary-soft-animation, .cb-btn, .primary-outline-animation {
   display: inline-block;
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
-.primary-animation:after, .secondary-animation:after, .primary-soft-animation:after, .cb-btn:after {
+.primary-animation:after, .secondary-animation:after, .primary-soft-animation:after, .cb-btn:after, .primary-outline-animation:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1451,7 +1451,7 @@ ul[class], ol[class] {
   background-color: var(--primary-color);
   z-index: -2;
 }
-.primary-animation:before, .secondary-animation:before, .primary-soft-animation:before, .cb-btn:before {
+.primary-animation:before, .secondary-animation:before, .primary-soft-animation:before, .cb-btn:before, .primary-outline-animation:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1462,10 +1462,10 @@ ul[class], ol[class] {
   transition: all 0.3s;
   z-index: -1;
 }
-.primary-animation:hover, .secondary-animation:hover, .primary-soft-animation:hover, .cb-btn:hover {
+.primary-animation:hover, .secondary-animation:hover, .primary-soft-animation:hover, .cb-btn:hover, .primary-outline-animation:hover {
   color: var(--black);
 }
-.primary-animation:hover:before, .secondary-animation:hover:before, .primary-soft-animation:hover:before, .cb-btn:hover:before {
+.primary-animation:hover:before, .secondary-animation:hover:before, .primary-soft-animation:hover:before, .cb-btn:hover:before, .primary-outline-animation:hover:before {
   width: 100%;
 }
 
@@ -1492,6 +1492,20 @@ ul[class], ol[class] {
   color: #fff;
 }
 .primary-soft-animation:hover:before {
+  width: 100%;
+}
+
+.primary-outline-animation:after {
+  background-color: #fff;
+}
+.primary-outline-animation:before {
+  background-color: var(--primary-color-light);
+}
+.primary-outline-animation:hover {
+  color: #000;
+  border-color: var(--primary-color-light);
+}
+.primary-outline-animation:hover:before {
   width: 100%;
 }
 

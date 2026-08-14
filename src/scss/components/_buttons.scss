@@ -111,7 +111,7 @@
 }
 
 
-.primary-animation, .secondary-animation, .primary-soft-animation, .cb-btn {
+.primary-animation, .secondary-animation, .primary-soft-animation, .cb-btn, .primary-outline-animation {
   display: inline-block;
   transition: all .3s;
   position: relative;
@@ -173,6 +173,21 @@
   }
   &:hover {
     color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+.primary-outline-animation{
+  &:after {
+    background-color:#fff;
+  }
+  &:before {
+    background-color: var(--primary-color-light) ;
+  }
+  &:hover {
+    color: #000; border-color: var(--primary-color-light);
     &:before {
       width: 100%;
     }
