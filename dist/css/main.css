@@ -1351,6 +1351,24 @@ ul[class], ol[class] {
 .btn--secondary:hover {
   border-color: var(--text-on-paper);
 }
+.btn--primary-outline {
+  background: transparent;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+.btn--primary-outline:hover {
+  border-color: var(--black);
+  color: var(--black);
+}
+.btn--primary-white {
+  background: transparent;
+  border-color: var(--white);
+  color: var(--white);
+}
+.btn--primary-white:hover {
+  border-color: var(--white);
+  color: var(--white);
+}
 .btn--on-navy {
   background: transparent;
   border-color: var(--line-dark);
@@ -2458,6 +2476,9 @@ ul[class], ol[class] {
   .page-banner::after {
     content: none;
   }
+}
+.page-banner.portal-article .page-banner__title {
+  color: var(--white);
 }
 
 .page-banner__media {
@@ -4642,6 +4663,10 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
 
 .pb-6 {
   padding-bottom: 6rem;
+}
+
+.pt-6 {
+  padding-top: 6rem;
 }
 
 .pt-2 {

@@ -24,6 +24,9 @@
 
   @include bp(md) { content: none; } 
 }
+&.portal-article{
+  .page-banner__title{color: var(--white);}
+}
 }
 
 .page-banner__media {

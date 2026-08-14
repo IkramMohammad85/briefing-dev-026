@@ -40,6 +40,19 @@
     color: var(--text-on-paper);
     &:hover { border-color: var(--text-on-paper); }
   }
+    &--primary-outline {
+    background: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    &:hover { border-color: var(--black); color: var(--black); }
+  }
+
+      &--primary-white {
+    background: transparent;
+    border-color: var(--white);
+    color: var(--white);
+    &:hover { border-color: var(--white); color: var(--white); }
+  }
 
   &--on-navy {
     background: transparent;
