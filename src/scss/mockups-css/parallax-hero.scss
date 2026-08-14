@@ -492,9 +492,14 @@
 .news-block.four-column .briefing-news .posts img {
     transition: .5s ease;
 }
-.briefing-news .posts:hover img {
+.briefing-news .posts:hover {
+    img {
     transform: scale(1.2);
     cursor: pointer;
+}
+.news-content h3 a{
+    color: var(--primary-color);
+}
 }
 
 #article-cta-heading{
