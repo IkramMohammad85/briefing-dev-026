@@ -1,0 +1,218 @@
+// ==========================================================================
+// MULTILEVEL MENU
+// ==========================================================================
+
+@use "../base/tokens" as *;
+
+.multilevel {
+  // Mobile-first: single column, panels stack under their heading.
+  display: block;
+
+  @include bp(lg) {
+    display: grid;
+    grid-template-columns: minmax(200px, 0.7fr) minmax(0, 2.3fr);
+    gap: 0;
+    min-height: 330px;
+  }
+}
+
+// ---- Column 1: top-level items ----
+
+@mixin ml-cream {
+  background: #FBF3E6; 
+
+  clip-path: polygon(0 0, 100% 0, 100% 42%, calc(100% - 12px) 50%, 100% 58%, 100% 100%, 0 100%);
+}
+
+.multilevel__nav {
+  @include bp(lg) {
+    padding: var(--space-6) var(--space-6) var(--space-6) var(--space-6);
+    background: transparent;
+    transition: background var(--duration-fast) var(--ease-standard);
+
+
+    @include ml-cream;
+  }
+}
+
+
+.multilevel.is-col2-lit .multilevel__nav {
+  @include bp(lg) {
+    background: transparent;
+    clip-path: none;
+  }
+}
+
+.multilevel__item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: var(--space-1) 0;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-on-paper);
+  cursor: pointer;
+  text-decoration: none;
+
+  
+  &::after {
+    content: "›";
+    margin-left: var(--space-2);
+    opacity: 0;
+    color: var(--accent);
+  }
+
+  &:hover,
+  &.is-active {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  &.is-active::after { opacity: 1; }
+
+
+  &--all {
+    font-style: italic;
+    color: var(--text-on-paper-muted);
+    &:hover { color: var(--accent); }
+  }
+}
+
+
+.multilevel__panels {
+  @include bp(lg) {
+    display: grid;
+    grid-template-columns: minmax(200px, 0.9fr) minmax(0, 1.6fr);
+    background: var(--white);
+  }
+}
+
+.multilevel__panel {
+  display: none;
+  &.is-active { display: contents; } 
+}
+
+// Column 2: sub-links
+.multilevel__links {
+  padding: var(--space-6);
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+
+  @include bp(lg) {
+    background: transparent;
+    transition: background var(--duration-fast) var(--ease-standard);
+  }
+}
+
+
+.multilevel.is-col2-lit .multilevel__panel.is-active .multilevel__links {
+  @include bp(lg) { @include ml-cream; }
+}
+
+.multilevel__sublink {
+  color: var(--text-on-paper);
+  text-decoration: none;
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
+  cursor: pointer;
+
+  // Arrow 
+  &::after {
+    content: " ›";
+    color: var(--accent);
+    opacity: 0;
+  }
+
+  &:hover,
+  &.is-active {
+    color: var(--accent);
+  }
+
+  &:hover::after,
+  &.is-active::after { opacity: 1; }
+}
+
+// Column 3: features container
+// active one shows.
+.multilevel__features {
+  position: relative;
+}
+
+.multilevel__feature {
+  width: 100%;
+  padding: var(--space-6);
+  display: none;
+  grid-template-columns: 200px minmax(220px, 1fr);
+  gap: var(--space-5);
+  align-content: start;
+
+  &.is-active { display: grid; }
+
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr; 
+  }
+}
+
+.multilevel__feature-img {
+  width: 200px;
+  height: 150px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+
+  @media (max-width: 1100px) { width: 100%; height: auto; }
+}
+
+.multilevel__feature-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: 0 0 var(--space-3);
+  color: var(--text-on-paper);
+}
+
+.multilevel__feature-text {
+  font-size: var(--text-sm);
+  color: var(--text-on-paper-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0 0 var(--space-4);
+}
+
+.multilevel__feature-more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--primary-color) !important;
+  text-decoration: none;
+
+  &:hover { color: var(--cta-red-strong); }
+}
+
+// ---- Mobile:  ----
+@media (max-width: 1023px) {
+  .multilevel__nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    margin-bottom: var(--space-2);
+  }
+
+  .multilevel__panel {
+    &.is-active {
+      display: block;
+      padding-left: var(--space-4);
+      border-left: 2px solid var(--line);
+      margin-bottom: var(--space-3);
+    }
+  }
+
+  .multilevel__links { padding: var(--space-3) 0; }
+  .multilevel__feature {
+    &.is-active { display: block; }
+    padding: var(--space-3) 0;
+    grid-template-columns: 1fr;
+  }
+}

@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initStickyOffsets();
   initMegaMenus();
+  initMultilevelMenus();
   initSearchOverlay();
   initSearchSuggest();
   initStatCounters();
@@ -52,6 +53,76 @@ function initMobileNav() {
     // Icon swap (hamburger <-> X) 
    
     toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+}
+
+
+/* ---- Multilevel menu — three-column hover menu ----    */
+function initMultilevelMenus() {
+  document.querySelectorAll("[data-multilevel]").forEach((menu) => {
+    const items = menu.querySelectorAll("[data-ml-item]");
+    const panels = menu.querySelectorAll("[data-ml-panel]");
+    if (!items.length || !panels.length) return;
+
+    const isTouch = () => window.matchMedia("(hover: none)").matches;
+
+    function select(key) {
+      items.forEach((it) => it.classList.toggle("is-active", it.dataset.mlItem === key));
+      panels.forEach((p) => p.classList.toggle("is-active", p.dataset.mlPanel === key));
+    }
+
+    items.forEach((item) => {
+      const key = item.dataset.mlItem;
+      
+      item.addEventListener("mouseenter", () => { if (!isTouch()) select(key); });
+      item.addEventListener("focus", () => { if (!isTouch()) select(key); });
+      
+      item.addEventListener("click", (e) => {
+        if (isTouch()) {
+          e.preventDefault();
+          select(key);
+        }
+      });
+    });
+
+    // feature card shows.
+    panels.forEach((panel) => {
+      const sublinks = panel.querySelectorAll("[data-ml-feature]");
+      const features = panel.querySelectorAll("[data-ml-featurepanel]");
+      if (!sublinks.length || !features.length) return;
+
+      function selectFeature(fkey) {
+        sublinks.forEach((s) => s.classList.toggle("is-active", s.dataset.mlFeature === fkey));
+        features.forEach((f) => f.classList.toggle("is-active", f.dataset.mlFeaturepanel === fkey));
+      }
+
+      sublinks.forEach((sub) => {
+        const fkey = sub.dataset.mlFeature;
+        sub.addEventListener("mouseenter", () => { if (!isTouch()) selectFeature(fkey); });
+        sub.addEventListener("focus", () => { if (!isTouch()) selectFeature(fkey); });
+        sub.addEventListener("click", (e) => {
+          if (isTouch()) { e.preventDefault(); selectFeature(fkey); }
+        });
+      });
+    });
+
+    const navCol = menu.querySelector(".multilevel__nav");
+    if (navCol) {
+      
+      navCol.addEventListener("mouseenter", () => {
+        menu.classList.remove("is-col2-lit");
+      });
+      
+      menu.addEventListener("mousemove", (e) => {
+        if (isTouch()) return;
+        const inNav = navCol.contains(e.target) || e.target === navCol;
+        menu.classList.toggle("is-col2-lit", !inNav);
+      });
+      
+      menu.addEventListener("mouseleave", () => {
+        menu.classList.remove("is-col2-lit");
+      });
+    }
   });
 }
 
