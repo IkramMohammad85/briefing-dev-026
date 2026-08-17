@@ -170,16 +170,16 @@
                         </div>
                     </div>
 
-<p class="article-toc__label article-toc__label--gray-head" id="explore-heading" style="margin-bottom: var(--space-4); margin-top: var(--space-6);">Contributing Advisor
-            </p>
+<p>Moreover, &nbsp;China’s GDP per capita was US$12,700 in 2023, about six times lower than that of the US. The gap shows that there is still significant room for economic activity and household wealth to continue to grow before leveling off at a saturation point.</p>
        <div class="author-bio">
             <img class="author-bio__avatar" src="https://d2h56l9e5xqoi4.cloudfront.net/dsa/images/personnel/rect_1/alberto-vettoretti.webp" alt="" loading="lazy">
             <div>
-              <p class="author-bio__quote">"As one of Asia’s leading business setup consultants, we help companies
+              <p class="author-bio__quote" style="margin-bottom: var(--space-3);">"As one of Asia’s leading business setup consultants, we help companies
                 structure entities to meet strategic goals and maximise operational efficiency, including cross-border
                 asset transfers, M&amp;A transactions, and corporate relocations."</p>
-              <p class="author-bio__name">Alberto Vettoretti</p>
-              <p class="author-bio__role">Partner</p>
+              <p class="author-bio__name" style="font-weight: 600; margin-bottom: 0;">Alberto Vettoretti</p>
+              <p class="author-bio__role" style="margin-bottom: 0; padding-bottom: 0;">Partner</p>
+              <a class="author-bio__link" href="#">Contact Us →</a>
               
             </div>
           </div>         
@@ -207,7 +207,7 @@
                 <div>
                   
                   <h3>An Introduction to Doing Business in China 2026 </h3>
-                  <p>China remains a vital market for global companies in 2026, offering scale, integrated supply chains, advanced infrastructure, and deep innovation capa...</p>
+                  <p>China remains a vital market for global companies in 2026, offering scale...</p>
                 </div>
               </a>
               </div>
@@ -554,150 +554,7 @@
 
     }
   </script>
-  <script>
-
-    var levels=document.querySelectorAll(".multilevel .level1,.multilevel .level2");
-    for(i=0;i<=levels.length;i++){
-        levels[i].addEventListener('mouseover',function(e){
-
-            let parent=this.parentElement.parentElement.parentElement.parentElement;
-            let bgAfter=parent.querySelector(".bg-after");
-            console.log(bgAfter);
-        
-            if(bgAfter){
-                if(this.classList.contains("level2")){
-
-                    bgAfter.innerHTML='<div class="mm_left"><img src="/images/CB_l2_left.png"/></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="/images/CB_l2_right.png" /></div>';
-
-                    bgAfter.classList.remove("level1");
-                    bgAfter.classList.add("level2");
-
-                    const computedStyle = window.getComputedStyle(this);
-
-                    // Calculate the total left offset including margin
-                    const marginLeft = parseFloat(computedStyle.marginLeft.replace('px', ''));
-                    const paddingLeft = parseFloat(computedStyle.paddingLeft.replace('px', ''));
-                    const totalLeftOffset = this.offsetLeft + marginLeft + paddingLeft-50;
-
-
-
-                    const rect = this.getBoundingClientRect();
-                    bgAfter.style.left = `${totalLeftOffset}px`;
-                    bgAfter.style.width = `${rect.width+55}px`;
-
-
-
-                } else if(this.classList.contains("level1")) {
-
-                    bgAfter.innerHTML='<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="/images/CB_l1_right.png" /></div>';
-
-                    bgAfter.classList.remove("level2");
-                    bgAfter.classList.add("level1");
-
-                    bgAfter.style.left = '';
-                    bgAfter.style.width = '';
-
-                } else {
-                    bgAfter.innerHTML='<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="/images/CB_l1_right.png" /></div>';
-                    bgAfter.classList.remove("level2");
-                    bgAfter.classList.remove("level1");
-                }
-            }
-
-        });
-    }
-</script>
-<script>
-    // Function to handle the hover event for level 1 and level 2 items
-    function handleMegaMenuHover(event) {
-            // Get the data-show attribute value
-            const showAttr = event.target.getAttribute("data-show");
-            const parentDiv=event.target.parentElement.parentElement.parentElement;
-            const parentSubmenuContainer=event.target.closest('.submenu-container');
-            // Delay in milliseconds before showing the next level
-            const delay = 300; // Adjust this value as needed
-          
-            // Clear any existing timeouts
-            clearTimeout(handleMegaMenuHover.timeoutId);
-          
-            // Set a new timeout to show the next level
-            handleMegaMenuHover.timeoutId = setTimeout(() => {
-              // Hide all level 3 elements
-              const level3Elements = parentSubmenuContainer.querySelectorAll(".level3 > div");
-              level3Elements.forEach(element => {
-              //   element.style.display = "none";
-                element.classList.add("hide");
-              });
-          
-              // Show the corresponding level 2 or level 3 element based on the data-show attribute value
-              if(parentDiv){
-          
-                  let openLevels=[];
-                  let activeLis=[];
-                  if(parentDiv.classList.contains("level1")){
-                      openLevels = parentSubmenuContainer.querySelectorAll('.level2 > ul');
-                      activeLis = parentSubmenuContainer.querySelectorAll(".level1 li");
-                  } else {
-                      openLevels = parentSubmenuContainer.querySelectorAll('.level3 > div');
-                      activeLis = parentSubmenuContainer.querySelectorAll(".level2 li");
-                  }
-                  // Remove active class from all li elements
-                  if(activeLis){
-                      activeLis.forEach(li => {
-                      li.classList.remove("mm_active");
-                      });
-                  }
-          
-                  if(openLevels){
-    
-                  for(i=0;i<=openLevels.length;i++){
-                      if (openLevels[i]) {
-                          openLevels[i].classList.add("hide");
-                      }
-                  }
-                  }
-              }
-              
-              const nextLevelElement = parentSubmenuContainer.querySelector(`ul[data-show="${showAttr}"], div[data-show="${showAttr}"]`);
-              if (nextLevelElement) {
-              //   nextLevelElement.style.display = "block !important";
-                nextLevelElement.classList.remove("hide");
-                // Add active class to the current li element
-                const currentLi = event.target.parentElement;
-                if (currentLi) {
-                  currentLi.classList.add("mm_active");
-                }
-    
-    
-                    // Default activation of level2 and level3 content as demo
-                    let openLevelsFirstLi=nextLevelElement.querySelector("li:nth-child(2)");
-                    let firstLevel3Div=parentSubmenuContainer.querySelector('.level3 > div:first-child');
-                    if(openLevelsFirstLi) {
-                        openLevelsFirstLi.classList.add("mm_active");
-                        firstLevel3Div.classList.remove("hide");
-                    }
-    
-              }
-            }, delay);
-          }
-          // Attach the hover event listener to level 1 and level 2 items
-          const level1And2Items = document.querySelectorAll("div#menu-list .level1 a, div#menu-list .level2 a");
-          level1And2Items.forEach(item => {
-            item.addEventListener("mouseover", handleMegaMenuHover);
-          });
-    </script>
-<script>
-    var scrollContainers = document.getElementsByClassName("scrollContainer");
-    var scrollContainer = scrollContainers[0]; // Assuming there's only one element with the class "container"
-    
-    scrollContainer.addEventListener("scroll", function() {
-      var scrollPercentage = (scrollContainer.scrollTop + scrollContainer.clientHeight) / scrollContainer.scrollHeight * 100;
-      var scrollbarThumb = scrollContainer.querySelector(".scrollContainer::-webkit-scrollbar-thumb");
-    
-      scrollbarThumb.style.height = scrollPercentage + "%";
-    });
-    
-    </script>  
+ 
   <script src="/js/main.min.js"></script>
 </body>
 </html>

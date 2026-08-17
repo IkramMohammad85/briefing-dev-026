@@ -409,7 +409,9 @@ h4 {
     a{color: var(--white); text-decoration: none;}
 }
 .explore-card h3, .explore-card p, .explore-card-outer__label, .author-bio__name{margin-bottom: var(--space-2) !important;}
-.author-bio{ margin-top: var(--space-4); margin-bottom: var(--space-8);}
+.author-bio{ margin-bottom: var(--space-8);}
+
+.article-callout__eyebrow{margin-bottom: var(--space-1) !important;}
 
 @media (min-width: 1024px) {
     .consultation, .expert-aside, .right-aside-cta {
