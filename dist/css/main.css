@@ -5123,6 +5123,9 @@ ul.unordered-list li::marker {
   color: #000;
   text-decoration: none;
 }
+.event-info a h3 {
+  margin-bottom: 0.5rem;
+}
 .event-info footer {
   line-height: 1.4;
 }
@@ -5140,6 +5143,7 @@ ul.unordered-list li::marker {
   line-height: 1.6;
   margin-bottom: 0;
   color: #333;
+  margin-bottom: 1rem !important;
 }
 
 .event-title {
