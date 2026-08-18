@@ -1372,8 +1372,9 @@ ul.unordered-list {
 .personnel-profile-title {
   font-size: 0.875rem;
   color: #58585b;
-  min-height: 40px;
-  margin-bottom: 0.5rem;
+  min-height: auto;
+  line-height: 20px !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .personnel-profile-icons {

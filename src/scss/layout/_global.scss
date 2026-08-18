@@ -11,7 +11,6 @@ $border-radius: 50%;
 $border-color: #e9ecef;
 $text-muted: #58585b;
 $profile-size: 120px;
-$profile-title-height: 40px;
 $breakpoint-tablet: 753px;
 
 .personnel-wrapper {
@@ -71,8 +70,9 @@ $breakpoint-tablet: 753px;
 .personnel-profile-title {
 	font-size: 0.875rem;
 	color: $text-muted;
-	min-height: $profile-title-height;
-	margin-bottom: $spacing-sm;
+	min-height: auto;
+    line-height: 20px !important;
+	margin-bottom: $spacing-sm !important;
 }
 
 .personnel-profile-icons {
