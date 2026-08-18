@@ -18,6 +18,10 @@
   @include bp(xl) {  width: 35.9%;}
 
   &::-webkit-scrollbar { display: none; }
+  &.partner-tabs{ margin-top: 3rem;
+    @include bp(md) {  width: 100%; padding: 0; flex-direction: row;}
+  @include bp(xl) {  width: 100%;}
+  }
 }
 
 .tabs__tab {

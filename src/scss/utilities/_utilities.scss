@@ -176,3 +176,20 @@ a{
 }
 .success{ color: #0a3622; background-color: #d1e7dd; border: solid 1px #a3cfbb; padding: 5px 10px; text-align: center; font-weight: normal; font-size: 12px; border-radius: 3px;}
 .error{ color: #58151c; background-color: #f8d7da; border: solid 1px #f1aeb5; padding: 5px 10px; text-align: center; font-weight: normal; font-size: 12px; border-radius: 3px;}
+
+ul.unordered-list{
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  li{margin-bottom: 0.5rem;
+  &:last-child{margin-bottom: 0;}
+  }
+      a{
+      color: var(--primary-color); text-decoration: none;
+      &:hover{text-decoration: underline;}
+    }
+  li::marker {
+    margin: 0 .5rem 0 0;
+    color: var(--primary-color);
+
+}
+}

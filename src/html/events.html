@@ -13,11 +13,10 @@
   @@include('./includes/header.html')    
   
   <main id="main">
-    <section class="events">
-      <div class="container">
-
-
-          <h1 class="events__title">Events</h1>
+    <section class="events inner-page">
+      <div class="container inner-page__grid">
+		<div class="inner-page__main">
+			          <h1 class="events__title">Events</h1>
        
 
 <ul class="e-list events-list-block">
@@ -235,20 +234,40 @@
 								</div>
 							</li>
 											</ul>
-nav class="pagination" aria-label="Pagination">
-  <ul class="pagination__list">
-    <li><a class="pagination__item is-current" href="#" aria-current="page">1</a></li>
-    <li><a class="pagination__item" href="#">2</a></li>
-    …
-    <li><a class="pagination__item" href="#" aria-label="Next page">›</a></li>
-    <li><a class="pagination__item" href="#">Last</a></li>
-  </ul>
-  <form class="pagination__jump">
-    <label for="page-jump">Page</label>
-    <input class="pagination__jump-input" type="number" id="page-jump" value="1" min="1" max="46">
-    <span class="pagination__jump-total">of 46</span>
-  </form>
-</nav>											
+<div class="page">
+                <span>Showing 8 of 3866 articles</span>
+                
+	<nav class="navigation pagination" aria-label="Posts">
+		<div class="nav-links"><span aria-current="page" class="page-numbers current">1</span>
+<a class="page-numbers" href="page/2/">2</a>
+<a class="page-numbers" href="page/3/">3</a>
+<a class="page-numbers" href="page/4/">4</a>
+<span class="page-numbers dots">…</span>
+<a class="page-numbers" href="page/484/">484</a>
+<a class="next page-numbers" href="page/2/">Next</a></div>
+	</nav>                </div>	
+		</div>
+        <aside class="right-aside-cta">
+
+          <div class="mt-6 article-callout">
+              <div class="article-callout__text">
+                <p class="article-callout__eyebrow">Planning to establish a business in China?</p>
+                <strong>We advise foreign investors on corporate establishment, structuring, and governance across China.</strong>
+              </div>
+              <button class="btn btn--primary primary-animation" type="button" data-open-modal="">Schedule a Free Consultation</button>
+            </div>
+            <div class="ab-weekly-cta">
+              <img src="https://d2h56l9e5xqoi4.cloudfront.net/ab/assets/images/AB Newsletter Weekly.svg" alt="Asia Briefing Weekly" width="100%">
+              
+              <h4>Want the Latest Sent to Your Inbox?</h4>
+              <p>Subscribing grants you this, plus free access to our articles and magazines.</p>
+               <a class="btn btn--primary-outline primary-outline-animation" href="#">SUBSCRIBE</a>
+            </div>
+        </aside>
+
+
+
+										
 
 <!-- <nav class="pagination" aria-label="Pagination">
   <ul class="pagination__list">

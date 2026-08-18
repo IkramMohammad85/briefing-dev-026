@@ -10,6 +10,7 @@
 @use "layout/grid";
 @use "layout/header";
 @use "layout/footer";
+@use "layout/global";
 
 
 @use "components/buttons";
@@ -35,6 +36,8 @@
 
 @use "pages/home";
 @use "pages/services";
+
+
 
 
 @use "utilities/utilities";

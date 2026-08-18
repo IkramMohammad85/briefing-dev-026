@@ -1,0 +1,144 @@
+@use "../base/tokens" as *;
+
+
+
+// Variables for maintainability
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 80px;
+$border-radius: 50%;
+$border-color: #e9ecef;
+$text-muted: #58585b;
+$profile-size: 120px;
+$profile-title-height: 40px;
+$breakpoint-tablet: 753px;
+
+.personnel-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.personnel-profile {
+	width: 100%;
+	margin: $spacing-lg 0;
+	display: flex;
+	align-items: center;
+
+	@media only screen and (min-width: $breakpoint-tablet) {
+		max-width: calc((100% - #{$spacing-xl}) / 2);
+	}
+}
+
+.personnel-profile-pic {
+	flex-shrink: 0; 
+	width: $profile-size;
+	margin-right: $spacing-md;
+	font-size: 0; 
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: $border-radius;
+		border: 2px solid $border-color;
+		display: block; 
+	}
+}
+
+.personnel-profile-info {
+	flex: 1; 
+
+	a {
+		text-decoration: none;
+		color: var(--black);
+
+		&:hover {
+			text-decoration: underline; 
+		}
+	}
+
+	p {
+		margin-bottom: $spacing-sm;
+	}
+}
+
+.personnel-profile-name {
+	display: block;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+.personnel-profile-title {
+	font-size: 0.875rem;
+	color: $text-muted;
+	min-height: $profile-title-height;
+	margin-bottom: $spacing-sm;
+}
+
+.personnel-profile-icons {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 1.4;
+
+	li {
+		display: inline-block;
+
+		&:not(:first-child) {
+			margin-left: $spacing-md;
+		}
+	}
+
+	svg {
+		width: 1rem;
+		fill: var(--primary-color);
+		transition: fill 0.2s ease; 
+	}
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		border-bottom: 1px solid #f2f2f2;
+		margin-top: 2rem;
+	}
+	h5 {
+		margin-top: 0; font-size: 18px; margin-bottom: 1rem; line-height: 24px;
+	}
+}
+.list-info {
+	display: flex;
+	flex-direction: column;
+	.lists-img-thumbnail {
+		margin-right: 0;
+		margin-bottom: 1rem;
+	}
+	@media only screen and (min-width: 667px) {
+		flex-direction: row;
+		.lists-img-thumbnail {
+			margin-right: 2rem;
+			margin-bottom: 0;
+            img{max-width: 120px;}
+		}
+	}
+}
+
+.list-content {
+	h5 {
+		a {
+			text-decoration: none;
+			color: var(--black);
+			font-weight: 500;
+			transition: opacity 0.2s ease;
+			&:hover {
+				opacity: 0.7;
+			}
+			&:focus {
+				outline: 2px solid var(--primary-color);
+				outline-offset: 2px;
+			}
+		}
+	}
+}

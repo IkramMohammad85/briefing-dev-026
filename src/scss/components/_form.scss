@@ -13,6 +13,12 @@
   }
 }
 
+.ab-weekly-cta{
+    @include bp(lg) {
+    top: calc(var(--header-h, 172px) - (-100px));
+  }
+}
+
 .expert-form-wrap {
   margin-bottom: var(--space-6);
 
