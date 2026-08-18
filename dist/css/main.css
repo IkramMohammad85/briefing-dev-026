@@ -3633,21 +3633,21 @@ thead th {
   width: 22px;
   height: 22px;
   margin-left: var(--space-3);
-  border: 1px solid var(--line);
+  border: 1px solid var(--black);
   border-radius: var(--radius-full);
   background: var(--paper);
-  color: var(--text-on-paper-muted);
+  color: var(--black);
   cursor: pointer;
   flex-shrink: 0;
   transition: transform var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
 }
 .feature-links__more:hover {
-  color: var(--brief-theme-color);
-  border-color: var(--brief-theme-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 .feature-links__more[aria-expanded=true] {
   transform: rotate(45deg);
-  color: var(--brief-theme-color);
+  color: var(--primary-color);
   border-color: var(--brief-theme-color);
 }
 
