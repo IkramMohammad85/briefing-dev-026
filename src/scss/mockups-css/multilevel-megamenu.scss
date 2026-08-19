@@ -145,6 +145,7 @@
         .guides-title-level2 {
           color: #000;
         }
+        ul{margin-left: 4rem;}
       }
       
     /* Level 3 Design */
@@ -266,7 +267,9 @@
 width: 100%;
 }
 ul{padding: 0;}
-.level2{ padding: 0;}
+.level2{ padding: 0;
+ul{margin-left: 0px;}
+}
 .level3 { padding-left: 0px;
   .posts{
   flex-direction: column;
