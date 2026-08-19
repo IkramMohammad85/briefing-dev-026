@@ -2,11 +2,9 @@
  @use "../base/tokens" as *;
 
 /* General setup */
-#menu-list .multilevel { display: flex; min-height: 300px; margin-top: 1rem; }
 #menu-list {
         .menu-column { margin-bottom: 0; padding-bottom: 0; padding-top: 3rem; }
         .multilevel { display: flex; min-height: 300px;  margin-top: 0;  
-            
             .level1, .level2, .level3 {
                 ul{ margin-top: 0 ;
                 &.hide{
@@ -73,12 +71,12 @@
           }
       
           &.mm_left, &.mm_right {
-            width: 32px !important;
-            height: 100% !important;
+            width: 32px;
+            height: 100%;
       
             img {
-              width: 32px !important;
-              height: 100% !important;
+              width: 32px;
+              height: 100%;
             }
           }
         }
@@ -150,12 +148,11 @@
       }
       
     /* Level 3 Design */
-    #menu-list .multilevel .level3 {
+
+      
+      #menu-list .multilevel .level3 {
         width: 48%;
         padding-left: 1rem;
-      }
-      
-      .multilevel .level3 {
         .posts {
           display: flex;
           width: 100%;
@@ -238,7 +235,7 @@
       }
       
     /* Mega Menu Helper */
-    .scrollContainer { max-height: 47vh; overflow-y: auto; overflow-x: visible;  margin-bottom: 1rem; position: relative;}
+
    
   .section-wrapper {
   position: relative;
@@ -246,6 +243,7 @@
   padding: 0 1.5rem;
   height: inherit;
 }
+.scrollContainer { max-height: 47vh; overflow-y: auto; overflow-x: visible;  margin-bottom: 1rem; position: relative;}
 .scrollContainer::-webkit-scrollbar {
   width: 2px; margin-right: 1rem;
 }
