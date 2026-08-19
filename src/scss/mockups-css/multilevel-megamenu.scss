@@ -2,6 +2,7 @@
  @use "../base/tokens" as *;
 
 /* General setup */
+.mega-panel{background-color: #fff;}
 #menu-list {
         .menu-column { margin-bottom: 0; padding-bottom: 0; padding-top: 3rem; }
         .multilevel { display: flex; min-height: 300px;  margin-top: 0;  
@@ -92,6 +93,7 @@
           width: 23%;
           ul {
             margin-left: 0;
+            padding-right: 2rem;
           }
           li {
             margin-right: .5rem;
@@ -267,6 +269,9 @@
 width: 100%;
 }
 ul{padding: 0;}
+.level1 ul{
+  padding-right: 0;
+}
 .level2{ padding: 0;
 ul{margin-left: 0px;}
 }
