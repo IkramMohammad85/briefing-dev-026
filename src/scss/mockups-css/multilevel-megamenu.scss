@@ -3,7 +3,7 @@
 
 /* General setup */
 
-  .scrollContainer{max-height: 47vh !important;margin-bottom: 1rem !important;}
+
 
     #menu-list .multilevel { display: flex; min-height: 300px; margin-top: 1rem; }
 #menu-list {
@@ -257,7 +257,7 @@
       }
       
     /* Mega Menu Helper */
-    .scrollContainer { max-height: 55vh; overflow-y: auto; overflow-x: visible; }
+    .scrollContainer { max-height: 47vh; overflow-y: auto; overflow-x: visible;  margin-bottom: 1rem; }
     .scrollContainer  {
         position: relative;
       }
