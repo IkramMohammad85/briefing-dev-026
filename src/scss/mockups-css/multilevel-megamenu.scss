@@ -2,10 +2,7 @@
  @use "../base/tokens" as *;
 
 /* General setup */
-
-
-
-    #menu-list .multilevel { display: flex; min-height: 300px; margin-top: 1rem; }
+#menu-list .multilevel { display: flex; min-height: 300px; margin-top: 1rem; }
 #menu-list {
         .menu-column { margin-bottom: 0; padding-bottom: 0; padding-top: 3rem; }
         .multilevel { display: flex; min-height: 300px;  margin-top: 0;  
@@ -32,13 +29,11 @@
               }
               ul li:hover {
                 background-color: transparent;
-          
                 a {
                   color: var(--primary-color);
                   background-color: transparent;
                 }
               }
-          
               a:hover {
                 color: var(--primary-color);
                 background-color: transparent;
@@ -97,25 +92,17 @@
       #menu-list .multilevel {
         .level1 {
           width: 23%;
-      
           ul {
             margin-left: 0;
           }
-      
           li {
             margin-right: .5rem;
             font-size: 15px;
-      
             &:first-child {
               color: #252525;
               margin-bottom: 1rem;
               font-size: 15px;
-      
-              //&::after {
-                //display: none;
-             // }
             }
-      
             &:hover a, &.mm_active a {
               color: var(--primary-color);
               background-color: transparent;
@@ -123,13 +110,11 @@
             }
           }
         }
-      
         .level2 li.mm_active a {
           color: var(--primary-color);
           background-color: transparent;
           display: inline;
         }
-      
         .level1 li::after, .level2 li::after {
           display: inline;
           content: '▸';
@@ -138,7 +123,6 @@
           color: var(--primary-color);
           visibility: hidden;
         }
-      
         .level1 li.mm_active::after, .level2 li.mm_active::after {
           visibility: visible;
         }
@@ -254,108 +238,8 @@
       }
       
     /* Mega Menu Helper */
-    .scrollContainer { max-height: 47vh; overflow-y: auto; overflow-x: visible;  margin-bottom: 1rem; }
-    .scrollContainer  {
-        position: relative;
-      }
-      
-      .sticky {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-      }
-    /* Mobile optimization */
-    .menu-list.desktop-m {
-        .multilevel {
-          .level1, .level3 {
-            width: 100%;
-            display: none;
-          }
-        }
-      
-        .bg-after {
-          display: none;
-        }
-      }
-      
-
-      
-      .menu-list {
-        .multilevel .level2 {
-          .guides-title-level2 {
-            display: block;
-            color: var(--primary-color);
-          }
-      
-          .guides-title-level2-mobile {
-            display: none;
-          }
-        }
-      
-        &.desktop-m {
-           .section-wrapper:after {
-            display: none;
-          }
-          .multilevel {
-            .level2 ul {
-              margin-bottom: 2rem;
-      
-              li {
-                margin-bottom: 0 ;
-                padding-left: 1rem ;
-                margin-left: 0 ;
-                margin-top: 0.8rem;
-      
-                &:first-child {
-                  padding-left: 0 ;
-                  margin-left: 0 ;
-      
-                  &:before {
-                    display: none;
-                  }
-                }
-              }
-            }
-      
-            ul li {
-              &:after {
-                display: none;
-              }
-              &:before {
-                transition: all .25s;
-                opacity: 1;
-                content: '›';
-                display: inline-block;
-                vertical-align: top;
-                font-weight: 500;
-                color: #ddd;
-                font-size: 1.5rem;
-                position: absolute;
-                left: 0;
-                top: 10px;
-                line-height: 0;
-                height: 0;
-                display: none;
-              }
-            }
-            .level2 .hide {
-              display: block !important;
-              visibility: visible !important;
-              opacity: 1;
-            }
-          }
-        }
-      
-        li {
-          >  .menu-column {
-            .multilevel ul li:first-child a {
-              color: #252525;
-              font-weight: 400;
-            }
-          }
-        }
-      }
-      
+    .scrollContainer { max-height: 47vh; overflow-y: auto; overflow-x: visible;  margin-bottom: 1rem; position: relative;}
+   
   .section-wrapper {
   position: relative;
   margin: 0 auto;
@@ -375,6 +259,31 @@
 .scrollContainer::-webkit-scrollbar-thumb {
   background-color: #d6d6d6; border-radius: 50px;
 }
+
+@media (max-width: 767px) {
+.multilevel{flex-direction: column;}
+#menu-list {
+  .multilevel {
+.level1, .level2, .level3{
+width: 100%;
+}
+ul{padding: 0;}
+.level2{ padding: 0;}
+.level3 { padding-left: 0px;
+  .posts{
+  flex-direction: column;
+  .thumbnail, .news-content{ width: 100%;}
+  .thumbnail{margin-bottom: 1.5rem; margin-right: 0;}
+}
+}
+  }
+  .menu-column{margin-top: 0; padding-top: 0px;}
+}
+
+
+}
+
+
 @media only screen and (max-width: 1099px) {
   .section-wrapper {
     &.padding-left-right-none{padding-left: 0; padding-right: 0;}
