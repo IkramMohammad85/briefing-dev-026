@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initAdvisoryCarousel();
   initMobileSliders();
   initAccordions();
-  initCalculator();
-  initCalcReadyName();
+  //initCalculator();
+  //initCalcReadyName();
   initTabs();
   initDropdowns();
   initContentSwitch();
@@ -728,6 +728,7 @@ function initAccordions() {
 }
 
 /* ---- Calculator — multi-step form ----*/
+/*  
 function initCalcReadyName() {
   const slot = document.querySelector("[data-ready-name]");
   if (!slot) return;
@@ -834,7 +835,7 @@ function initCalculator() {
     render();
   });
 }
-
+*/
 
 /* ---- Contact modal  ---- */
 // function initContactModal() {
