@@ -36,11 +36,14 @@ $breakpoint-tablet: 753px;
 	margin-right: $spacing-md;
 	font-size: 0; 
 	img {
-		width: 100%;
-		height: auto;
+		
+		
 		border-radius: $border-radius;
 		border: 2px solid $border-color;
 		display: block; 
+        width: 120px;
+        height: 120px;
+          object-fit: cover;
 	}
 }
 

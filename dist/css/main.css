@@ -1342,11 +1342,13 @@ ul.unordered-list {
   font-size: 0;
 }
 .personnel-profile-pic img {
-  width: 100%;
-  height: auto;
   border-radius: 50%;
   border: 2px solid #e9ecef;
   display: block;
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .personnel-profile-info {

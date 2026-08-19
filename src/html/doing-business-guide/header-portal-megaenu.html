@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>China Outbound — Advisory</title>
+  <meta name="description" content="Outbound direct investment briefings and advisory support for Chinese businesses expanding overseas.">
+  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/mockups-css/article.min.css">
+  <link rel="stylesheet" href="/css/mockups-css/portal.min.css">
+  <link rel="stylesheet" href="/css/mockups-css/mega-menu.min.css">
+  <link rel="stylesheet" href="/css/mockups-css/multilevel-megamenu.css">
+  <link rel="stylesheet" href="/css/mockups-css/header-mega-menu-old.css">
+
+
+
+<style>
+    .header-nav ul li .submenu-container .menu-column .mega-menu-news .mega-menu-news-category {
+      min-width: 185px;
+    }
+
+    .hp-business-asia-wrap1,
+    .hp-business-asia-wrap {
+      padding: 2rem 0;
+    }
+
+    .table.cb td p {
+      color: unset;
+    }
+
+    .resource-section .pub-description .right-thumb-block {
+      margin-top: 0.5rem;
+    }
+
+    /* Fixing multi level bullet lists sybmols */
+    .article-content ul ul li:before {
+      content: "-";
+      transform: none;
+      border: none;
+      top: 0;
+    }
+
+    .article-content ul ul ul li:before {
+      content: "·";
+      transform: none;
+      border: none;
+      top: 0;
+    }
+
+    .article-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .l3_guide_lists {
+      padding-bottom: 2rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .widget-link-block .widget-sep {
+        min-width: 110px;
+      }
+    }
+
+    /* @media only screen and (max-width: 1399px){
+    .header-nav ul li .submenu-container .menu-column .news-block.three-column-menu .briefing-news:nth-child(n+4) .posts .thumbnail {
+      display:none;
+      margin-bottom: 1rem;
+    }
+
+  } */
+
+    .header-nav ul li .submenu-container .menu-column .news-block.three-column-menu .briefing-news:nth-child(n+4) .posts .thumbnail {
+      display: none;
+      margin-bottom: 1.2rem;
+    }
+
+        /* @media (min-width: 1100px){
+  .menu-list li:hover>.submenu-container .menu-column.menu-links, .menu-list li>.open .menu-column.menu-links {
+      max-height: 55vh;
+  } */
+
+    @media (min-width: 1100px) {
+      .submenu-container .section-wrapper .flex-spacing {
+        position: relative;
+      }
+
+      .submenu-container .section-wrapper .flex-spacing .mega-menu-close-btn {
+        position: absolute;
+        right: -30px;
+        top: 25px;
+        cursor: pointer;
+      }
+
+      .submenu-container .section-wrapper .flex-spacing .mega-menu-close-btn svg {
+        fill: #787878;
+        width: 25px;
+        cursor: pointer;
+      }
+    }
+
+    .header-nav ul li.dbgia a.dbgia-link {
+      font-size: inherit !important;
+    }
+
+    #publication-preview .modal-content {
+      width: 95%;
+      max-width: 800px;
+    }
+
+    .country-lng.dropdown-trigger {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .dropdown-content.dropdown-content-language ul li a {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 7px;
+      color: #383838;
+    }
+
+    .dropdown-content.dropdown-content-language ul li a span,
+    .dropdown-content.briefing ul li a span.sprite-ab {
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      height: auto !important;
+    }
+
+    .dropdown-content.briefing ul li a .sprite-icons:before {
+      margin-top: 0;
+    }
+
+
+    /* Language Dropdown */
+    .dropdown .language-choose .sprite.sprite-language:before,.dropdown #languageDropdown .sprite.sprite-language:before{transform: scale(0.9);}
+    .dropdown .language-choose.country-lng:after{margin-left: 0;}
+    #languageDropdown.dropdown-content.dropdown-content-language{min-width: 100px;}
+    #languageDropdown.dropdown-content.dropdown-content-language ul li a{padding:0.7rem 1rem;}
+
+    @media only screen and (max-width: 1100px) {
+
+      .dropdown.language{display: none;}
+      .country-lng.dropdown-trigger {
+        font-size: 0;
+      }
+
+    }
+
+
+    @media only screen and (max-width: 1399px) {
+      .dsa-cta-rhs-bg .subs-info {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Only for Desktop */
+    @media only screen and (min-width: 753px){
+      .mega-menu-featured-article .briefing-news .posts .thumbnail {max-height:150px;max-width: 310px;}
+      .mega-menu-featured-article .briefing-news .posts .news-content {max-width: 310px;}
+      .mega-menu-featured-article{margin-right:4%;}
+    }
+
+    /* Delay on hover */
+    header .menu-list li>.submenu-container{
+      transition: all 0.15s ease 0.15s;
+      opacity: 0;
+      visibility: hidden;
+      display:flex;
+      max-height: 0;
+      overflow:hidden;
+    }
+
+    header .header-nav ul li:hover .submenu-container{
+      opacity: 1;
+      visibility: visible;
+      max-height:unset;
+    }
+
+    header .header-nav ul li:not(:hover) .submenu-container {
+      transition-delay: 0s;
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+      overflow:hidden;
+    }
+
+    .briefing-news .posts .news-content h3 a {color:#252525 !important;}
+
+    .menu-list#menu-list .no-event{
+      pointer-events:unset;
+    }
+
+
+    /* Popup */
+    .msf_hide {
+        display: none;
+    }
+
+    .msf_show {
+        display: block;
+        animation: fade-in 1s;
+    }
+
+    .scrollContainer{max-height: 47vh !important;margin-bottom: 1rem !important;}
+
+    #menu-list .multilevel { display: flex; min-height: 300px; margin-top: 1rem; }
+
+    /* Twitter logo fix */
+    .sprite-twitter:before {
+      background-image: url(/assets/images/sprite.svg?v2?v3);
+      background-position: -327px -40px;
+    }
+
+    /* SEO Fixes */
+    .swc .or{color:#444546;}
+    .dsa-logo-cta-block .btn-dsa-theme{font-size: 0.9rem;}
+
+    /* New Outbound Category Fixes */
+    .header-nav ul li.tariff-tracker-news,.header-nav ul li.china-outbound-news{background-color: #343434;}
+    @media (min-width: 1600px) {
+    .header-nav ul li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    }
+
+    @media screen and (min-width: 1100px) and (max-width: 1300px) {
+        .header-nav ul li {
+            font-size: .8rem;
+            padding-left: 0.5rem;
+            padding-right: .5rem;
+        }
+    }
+  </style>
+</head>
+<body>
+
+
+  @@include('./includes/header-portal-old.html')
+
+  <main id="main">
+
+
+<section class="page-banner portal-article" aria-labelledby="page-banner-title">
+  <img class="page-banner__media" src="https://www.china-briefing.com/assets/countryguide/China/top-banner_1.webp" alt="" aria-hidden="true">
+
+  <div class="container page-banner__inner">
+    <h1 class="page-banner__title" id="page-banner-title" data-lang-en="Why Foreign Companies Relocate to China?" data-lang-zh="Why Foreign Companies Relocate to China?">Why Foreign Companies Relocate to China?
+</h1>
+
+  
+  </div>
+</section>
+
+
+    <article class="inner-page">
+      <div class="container inner-page__grid">
+        <div class="inner-page__main">
+        <details class="article-toc" open="">
+            <summary class="article-toc__summary">
+              <span class="article-toc__label">In this article</span>
+              <svg class="article-toc__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </summary>
+            <ol class="article-toc__list" id="toc">
+              <li data-level="2"><a href="#chinastrategyHeader">China +1 strategy</a></li><li data-level="2"><a href="#resilientsupplychainandexportcapacityHeader">Resilient supply chain and export capacity</a></li><li data-level="2"><a href="#strongfreetradeanddoubletaxagreementsHeader">Strong Free Trade and Double Tax agreements</a></li><li data-level="2"><a href="#lowercorporateincometaxratesincentivesfordoingbusinessHeader">Lower Corporate Income Tax rates, Incentives for doing business</a></li><li data-level="2"><a href="#greatgrowthpotentialHeader">Great growth potential</a></li><li data-level="2"><a href="#domesticmarketexperiencedworkforceandmarketliberalizationHeader">Domestic market, experienced workforce, and market liberalization</a></li>
+            </ol>
+          </details>
+
+      
+
+                                    <a href="#" data-widget="0" class="widget_marker"></a>
+                
+
+                <p>China’s economy experienced a turbulent 2022 as the country grappled with multiple COVID-19 outbreaks. Against these odds, sectors such as foreign trade and investment continued to see double-digit growth as the country lifted COVID restrictions and forged a way toward economic growth.</p>
+               
+<p>The parallel experiences of China versus much of the rest of the world have put the country in a uniquely advantageous position. Foreign investors who had moved their supply chain out of the country due to the US-China trade tension and China’s rising labor cost are now seriously considering moving back to China.</p>
+
+<div class="article-callout">
+              <div class="article-callout__text">
+                <p class="article-callout__eyebrow">Request Your Market Intelligence Brief</p>
+                <strong>Our Asia-centric BI services combine cross-country benchmarking, compliance & cost analysis, and partner vetting so you can scale smartly.</strong>
+              </div>
+              <button class="btn btn--primary primary-animation" type="button">Explore This Service</button>
+            </div>
+
+<p>On top of <a href="/doing-business-guide/china/why-china">why foreign investors choose China as an investment destination</a> in the first place, i.e.:</p>
+<ul>
+<li><strong>Great growth potential: </strong>China’s GDP per capita was US$12,700 in 2023, about six times lower than that of the US. The gap shows that there is still significant room for economic activity and household wealth to continue to grow before leveling off at a saturation point.</li>
+<li><strong>Tremendous&nbsp;domestic market:</strong>&nbsp;China is the world’s second-largest retail market and is touted to be the first in the near future with China’s rising purchasing power, expanding middle class, and population of over 1.4 billion.</li>
+<li><strong>Strong supply chain</strong>: China is the only country that possesses all the industrial categories in the United Nations industrial classification, which allows firms to source goods easily.</li>
+<li><strong>Sophisticated infrastructure:&nbsp;</strong>China boasts the largest network of high-speed rail and expressways in terms of mileage, which allows products to be transported efficiently.</li>
+<li><strong>Improving business environment:&nbsp;</strong>China moved from ranking 78th to 31st on the World Bank’s Ease of Doing Business rankings in the years between 2017 and 2019 as a result of a series of business reforms.</li>
+<li><strong>Continuous market opening to foreign investment: </strong>China rolled out two 2021 negative lists for foreign investment, reducing the number of items from 33 to 31 on the national negative list and 30 to 27 on the free trade zone negative list.</li>
+<li><strong>Workforce and labor:&nbsp;</strong>China has the world’s largest labor market while at the same time holding advantages in expertise and efficiency compared to lower-cost emerging markets.</li>
+<li><strong>Increasing trade and investment agreement framework:&nbsp;</strong>China has signed 22 free trade agreements (FTAs) with 29 countries or regions on a bilateral or multilateral basis, with another 10 FTAs under negotiation; China has 107 bilateral investment agreements (BITs) in place, with another 17 under negotiation; China has signed double tax avoidance agreements (DTAs) with 114 countries and regions.</li>
+</ul>
+<p>Given China’s strength and high growth potential across a multitude of industries, it is inevitable that it will continue to attract investors globally.</p>
+<p>Below, we summarize why foreign companies relocate to China:</p>
+<h2 id="chinastrategyHeader">China +1 strategy</h2>
+
+<p>China is a significant base for the China Plus One strategy as it creates a strong foothold for foreign companies when looking to diversify their investment in Asia.</p>
+<p>As the Chinese economy continues to transition towards consumption-led growth, both statutory minimum and real wages will rise further. With the rising costs for Chinese manufacturing operations, investors are choosing to supplement Chinese operations with assembly and low-value-added production in markets such as Vietnam, India, Indonesia, etc.</p>
+<p>Moreover, China’s proximity to other Asian countries, coupled with its resilient supply chain and logistics, has led companies to set up operation plants in different locations with ease. By situating manufacturing cost centers close to traditional hubs in mainland China, investors can reduce costs with limited interruption or delays to currently existing supply chains.</p>
+<div class="ab-widget mceNonEditable" align="left">
+                        <div class="widget-link-block border-top-bottom">
+                        <span class="widget-sep"><a href="https://www.china-briefing.com/news/reshoring-from-china-to-mexico-how-prevalent-is-it-really/" target="_blank"> Also Read</a></span>
+                        <a href="https://www.china-briefing.com/news/reshoring-from-china-to-mexico-how-prevalent-is-it-really/" target="_blank">Reshoring from China to Mexico – How Prevalent is it Really?</a>
+                        </div>
+                    </div>
+<h2 id="resilientsupplychainandexportcapacityHeader">Resilient supply chain and export capacity</h2>
+<p>Foreign trade in 2023 has remained relatively stable, although growth was meager. Imports and exports reached a total of &nbsp;41.76 trillion (US$5.86 trillion) in 2023, a year-on-year growth rate of 0.2 percent. Of this, exports grew 0.6 percent year-on-year while imports decreased by 0.3 percent year-on-year.</p>
+<p>China is the only country that possesses all the industrial categories in the United Nations industrial classification, which allows firms to source goods easily. China also boasts of the largest network of high-speed rail and expressways in terms of mileage, which allows products to be transported efficiently.</p>
+<p>
+                
+                </p><div class="duk-block">
+                    <div class="duk-icon">
+                        <div class="svg_dunk-icon">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve" width="50" height="50">
+
+                <circle class="st0" cx="7.5" cy="7.5" r="7.4"></circle>
+                <g>
+                    <path class="st1 bulb-color" d="M7.2,2.6v1.3h0.7V2.6H7.2z"></path>
+                    <path class="st1 bulb-color" d="M4.8,5l-1-1L3.3,4.5l1,1L4.8,5z"></path>
+                    <path class="st1 bulb-color" d="M10.7,5.4l1-1L11.2,4l-1,1L10.7,5.4z"></path>
+                    <path class="st1 bulb-color" d="M7.5,4.6c-1.3,0-2.4,0.9-2.6,2.2l0,0C4.8,7.6,5,8.2,5.4,8.8c0.3,0.3,0.4,0.6,0.4,0.9v1c0,0.2,0.1,0.3,0.3,0.3
+                        h2.6c0.2,0,0.3-0.1,0.3-0.3v-1c0-0.3,0.2-0.6,0.4-0.9c0.4-0.5,0.6-1.2,0.5-2l0,0C9.9,5.5,8.8,4.6,7.5,4.6z"></path>
+                    <path class="st1 bulb-color" d="M2.6,7.8h1.3V7.2H2.6V7.8z"></path>
+                    <path class="st1 bulb-color" d="M11.1,7.8h1.3V7.2h-1.3V7.8z"></path>
+                    <path class="st1 bulb-color" d="M6.5,12.4h2v-0.7h-2V12.4z"></path>
+                </g>
+                </svg>
+                        </div>
+                        <div class="text-dunk">Did You Know?</div>
+                    </div>
+                    <div class="duk-text">The supply chain and infrastructure advantage has become one of the most important drivers for foreign companies relocating to China when global supply chains were seriously disrupted due to the aggressive implementation of infection control measures.</div>
+                </div>
+                <p></p>
+<p>Global businesses may consider applying a dual-track supply chain strategy to alleviate supply chain risks even in the future after-pandemic scenarios. Beyond the global supply chain, the business relies on normal times, and they may relocate some core operations to China to avoid being caught in future supply chain shocks.</p>
+<h2 id="strongfreetradeanddoubletaxagreementsHeader">Strong Free Trade and Double Tax agreements</h2>
+<p>China has developed a strategic position when it comes to entering into free trade agreements – the policy of allowing dutiable and tax reduction on certain products and services being one of the main cornerstones that has projected the nation to be the world’s manufacturing hub over more recent years.</p>
+<p></p><div class="video_embed align-left" id="portalVideo" data-file="https://dp3rhc3eohw2j.cloudfront.net/Distribute/why-still-china-your-ultimate-guide-to-doing-business-in-china-2025/f6db3a7f-c101-4771-9afe-1d59a1369611/MP4/why-still-china-your-ultimate-guide-to-doing-business-in-china-2025_720.mp4" data-image="https://resource.dezshira.com/resize/900x506/Misc/banners/web_1.jpg" data-title="Why China in 2025: Your Ultimate Guide to Doing Business in China"><div class="video-title"><span>WATCH</span><h4>Why China in 2025: Your Ultimate Guide to Doing Business in China</h4></div><div class="embed" id="dd755f13cdcee26af006e866a4af24bf"><video class="embed" controls="" poster="https://resource.dezshira.com/resize/900x506/Misc/banners/web_1.jpg"><source src="https://dp3rhc3eohw2j.cloudfront.net/Distribute/why-still-china-your-ultimate-guide-to-doing-business-in-china-2025/f6db3a7f-c101-4771-9afe-1d59a1369611/MP4/why-still-china-your-ultimate-guide-to-doing-business-in-china-2025_720.mp4"> This video is unavailable in your region. Please enable VPN to view</video></div></div><p></p>
+<p>In total, China has signed off 22 FTAs impacting 29 countries or regions countries (including the 10 ASEAN nations), has another 10 under negotiation, and a further eight under consideration.</p>
+<p>Further, Double Tax Avoidance Agreements treaties effectively eliminate double taxation by identifying exemptions or reducing the amount of taxes payable in China.</p>
+<p>DTAs not only provide certainty to investors regarding their potential tax liabilities but also act as a tool to create tax-efficient international investments.</p>
+<p>So far, China has signed DTAs with 114 countries or regions.</p>
+<div class="ab-widget mceNonEditable" align="left">
+                        <div class="widget-link-block border-top-bottom">
+                        <span class="widget-sep"><a href="/doing-business-guide/china/why-china/china-s-international-free-trade-and-tax-agreements" target="_blank"> Also Read</a></span>
+                        <a href="/doing-business-guide/china/why-china/china-s-international-free-trade-and-tax-agreements" target="_blank">Find a list of China's free trade and bilateral trade agreements in our guide.</a>
+                        </div>
+                    </div>
+<h2 id="lowercorporateincometaxratesincentivesfordoingbusinessHeader">Lower Corporate Income Tax rates, Incentives for doing business</h2>
+<p>The standard CIT rate in China is 25 percent, applicable to resident enterprises and non-resident enterprises with income-generating establishments. Comparatively, in India and Mexico, the CIT rate is higher at 30 percent. This 5% gap provides companies operating in China a competitive edge over Asian counterparts - making it a preferred destination for relocation.</p>
+<p>Moreover, the CIT rates in China could be lower based on the entity type, size, sector, or location:</p>
+<ul>
+<li>A 10 percent withholding rate (temporarily reduced from 20 percent) is applied to China-sourced income not related to a non-resident enterprise’s establishments in China or China income derived by non-resident enterprises without establishments in China;</li>
+<li>Small and low-profit enterprises are entitled to a reduced CIT rate of 20 percent in combination with a reduction of their tax base; and</li>
+<li>A reduced CIT rate of 15 percent is applied to high-tech enterprises or enterprises registered in special zones, such as enterprises engaging in encouraged sectors in Hainan.</li>
+<li>A reduced CIT of 10 percent is applied to encourage key software enterprises and key integrated circuit enterprises after the first five years of CIT exemption.</li>
+</ul>
+<h3>Incentives</h3>
+
+<p>There are multiple forms of tax and non-tax incentives available to businesses in China, such as tax exemptions, tax reductions, lower tax rates, tax refunds or rebates, tax credits, etc.</p>
+<p>These can be primarily categorized as tax incentives based on:</p>
+<ul>
+<li>Type of tax;</li>
+<li>Size of business;</li>
+<li>Sector-wise; and</li>
+<li>Region based.</li>
+</ul>
+<div class="ab-widget mceNonEditable" align="left">
+                        <div class="widget-link-block border-top-bottom">
+                        <span class="widget-sep"><a href="/doing-business-guide/china/taxation-and-accounting/tax-incentives-in-china" target="_blank"> Also Read</a></span>
+                        <a href="/doing-business-guide/china/taxation-and-accounting/tax-incentives-in-china" target="_blank">Which incentives can your business leverage in China? Find out in this guide.</a>
+                        </div>
+                    </div>
+<h2 id="greatgrowthpotentialHeader">Great growth potential</h2>
+<p>China’s gross domestic product (GDP) reached &nbsp;RMB 126.06 trillion (US$17.52 trillion) in 2023, up 5.2 percent year on year, according to data released by the National Bureau of Statistics.</p>
+<p>Moreover, &nbsp;China’s GDP per capita was US$12,700 in 2023, about six times lower than that of the US. The gap shows that there is still significant room for economic activity and household wealth to continue to grow before leveling off at a saturation point.</p>
+<h2 id="domesticmarketexperiencedworkforceandmarketliberalizationHeader">Domestic market, experienced workforce, and market liberalization</h2>
+<p>The Chinese government’s increasing market liberalization policies, coupled with a large domestic market and<strong>&nbsp;</strong>a<strong>&nbsp;</strong>more experienced, more educated, and better-resourced labor pool, provide foreign companies with an unparalleled competitive advantage for operating in China. <strong>&nbsp;</strong></p>
+<p>The Chinese government offers numerous investment-related business incentives and is continually making further improvements through reforms to maintain the country’s high appeal to foreign investors. In a concrete effort to expand market access to foreign investors, China has continued to expand its&nbsp;<a href="https://www.china-briefing.com/news/china-2022-encouraged-catalogue-updated-implementation-from-january-1-2023/"><em>Catalogue of Encouraged Industries for Foreign Investment</em></a>. The 2022 version of the catalog includes a total of 1,474 items across two catalogs (a nationwide catalog and a regional catalog), an increase of 19 percent from the 2020 version.&nbsp;</p>
+<p>Furthermore, China is the world’s second-largest retail market and is touted to be the first soon with China’s rising purchasing power, expanding middle class, and population of 1.4 billion.</p>
+<div class="ab-widget mceNonEditable" align="left">
+                        <div class="widget-link-block border-top-bottom">
+                        <span class="widget-sep"><a href="https://www.china-briefing.com/news/business-relocation-manage-legal-tax-hr-concerns/" target="_blank"> Also Read</a></span>
+                        <a href="https://www.china-briefing.com/news/business-relocation-manage-legal-tax-hr-concerns/" target="_blank">Business Relocation in China: How to Manage Legal, Tax, and HR Concerns</a>
+                        </div>
+                    </div>
+
+<p>Moreover, &nbsp;China’s GDP per capita was US$12,700 in 2023, about six times lower than that of the US. The gap shows that there is still significant room for economic activity and household wealth to continue to grow before leveling off at a saturation point.</p>
+       <div class="author-bio">
+            <img class="author-bio__avatar" src="https://d2h56l9e5xqoi4.cloudfront.net/dsa/images/personnel/rect_1/alberto-vettoretti.webp" alt="" loading="lazy">
+            <div>
+              <p class="author-bio__quote" style="margin-bottom: var(--space-3);">"As one of Asia’s leading business setup consultants, we help companies
+                structure entities to meet strategic goals and maximise operational efficiency, including cross-border
+                asset transfers, M&amp;A transactions, and corporate relocations."</p>
+              <p class="author-bio__name" style="font-weight: 600; margin-bottom: 0 !important;">Alberto Vettoretti</p>
+              <p class="author-bio__role" style="margin-bottom: 0; padding-bottom: 0;">Partner</p>
+              <a class="author-bio__link" href="#">Contact Us →</a>
+              
+            </div>
+          </div>         
+
+<section aria-labelledby="explore-heading">
+            <p class="article-toc__label article-toc__label--gray-head" id="explore-heading" style="margin-bottom: var(--space-4);">Continue exploring
+            </p>
+            <div class="explore-grid">
+              <div class="explore-card-outer">
+                <p class="explore-card-outer__label">Related event</p>
+              <a class="explore-card" href="#">
+                <span class="explore-card__date"><strong>22</strong><span>Jul</span></span>
+                <div>
+                  
+                  <h3>India Market Entry Masterclass: Choosing the Right Business Structure for Expansion into India
+                  </h3>
+                  <p>Webinar | Wednesday, July 22, 2026 | 2:30 PM India / 4:00 PM Vietnam / 5:00 PM China</p>
+                </div>
+              </a>
+              </div>
+              <div class="explore-card-outer">
+                <p class="explore-card-outer__label">Publication</p>
+              <a class="explore-card" href="https://www.asiabriefing.com/store/book/introduction-doing-business-china.html">
+                <img class="explore-card__thumb" src="https://resource.dezshira.com/resize/260x360/Publications/9853/Doing-Business-in-China-2026_featured.jpg" alt="" loading="lazy">
+                <div>
+                  
+                  <h3>An Introduction to Doing Business in China 2026 </h3>
+                  <p>China remains a vital market for global companies in 2026, offering scale...</p>
+                </div>
+              </a>
+              </div>
+            </div>
+          </section>
+
+
+                
+
+            
+        </div>
+
+             <aside class="expert-aside" aria-label="Get expert advice">
+          <details class="expert-form-wrap">
+            <summary class="expert-form-wrap__summary">
+              Get Expert Advice
+              <svg class="expert-form-wrap__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </summary>
+
+            <div class="expert-form">
+              <p class="expert-form__title">Get Expert Advice</p>
+              <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team
+                across our global network.</p>
+              <form class="stack" novalidate>
+                <div class="field field--two-column">
+                  <!-- <label class="field__label" for="modal-name">First Name <span class="rstar">*</span></label> -->
+                   <div class="col input-wrap"><input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder=" "
+                    required>
+                  <span class="field-placeholder">First Name<span class="required">*</span></span>
+                  </div>
+                  <div class="col input-wrap">
+                    <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder=" "
+                    required>
+                  <span class="field-placeholder">Last Name<span class="required">*</span></span>
+                  </div>
+                    
+                </div>
+                <!-- <div class="field">
+                  <label class="field__label" for="modal-name">Last Name <span class="rstar">*</span></label> -->
+                  <!-- <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder="Last Name"
+                    required> 
+                </div>-->
+                <div class="field input-wrap">
+                  <!-- <label class="field__label" for="modal-email">Email <span class="rstar">*</span></label> -->
+                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder=""
+                    required>
+                    <span class="field-placeholder">Email<span class="required">*</span></span>
+                </div>
+                <div class="field input-wrap">
+                  <!-- <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label> -->
+                  <input class="input" type="text" id="eag-company" name="company" autocomplete="text" placeholder="" required>
+                <span class="field-placeholder">Company<span class="required">*</span></span>
+                </div>
+                <div class="field input-wrap">
+                  <!-- <label class="field__label" for="modal-message">Message <span class="rstar">*</span></label> -->
+                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value=""
+                    placeholder="" required=""></textarea>
+                    <span class="field-placeholder">Message<span class="required">*</span></span>
+                </div>
+
+
+                <div class="field text-xs">
+
+                  <label class="margin-top-2 flex items-top gap-2" for="agree_privary_policy">
+                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>
+                      I have read Ascentium's <a href="https://www.dezshira.com/privacy-policy"> Privacy Statement</a>
+                      and agree to Ascentium using my information provided to contact me about related content and
+                      services. <span class="rstar">*</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="g-recaptcha" data-sitekey="">
+                  <div class="captcha-card">
+                  <img src="../img/capcha.svg" alt="captcha" loading="lazy">
+                  </div>
+                </div>
+                <div class="message-dispay hidden">Message goes here</div>
+                <button class="btn btn--primary primary-animation" type="submit">Submit</button>
+              </form>
+            </div>
+          </details>
+        </aside>
+
+      </div>
+    </article>
+<section class="pt-4 pb-6">
+    <div class="container">
+        <h2 class="align-center mt-2 mb-2 weight-base">NEXT GUIDES IN Why China</h2>
+      <div class="splide guide-slider" data-guide-slider data-guide-perview="4" data-guide-tablet="3" data-guide-autoplay="0" aria-label="China guide articles">
+      <div class="splide__track">
+        <ul class="splide__list">
+
+          <li class="splide__slide">
+<div class="briefing-news">
+                        <div class="posts">
+                            <div class="thumbnail">
+                                <a href="https://www.china-briefing.com/doing-business-guide/china/why-china/china-s-international-free-trade-and-tax-agreements"><img alt="China’s  Free Trade Agreements Framework" src="https://www.china-briefing.com/assets/countryguide/China/thumb_2.webp" class="img-responsive"></a>
+                            </div>
+
+                            <div class="news-content">
+                                <h3>
+                                <a href="https://www.china-briefing.com/doing-business-guide/china/why-china/china-s-international-free-trade-and-tax-agreements">China’s  Free Trade Agreements Framework</a>
+                                </h3>
+
+                          
+
+                            </div>
+
+                        </div>
+            </div>
+          </li>
+
+          <li class="splide__slide">
+            <div class="briefing-news">
+                        <div class="posts">
+                            <div class="thumbnail">
+                                <a href="https://www.china-briefing.com/doing-business-guide/china/why-china/china-economy"><img alt="Economic Indicators and China's GDP, FDI, and Trade Trends" src="https://www.china-briefing.com/assets/countryguide/China/thumb_3.webp" class="img-responsive"></a>
+                            </div>
+
+                            <div class="news-content">
+                                <h3>
+                                <a href="https://www.china-briefing.com/doing-business-guide/china/why-china/china-economy">Economic Indicators and China's GDP, FDI, and Trade Trends</a>
+                                </h3>
+
+                          
+
+                            </div>
+
+                        </div>
+            </div>
+          </li>
+
+          <li class="splide__slide">
+         <div class="briefing-news">
+                        <div class="posts">
+                            <div class="thumbnail">
+                                <a href="https://www.china-briefing.com/doing-business-guide/china/why-china/incentives-for-doing-business-in-china"><img alt="Incentives for Doing Business in China" src="https://www.china-briefing.com/assets/countryguide/China/Incentives-for-Doing-Business-in-China_thumb_1.webp" class="img-responsive"></a>
+                            </div>
+
+                            <div class="news-content">
+                                <h3>
+                                <a href="https://www.china-briefing.com/doing-business-guide/china/why-china/incentives-for-doing-business-in-china">Incentives for Doing Business in China</a>
+                                </h3>
+
+                          
+
+                            </div>
+
+                        </div>
+            </div>
+          </li>
+
+          <li class="splide__slide">
+          <div class="briefing-news">
+                        <div class="posts">
+                            <div class="thumbnail">
+                                <a href="https://www.china-briefing.com/doing-business-guide/china/why-china/china-s-double-taxation-avoidance-agreements"><img alt="China's Double Taxation Avoidance Agreements" src="https://www.china-briefing.com/assets/countryguide/China/China-s-Double-Taxation-Avoidance-Agreements_thumb.webp" class="img-responsive"></a>
+                            </div>
+
+                            <div class="news-content">
+                                <h3>
+                                <a href="https://www.china-briefing.com/doing-business-guide/china/why-china/china-s-double-taxation-avoidance-agreements">China's Double Taxation Avoidance Agreements</a>
+                                </h3>
+
+                          
+
+                            </div>
+
+                        </div>
+            </div>
+          </li>
+
+        
+        </ul>
+      </div>
+    </div>
+    <div class="align-center mt-4"><a href="#" class="btn btn--primary-outline primary-outline-animation">CHANGE SECTION</a></div>
+
+</div>
+</section>
+    <section class="feedback-banner">
+    <div class="container">
+            <div class="feedback-text">Found what you're looking for and enjoying this portal?</div>
+            <div class="feedback-block">
+                <div class="swc">
+                    <div class="share-section">
+                        <span>Share with your colleagues </span>
+
+                        <ul>
+                            <li><a href="https://www.facebook.com/VietnamBriefing" target="_blank">
+                                <svg aria-label="Facebook" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="svg-stroke" id="lf1" d="M26 13.5C26 6.59644 20.4036 1 13.5 1C6.59644 1 1 6.59644 1 13.5C1 20.4036 6.59644 26 13.5 26C20.4036 26 26 20.4036 26 13.5Z" stroke-miterlimit="10"></path>
+                                <path class="svg-fill" id="lf2" d="M11.5955 21.053H14.6367V13.4335H16.7584L16.9817 10.8849H14.6301V9.43323C14.6301 8.82892 14.7484 8.59245 15.333 8.59245H16.9817V5.94531H14.8732C12.607 5.94531 11.5889 6.94374 11.5889 8.84862V10.8849H10.0059V13.4663H11.5889V21.053H11.5955Z"></path>
+                                </svg>
+                            </a></li>
+                            <li><a href="https://www.linkedin.com/company/asia-briefing-ltd-/" target="_blank">
+                                <svg aria-label="LinkedIn" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="svg-stroke" id="ff4" d="M26 13.5C26 6.59644 20.4036 1 13.5 1C6.59644 1 1 6.59644 1 13.5C1 20.4036 6.59644 26 13.5 26C20.4036 26 26 20.4036 26 13.5Z" stroke-miterlimit="10"></path>
+                                <path class="svg-fill" id="ff1" d="M10.4259 10.7148H7.83789V19.0701H10.4259V10.7148Z"></path>
+                                <path class="svg-fill" id="ff3" d="M9.11836 9.6263C9.96571 9.6263 10.6488 8.93659 10.6488 8.08268C10.6488 7.22876 9.96571 6.53906 9.11836 6.53906C8.27102 6.53906 7.58789 7.22876 7.58789 8.08268C7.58789 8.93659 8.27102 9.6263 9.11836 9.6263Z"></path>
+                                <path class="svg-fill" id="ff2" d="M14.5571 14.6911C14.5571 13.5153 15.0958 12.8191 16.1336 12.8191C17.086 12.8191 17.5393 13.4891 17.5393 14.6911V19.0789H20.1142V13.7846C20.1142 11.5448 18.8464 10.4609 17.0729 10.4609C15.2994 10.4609 14.5571 11.8403 14.5571 11.8403V10.7171H12.0742V19.0723H14.5571V14.6845V14.6911Z"></path>
+                                </svg>
+                            </a></li>
+                            <li><a href="https://twitter.com/VietnamBriefing" target="_blank">
+                                <svg  xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 12.1 11" aria-label="Twitter" width="27" height="27" fill="var(--primary-color)">
+  <path class="svg-fill" id="lf6" d="M6.1,10.9c-3,0-5.4-2.4-5.4-5.4S3.1,0,6.1,0s5.4,2.4,5.4,5.4-2.4,5.4-5.4,5.4ZM6.1.6C3.4.6,1.2,2.8,1.2,5.5s2.2,4.9,4.9,4.9,4.9-2.2,4.9-4.9S8.8.6,6.1.6Z"/>
+  <path class="svg-fill" id="lf7" d="M7.5,7.8h.5l-3.3-4.5h-.6l3.3,4.5h0ZM7.9,2.7h.9l-2,2.3,2.3,3.2h-1.8l-1.4-1.9-1.6,1.9h-1l2.1-2.5-2.3-3.1h1.9l1.3,1.8,1.6-1.8Z"/>
+</svg>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="or">Or</div>
+                    
+                    <a href="#" onclick="chat_direct_step3('ab_feedback');return false;" style="cursor:pointer;" target="_blank" class="btn-link">Drop us a feedback here <svg aria-label="Feedback" xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 24 24">
+                            <path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"></path>
+                        </svg></a>
+                </div>
+
+
+            </div>
+        </div>
+</section>
+  </main>
+
+  @@include('./includes/footer.html')
+
+  <!-- ============ CONTACT MODAL  ============ -->
+  <div class="modal-overlay" id="contactPopup">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading" style="padding: 0;">
+      <button class="modal__close" type="button" aria-label="Close contact form">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <!-- <h2 id="modal-heading" class="text-2xl" style="margin-bottom: var(--space-5);">Talk to our team</h2> -->
+          <div class="contact-popup">
+            <div class="expert-form expert-form--m-top-none">
+              <p class="expert-form__title">Get Expert Advice</p>
+              <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team
+                across our global network.</p>
+              <form class="stack" novalidate>
+                <div class="field">
+                  <label class="field__label" for="modal-name">First Name <span class="rstar">*</span></label>
+                  <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-name">Last Name <span class="rstar">*</span></label>
+                  <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-email">Email <span class="rstar">*</span></label>
+                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label>
+                  <input class="input" type="tel" id="eag-company" name="phone" autocomplete="tel" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-message">Message <span class="rstar">*</span></label>
+                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value=""
+                    placeholder="" required=""></textarea>
+                </div>
+
+
+                <div class="field text-xs">
+
+                  <label class="margin-top-2 flex items-top" for="agree_privary_policy">
+                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>
+                      I have read Ascentium's <a href="https://www.dezshira.com/privacy-policy"> Privacy Statement</a>
+                      and agree to Ascentium using my information provided to contact me about related content and
+                      services. <span class="rstar">*</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="g-recaptcha" data-sitekey="">
+                  <div class="captcha-card">
+                  <img src="../img/capcha.svg" alt="captcha" loading="lazy">
+                  </div>
+                </div>
+                <button class="btn btn--primary" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <!-- ============ publication-preview MODAL  ============ -->
+     <div class="modal-overlay" id="publication-preview">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading" style="padding: 0;">
+      <button class="modal__close" type="button" aria-label="Close contact form">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <!-- <h2 id="modal-heading" class="text-2xl" style="margin-bottom: var(--space-5);">Talk to our team</h2> -->
+          <div class="contact-popup">
+            <div class="expert-form expert-form--m-top-none">
+                    <div class="flex gap-5 mb-2">
+                        <div class="image">
+                            <img src="https://resource.dezshira.com/resize/650x400/Publications/9853/Doing-Business-in-China-2026_cover.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                        <h3>An Introduction to Doing Business in China 2026</h3>
+                        <span class="publication-card-date insight-card__meta">Published: December 2025</span><p class="pt-1">Please login to download below or <a href="https://www.asiabriefing.com/store/search?brand=cb&amp;page=1" target="_blank">see all our China publications here.</a>
+                         </p>
+                        </div>
+                    </div>
+    
+              <form class="stack" novalidate>
+                <div class="field">
+                  <label class="field__label" for="email">Email</label>
+                    <input class="input" type="text" placeholder="Enter Email" name="email" id="popup_email" required="">
+                </div>
+                <div class="field">
+                  <label class="field__label" for="psw">Password</label>
+                  <input class="input" type="password" placeholder="Enter Password" name="password" id="popup_password" required="">
+                </div>
+                <button class="btn btn--primary primary-animation" type="submit">Login</button>
+                 <button class="btn btn--primary-outline primary-outline-animation" type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+    </div>
+  </div>
+  <script>
+    var feedbackBanner=document.querySelector("section.feedback-banner");
+    var subscribeBTN=document.querySelector("a#subscribeBTN");
+    if(feedbackBanner){
+
+        feedbackBanner.addEventListener('mouseover',function(e){
+            if(subscribeBTN && !subscribeBTN.classList.contains("animate")){
+                subscribeBTN.classList.add("animate","zoomFlash");
+            }
+        });
+
+        feedbackBanner.addEventListener('mouseout',function(e){
+            if(subscribeBTN && subscribeBTN.classList.contains("animate")){
+                subscribeBTN.classList.remove("animate","zoomFlash");
+            }
+        });
+
+    }
+  </script>
+ <script>
+
+    var levels=document.querySelectorAll(".multilevel .level1,.multilevel .level2");
+    for(i=0;i<=levels.length;i++){
+        levels[i].addEventListener('mouseover',function(e){
+
+            let parent=this.parentElement.parentElement.parentElement.parentElement;
+            let bgAfter=parent.querySelector(".bg-after");
+            console.log(bgAfter);
+        
+            if(bgAfter){
+                if(this.classList.contains("level2")){
+
+                    bgAfter.innerHTML='<div class="mm_left"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_left.png?v4"/></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_right.png?v4" /></div>';
+
+                    bgAfter.classList.remove("level1");
+                    bgAfter.classList.add("level2");
+
+                    const computedStyle = window.getComputedStyle(this);
+
+                    // Calculate the total left offset including margin
+                    const marginLeft = parseFloat(computedStyle.marginLeft.replace('px', ''));
+                    const paddingLeft = parseFloat(computedStyle.paddingLeft.replace('px', ''));
+                    const totalLeftOffset = this.offsetLeft + marginLeft + paddingLeft-50;
+
+
+
+                    const rect = this.getBoundingClientRect();
+                    bgAfter.style.left = `${totalLeftOffset}px`;
+                    bgAfter.style.width = `${rect.width+55}px`;
+
+
+
+                } else if(this.classList.contains("level1")) {
+
+                    bgAfter.innerHTML='<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_right.png?v4" /></div>';
+
+                    bgAfter.classList.remove("level2");
+                    bgAfter.classList.add("level1");
+
+                    bgAfter.style.left = '';
+                    bgAfter.style.width = '';
+
+                } else {
+                    bgAfter.innerHTML='<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_right.png?v4" /></div>';
+                    bgAfter.classList.remove("level2");
+                    bgAfter.classList.remove("level1");
+                }
+            }
+
+        });
+    }
+</script>
+<script>
+    // Function to handle the hover event for level 1 and level 2 items
+    function handleMegaMenuHover(event) {
+            // Get the data-show attribute value
+            const showAttr = event.target.getAttribute("data-show");
+            const parentDiv=event.target.parentElement.parentElement.parentElement;
+            const parentSubmenuContainer=event.target.closest('.submenu-container-new');
+            // Delay in milliseconds before showing the next level
+            const delay = 300; // Adjust this value as needed
+          
+            // Clear any existing timeouts
+            clearTimeout(handleMegaMenuHover.timeoutId);
+          
+            // Set a new timeout to show the next level
+            handleMegaMenuHover.timeoutId = setTimeout(() => {
+              // Hide all level 3 elements
+              const level3Elements = parentSubmenuContainer.querySelectorAll(".level3 > div");
+              level3Elements.forEach(element => {
+              //   element.style.display = "none";
+                element.classList.add("hide");
+              });
+          
+              // Show the corresponding level 2 or level 3 element based on the data-show attribute value
+              if(parentDiv){
+          
+                  let openLevels=[];
+                  let activeLis=[];
+                  if(parentDiv.classList.contains("level1")){
+                      openLevels = parentSubmenuContainer.querySelectorAll('.level2 > ul');
+                      activeLis = parentSubmenuContainer.querySelectorAll(".level1 li");
+                  } else {
+                      openLevels = parentSubmenuContainer.querySelectorAll('.level3 > div');
+                      activeLis = parentSubmenuContainer.querySelectorAll(".level2 li");
+                  }
+                  // Remove active class from all li elements
+                  if(activeLis){
+                      activeLis.forEach(li => {
+                      li.classList.remove("mm_active");
+                      });
+                  }
+          
+                  if(openLevels){
+    
+                  for(i=0;i<=openLevels.length;i++){
+                      if (openLevels[i]) {
+                          openLevels[i].classList.add("hide");
+                      }
+                  }
+                  }
+              }
+              
+              const nextLevelElement = parentSubmenuContainer.querySelector(`ul[data-show="${showAttr}"], div[data-show="${showAttr}"]`);
+              if (nextLevelElement) {
+              //   nextLevelElement.style.display = "block !important";
+                nextLevelElement.classList.remove("hide");
+                // Add active class to the current li element
+                const currentLi = event.target.parentElement;
+                if (currentLi) {
+                  currentLi.classList.add("mm_active");
+                }
+    
+    
+                    // Default activation of level2 and level3 content as demo
+                    let openLevelsFirstLi=nextLevelElement.querySelector("li:nth-child(2)");
+                    let firstLevel3Div=parentSubmenuContainer.querySelector('.level3 > div:first-child');
+                    if(openLevelsFirstLi) {
+                        openLevelsFirstLi.classList.add("mm_active");
+                        firstLevel3Div.classList.remove("hide");
+                    }
+    
+              }
+            }, delay);
+          }
+          // Attach the hover event listener to level 1 and level 2 items
+          const level1And2Items = document.querySelectorAll("div#menu-list .level1 a, div#menu-list .level2 a");
+          level1And2Items.forEach(item => {
+            item.addEventListener("mouseover", handleMegaMenuHover);
+          });
+    </script>
+<script>
+    var scrollContainers = document.getElementsByClassName("scrollContainer");
+    var scrollContainer = scrollContainers[0]; // Assuming there's only one element with the class "container"
+    
+    scrollContainer.addEventListener("scroll", function() {
+      var scrollPercentage = (scrollContainer.scrollTop + scrollContainer.clientHeight) / scrollContainer.scrollHeight * 100;
+      var scrollbarThumb = scrollContainer.querySelector(".scrollContainer::-webkit-scrollbar-thumb");
+    
+      scrollbarThumb.style.height = scrollPercentage + "%";
+    });
+    
+    </script>  
+    <script>
+        // script for mega menu
+
+// Portal Mega Menu
+function initMegaMenuPortal() {
+  // Attach the hover event listener to level 1 and level 2 items
+  const level1Items = document.querySelectorAll("div#menu-list .level1 a");
+  level1Items.forEach(item => {
+    item.addEventListener("mouseover", handleMegaMenuHover);
+  });
+
+  const level2Items = document.querySelectorAll("div#menu-list .level2 a");
+  level2Items.forEach(item => {
+    item.addEventListener("mouseover", function (event) {
+      const currentMenu = item.getAttribute("href");
+
+      hoverTimeout = setTimeout(function () {
+        // Add active class to the current li element
+        const activeLis = document.querySelectorAll("div#menu-list .level2 li.mm_active");
+        if (activeLis) {
+          activeLis.forEach(li => {
+            li.classList.remove("mm_active");
+          });
+        }
+        const currentLi = event.target.parentElement;
+        if (currentLi) {
+          currentLi.classList.add("mm_active");
+        }
+        showMenuDescription(item);
+      }, 300);
+
+    });
+  });
+
+  // Function to handle the hover event for level 1 and level 2 items
+  function handleMegaMenuHover(event) {
+    // Get the data-show attribute value
+    const showAttr = event.target.getAttribute("data-show");
+    const parentDiv = event.target.parentElement.parentElement.parentElement;
+    const parentSubmenuContainer = event.target.closest('.submenu-container-new');
+    // Delay in milliseconds before showing the next level
+    const delay = 300; // Adjust this value as needed
+
+    // Clear any existing timeouts
+    clearTimeout(handleMegaMenuHover.timeoutId);
+
+    // Set a new timeout to show the next level
+    //handleMegaMenuHover.timeoutId = setTimeout(() => {
+    // Hide all level 3 elements
+    const level3Elements = parentSubmenuContainer.querySelectorAll(".level3 > div");
+    level3Elements.forEach(element => {
+      //   element.style.display = "none";
+      element.classList.add("hide");
+    });
+
+    // Show the corresponding level 2 or level 3 element based on the data-show attribute value
+    if (parentDiv) {
+
+      let openLevels = [];
+      let activeLis = [];
+      if (parentDiv.classList.contains("level1")) {
+        openLevels = parentSubmenuContainer.querySelectorAll('.level2 > ul');
+        activeLis = parentSubmenuContainer.querySelectorAll(".level1 li");
+      } else {
+        openLevels = parentSubmenuContainer.querySelectorAll('.level3 > div');
+        activeLis = parentSubmenuContainer.querySelectorAll(".level2 li");
+      }
+      // Remove active class from all li elements
+      if (activeLis) {
+        activeLis.forEach(li => {
+          li.classList.remove("mm_active");
+        });
+      }
+
+      if (openLevels) {
+        for (i = 0; i <= openLevels.length; i++) {
+          if (openLevels[i]) {
+            // console.log(openLevels[i]);
+            openLevels[i].classList.remove("mm_active");
+            openLevels[i].classList.add("hide");
+          }
+        }
+      }
+    }
+
+    const nextLevelElement = parentSubmenuContainer.querySelector(`ul[data-show="${showAttr}"], div[data-show="${showAttr}"]`);
+    if (nextLevelElement) {
+      //   nextLevelElement.style.display = "block !important";
+      nextLevelElement.classList.remove("hide");
+      // Add active class to the current li element
+      const currentLi = event.target.parentElement;
+      if (currentLi) {
+        currentLi.classList.add("mm_active");
+      }
+    }
+
+
+    // set defaultView for level1 anchor
+    if (parentDiv.classList.contains("level1")) {
+      activeDefailtView(parentDiv.parentElement.parentElement.parentElement.parentElement.parentElement);
+    }
+
+    //}, delay);
+  }
+
+
+
+  // Level Hovers
+  var levels = document.querySelectorAll(".multilevel .level1,.multilevel .level2");
+  for (i = 0; i <= levels.length; i++) {
+    if (levels[i]) {
+      levels[i].addEventListener('mouseover', function (e) {
+
+        let parent = this.parentElement.parentElement.parentElement.parentElement;
+        let bgAfter = parent.querySelector(".bg-after");
+
+        if (bgAfter) {
+          if (this.classList.contains("level2")) {
+
+            bgAfter.innerHTML = '<div class="mm_left"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_left.png?v4" /></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_right.png?v4" /></div>';
+
+            bgAfter.classList.remove("level1");
+            bgAfter.classList.add("level2");
+
+            const computedStyle = window.getComputedStyle(this);
+
+            // Calculate the total left offset including margin
+            const marginLeft = parseFloat(computedStyle.marginLeft.replace('px', ''));
+            const paddingLeft = parseFloat(computedStyle.paddingLeft.replace('px', ''));
+            const totalLeftOffset = this.offsetLeft + marginLeft + paddingLeft - 30;
+
+
+
+            const rect = this.getBoundingClientRect();
+            bgAfter.style.left = `${totalLeftOffset}px`;
+            bgAfter.style.width = `${rect.width + 55}px`;
+
+
+
+          } else if (this.classList.contains("level1")) {
+
+            bgAfter.innerHTML = '<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l1_right.png?v4" /></div>';
+
+            bgAfter.classList.remove("level2");
+            bgAfter.classList.add("level1");
+
+            bgAfter.style.left = '';
+            bgAfter.style.width = '';
+
+          } else {
+            bgAfter.innerHTML = '<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l1_right.png?v4" /></div>';
+            bgAfter.classList.remove("level2");
+            bgAfter.classList.remove("level1");
+          }
+        }
+
+      });
+    }
+  }
+
+
+
+
+  var level2TimeoutID;
+
+  // document.querySelector('#menu-list #mega_menu_level3').addEventListener("mouseover",function(){
+  //   clearTimeout(level2TimeoutID);
+  // });
+
+  function showMenuDescription(currentMenu) {
+    const parentDiv = currentMenu.parentElement.parentElement.parentElement.parentElement;
+    const mega_menu_level3 = parentDiv.querySelector(".level3");
+    const currentMenuHREF = currentMenu.getAttribute("href");
+    var currentMenuHREF_New = "";
+
+    // Remove the ENTRY part from URL
+    if (currentMenuHREF) {
+      const [baseUrl, queryParams] = currentMenuHREF.split("?");
+      const newParams = queryParams ? queryParams.split("&").filter(pair => !pair.startsWith("ENTRY=")) : [];
+      currentMenuHREF_New = baseUrl + (newParams.length > 0 ? "?" + newParams.join("&") : "");
+    }
+
+    const delay = 300; // Adjust this value as needed
+
+    // Clear any existing timeout
+    clearTimeout(level2TimeoutID);
+
+    if (mega_menu_level3) {
+
+      mega_menu_level3.innerHTML = "";
+
+      // Debounce the function to prevent rapid calls
+      //level2TimeoutID = setTimeout(() => {
+      // const mega_menu_level3 = document.querySelector('#menu-list #mega_menu_level3');
+
+      mega_menu_level3.innerHTML = "";
+
+
+      for (var key in mm_data) {
+        if (mm_data.hasOwnProperty(key)) {
+          var subGuide = mm_data[key];
+
+          if (currentMenuHREF == "/doing-business-guide/" + subGuide.slug || currentMenuHREF_New == subGuide.slug) {
+
+            var thumb_image = subGuide.thumb_image;
+
+            if (!thumb_image.startsWith('https://')) {
+              thumb_image = 'https://resource.dezshira.com/resize/350x150/' + thumb_image;
+            }
+
+            var displayURL = "/doing-business-guide/" + subGuide.slug;
+            if (subGuide.slug.startsWith("http://") || subGuide.slug.startsWith("https://")) {
+              displayURL = subGuide.slug;
+            } else if (subGuide.slug == "/contact") {
+              displayURL = "javascript:openForm('personnel');";
+            } else if (subGuide.slug == "/search") {
+              displayURL = "javascript:open_search();";
+            }
+
+
+            mega_menu_level3.innerHTML = `
+                  <div class="level3_content active">
+                    <div class="briefing-news">
+                      <div class="posts">
+                        <div class="thumbnail">
+                          <a href="`+ displayURL + `" class="megamenu_l3_link">
+                          <img src="`+thumb_image+`" width="227" height="127" data-main-src="`+ thumb_image + `" class="img-responsive megamenu_l3_image">
+                          </a>
+                          
+                        </div>
+                        <div class="news-content">
+                          <h3>
+                            <a href="`+ displayURL + `" class="megamenu_l3_link megamenu_l3_title">` + subGuide.title + `</a>
+                          </h3>
+                          <span class="tag"></span>
+                          <p class="megamenu_l3_teaser">`+ subGuide.teaser + `</p>
+                          <a class="find-out-m-link" href="`+ displayURL + `" class="megamenu_l3_link">Find out more</a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  `;
+
+            // var l3_descriptionImage = mega_menu_level3.querySelector(".megamenu_l3_image");
+            // l3_descriptionImage.addEventListener("load", function () {
+            //   l3_descriptionImage.src = l3_descriptionImage.getAttribute("data-main-src");
+            //   l3_descriptionImage.style.opacity = "1";
+            // });
+          }
+        }
+      }
+      //}, delay);
+    }
+  }
+
+
+
+  function activeDefailtView(submenuContainer) {
+
+    // console.log(submenuContainer);
+    // check if any item is active on level 1
+    var activeLevel1 = submenuContainer.querySelector(".level1 li.mm_active:has(a)");
+    if (!activeLevel1) {
+      activeLevel1 = submenuContainer.querySelector(".level1 li a").parentElement;
+      // if(activeLevel1) activeLevel1.classList.add("mm_active");
+    }
+
+    // check and set active item for level2
+    if (activeLevel1 && activeLevel1.querySelector("a")) {
+      var l1_dataShow = activeLevel1.querySelector("a").getAttribute("data-show");
+      var activeLevel2 = submenuContainer.querySelectorAll(".level2 > ul");
+      for (i = 0; i <= activeLevel2.length; i++) {
+        if (activeLevel2[i]) {
+          activeLevel2[i].classList.add("hide");
+
+          if (activeLevel2[i].getAttribute("data-show") == l1_dataShow) {
+            // console.log(l1_dataShow);
+            activeLevel2[i].classList.remove("hide");
+            if (activeLevel2[i].querySelector("a")) {
+
+              var current_activeLevel2LI = activeLevel2[i].querySelector("li.mm_active");
+              if (current_activeLevel2LI) {
+                current_activeLevel2LI.classList.add("mm_active");
+                showMenuDescription(current_activeLevel2LI.querySelector("a"));
+              } else {
+                activeLevel2[i].querySelector("li:has(a)").classList.add("mm_active");
+                showMenuDescription(activeLevel2[i].querySelector("a"));
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  var mainMenuLists = document.querySelectorAll(".menu-list > ul > li");
+  // console.log(mainMenuLists);
+  for (i = 0; i <= mainMenuLists.length; i++) {
+
+    if (mainMenuLists[i]) {
+      mainMenuLists[i].querySelector("a").addEventListener("mouseover", function (e) {
+        if (!e.target.classList.contains("submenu-container-new") && this.parentElement.querySelector(".submenu-container-new")) {
+          activeDefailtView(this.parentElement.querySelector(".submenu-container-new"));
+        }
+      })
+    }
+
+  }
+}
+
+let mmCheckPortal = document.getElementById("MMportal");
+if (mmCheckPortal) {
+  initMegaMenuPortal();
+}
+
+
+// News Mega Menu for Portal
+function initMegaMenuNews() {
+
+  console.log('init: initMegaMenuNews');
+
+  var loaded_menu = [];
+  var country_default = "china";
+
+  function updateMegaMenu(country) {
+    if (loaded_menu.includes(country)) return false;
+    setTimeout(function () {
+      load_country_menu(country);
+    }, 100);
+  }
+
+
+  function load_country_menu(country) {
+    country_default = country;
+    for (i = 0; i <= loaded_menu.length; i++) {
+      if (loaded_menu[i]) {
+        if (loaded_menu[i][0] == country) {
+
+          changeMenu(country);
+          return;
+        }
+      }
+    }
+
+    // Polyfill for fetch
+    if (!window.fetch) {
+      // Include "whatwg-fetch" polyfill
+      var script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js';
+      document.head.appendChild(script);
+    }
+
+    // var load_url='/doing-business-guide/json/'+country;
+    var load_url = 'https://www.china-briefing.com/cache/country_' + country + '.json'
+
+    // Fetch the JSON data
+    fetch(load_url)
+      .then(response => response.json())
+      .then(data => {
+        loaded_menu.push([country, data]);
+
+        changeMenu(country);
+      })
+      .catch(error => console.error('Error fetching JSON:', error));
+
+  }
+
+  function changeMenu(country) {
+
+    for (i = 0; i <= loaded_menu.length; i++) {
+      if (loaded_menu[i] && loaded_menu[i][0] == country) {
+        data = loaded_menu[i][1];
+      }
+    }
+
+    const mega_menu_level3 = document.querySelector('#menu-list #mega_menu_level3');
+    const menu_level1 = document.querySelector('#menu-list ul#mega_menu_level1');
+    const menu_level2 = document.querySelector('#menu-list #mega_menu_level2');
+    const menu_level3 = document.querySelector('#menu-list #mega_menu_level3');
+
+    const Mobile_mega_menu_level2 = document.querySelector("#push-menu-list .mega_menu_level2");
+
+    const submenuContainer = menu_level1.parentElement.parentElement.parentElement.parentElement;
+    var l1_active_class = "mm_active";
+    var l2_active_class = "mm_active";
+
+    mega_menu_level3.innerHTML = '';
+    menu_level1.innerHTML = '';
+    menu_level2.innerHTML = '';
+    var subGuidesHTML = '';
+    Object.keys(data).forEach(function (sectionKey) {
+      var section = data[sectionKey];
+      var subGuides = section.sub_guides;
+
+
+      menu_level1.innerHTML += `<li class="${l1_active_class}"><a href="/doing-business-guide/${section.slug}" data-show="${section.id}">${section.name}</a></li>`;
+      l1_active_class = "";
+
+      subGuidesHTML += `<ul data-show="${section.id}" class="${l2_active_class}"><li><a style="color:#252525 !important;" href="/doing-business-guide/${section.slug}">${section.name} Guides</a></li>`;
+      l2_active_class = "hide";
+      subGuides.forEach((subGuide, index) => {
+
+        subGuidesHTML += `<li class=""><a href="/doing-business-guide/${subGuide.slug}">${subGuide.title_dynamic}</a></li>`;
+
+        // console.log(subGuide,index);
+
+      });
+      subGuidesHTML += '</ul>';
+      if (menu_level2) menu_level2.innerHTML = subGuidesHTML;
+      if (Mobile_mega_menu_level2) Mobile_mega_menu_level2.innerHTML = subGuidesHTML;
+
+      // Attach the hover event listener to level 1 and level 2 items
+      const level1And2Items = document.querySelectorAll("div#menu-list .level1 a");
+      level1And2Items.forEach(item => {
+        item.addEventListener("mouseover", handleMegaMenuHover);
+      });
+
+      const level2Items = document.querySelectorAll("div#menu-list .level2 a");
+      level2Items.forEach((item) => {
+        const currentMenu = item.getAttribute("href");
+        const country_temp = country; // Set the appropriate country value
+        // const debouncedShowMenuDescription = debounce(showMenuDescription, 300);
+
+
+        let hoverTimeout;
+        item.addEventListener("mouseover", function (event) {
+
+          //hoverTimeout = setTimeout(function () {
+          // Add active class to the current li element
+          const activeLis = document.querySelectorAll("div#menu-list .level2 li.mm_active");
+          if (activeLis) {
+            activeLis.forEach(li => {
+              li.classList.remove("mm_active");
+            });
+          }
+
+          const currentLi = event.target.parentElement;
+          if (currentLi) {
+            currentLi.classList.add("mm_active");
+          }
+
+          showMenuDescription(currentMenu, country_temp);
+          //}, 300);
+
+        });
+
+        item.addEventListener('mouseout', function (event) {
+          clearTimeout(hoverTimeout);
+        });
+
+      });
+
+
+
+
+    })
+
+
+    activeDefailtView(submenuContainer);
+
+    // Copy to mobile menu
+    // setTimeout(copyMobileMenu,300);
+  }
+
+
+
+  var level2TimeoutID;
+
+  document.querySelector('#menu-list #mega_menu_level3').addEventListener("mouseover", function () {
+    clearTimeout(level2TimeoutID);
+  });
+
+  function showMenuDescription(currentMenu, country) {
+    var currentMenuHREF = "";
+    if (typeof currentMenu === 'string') {
+      currentMenuHREF = currentMenu;
+    } else {
+      currentMenuHREF = currentMenu.getAttribute("href");
+    }
+    const delay = 100; // Adjust this value as needed
+
+    // Clear any existing timeout
+    clearTimeout(level2TimeoutID);
+
+    // Debounce the function to prevent rapid calls
+    level2TimeoutID = setTimeout(() => {
+      const mega_menu_level3 = document.querySelector('#menu-list #mega_menu_level3');
+
+      for (let i = 0; i < loaded_menu.length; i++) {
+        if (loaded_menu[i] && loaded_menu[i][0] == country) {
+          data = loaded_menu[i][1];
+        }
+      }
+
+      mega_menu_level3.innerHTML = "";
+
+      Object.keys(data).forEach(function (sectionKey) {
+        var section = data[sectionKey];
+        var subGuides = section.sub_guides;
+
+        subGuides.forEach((subGuide, index) => {
+          if (currentMenuHREF == "/doing-business-guide/" + subGuide.slug) {
+            var thumb_image = subGuide.thumb_image;
+
+            if (!thumb_image.startsWith('https://')) {
+              thumb_image = 'https://resource.dezshira.com/resize/350x150/' + thumb_image;
+            }
+
+            mega_menu_level3.innerHTML = `
+              <div class="level3_content active">
+              <div class="briefing-news">
+                  <div class="posts">
+                  <div class="thumbnail">
+                      <a href="/doing-business-guide/${subGuide.slug}" class="megamenu_l3_link">
+                      <img src="${thumb_image}" width="227" height="127" data-main-src="${thumb_image}" class="img-responsive megamenu_l3_image">
+                      </a>
+                      
+                  </div>
+                  <div class="news-content">
+                      <h3>
+                      <a href="/doing-business-guide/${subGuide.slug}" class="megamenu_l3_link megamenu_l3_title">${subGuide.title}</a>
+                      </h3>
+                      <span class="tag"></span>
+                      <p class="megamenu_l3_teaser">${subGuide.teaser}</p>
+                      <a class="find-out-m-link" href="/doing-business-guide/${subGuide.slug}" class="megamenu_l3_link">Find out more</a>
+                  </div>
+                  </div>
+              </div>
+              </div>
+              `;
+
+            // var l3_descriptionImage = mega_menu_level3.querySelector(".megamenu_l3_image");
+            // l3_descriptionImage.addEventListener("load", function () {
+            //   l3_descriptionImage.src = l3_descriptionImage.getAttribute("data-main-src");
+            //   l3_descriptionImage.style.opacity = "1";
+            // });
+          }
+        });
+      });
+    }, delay);
+  }
+
+
+  load_country_menu(country_default);
+
+  var country_switcher = document.querySelectorAll("a[data-switch_country]");
+  var country_switcher_dropdown = document.querySelector("#dropdownchangecountry .dropdown-btn");
+
+  for (i = 0; i <= country_switcher.length; i++) {
+    if (country_switcher[i]) {
+      country_switcher[i].addEventListener('click', function (e) {
+        
+        var country_switcher_dropdown_content = document.querySelectorAll("#dropdownchangecountry .dropdown-btn .dropdown-content");
+        if(country_switcher_dropdown_content) var defaultCountrySelected = document.querySelectorAll(".defaultCountrySelected");
+
+        var selectedCountryForSwitch = this.getAttribute("data-switch_country");
+        if (selectedCountryForSwitch) {
+          load_country_menu(selectedCountryForSwitch);
+          if(defaultCountrySelected) {
+            for(i=0;i<=defaultCountrySelected.length;i++){
+              if(defaultCountrySelected[i]) defaultCountrySelected[i].innerHTML = this.innerHTML;
+            }
+          }
+          
+          for(j=0;j<=defaultCountrySelected.length;j++){
+            if(country_switcher_dropdown_content[j]) country_switcher_dropdown_content[j].style.display = 'none';
+          }
+          setTimeout(() => {
+            for(j=0;j<=defaultCountrySelected.length;j++){
+              if(country_switcher_dropdown_content[j]) country_switcher_dropdown_content[j].removeAttribute("style");
+            }
+          }, 200);
+        }
+      })
+    }
+  }
+
+  // Function to handle the hover event for level 1 and level 2 items
+  function handleMegaMenuHover(event) {
+    // Get the data-show attribute value
+    const showAttr = event.target.getAttribute("data-show");
+    const parentDiv = event.target.parentElement.parentElement.parentElement;
+    const parentSubmenuContainer = event.target.closest('.submenu-container-new');
+    // Delay in milliseconds before showing the next level
+    const delay = 300; // Adjust this value as needed
+
+    // Clear any existing timeouts
+    clearTimeout(handleMegaMenuHover.timeoutId);
+
+
+    // Set a new timeout to show the next level
+    handleMegaMenuHover.timeoutId = setTimeout(() => {
+      // Hide all level 3 elements
+      const level3Elements = parentSubmenuContainer.querySelectorAll(".level3 > div");
+      level3Elements.forEach(element => {
+        //   element.style.display = "none";
+        element.classList.add("hide");
+      });
+
+      // Show the corresponding level 2 or level 3 element based on the data-show attribute value
+      if (parentDiv) {
+
+        let openLevels = [];
+        let activeLis = [];
+        if (parentDiv.classList.contains("level1")) {
+          openLevels = parentSubmenuContainer.querySelectorAll('.level2 > ul');
+          activeLis = parentSubmenuContainer.querySelectorAll(".level1 li");
+        } else {
+          openLevels = parentSubmenuContainer.querySelectorAll('.level3 > div');
+          activeLis = parentSubmenuContainer.querySelectorAll(".level2 li");
+        }
+        // Remove active class from all li elements
+        if (activeLis) {
+          activeLis.forEach(li => {
+            li.classList.remove("mm_active");
+          });
+        }
+
+        if (openLevels) {
+          for (i = 0; i <= openLevels.length; i++) {
+            if (openLevels[i]) {
+              openLevels[i].classList.remove("mm_active");
+              openLevels[i].classList.add("hide");
+            }
+          }
+        }
+      }
+
+      const nextLevelElement = parentSubmenuContainer.querySelector(`ul[data-show="${showAttr}"], div[data-show="${showAttr}"]`);
+      if (nextLevelElement) {
+        //   nextLevelElement.style.display = "block !important";
+        nextLevelElement.classList.remove("hide");
+        // Add active class to the current li element
+        const currentLi = event.target.parentElement;
+        if (currentLi) {
+          currentLi.classList.add("mm_active");
+        }
+      }
+
+
+      // set defaultView for level1 anchor
+      if (parentDiv.classList.contains("level1")) {
+        activeDefailtView(parentDiv.parentElement.parentElement.parentElement.parentElement.parentElement);
+      }
+
+    }, delay);
+  }
+
+
+
+
+  function activeDefailtView(submenuContainer) {
+
+    // console.log(submenuContainer);
+    // check if any item is active on level 1
+    var activeLevel1 = submenuContainer.querySelector(".level1 li.mm_active:has(a)");
+    if (!activeLevel1) {
+      activeLevel1 = submenuContainer.querySelector(".level1 li a").parentElement;
+      // if(activeLevel1) activeLevel1.classList.add("mm_active");
+    }
+
+    // check and set active item for level2
+    if (activeLevel1 && activeLevel1.querySelector("a")) {
+      var l1_dataShow = activeLevel1.querySelector("a").getAttribute("data-show");
+      var activeLevel2 = submenuContainer.querySelectorAll(".level2 > ul");
+      for (i = 0; i <= activeLevel2.length; i++) {
+        if (activeLevel2[i]) {
+          activeLevel2[i].classList.add("hide");
+
+          if (activeLevel2[i].getAttribute("data-show") == l1_dataShow) {
+            activeLevel2[i].classList.remove("hide");
+            if (activeLevel2[i].querySelector("a")) {
+              activeLevel2[i].querySelector("li:nth-child(2)").classList.add("mm_active");
+              showMenuDescription(activeLevel2[i].querySelector("li:nth-child(2) a"), country_default);
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+
+
+  // Level Hovers
+  var levels = document.querySelectorAll(".multilevel .level1,.multilevel .level2");
+  for (i = 0; i <= levels.length; i++) {
+    if (levels[i]) {
+      levels[i].addEventListener('mouseover', function (e) {
+
+        let parent = this.parentElement.parentElement.parentElement.parentElement;
+        // console.log(parent);
+        let bgAfter = parent.querySelector(".bg-after");
+
+        if (bgAfter) {
+          if (this.classList.contains("level2")) {
+
+            bgAfter.innerHTML = '<div class="mm_left"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_left.png?v4" /></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_right.png?v4" /></div>';
+
+            bgAfter.classList.remove("level1");
+            bgAfter.classList.add("level2");
+
+            const computedStyle = window.getComputedStyle(this);
+
+            // Calculate the total left offset including margin
+            const marginLeft = parseFloat(computedStyle.marginLeft.replace('px', ''));
+            const paddingLeft = parseFloat(computedStyle.paddingLeft.replace('px', ''));
+            const totalLeftOffset = this.offsetLeft + marginLeft + paddingLeft - 30;
+
+
+
+            const rect = this.getBoundingClientRect();
+            bgAfter.style.left = `${totalLeftOffset}px`;
+            bgAfter.style.width = `${rect.width + 55}px`;
+
+
+
+          } else if (this.classList.contains("level1")) {
+
+            bgAfter.innerHTML = '<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l1_right.png?v4" /></div>';
+
+            bgAfter.classList.remove("level2");
+            bgAfter.classList.add("level1");
+
+            bgAfter.style.left = '';
+            bgAfter.style.width = '';
+
+          } else {
+            bgAfter.innerHTML = '<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="/assets/images/mega-menu/aseanb/l1_right.png?v4" /></div>';
+            bgAfter.classList.remove("level2");
+            bgAfter.classList.remove("level1");
+          }
+        }
+
+      });
+    }
+  }
+
+}
+
+let mmCheckNews = document.getElementById("MMnews");
+console.log('mmCheckNews: ',mmCheckNews);
+if (mmCheckNews) {
+  initMegaMenuNews();
+}
+    </script>
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

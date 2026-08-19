@@ -1,0 +1,383 @@
+
+ @use "../base/tokens" as *;
+
+/* General setup */
+#menu-list .multilevel .level1 {
+    width: 23%;
+}
+#menu-list .multilevel .level2 {
+    width: 30%;
+    padding-left: 3rem;
+    margin-right: 3rem;
+}
+#menu-list .multilevel .level3 {
+    width: 48%;
+    padding-left: 1rem;
+}
+    #menu-list {
+        .menu-column { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+        .multilevel { display: flex; min-height: 400px; margin-top: 3rem;
+            &.multilevel-margin-top{margin-top: 1rem;}
+            .level1, .level2, .level3 {
+                ul{ margin-top: 0 !important;
+                &.hide{
+                    display: none !important; 
+                }
+                li{
+                    a{
+                        &:before { content: "" !important; display: none !important; }
+                        &:hover{
+                          color: var(--primary-color);
+                        }
+                    }
+                }
+                }
+            }
+            .level1 a, .level2 a {
+                color: #696969 !important;
+                display: inline !important;
+                font-size: 15px;
+              }
+              ul li:hover {
+                background-color: transparent !important;
+          
+                a {
+                  color: var(--primary-color);
+                  background-color: transparent !important;
+                }
+              }
+          
+              a:hover {
+                color: var(--primary-color);
+                background-color: transparent !important;
+              }
+          
+              .level1 li, .level2 li {
+                width: 100%;
+                list-style: none;
+                margin-bottom: 1rem;
+              }
+              .level1 ul.hide, .level2 ul.hide, .level3 .hide {
+                display: none !important;
+              }
+            }
+          }
+          
+/* Container background */
+   .section-wrapper .bg-after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -51%;
+        width: 86.8%;
+        height: 100%;
+        z-index: -1;
+        display: flex;
+      
+        > div {
+          display: block;
+        }
+      
+        div {
+          &.mm_center {
+            width: 80%;
+            height: 100%;
+          }
+      
+          &.mm_left, &.mm_right {
+            width: 32px !important;
+            height: 100% !important;
+      
+            img {
+              width: 32px !important;
+              height: 100% !important;
+            }
+          }
+        }
+      
+        .no_shadow {
+          background:#fff7ec;
+        }
+      }
+      
+    /* Level 1 Design */
+      #menu-list .multilevel {
+        .level1 {
+          width: 23%;
+      
+          ul {
+            margin-left: 0;
+          }
+      
+          li {
+            margin-right: .5rem;
+            font-size: 15px;
+      
+            &:first-child {
+              color: #252525 !important;
+              margin-bottom: 1rem !important;
+              font-size: 15px;
+      
+              //&::after {
+                //display: none;
+             // }
+            }
+      
+            &:hover a, &.mm_active a {
+              color: var(--primary-color) !important;
+              background-color: transparent;
+              display: inline !important;
+            }
+          }
+        }
+      
+        .level2 li.mm_active a {
+          color: var(--primary-color) !important;
+          background-color: transparent;
+          display: inline !important;
+        }
+      
+        .level1 li::after, .level2 li::after {
+          display: inline;
+          content: '▸';
+          transform: translateX(0);
+          padding-left: 6px;
+          color: var(--primary-color) !important;
+          visibility: hidden;
+        }
+      
+        .level1 li.mm_active::after, .level2 li.mm_active::after {
+          visibility: visible;
+        }
+      }
+      
+    /* Level 2 Design */
+
+    #menu-list .multilevel .level2 {
+        width: 30%;
+        padding-left: 3rem;
+        margin-right: 3rem;
+      
+        li:first-child {
+          color: #252525 !important;
+          font-size: 15px;
+      /* Level 2 arro hide */
+          &::after {
+            display: none;
+          }
+        }
+      
+        .guides-title-level2 {
+          color: black !important;
+        }
+      }
+      
+    /* Level 3 Design */
+    #menu-list .multilevel .level3 {
+        width: 48%;
+        padding-left: 1rem;
+      }
+      
+      .multilevel .level3 {
+        .posts {
+          display: flex;
+          width: 100%;
+      
+          .news-content {
+            padding: 0;
+            text-align: left;
+            width: 60%;
+      p{margin-bottom: 1rem;}
+            h3 {
+              padding: 0 !important;
+              margin: 0 ;
+     font-size: 1rem;
+           
+              line-height: 22px;
+              margin-bottom: 0.5rem;
+      
+              a {
+                color: black !important;
+                padding: 0 !important;
+     
+     font-size: 1rem;
+                line-height: 22px;
+              }
+            }
+      
+            .find-out-m-link {
+              font-weight: 600;
+              color: var(--primary-color);
+              padding: 0 !important;
+      
+              &:hover {
+                color: var(--primary-color) !important;
+              }
+      
+              &:after {
+                content: '→';
+                display: inline-block;
+                vertical-align: top;
+                font-weight: 700;
+                color: var(--primary-color) !important;
+                font-size: 1.5rem;
+                margin-left: 10px;
+                line-height: 18px;
+              }
+            }
+          }
+      
+          .thumbnail {
+            margin-right: 2rem;
+            width: 40%;
+            text-align: left;
+      
+            img {
+              border-radius: 5px;
+              width: 100%;
+            }
+      
+            a {
+              padding: 0 !important;
+            }
+          }
+        }
+      
+        .briefing-news .posts:hover img {
+          transform: none;
+        }
+      
+        ul {
+          flex-direction: column !important;
+          margin: 0 !important;
+      
+          li {
+            flex-direction: column !important;
+            width: 100% !important;
+      
+            a:before {
+              display: none !important;
+              margin: 0 !important;
+            }
+          }
+        }
+      }
+      
+    /* Mega Menu Helper */
+    .scrollContainer { max-height: 55vh; overflow-y: auto; overflow-x: visible; }
+    .scrollContainer  {
+        position: relative;
+      }
+      
+      .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+    /* Mobile optimization */
+    .menu-list.desktop-m {
+        .multilevel {
+          .level1, .level3 {
+            width: 100%;
+            display: none;
+          }
+        }
+      
+        .bg-after {
+          display: none;
+        }
+      }
+      
+      .pushy-content .scrollContainer {
+        overflow: hidden;
+        max-height: unset !important;
+      }
+      
+      .menu-list {
+        .multilevel .level2 {
+          .guides-title-level2 {
+            display: block;
+            color: var(--primary-color);
+          }
+      
+          .guides-title-level2-mobile {
+            display: none;
+          }
+        }
+      
+        &.desktop-m {
+           .section-wrapper:after {
+            display: none;
+          }
+      
+          .multilevel {
+            .level2 ul {
+              margin-bottom: 2rem !important;
+      
+              li {
+                margin-bottom: 0 !important;
+                padding-left: 1rem !important;
+                margin-left: 0 !important;
+                margin-top: 0.8rem;
+      
+                &:first-child {
+                  padding-left: 0 !important;
+                  margin-left: 0 !important;
+      
+                  &:before {
+                    display: none;
+                  }
+                }
+              }
+            }
+      
+            ul li {
+              &:after {
+                display: none;
+              }
+      
+              &:before {
+                transition: all .25s;
+                opacity: 1;
+                content: '›';
+                display: inline-block;
+                vertical-align: top;
+                font-weight: 500;
+                color: #ddd !important;
+                font-size: 1.5rem;
+                position: absolute;
+                left: 0;
+                top: 10px;
+                line-height: 0;
+                height: 0;
+                display: none;
+              }
+            }
+      
+            .level2 .hide {
+              display: block !important;
+              visibility: visible !important;
+              opacity: 1;
+            }
+          }
+        }
+      
+        li {
+          &:hover >  .menu-column ul li a {
+            //color: #696969 !important;
+          }
+      
+          >  .menu-column {
+            ul li a {
+              //color: #696969 !important;
+            }
+      
+            .multilevel ul li:first-child a {
+              color: #252525 !important;
+              font-weight: 400 !important;
+            }
+          }
+        }
+      }
+      
