@@ -2,22 +2,14 @@
  @use "../base/tokens" as *;
 
 /* General setup */
-#menu-list .multilevel .level1 {
-    width: 23%;
-}
-#menu-list .multilevel .level2 {
-    width: 30%;
-    padding-left: 3rem;
-    margin-right: 3rem;
-}
-#menu-list .multilevel .level3 {
-    width: 48%;
-    padding-left: 1rem;
-}
-    #menu-list {
-        .menu-column { margin-bottom: 0 !important; padding-bottom: 0 !important; }
-        .multilevel { display: flex; min-height: 400px; margin-top: 3rem;
-            &.multilevel-margin-top{margin-top: 1rem;}
+
+  .scrollContainer{max-height: 47vh !important;margin-bottom: 1rem !important;}
+
+    #menu-list .multilevel { display: flex; min-height: 300px; margin-top: 1rem; }
+#menu-list {
+        .menu-column { margin-bottom: 0 !important; padding-bottom: 0 !important; padding-top: 3rem; }
+        .multilevel { display: flex; min-height: 300px;  margin-top: 0;  
+            
             .level1, .level2, .level3 {
                 ul{ margin-top: 0 !important;
                 &.hide{
@@ -289,10 +281,7 @@
         }
       }
       
-      .pushy-content .scrollContainer {
-        overflow: hidden;
-        max-height: unset !important;
-      }
+
       
       .menu-list {
         .multilevel .level2 {
@@ -310,7 +299,6 @@
            .section-wrapper:after {
             display: none;
           }
-      
           .multilevel {
             .level2 ul {
               margin-bottom: 2rem !important;
@@ -336,7 +324,6 @@
               &:after {
                 display: none;
               }
-      
               &:before {
                 transition: all .25s;
                 opacity: 1;
@@ -354,7 +341,6 @@
                 display: none;
               }
             }
-      
             .level2 .hide {
               display: block !important;
               visibility: visible !important;
@@ -364,15 +350,7 @@
         }
       
         li {
-          &:hover >  .menu-column ul li a {
-            //color: #696969 !important;
-          }
-      
           >  .menu-column {
-            ul li a {
-              //color: #696969 !important;
-            }
-      
             .multilevel ul li:first-child a {
               color: #252525 !important;
               font-weight: 400 !important;
@@ -381,3 +359,42 @@
         }
       }
       
+      .section-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: inherit;
+}
+.scrollContainer::-webkit-scrollbar {
+  width: 2px; margin-right: 1rem;
+  //margin-top:36px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background: #eeeeee;
+  border-radius: 50px;
+  margin-right: 20px;
+  //margin-top:36px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background-color: #d6d6d6; border-radius: 50px;
+}
+@media only screen and (max-width: 1099px) {
+  .section-wrapper {
+    &.padding-left-right-none{padding-left: 0; padding-right: 0;}
+  }
+}
+      @media (min-width: 1200px) {
+  .section-wrapper {
+    width: 90%;
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-wrapper {
+    width: 85%;
+    max-width: 1440px;
+  }
+}
