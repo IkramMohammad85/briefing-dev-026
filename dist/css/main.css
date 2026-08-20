@@ -210,11 +210,6 @@ ul, ol {
   margin-bottom: 1.5rem;
 }
 
-ul.unordered-list {
-  list-style: disc;
-  padding-left: 1.5rem;
-}
-
 :focus {
   outline: none;
 }
@@ -663,6 +658,24 @@ ul.unordered-list {
   width: 30px;
   height: 30px;
   flex-shrink: 0;
+}
+.brand ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.brand ul li {
+  font-weight: 500;
+  font-size: 14px;
+}
+.brand ul li a {
+  color: var(--black);
+  text-decoration: none;
+}
+.brand ul li a:hover {
+  text-decoration: underline;
 }
 
 .site-header__actions {

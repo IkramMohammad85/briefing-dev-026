@@ -13,7 +13,7 @@ const browserSync = require("browser-sync").create();
 
 const paths = {
   scss: "src/scss/**/*.scss",
-  scssEntry: ["src/scss/main.scss", "src/scss/vb-main.scss"],
+  scssEntry: ["src/scss/main.scss", "src/scss/vb-main.scss", "src/scss/ab-main.scss"],
   scssMockups: "src/scss/mockups-css/**/*.scss",
   js: ["src/js/vendor/**/*.js", "src/js/main.js"],
   img: "src/assets/img/**/*",

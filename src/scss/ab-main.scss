@@ -1,0 +1,8 @@
+// Variable overwrite for AB
+
+@use "../scss/base/tokens";
+
+:root {
+  --brief-theme-color:#82131B !important;
+  --brief-theme-color-light:#82131B !important;
+}

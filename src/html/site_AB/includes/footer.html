@@ -1,0 +1,125 @@
+  <footer class="site-footer">
+
+    <!-- Newsletter band -->
+    <div class="footer-newsletter">
+      <div class="container footer-newsletter__row">
+        <div>
+          <h2 class="footer-newsletter__title">Get free access to our subscriptions and publications</h2>
+          <p class="footer-newsletter__sub">Weekly Asia Briefing updates, plus our latest guides and reports.</p>
+        </div>
+        <form class="footer-newsletter__form" novalidate>
+          <label class="visually-hidden" for="nl-email">Email</label>
+          <input class="footer-newsletter__input" type="email" id="nl-email" name="email" placeholder="Email" autocomplete="email" required>
+          <button class="btn btn--contact cb-btn" type="submit">Sign up now</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Light footer body -->
+    <div class="footer-body">
+      <div class="container">
+
+        <!-- Topic icon row -->
+        <ul class="footer-icons" aria-label="Explore topics">
+          <li><a href="https://www.dezshira.com/" aria-label="Dezan Shira & Associates" data-tooltip="Dezan Shira & Associates" data-tooltip-pos="bottom"><span class="sprite sprite-icons sprite-dsa"></span></a></li>
+          <li><a href="https://www.asiabriefing.com/" aria-label="Asia Briefing"  data-tooltip="Asia Briefing" data-tooltip-pos="bottom"><span class="sprite sprite-icons sprite-ab"></span></a></li>
+          <li><a href="https://www.china-briefing.com/" aria-label="China Briefing" data-tooltip="China Briefing" data-tooltip-pos="bottom" ><span class="sprite sprit-briefing-icons sprite-cb"></span></a></li>
+          <li><a href="https://www.india-briefing.com/" aria-label="India Briefing"  data-tooltip="India Briefing" data-tooltip-pos="bottom"><span class="sprite sprit-briefing-icons sprite-ib"></span></a></li>
+          <li><a href="https://www.aseanbriefing.com/" aria-label="ASEAN Briefing"  data-tooltip="ASEAN Briefing" data-tooltip-pos="bottom"><span class="sprite sprit-briefing-icons sprite-aseanb"></span></a></li>
+          <li><a href="https://www.middleeastbriefing.com/" aria-label="Middle East Briefing" data-tooltip="Middle East Briefing" data-tooltip-pos="bottom"><span class="sprite sprit-briefing-icons sprite-meb"></span></a></li>
+          
+        </ul>
+
+        <!-- Link columns -->
+        <div class="footer-cols">
+          <nav aria-label="About Us">
+            <h3 class="footer-col__title">About Us</h3>
+            <div class="footer-links">
+              <a href="#">Overview</a>
+              <a href="#">Personnel</a>
+              <a href="#">News</a>
+              <a href="#">Events</a>
+              <a href="#">Subscribe</a>
+            </div>
+          </nav>
+
+          <nav aria-label="Topics">
+            <h3 class="footer-col__title">Corporate Service</h3>
+            <div class="footer-links">
+              <a href="#">Accounting</a>
+              <a href="#">Audit and Financial Review</a>
+              <a href="#">Business Advisory</a>
+              <a href="#">Business Intelligence</a>
+              <a href="#">China Outbound | 境外直接投资</a>
+              <a href="#">Corporate Establishment</a>
+              <a href="#">HR and Payroll</a>
+              <a href="#">Mergers and Acquisitions</a>
+              <a href="#">Risk Management and ESG</a>
+              <a href="#">Tax</a>
+              <a href="#">Technology</a>
+            </div>
+          </nav>
+
+          <nav aria-label="Contact Us">
+            <h3 class="footer-col__title">Contact Us</h3>
+            <div class="footer-links">
+              <a href="#">Enquiry Form</a>
+              <a href="#">Careers</a>
+              <a href="#">International Desks</a>
+              <a href="#">Social Media</a>
+              <a href="#">Our Offices</a>
+              <a href="#">Partnerships</a>
+            </div>
+          </nav>
+
+          <nav aria-label="Resources">
+            <h3 class="footer-col__title">Resources</h3>
+            <div class="footer-links">
+              <a href="#">Asia Briefing</a>
+              <a href="#">Asiapedia</a>
+              <a href="#">Asiaadmin</a>
+              <a href="#">Asiamerger</a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Social row -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/ChinaBriefing99" aria-label="Facebook"><span class="sprite social-icons sprite-facebook"></span></a>
+          <a href="https://twitter.com/chinabriefing" aria-label="X"><span class="sprite social-icons sprite-twitter"></span></a>
+          <a href="https://www.linkedin.com/company/asia-briefing-ltd-/" aria-label="LinkedIn"><span class="sprite social-icons sprite-linkedin"></span></a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dark bottom bar -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom">
+        <p>©1992-2026 Dezan Shira & Associates All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Back-to-top button -->
+  <button class="to-top" type="button" aria-label="Scroll back to top" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <script>
+function handleNavClick(e, el){
+    // mobile / small device — dropdown toggle karo, link mat kholo
+    if(window.innerWidth <= 991){
+        e.preventDefault();  // link open hone se roko
+        var expanded = el.getAttribute('aria-expanded') === 'true';
+        el.setAttribute('aria-expanded', String(!expanded));
+        return false;
+    }
+    // desktop — kuch mat roko, link normal tarike se open ho jaayega
+    return true;
+}
+</script>
