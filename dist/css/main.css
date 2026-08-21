@@ -1872,15 +1872,16 @@ ul, ol {
   flex-direction: column;
   height: 100%;
   padding: var(--space-5);
-  background: var(--paper);
+  background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   text-decoration: none;
   transition: border-color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard);
 }
 .country-card:hover {
-  border-color: var(--accent);
+  border-color: #E3E3E3;
   box-shadow: var(--shadow-sm);
+  background-color: #F8F8F8;
 }
 
 .country-card__head {
