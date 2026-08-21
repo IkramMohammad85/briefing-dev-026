@@ -3250,6 +3250,203 @@ ul, ol {
   z-index: 1;
 }
 
+.publication-guide {
+  background: linear-gradient(135deg, #00302C 0%, #00302C 100%);
+  padding: 2rem 1.5rem;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .publication-guide {
+    padding: 3rem 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .publication-guide {
+    padding: 4rem 3rem;
+  }
+}
+.publication-guide__breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto 2.5rem;
+}
+@media (min-width: 768px) {
+  .publication-guide__breadcrumb {
+    margin-bottom: 3rem;
+  }
+}
+.publication-guide__breadcrumb-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+@media (min-width: 768px) {
+  .publication-guide__breadcrumb-list {
+    font-size: 0.9rem;
+  }
+}
+.publication-guide__breadcrumb-list li {
+  display: flex;
+  align-items: center;
+}
+.publication-guide__breadcrumb-list li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  opacity: 0.6;
+}
+.publication-guide__breadcrumb-list li a {
+  color: #DBDBDB;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  font-weight: 300;
+}
+.publication-guide__breadcrumb-list li a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+.publication-guide__breadcrumb-list li span {
+  opacity: 0.7;
+}
+.publication-guide__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .publication-guide__container {
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .publication-guide__container {
+    gap: 3rem;
+  }
+}
+.publication-guide__image-wrapper {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .publication-guide__image-wrapper {
+    justify-content: flex-start;
+  }
+}
+.publication-guide__image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 768px) {
+  .publication-guide__image {
+    max-width: 180px;
+  }
+}
+@media (min-width: 1024px) {
+  .publication-guide__image {
+    max-width: 220px;
+  }
+}
+.publication-guide__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .publication-guide__content {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+}
+.publication-guide__badge {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #E3F1F0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #006960;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+}
+@media (min-width: 768px) {
+  .publication-guide__badge {
+    font-size: 0.8rem;
+    padding: 0.45rem 1rem;
+  }
+}
+.publication-guide__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .publication-guide__title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .publication-guide__title {
+    font-size: 2.2rem;
+  }
+}
+.publication-guide__meta {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .publication-guide__meta {
+    font-size: 1rem;
+  }
+}
+.publication-guide__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .publication-guide__button {
+    padding: 0.85rem 1.75rem;
+    font-size: 1rem;
+  }
+}
+.publication-guide__button:hover {
+  background: transparent;
+  color: var(--primary-color);
+  color: #000;
+}
+.publication-guide__button:active {
+  transform: translateY(0);
+}
+.publication-guide__button-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+}
+
 .article-callout {
   display: flex;
   flex-wrap: wrap;
