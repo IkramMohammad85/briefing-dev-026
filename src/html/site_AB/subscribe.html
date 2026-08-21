@@ -32,102 +32,478 @@
                 <p><strong>1. Account details</strong></p>
                 <div class="field-two-column">
                   <div class="field">
-                    <label class="field__label" for="fname">First Name <span class="rstar">*</span></label>
-                    <input class="input" type="text" id="name" name="name" autocomplete="name" placeholder="" required="">
+                    
+                    <input class="input" type="text" id="name" name="name" autocomplete="name" placeholder="Name" required="">
                   </div>
                   <div class="field">
-                    <label class="field__label" for="last-name">Last Name <span class="rstar">*</span></label>
-                    <input class="input" type="text" id="lname" name="name" autocomplete="name" placeholder="" required="">
+                    
+                    <input class="input" type="text" id="lname" name="name" autocomplete="name" placeholder="Last Name" required="">
                   </div>
                 </div>
                 <div class="field-two-column">
                     <div class="field">
-                    <label class="field__label" for="email">Email <span class="rstar">*</span></label>
-                    <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder="" required="">
-                </div>
-                <div class="field">
-                    <label class="field__label" for="password">Password <span class="rstar">*</span></label>
-                    <input class="input" type="password" id="password" name="password" autocomplete="Password" placeholder="" required="">
-                </div>
-                </div>
-                  
-               <p><strong>2. Professional details</strong></p>
-                <div class="field-two-column">
-                  <div class="field">
-                    <label class="field__label" for="company">Company <span class="rstar">*</span></label>
-                    <input class="input" type="tel" id="organization" name="phone" autocomplete="tel" placeholder="" required="">
-                  </div>
-                  <div class="field">
-                    <label class="field__label" for="modal-phone">Phone <span class="rstar">*</span></label>
-
                     
-                  <input id="telephone" name="" required="" placeholder="" type="tel" class="input has-value" inputmode="tel" autocomplete="tel" value="+91 "></div>
-                  </div>
-                  
-                
-
-                <div class="field-two-column">
-                  <div class="field">
-                    <label class="field__label" for="modal-interested">Which market are you interested in? <span class="rstar">*</span></label>
-                    <select class="select" id="investment_destination" name="investment_destination" required="">
-            <option disabled="" selected="">Select Region</option>
-
-            <option value="Bangladesh">Bangladesh</option>
-<option value="China">China</option>
-<option value="Hong Kong SAR">Hong Kong SAR</option>
-<option value="India">India</option>
-<option value="Indonesia">Indonesia</option>
-<option value="Israel">Israel</option>
-<option value="Japan">Japan</option>
-<option value="Malaysia">Malaysia</option>
-<option value="Mongolia">Mongolia</option>
-<option value="Philippines">Philippines</option>
-<option value="Russia">Russia</option>
-<option value="Singapore">Singapore</option>
-<option value="South Korea">South Korea</option>
-<option value="Thailand">Thailand</option>
-<option value="Turkiye">Turkiye</option>
-<option value="United Arab Emirates">United Arab Emirates</option>
-<option value="Vietnam">Vietnam</option>
-        </select>
-                  </div>
-<div class="field">
-                    <label id="type_service_required" class="field__label" for="type_service_required">Which service are you interested in? <span class="rstar">*</span></label>
-                    <select class="select" id="type_service_required" name="type_service_required" required="">
-            <option disabled="" selected="">Select Services</option>
-            <option value="Accounting, Financial Reporting &amp; Review">Accounting, Financial Reporting &amp; Review</option>
-<option value="Audit and Risk Advisory">Audit and Risk Advisory</option>
-<option value="Corporate Establishment and Governance">Corporate Establishment and Governance</option>
-<option value="Country Benchmarking / Location Selection">Country Benchmarking / Location Selection</option>
-<option value="Due Diligence">Due Diligence</option>
-<option value="ESG Sustainability Services">ESG Sustainability Services</option>
-<option value="HR Global Mobility PEO / EOR">HR Global Mobility PEO / EOR</option>
-<option value="HR Advisory and Payroll">HR Advisory and Payroll</option>
-<option value="HR Payroll Software">HR Payroll Software</option>
-<option value="HR Visa &amp; Work Permits">HR Visa &amp; Work Permits</option>
-<option value="Intellectual Property">Intellectual Property</option>
-<option value="Joint Ventures and Match making">Joint Ventures and Match making</option>
-<option value="Legal Services">Legal Services</option>
-<option value="M&amp;A - asiamerger portal">M&amp;A - asiamerger portal</option>
-<option value="Market Research &amp; Business Intelligence">Market Research &amp; Business Intelligence</option>
-<option value="Mergers and Acquisitions">Mergers and Acquisitions</option>
-<option value="Recruitment">Recruitment</option>
-<option value="Tax Advisory &amp; Planning">Tax Advisory &amp; Planning</option>
-<option value="Tax International &amp; Transfer Pricing">Tax International &amp; Transfer Pricing</option>
-<option value="Technology, Cyber / Data Privacy">Technology, Cyber / Data Privacy</option>
-<option value="Technology, IT and ERP Services">Technology, IT and ERP Services</option>
-<option value="Other">Other</option>
-<option value="Other, Journalist Comment or Quote">Other, Journalist Comment or Quote</option>
-<option value="Other, Asia Briefing Media/Ad Placement">Other, Asia Briefing Media/Ad Placement</option>
-        </select>
-                  </div>
+                    <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder="Email" required="">
                 </div>
-<p><strong>3. Personalise your Asia Briefing experience
-</strong></p>
                 <div class="field">
-                  <label class="field__label" for="comments">Message <span class="rstar">*</span></label>
-                  <textarea id="comments" class="required input" cols="4" rows="2" name="comments" aria-required="true" value="" placeholder="" required=""></textarea>
+                    
+                    <input class="input" type="password" id="password" name="password" autocomplete="Password" placeholder="Password" required="">
                 </div>
+                </div>
+                  
+               <p class="pt-2"><strong>2. Professional details</strong></p>
+                <div class="field-three-column">
+    <div class="field">
+                   
+                    <select class="required select" id="lead_companyindustry" name="lead_companyindustry">
+                <option value="" selected="true" disabled="disabled">Industry </option>
+                                  <option value="Aerospace and Military">Aerospace and Military</option>
+                                  <option value="Agriculture and Livestock">Agriculture and Livestock</option>
+                                  <option value="Apparel, Fashion and Luxury Goods">Apparel, Fashion and Luxury Goods</option>
+                                  <option value="Automotive">Automotive</option>
+                                  <option value="Construction">Construction</option>
+                                  <option value="Consumer Packaged Goods">Consumer Packaged Goods</option>
+                                  <option value="Education">Education</option>
+                                  <option value="Energy and Environment">Energy and Environment</option>
+                                  <option value="Financial Services">Financial Services</option>
+                                  <option value="Food and Beverage">Food and Beverage</option>
+                                  <option value="Government and Non-Profits">Government and Non-Profits</option>
+                                  <option value="Healthcare">Healthcare</option>
+                                  <option value="Industrial Goods and Machinery">Industrial Goods and Machinery</option>
+                                  <option value="Media, Entertainment and Sports">Media, Entertainment and Sports</option>
+                                  <option value="Other">Other</option>
+                                  <option value="Professional Services">Professional Services</option>
+                                  <option value="Raw Materials and unfinished Goods">Raw Materials and unfinished Goods</option>
+                                  <option value="Retail">Retail</option>
+                                  <option value="Services">Services</option>
+                                  <option value="Technology">Technology</option>
+                                  <option value="Transportation, Logistics and Packaging">Transportation, Logistics and Packaging</option>
+                                  <option value="Travel, Hospitality and Leisure">Travel, Hospitality and Leisure</option>
+                              </select>
+                  </div>
+                  <div class="field">
+                    
+                    <select class="required select" id="lead_persontitle" name="lead_persontitle">
+                <option value="" selected="true" disabled="disabled"> Function / Area</option>
+                                  <option value="Accounting">Accounting</option>
+                                  <option value="Administration">Administration</option>
+                                  <option value="Advertising">Advertising</option>
+                                  <option value="Analysis">Analysis</option>
+                                  <option value="Auditing">Auditing</option>
+                                  <option value="Business Development">Business Development</option>
+                                  <option value="Communications">Communications</option>
+                                  <option value="Corporate Governance/Compliance">Corporate Governance/Compliance</option>
+                                  <option value="Editing">Editing</option>
+                                  <option value="Event Management">Event Management</option>
+                                  <option value="Executive / Senior Management">Executive / Senior Management</option>
+                                  <option value="Finance">Finance</option>
+                                  <option value="Foreign Affairs">Foreign Affairs</option>
+                                  <option value="Human Resources">Human Resources</option>
+                                  <option value="Information Technology">Information Technology</option>
+                                  <option value="Journalist">Journalist</option>
+                                  <option value="Legal / Compliance">Legal / Compliance</option>
+                                  <option value="Market Analysis">Market Analysis</option>
+                                  <option value="Marketing">Marketing</option>
+                                  <option value="None">None</option>
+                                  <option value="Not on the list">Not on the list</option>
+                                  <option value="Operations">Operations</option>
+                                  <option value="Other">Other</option>
+                                  <option value="Production">Production</option>
+                                  <option value="Public Relations">Public Relations</option>
+                                  <option value="Purchasing">Purchasing</option>
+                                  <option value="Risk Management">Risk Management</option>
+                                  <option value="Sales">Sales</option>
+                                  <option value="Sourcing / Supply Chain">Sourcing / Supply Chain</option>
+                                  <option value="Tax">Tax</option>
+                                </select>
+                  </div>
+                  <div class="field">
+                    
+                    <select class="required select" id="lead_titlecode" name="lead_titlecode">
+                <option value="" selected="true" disabled="disabled">Seniority </option>
+                                  <option value="Assistant">Assistant</option>
+                                  <option value="Associate">Associate</option>
+                                  <option value="Senior Associate">Senior Associate</option>
+                                  <option value="Manager">Manager</option>
+                                  <option value="Director / VP">Director / VP</option>
+                                  <option value="Partner">Partner</option>
+                                  <option value="General Manager">General Manager</option>
+                                  <option value="Chief Representative">Chief Representative</option>
+                                  <option value="Managing Director">Managing Director</option>
+                                  <option value="C-Suite">C-Suite</option>
+                                  <option value="CEO">CEO</option>
+                                  <option value="CFO">CFO</option>
+                                  <option value="COO">COO</option>
+                                  <option value="Founder">Founder</option>
+                                  <option value="Chairman">Chairman</option>
+                                  <option value="Other">Other</option>
+                              </select>
+                  </div>
+
+</div>
+<div class="field-three-column">
+    <div class="field">
+                    <select class="required select" id="lead_companycountry" name="lead_companycountry">
+                <option value="" selected="true" disabled="disabled">Country </option>
+                                  <option value="Belt &amp; Road Initiative">Belt &amp; Road Initiative</option>
+                                  <option value="Afghanistan, Islamic State">Afghanistan, Islamic State</option>
+                                  <option value="Åland Islands">Åland Islands</option>
+                                  <option value="Albania">Albania</option>
+                                  <option value="Algeria">Algeria</option>
+                                  <option value="American Samoa">American Samoa</option>
+                                  <option value="Andorra, Principality of">Andorra, Principality of</option>
+                                  <option value="Angola">Angola</option>
+                                  <option value="Anguilla">Anguilla</option>
+                                  <option value="Antarctica">Antarctica</option>
+                                  <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                  <option value="Argentina">Argentina</option>
+                                  <option value="Armenia">Armenia</option>
+                                  <option value="Aruba">Aruba</option>
+                                  <option value="Australia">Australia</option>
+                                  <option value="Austria">Austria</option>
+                                  <option value="Azerbaijan">Azerbaijan</option>
+                                  <option value="Bahamas">Bahamas</option>
+                                  <option value="Bahrain">Bahrain</option>
+                                  <option value="Bangladesh">Bangladesh</option>
+                                  <option value="Barbados">Barbados</option>
+                                  <option value="Belarus">Belarus</option>
+                                  <option value="Belgium">Belgium</option>
+                                  <option value="Belize">Belize</option>
+                                  <option value="Benin">Benin</option>
+                                  <option value="Bermuda">Bermuda</option>
+                                  <option value="Bhutan">Bhutan</option>
+                                  <option value="Bolivia">Bolivia</option>
+                                  <option value="Bosnia-Herzegovina">Bosnia-Herzegovina</option>
+                                  <option value="Botswana">Botswana</option>
+                                  <option value="Bouvet Island">Bouvet Island</option>
+                                  <option value="Brazil">Brazil</option>
+                                  <option value="British Indian Ocean Terr.">British Indian Ocean Terr.</option>
+                                  <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                  <option value="Bulgaria">Bulgaria</option>
+                                  <option value="Burkina Faso">Burkina Faso</option>
+                                  <option value="Burundi">Burundi</option>
+                                  <option value="Cambodia, Kingdom of">Cambodia, Kingdom of</option>
+                                  <option value="Cameroon">Cameroon</option>
+                                  <option value="Canada">Canada</option>
+                                  <option value="Cape Verde">Cape Verde</option>
+                                  <option value="Cayman Islands">Cayman Islands</option>
+                                  <option value="Central African Republic">Central African Republic</option>
+                                  <option value="Chad">Chad</option>
+                                  <option value="Chile">Chile</option>
+                                  <option value="China">China</option>
+                                  <option value="Taiwan">Taiwan</option>
+                                  <option value="Christmas Island">Christmas Island</option>
+                                  <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                  <option value="Colombia">Colombia</option>
+                                  <option value="Comoros">Comoros</option>
+                                  <option value="Congo">Congo</option>
+                                  <option value="Cook Islands">Cook Islands</option>
+                                  <option value="Costa Rica">Costa Rica</option>
+                                  <option value="Croatia">Croatia</option>
+                                  <option value="Cuba">Cuba</option>
+                                  <option value="Curaçao">Curaçao</option>
+                                  <option value="Cyprus">Cyprus</option>
+                                  <option value="Czech Republic">Czech Republic</option>
+                                  <option value="Congo, Democratic Republic">Congo, Democratic Republic</option>
+                                  <option value="Denmark">Denmark</option>
+                                  <option value="Djibouti">Djibouti</option>
+                                  <option value="Dominica">Dominica</option>
+                                  <option value="Dominican Republic">Dominican Republic</option>
+                                  <option value="Timor-Leste">Timor-Leste</option>
+                                  <option value="Ecuador">Ecuador</option>
+                                  <option value="Egypt">Egypt</option>
+                                  <option value="El Salvador">El Salvador</option>
+                                  <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                  <option value="Eritrea">Eritrea</option>
+                                  <option value="Estonia">Estonia</option>
+                                  <option value="Ethiopia">Ethiopia</option>
+                                  <option value="Falkland Islands">Falkland Islands</option>
+                                  <option value="Faroe Islands">Faroe Islands</option>
+                                  <option value="Fiji">Fiji</option>
+                                  <option value="Finland">Finland</option>
+                                  <option value="France">France</option>
+                                  <option value="French Guyana">French Guyana</option>
+                                  <option value="French Polynesia">French Polynesia</option>
+                                  <option value="French Southern Territories">French Southern Territories</option>
+                                  <option value="Gabon">Gabon</option>
+                                  <option value="Gambia">Gambia</option>
+                                  <option value="Georgia">Georgia</option>
+                                  <option value="Germany">Germany</option>
+                                  <option value="Ghana">Ghana</option>
+                                  <option value="Gibraltar">Gibraltar</option>
+                                  <option value="Greece">Greece</option>
+                                  <option value="Greenland">Greenland</option>
+                                  <option value="Grenada">Grenada</option>
+                                  <option value="Guadeloupe (French)">Guadeloupe (French)</option>
+                                  <option value="Guam (USA)">Guam (USA)</option>
+                                  <option value="Guatemala">Guatemala</option>
+                                  <option value="Guernsey">Guernsey</option>
+                                  <option value="Guinea">Guinea</option>
+                                  <option value="Guinea Bissau">Guinea Bissau</option>
+                                  <option value="Guyana">Guyana</option>
+                                  <option value="Haiti">Haiti</option>
+                                  <option value="Heard and McDonald Islands">Heard and McDonald Islands</option>
+                                  <option value="Holy See (Vatican City)">Holy See (Vatican City)</option>
+                                  <option value="Honduras">Honduras</option>
+                                  <option value="Hong Kong SAR">Hong Kong SAR</option>
+                                  <option value="Hungary">Hungary</option>
+                                  <option value="Iceland">Iceland</option>
+                                  <option value="India">India</option>
+                                  <option value="Indonesia">Indonesia</option>
+                                  <option value="Iran">Iran</option>
+                                  <option value="Iraq">Iraq</option>
+                                  <option value="Ireland">Ireland</option>
+                                  <option value="Isle of Man">Isle of Man</option>
+                                  <option value="Israel">Israel</option>
+                                  <option value="Italy">Italy</option>
+                                  <option value="Ivory Coast (Cote D'Ivoire)">Ivory Coast (Cote D'Ivoire)</option>
+                                  <option value="Jamaica">Jamaica</option>
+                                  <option value="Japan">Japan</option>
+                                  <option value="Jersey">Jersey</option>
+                                  <option value="Jordan">Jordan</option>
+                                  <option value="Kazakhstan">Kazakhstan</option>
+                                  <option value="Kenya">Kenya</option>
+                                  <option value="Kiribati">Kiribati</option>
+                                  <option value="Kuwait">Kuwait</option>
+                                  <option value="Kyrgyz Republic (Kyrgyzstan)">Kyrgyz Republic (Kyrgyzstan)</option>
+                                  <option value="Laos">Laos</option>
+                                  <option value="Latvia">Latvia</option>
+                                  <option value="Lebanon">Lebanon</option>
+                                  <option value="Lesotho">Lesotho</option>
+                                  <option value="Liberia">Liberia</option>
+                                  <option value="Libya">Libya</option>
+                                  <option value="Liechtenstein">Liechtenstein</option>
+                                  <option value="Lithuania">Lithuania</option>
+                                  <option value="Luxembourg">Luxembourg</option>
+                                  <option value="Macau SAR">Macau SAR</option>
+                                  <option value="Macedonia">Macedonia</option>
+                                  <option value="Madagascar">Madagascar</option>
+                                  <option value="Malawi">Malawi</option>
+                                  <option value="Malaysia">Malaysia</option>
+                                  <option value="Maldives">Maldives</option>
+                                  <option value="Mali">Mali</option>
+                                  <option value="Malta">Malta</option>
+                                  <option value="Marshall Islands">Marshall Islands</option>
+                                  <option value="Martinique">Martinique</option>
+                                  <option value="Mauritania">Mauritania</option>
+                                  <option value="Mauritius">Mauritius</option>
+                                  <option value="Mayotte">Mayotte</option>
+                                  <option value="Mexico">Mexico</option>
+                                  <option value="Micronesia">Micronesia</option>
+                                  <option value="Moldavia">Moldavia</option>
+                                  <option value="Monaco">Monaco</option>
+                                  <option value="Mongolia">Mongolia</option>
+                                  <option value="Montenegro">Montenegro</option>
+                                  <option value="Montserrat">Montserrat</option>
+                                  <option value="Morocco">Morocco</option>
+                                  <option value="Mozambique">Mozambique</option>
+                                  <option value="Myanmar">Myanmar</option>
+                                  <option value="Namibia">Namibia</option>
+                                  <option value="Nauru">Nauru</option>
+                                  <option value="Nepal">Nepal</option>
+                                  <option value="Netherlands">Netherlands</option>
+                                  <option value="New Caledonia (French)">New Caledonia (French)</option>
+                                  <option value="New Zealand">New Zealand</option>
+                                  <option value="Nicaragua">Nicaragua</option>
+                                  <option value="Niger">Niger</option>
+                                  <option value="Nigeria">Nigeria</option>
+                                  <option value="Niue">Niue</option>
+                                  <option value="Norfolk Island">Norfolk Island</option>
+                                  <option value="North Korea">North Korea</option>
+                                  <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                  <option value="Norway">Norway</option>
+                                  <option value="Oman">Oman</option>
+                                  <option value="Other">Other</option>
+                                  <option value="Pakistan">Pakistan</option>
+                                  <option value="Palau">Palau</option>
+                                  <option value="Palestine, State of">Palestine, State of</option>
+                                  <option value="Panama">Panama</option>
+                                  <option value="Papua New Guinea">Papua New Guinea</option>
+                                  <option value="Paraguay">Paraguay</option>
+                                  <option value="Peru">Peru</option>
+                                  <option value="Philippines">Philippines</option>
+                                  <option value="Pitcairn Island">Pitcairn Island</option>
+                                  <option value="Poland">Poland</option>
+                                  <option value="Portugal">Portugal</option>
+                                  <option value="Puerto Rico">Puerto Rico</option>
+                                  <option value="Qatar">Qatar</option>
+                                  <option value="Reunion (French)">Reunion (French)</option>
+                                  <option value="Romania">Romania</option>
+                                  <option value="Russia">Russia</option>
+                                  <option value="Rwanda">Rwanda</option>
+                                  <option value="S. Georgia &amp; S. Sandwich Is.">S. Georgia &amp; S. Sandwich Is.</option>
+                                  <option value="Saint Barthélemy">Saint Barthélemy</option>
+                                  <option value="Saint Helena">Saint Helena</option>
+                                  <option value="Saint Kitts &amp; Nevis Anguilla">Saint Kitts &amp; Nevis Anguilla</option>
+                                  <option value="Saint Lucia">Saint Lucia</option>
+                                  <option value="Saint Martin">Saint Martin</option>
+                                  <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                  <option value="Saint Tome (Sao Tome)">Saint Tome (Sao Tome)</option>
+                                  <option value="Saint Vincent &amp; Grenadines">Saint Vincent &amp; Grenadines</option>
+                                  <option value="Samoa">Samoa</option>
+                                  <option value="San Marino">San Marino</option>
+                                  <option value="Saudi Arabia">Saudi Arabia</option>
+                                  <option value="Senegal">Senegal</option>
+                                  <option value="Serbia">Serbia</option>
+                                  <option value="Seychelles">Seychelles</option>
+                                  <option value="Sierra Leone">Sierra Leone</option>
+                                  <option value="Singapore">Singapore</option>
+                                  <option value="Slovak Republic">Slovak Republic</option>
+                                  <option value="Slovenia">Slovenia</option>
+                                  <option value="Solomon Islands">Solomon Islands</option>
+                                  <option value="Somalia">Somalia</option>
+                                  <option value="South Africa">South Africa</option>
+                                  <option value="South Korea">South Korea</option>
+                                  <option value="South Sudan">South Sudan</option>
+                                  <option value="Spain">Spain</option>
+                                  <option value="Sri Lanka">Sri Lanka</option>
+                                  <option value="Sudan">Sudan</option>
+                                  <option value="Suriname">Suriname</option>
+                                  <option value="Svalbard and Jan Mayen Is.">Svalbard and Jan Mayen Is.</option>
+                                  <option value="Swaziland">Swaziland</option>
+                                  <option value="Sweden">Sweden</option>
+                                  <option value="Switzerland">Switzerland</option>
+                                  <option value="Syria">Syria</option>
+                                  <option value="Tajikistan">Tajikistan</option>
+                                  <option value="Tanzania">Tanzania</option>
+                                  <option value="Thailand">Thailand</option>
+                                  <option value="Togo">Togo</option>
+                                  <option value="Tokelau">Tokelau</option>
+                                  <option value="Tonga">Tonga</option>
+                                  <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                  <option value="Tunisia">Tunisia</option>
+                                  <option value="Turkiye">Turkiye</option>
+                                  <option value="Turkmenistan">Turkmenistan</option>
+                                  <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                                  <option value="Tuvalu">Tuvalu</option>
+                                  <option value="Uganda">Uganda</option>
+                                  <option value="Ukraine">Ukraine</option>
+                                  <option value="United Arab Emirates">United Arab Emirates</option>
+                                  <option value="United Kingdom">United Kingdom</option>
+                                  <option value="United States">United States</option>
+                                  <option value="Uruguay">Uruguay</option>
+                                  <option value="USA Minor Outlying Islands">USA Minor Outlying Islands</option>
+                                  <option value="Uzbekistan">Uzbekistan</option>
+                                  <option value="Vanuatu">Vanuatu</option>
+                                  <option value="Venezuela">Venezuela</option>
+                                  <option value="Vietnam">Vietnam</option>
+                                  <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                                  <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                                  <option value="Wallis and Futuna Islands">Wallis and Futuna Islands</option>
+                                  <option value="Western Sahara">Western Sahara</option>
+                                  <option value="Yemen">Yemen</option>
+                                  <option value="Yugoslavia (former)">Yugoslavia (former)</option>
+                                  <option value="Zambia">Zambia</option>
+                                  <option value="Zimbabwe">Zimbabwe</option>
+                                  <option value="ASEAN Region">ASEAN Region</option>
+                              </select>
+                    
+                  </div>
+                  <div class="field">
+                    
+                    <select class="required select" id="Lead_CompanyCity" name="Lead_CompanyCity">
+                <option value="" selected="true" disabled="disabled">City </option>
+              </select>
+                  </div>
+                  <div class="field">
+                    
+                    <select class="required select" id="lead_personlanguage" name="lead_personlanguage" data-toggle="tooltip" data-placement="top" title="Please select your language preference for communications">
+                <option value="" selected="true" disabled="disabled">Language</option>
+                <option value="English">English</option>
+                <option value="Chinese">Chinese</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Italian">Italian</option>
+                <option value="Russian">Russian</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Other">Other</option>
+              </select>
+                  </div>
+
+</div>
+<div class="field-three-column">
+
+                  <div class="field">
+                    <input type="text" class="required input" value="" id="lead_companyname" name="lead_companyname" placeholder="Company name">
+                  </div>
+                      <div class="field">
+                    
+        <input type="link" class="input" value="" id="lead_companywebsite" name="lead_companywebsite" placeholder="Company Website">
+                    
+                  </div>
+
+</div>
+<p class="pt-2"><strong>3. Personalise your Asia Briefing experience</strong></p>
+<div class="field-three-column">
+    <div class="field">
+                   
+                   <select class="required select" id="lead_mainproductinterest" name="lead_mainproductinterest">
+                <option value="" selected="true" disabled="disabled"> Please select</option>
+                                  <option value="Accounting &amp; Financial Reporting">Accounting &amp; Financial Reporting</option>
+                                  <option value="Audit &amp; Risk Management">Audit &amp; Risk Management</option>
+                                  <option value="Background Check">Background Check</option>
+                                  <option value="Contract Draft &amp; Review">Contract Draft &amp; Review</option>
+                                  <option value="Corporate Establishment">Corporate Establishment</option>
+                                  <option value="Corporate Governance / Compliance">Corporate Governance / Compliance</option>
+                                  <option value="Corporate Structuring / Re-Structuring">Corporate Structuring / Re-Structuring</option>
+                                  <option value="ESG and Sustainability">ESG and Sustainability</option>
+                                  <option value="FDI Regulations">FDI Regulations</option>
+                                  <option value="Financial Due Diligence">Financial Due Diligence</option>
+                                  <option value="Human Resources">Human Resources</option>
+                                  <option value="Intellectual Property">Intellectual Property</option>
+                                  <option value="International Tax Advisory &amp; Structuring">International Tax Advisory &amp; Structuring</option>
+                                  <option value="Joint Ventures">Joint Ventures</option>
+                                  <option value="Legal Advisory">Legal Advisory</option>
+                                  <option value="Legal Due Diligence">Legal Due Diligence</option>
+                                  <option value="M&amp;A Transaction">M&amp;A Transaction</option>
+                                  <option value="Market Research">Market Research</option>
+                                  <option value="None">None</option>
+                                  <option value="Other">Other</option>
+                                  <option value="Payroll Processing">Payroll Processing</option>
+                                  <option value="Recruitment">Recruitment</option>
+                                  <option value="Site Selection or Relocation">Site Selection or Relocation</option>
+                                  <option value="Tax Advisory &amp; Planning for Companies">Tax Advisory &amp; Planning for Companies</option>
+                                  <option value="Tax Advisory &amp; Planning for Individuals">Tax Advisory &amp; Planning for Individuals</option>
+                                  <option value="Tax Compliance">Tax Compliance</option>
+                                  <option value="Tech - Cloud, ERP, Digitalization &amp; Transformation">Tech - Cloud, ERP, Digitalization &amp; Transformation</option>
+                                  <option value="Tech - Compliance &amp; Cybersecurity">Tech - Compliance &amp; Cybersecurity</option>
+                                  <option value="Transfer Pricing">Transfer Pricing</option>
+                                  <option value="Visa &amp; Work Permits">Visa &amp; Work Permits</option>
+                              </select>
+                  </div>
+                  <div class="field">
+                    
+                    <select class="required select" id="lead_countryofinterest" name="lead_countryofinterest" onchange="load_interest_city(this.value,'lead_cityofinterest');">
+                  <option value="" selected="true" disabled="disabled">Please select country</option>
+                                      <option value="Bangladesh">Bangladesh</option>
+                                      <option value="China">China</option>
+                                      <option value="Hong Kong SAR">Hong Kong SAR</option>
+                                      <option value="India">India</option>
+                                      <option value="Indonesia">Indonesia</option>
+                                      <option value="Israel">Israel</option>
+                                      <option value="Japan">Japan</option>
+                                      <option value="Malaysia">Malaysia</option>
+                                      <option value="Mongolia">Mongolia</option>
+                                      <option value="Philippines">Philippines</option>
+                                      <option value="Russia">Russia</option>
+                                      <option value="Singapore">Singapore</option>
+                                      <option value="South Korea">South Korea</option>
+                                      <option value="Thailand">Thailand</option>
+                                      <option value="Turkiye">Turkiye</option>
+                                      <option value="United Arab Emirates">United Arab Emirates</option>
+                                      <option value="Vietnam">Vietnam</option>
+                                  </select>
+                  </div>
+                  <div class="field">
+                    
+                    <select class="required select" id="lead_cityofinterest" name="lead_cityofinterest">
+                  <option value="">Please select city</option>
+                </select>
+                  </div>
+
+</div>
+
+                
                 <div class="field text-xs">
 
                   <label class="margin-top-2 flex items-top gap-2" for="agree_privary_policy">
