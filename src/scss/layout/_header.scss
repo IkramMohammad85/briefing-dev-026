@@ -71,7 +71,7 @@
       &:hover{ text-decoration: underline;}
       }
     }
-    @include bp(sm) { display: flex; }
+    @include bp(sm) { display: flex; margin-left: 2rem; }
   }
 }
 

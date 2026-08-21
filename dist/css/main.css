@@ -683,6 +683,7 @@ ul, ol {
 @media (min-width: 480px) {
   .brand ul {
     display: flex;
+    margin-left: 2rem;
   }
 }
 
