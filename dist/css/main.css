@@ -1724,7 +1724,7 @@ ul, ol {
   }
 }
 .signup-cta__highlight {
-  color: #ff6b35;
+  color: var(--primary-color);
   font-weight: 600;
 }
 .signup-cta__description {
@@ -1778,7 +1778,7 @@ ul, ol {
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  background: #ff6b35;
+  background: var(--primary-color);
   border-radius: 50%;
   color: white;
 }

@@ -347,7 +347,7 @@ $breakpoint-tablet: 753px;
 }
 
 .signup-cta {
-  background: #faf8f5; // Cream/beige background
+  background: #faf8f5; 
   padding: 1rem 1rem;
   border-radius: 8px;
 
@@ -387,7 +387,7 @@ $breakpoint-tablet: 753px;
   }
 
   &__highlight {
-    color: #ff6b35; // Orange accent color
+    color: var(--primary-color);
     font-weight: 600;
   }
 
@@ -446,7 +446,7 @@ $breakpoint-tablet: 753px;
     justify-content: center;
     width: 3rem;
     height: 3rem;
-    background: #ff6b35;
+    background: var(--primary-color);
     border-radius: 50%;
     color: white;
 
