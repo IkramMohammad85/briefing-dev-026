@@ -24,7 +24,52 @@
       <div class="container inner-page__grid">
 
         <div class="inner-page__main">
+            <section class="social-share">
+  <div class="social-share__container">
+    <span class="social-share__label">Share this publication</span>
+    
+    <div class="social-share__icons">
+      <a href="javascript:void(0)" class="social-share__link" 
+         aria-label="Share on Facebook"
+         data-platform="facebook">
+        <svg class="social-share__icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5c-.563-.074-1.823-.143-3.005-.143-3.476 0-5.995 2.199-5.995 6.237v1.906z"/>
+        </svg>
+      </a>
+      
+      <a href="javascript:void(0)" class="social-share__link" 
+         aria-label="Share on Twitter"
+         data-platform="twitter">
+        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 12.1 11" class="social-share__icon">
+ 
+  <path d="M8.8,10.1h1L3.3,1.2h-1.1l6.5,8.9h.1ZM9.5,0h1.8l-3.9,4.6,4.6,6.3h-3.6l-2.8-3.8-3.2,3.8H.5l4.2-4.9L.1,0h3.7l2.5,3.5L9.5,0Z"/>
+</svg>
+      </a>
+      
+      <a href="javascript:void(0)" class="social-share__link" 
+         aria-label="Share on LinkedIn"
+         data-platform="linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="social-share__icon"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
 <p><strong>A practical employer guide to India’s wage, payroll, and HR compliance landscape in 2026. This issue explains how India’s labor codes, state-level minimum wage rules, employment models, contractor risks, payroll TDS obligations, and the Income-tax Act, 2025 affect workforce planning, compensation structuring, HR administration, and employee exits.</strong></p>
+
+<details class="article-toc article-toc-ab" open="">
+            <summary class="article-toc__summary">
+              <span class="article-toc__label">INSIDE THIS GUIDE</span>
+              <svg class="article-toc__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </summary>
+            <ol class="article-toc__list" id="toc">
+              <li class="is-current" data-level="2"><a href="#entity-structure">India’s Workforce Landscape in 2026: Wage Trends and Labor Code Implementation</a></li>
+              <li data-level="2"><a href="#jv-question">Hiring, Managing, and Exiting Employees Under India’s Labor Codes</a></li>
+              <li data-level="2"><a href="#compliance-traps">Payroll Compliance Under the New Income Tax Framework</a></li>
+              
+            </ol>
+          </details>
 
             <p>India’s employment and payroll compliance environment is changing rapidly in 2026. With the implementation of India’s four labor codes, revised wage definitions, state-level minimum wage updates, greater scrutiny of contractor and third-party staffing arrangements, and the transition to the Income-tax Act, 2025, employers must reassess how they hire, compensate, manage, and terminate employees in India.</p>
 
@@ -42,7 +87,7 @@
         </div>
 
 
-        <aside class="expert-aside" aria-label="Get expert advice">
+        <aside class="expert-aside right-aside-cta-ab" aria-label="Get expert advice">
           <details class="expert-form-wrap">
             <summary class="expert-form-wrap__summary">
               Get Expert Advice
@@ -262,6 +307,42 @@
       </div>
     </div>
   </div>
+  <script>
+    class SocialShare {
+  constructor() {
+    this.links = document.querySelectorAll('.social-share__link');
+    this.init();
+  }
+
+  init() {
+    this.links.forEach(link => {
+      link.addEventListener('click', (e) => this.handleShare(e));
+    });
+  }
+
+  handleShare(e) {
+    e.preventDefault();
+    const platform = e.currentTarget.dataset.platform;
+    const pageTitle = document.title;
+    const pageUrl = window.location.href;
+
+    const shareUrls = {
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`,
+      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`,
+      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`
+    };
+
+    if (shareUrls[platform]) {
+      window.open(shareUrls[platform], '_blank', 'width=600,height=400');
+    }
+  }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  new SocialShare();
+});
+  </script>
   <script src="/js/main.min.js"></script>
 
 </body>
