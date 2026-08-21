@@ -134,7 +134,15 @@
   padding: var(--space-5) var(--space-5) var(--space-3) var(--space-5);
 
   &__label { color: var(--accent); font-size: var(--text-xs); font-weight: 600; text-transform: uppercase;  margin-bottom: var(--space-4); }
-
+&.realted-ab{
+  background-color: #fff;
+  padding: 0;
+  ul{
+    li{
+      margin-bottom: 1.5rem;
+    }
+  }
+}
 }
 
 .reading-item {
@@ -190,6 +198,14 @@
   grid-template-columns: 1fr;
   gap: var(--space-6);
   @include bp(md) { grid-template-columns: 30% 67%; }
+    &--ab{
+    @include bp(md) { grid-template-columns: 30% 30% 34%; }
+    .pub-card {
+      .mag-detail{width: 50%; max-height: 203px;}
+     img{max-width: 146px;}
+    }
+    
+  }
 }
 
 .topic-lead {
@@ -217,7 +233,9 @@
   //gap: 3rem 2.5rem;
   align-content: start;
   @include bp(md) { grid-template-columns: 48% 48%; }
-  
+  &--ab{
+    @include bp(md) { grid-template-columns: 100%; }
+  }
 
 }
 

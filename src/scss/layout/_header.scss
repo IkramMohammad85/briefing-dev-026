@@ -65,12 +65,13 @@
     height: 30px;
     flex-shrink: 0;
   }
-  ul{ padding: 0; margin: 0; list-style: none; display: flex; gap: 1rem;
+  ul{ padding: 0; margin: 0; list-style: none; display: none; gap: 1rem;
     li{font-weight: 500; font-size: 14px;
       a{color:var(--black); text-decoration: none;
       &:hover{ text-decoration: underline;}
       }
     }
+    @include bp(sm) { display: flex; }
   }
 }
 

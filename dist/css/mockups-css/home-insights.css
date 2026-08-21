@@ -293,6 +293,13 @@
   text-transform: uppercase;
   margin-bottom: var(--space-4);
 }
+.related-reading.realted-ab {
+  background-color: #fff;
+  padding: 0;
+}
+.related-reading.realted-ab ul li {
+  margin-bottom: 1.5rem;
+}
 
 .reading-item {
   display: grid;
@@ -376,6 +383,18 @@
     grid-template-columns: 30% 67%;
   }
 }
+@media (min-width: 768px) {
+  .topic__grid--ab {
+    grid-template-columns: 30% 30% 34%;
+  }
+}
+.topic__grid--ab .pub-card .mag-detail {
+  width: 50%;
+  max-height: 203px;
+}
+.topic__grid--ab .pub-card img {
+  max-width: 146px;
+}
 
 .topic-lead {
   text-decoration: none;
@@ -431,6 +450,11 @@
 @media (min-width: 768px) {
   .topic-list {
     grid-template-columns: 48% 48%;
+  }
+}
+@media (min-width: 768px) {
+  .topic-list--ab {
+    grid-template-columns: 100%;
   }
 }
 

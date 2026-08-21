@@ -193,22 +193,37 @@ function initStatCounters() {
 
   stats.forEach((el) => observer.observe(el));
 
+  // Show the starting value up front (unless reduced-motion), so the number
+  // doesn't flash its final value before counting up when scrolled into view.
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce) {
+    stats.forEach((el) => { el.textContent = format(0, el); });
+  }
+
+  function format(value, el) {
+    const prefix = el.dataset.prefix || "";
+    const suffix = el.dataset.suffix || "";
+    const grouped =
+      el.dataset.group === "true" ? value.toLocaleString("en-US") : String(value);
+    return prefix + grouped + suffix;
+  }
+
   function animateCount(el) {
     const target = parseInt(el.dataset.countTo, 10);
-    const suffix = el.dataset.suffix || "";
+    if (Number.isNaN(target)) return;
     const duration = 1200;
     const start = performance.now();
 
-    
+    // Respect reduced-motion preference: show the final value immediately.
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.textContent = target + suffix;
+      el.textContent = format(target, el);
       return;
     }
 
     function tick(now) {
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target) + suffix;
+      el.textContent = format(Math.round(eased * target), el);
       if (progress < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);

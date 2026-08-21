@@ -932,6 +932,25 @@
   });
 })();
 </script>
+<script>
+    var feedbackBanner=document.querySelector("section.feedback-banner");
+    var subscribeBTN=document.querySelector("a#subscribeBTN");
+    if(feedbackBanner){
+
+        feedbackBanner.addEventListener('mouseover',function(e){
+            if(subscribeBTN && !subscribeBTN.classList.contains("animate")){
+                subscribeBTN.classList.add("animate","zoomFlash");
+            }
+        });
+
+        feedbackBanner.addEventListener('mouseout',function(e){
+            if(subscribeBTN && subscribeBTN.classList.contains("animate")){
+                subscribeBTN.classList.remove("animate","zoomFlash");
+            }
+        });
+
+    }
+  </script>
   <script src="/js/main.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+@use "../base/tokens" as *;
+
+.stats-bar {
+  background: #F3F4F2;
+  
+}
+
+.stats-bar__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-6);
+  padding-block: var(--space-4);
+}
+
+// Lead-in sentence on the left.
+.stats-bar__lead {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-on-paper);
+  max-width: 60ch;
+}
+
+// The group of stats on the right.
+.stats-bar__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-4) var(--space-6);
+}
+
+.stats-bar__item {
+  font-size: var(--text-sm);
+  color: var(--text-on-paper-muted);
+  white-space: nowrap;
+}
+
+// Bold number that leads each stat.
+.stats-bar__num {
+  font-weight: 700;
+  color: var(--text-on-paper);
+}
+
+// ---- Mobile: stack the lead above the stats, stats wrap freely ----
+@media (max-width: 767px) {
+  .stats-bar__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .stats-bar__lead { max-width: none; }
+
+  .stats-bar__items {
+    gap: var(--space-2) var(--space-5);
+  }
+}

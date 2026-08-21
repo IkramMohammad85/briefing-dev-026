@@ -7,3 +7,11 @@
   --brief-theme-color-light:#82131B !important;
   --brief-theme-color-dark:#82131B !important;
 }
+.footer-newsletter{ background-color: #DDDDDD;}
+.footer-newsletter__title{color: #000;}
+.footer-newsletter__sub{color: #5D5D5D;}
+.footer-newsletter__input{border-color: #8D8D8D; color: #464646;}
+.footer-newsletter__input::placeholder {
+    color: #666;
+    opacity: 1;
+}

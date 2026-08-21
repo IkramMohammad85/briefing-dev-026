@@ -1,0 +1,99 @@
+@use "../base/tokens" as *;
+
+.country-guides__head {
+  max-width: 80ch;
+  margin-bottom: var(--space-6);
+}
+
+.country-guides__title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-3);
+}
+
+.country-guides__lead {
+  margin: 0;
+  color: var(--text-on-paper-muted);
+  line-height: var(--leading-relaxed);
+}
+
+// The grid of cards (also the Splide list on mobile).
+.country-guides__grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+
+  @include bp(sm) { grid-template-columns: repeat(2, 1fr); }
+  @include bp(lg) { grid-template-columns: repeat(4, 1fr); }
+  &--three-column{
+     @include bp(lg) { grid-template-columns: repeat(3, 1fr); }
+    @include bp(sm) { grid-template-columns: repeat(1, 1fr); }
+  }
+}
+
+// A single country card.
+.country-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-5);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+              box-shadow var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
+
+  &:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-sm);
+    //transform: translateY(-2px);
+  }
+}
+
+.country-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.country-card__name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-on-paper);
+  margin: 0;
+}
+
+.country-card__arrow {
+  flex-shrink: 0;
+  color: var(--primary-color);
+  transition: transform var(--duration-fast) var(--ease-standard);
+
+  .country-card:hover & { transform: translateX(3px); }
+}
+
+.country-card__text {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: #535353;
+  line-height: 22px;
+}
+
+.country-card__link {
+  margin: 1rem 0 0 0;
+  font-size: var(--text-sm);
+  color: var(--primary-color);
+  line-height: var(--leading-snug);
+}
+
+// Highlighted "not sure where to start" variant.
+.country-card--highlight {
+  background: var(--light-orange);
+  border-color: var(--primary-color);
+
+  .country-card__name { color: var(--primary-color); }
+  .country-card__text { color: var(--text-on-paper); }
+}
