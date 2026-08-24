@@ -92,7 +92,7 @@
   margin:clamp(1rem, 4vw, 1.75rem) auto 0;
   max-width:62ch;
   font-weight:300;
-  font-size:clamp(0.9375rem, 3.4vw, 1.125rem);
+  font-size:15px;
   line-height:1.68;
   color:var(--ink-muted);
   text-wrap:pretty;
@@ -129,7 +129,7 @@
     --parallax-depth:10;
   }
   .hero__media img{ object-position:50% 58%; }
-  .hero__lede{ max-width:70ch; }
+  .hero__lede{ max-width:85ch; }
   .hero__scrim{
     background:linear-gradient(to bottom,
       rgba(11,26,66,.34) 0%,
