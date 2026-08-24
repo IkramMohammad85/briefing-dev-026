@@ -169,11 +169,14 @@ $breakpoint-tablet: 753px;
     padding-block: var(--space-4);
   }
   &.article-toc-ab{
+    .article-toc__label{font-size: 15px;}
 	background-color: #E3F1F0;
 	.article-toc__list{
 	
 		@include bp(sm) { column-count: 1; }
-		li{margin-left: 0;}
+		li{margin-left: 0;
+    a{font-size: 15px;}
+    }
 		li.is-current ::before, li:hover ::before{display: none;}
 	}
   }
@@ -329,8 +332,9 @@ $breakpoint-tablet: 753px;
     }
 
     &[data-platform="twitter"]:hover {
-      background: #fff;
-      color: #000;
+      background: #000;
+      color: #fff;
+      svg{fill: #fff;}
     }
 
     &[data-platform="linkedin"]:hover {

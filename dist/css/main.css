@@ -1495,6 +1495,9 @@ ul, ol {
     padding-block: var(--space-4);
   }
 }
+.article-toc.article-toc-ab .article-toc__label {
+  font-size: 15px;
+}
 .article-toc.article-toc-ab {
   background-color: #E3F1F0;
 }
@@ -1506,6 +1509,9 @@ ul, ol {
 }
 .article-toc.article-toc-ab .article-toc__list li {
   margin-left: 0;
+}
+.article-toc.article-toc-ab .article-toc__list li a {
+  font-size: 15px;
 }
 .article-toc.article-toc-ab .article-toc__list li.is-current ::before, .article-toc.article-toc-ab .article-toc__list li:hover ::before {
   display: none;
@@ -1669,8 +1675,11 @@ ul, ol {
   color: white;
 }
 .social-share__link[data-platform=twitter]:hover {
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #fff;
+}
+.social-share__link[data-platform=twitter]:hover svg {
+  fill: #fff;
 }
 .social-share__link[data-platform=linkedin]:hover {
   background: #0077b5;
@@ -3264,7 +3273,7 @@ ul, ol {
 }
 @media (min-width: 1024px) {
   .publication-guide {
-    padding: 4rem 3rem;
+    padding: 3rem 3rem;
   }
 }
 .publication-guide__breadcrumb {
@@ -3343,7 +3352,7 @@ ul, ol {
 }
 .publication-guide__image {
   width: 100%;
-  max-width: 200px;
+  max-width: 180px;
   height: auto;
   -o-object-fit: cover;
   object-fit: cover;
@@ -3355,11 +3364,6 @@ ul, ol {
     max-width: 180px;
   }
 }
-@media (min-width: 1024px) {
-  .publication-guide__image {
-    max-width: 220px;
-  }
-}
 .publication-guide__content {
   display: flex;
   flex-direction: column;
@@ -3369,6 +3373,7 @@ ul, ol {
   .publication-guide__content {
     gap: 1.5rem;
     justify-content: center;
+    max-width: 545px;
   }
 }
 .publication-guide__badge {
@@ -3378,18 +3383,19 @@ ul, ol {
   background: #E3F1F0;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #006960;
-  padding: 0.4rem 0.9rem;
+  padding: 0.3rem 0.9rem;
   border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 12pxrem;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   backdrop-filter: blur(10px);
+  line-height: 12px;
 }
 @media (min-width: 768px) {
   .publication-guide__badge {
-    font-size: 0.8rem;
-    padding: 0.45rem 1rem;
+    font-size: 12px;
+    padding: 0.3rem 0.5rem;
   }
 }
 .publication-guide__title {
@@ -3401,12 +3407,7 @@ ul, ol {
 }
 @media (min-width: 768px) {
   .publication-guide__title {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 1024px) {
-  .publication-guide__title {
-    font-size: 2.2rem;
+    font-size: 24px;
   }
 }
 .publication-guide__meta {
@@ -3431,7 +3432,7 @@ ul, ol {
 }
 @media (min-width: 768px) {
   .publication-guide__button {
-    padding: 0.85rem 1.75rem;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
   }
 }
