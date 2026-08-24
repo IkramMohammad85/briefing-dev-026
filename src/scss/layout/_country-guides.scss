@@ -19,7 +19,7 @@
 
 // The grid of cards (also the Splide list on mobile).
 .country-guides__grid {
-  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-4);
   grid-template-columns: 1fr;
 
@@ -30,6 +30,7 @@
    
   }
 }
+.country-guides__grid:not(.splide__list) { display: grid; }
 
 // A single country card.
 .country-card {
@@ -97,4 +98,28 @@
 
   .country-card__name { color: var(--primary-color); }
   .country-card__text { color: var(--text-on-paper); }
+}
+.splide.is-initialized:not(.is-active) .mobile-slider-grid { display: grid; }
+
+// Generic pagination dots for these sliders. Consumers can override, but this
+// gives a sensible on-brand default everywhere.
+[data-mobile-slider] {
+  .splide__pagination {
+    position: static;
+    margin-top: var(--space-5);
+    gap: var(--space-2);
+  }
+  .splide__pagination__page {
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+
+    &.is-active {
+      background: var(--cta-red);
+      width: 20px;
+      border-radius: var(--radius-full);
+      transform: none;
+    }
+  }
 }

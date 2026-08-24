@@ -1857,7 +1857,7 @@ ul, ol {
 }
 
 .country-guides__grid {
-  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-4);
   grid-template-columns: 1fr;
 }
@@ -1875,6 +1875,10 @@ ul, ol {
   .country-guides__grid--three-column {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.country-guides__grid:not(.splide__list) {
+  display: grid;
 }
 
 .country-card {
@@ -1941,6 +1945,28 @@ ul, ol {
 }
 .country-card--highlight .country-card__text {
   color: var(--text-on-paper);
+}
+
+.splide.is-initialized:not(.is-active) .mobile-slider-grid {
+  display: grid;
+}
+
+[data-mobile-slider] .splide__pagination {
+  position: static;
+  margin-top: var(--space-5);
+  gap: var(--space-2);
+}
+[data-mobile-slider] .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+}
+[data-mobile-slider] .splide__pagination__page.is-active {
+  background: var(--cta-red);
+  width: 20px;
+  border-radius: var(--radius-full);
+  transform: none;
 }
 
 .btn {
