@@ -231,8 +231,8 @@
 /* Level 2 Design */
 #menu-list .multilevel .level2 {
   width: 30%;
-  padding-left: 3rem;
-  margin-right: 3rem;
+  padding-left: 0rem;
+  margin-right: 0rem;
 }
 #menu-list .multilevel .level2 li:first-child {
   color: #252525;
@@ -246,13 +246,14 @@
   color: #000;
 }
 #menu-list .multilevel .level2 ul {
-  margin-left: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 /* Level 3 Design */
 #menu-list .multilevel .level3 {
   width: 48%;
-  padding-left: 1rem;
+  padding-left: 3rem;
 }
 #menu-list .multilevel .level3 .posts {
   display: flex;
