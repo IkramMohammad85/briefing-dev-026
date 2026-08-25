@@ -2,6 +2,15 @@
  @use "../base/tokens" as *;
 
 /* General setup */
+.level3_content {
+  .briefing-news {
+    .tag{display: none;}
+    p{
+      color: #696969; font-size: 15px;
+    }
+  }
+}
+
 .submenu-container-new{margin: 0 auto; width: 100%;}
 .mega-panel{background-color: #fff;}
 .hide{display: none !important;}

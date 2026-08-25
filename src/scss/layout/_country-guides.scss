@@ -91,7 +91,7 @@
   line-height: var(--leading-snug);
 }
 
-// Highlighted "not sure where to start" variant.
+
 .country-card--highlight {
   background: var(--light-orange);
   border-color: var(--primary-color);
@@ -101,8 +101,7 @@
 }
 .splide.is-initialized:not(.is-active) .mobile-slider-grid { display: grid; }
 
-// Generic pagination dots for these sliders. Consumers can override, but this
-// gives a sensible on-brand default everywhere.
+
 [data-mobile-slider] {
   .splide__pagination {
     position: static;
