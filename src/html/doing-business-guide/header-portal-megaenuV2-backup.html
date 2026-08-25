@@ -879,8 +879,435 @@ if (mmCheckPortal) {
 }
 
 
+// News Mega Menu for Portal
+function initMegaMenuNews() {
+
+  console.log('init: initMegaMenuNews');
+
+  var loaded_menu = [];
+  var country_default = "china";
+
+  function updateMegaMenu(country) {
+    if (loaded_menu.includes(country)) return false;
+    setTimeout(function () {
+      load_country_menu(country);
+    }, 100);
+  }
 
 
+  function load_country_menu(country) {
+    country_default = country;
+    for (i = 0; i <= loaded_menu.length; i++) {
+      if (loaded_menu[i]) {
+        if (loaded_menu[i][0] == country) {
+
+          changeMenu(country);
+          return;
+        }
+      }
+    }
+
+    // Polyfill for fetch
+    if (!window.fetch) {
+      // Include "whatwg-fetch" polyfill
+      var script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js';
+      document.head.appendChild(script);
+    }
+
+    // var load_url='/doing-business-guide/json/'+country;
+    var load_url = 'https://www.china-briefing.com/cache/country_' + country + '.json'
+
+    // Fetch the JSON data
+    fetch(load_url)
+      .then(response => response.json())
+      .then(data => {
+        loaded_menu.push([country, data]);
+
+        changeMenu(country);
+      })
+      .catch(error => console.error('Error fetching JSON:', error));
+
+  }
+
+  function changeMenu(country) {
+
+    for (i = 0; i <= loaded_menu.length; i++) {
+      if (loaded_menu[i] && loaded_menu[i][0] == country) {
+        data = loaded_menu[i][1];
+      }
+    }
+
+    const mega_menu_level3 = document.querySelector('#menu-list #mega_menu_level3');
+    const menu_level1 = document.querySelector('#menu-list ul#mega_menu_level1');
+    const menu_level2 = document.querySelector('#menu-list #mega_menu_level2');
+    const menu_level3 = document.querySelector('#menu-list #mega_menu_level3');
+
+    const Mobile_mega_menu_level2 = document.querySelector("#push-menu-list .mega_menu_level2");
+
+    const submenuContainer = menu_level1.parentElement.parentElement.parentElement.parentElement;
+    var l1_active_class = "mm_active";
+    var l2_active_class = "mm_active";
+
+    mega_menu_level3.innerHTML = '';
+    menu_level1.innerHTML = '';
+    menu_level2.innerHTML = '';
+    var subGuidesHTML = '';
+    Object.keys(data).forEach(function (sectionKey) {
+      var section = data[sectionKey];
+      var subGuides = section.sub_guides;
+
+
+      menu_level1.innerHTML += `<li class="${l1_active_class}"><a href="/doing-business-guide/${section.slug}" data-show="${section.id}">${section.name}</a></li>`;
+      l1_active_class = "";
+
+      subGuidesHTML += `<ul data-show="${section.id}" class="${l2_active_class}"><li><a style="color:#252525 !important;" href="/doing-business-guide/${section.slug}">${section.name} Guides</a></li>`;
+      l2_active_class = "hide";
+      subGuides.forEach((subGuide, index) => {
+
+        subGuidesHTML += `<li class=""><a href="/doing-business-guide/${subGuide.slug}">${subGuide.title_dynamic}</a></li>`;
+
+        // console.log(subGuide,index);
+
+      });
+      subGuidesHTML += '</ul>';
+      if (menu_level2) menu_level2.innerHTML = subGuidesHTML;
+      if (Mobile_mega_menu_level2) Mobile_mega_menu_level2.innerHTML = subGuidesHTML;
+
+      // Attach the hover event listener to level 1 and level 2 items
+      const level1And2Items = document.querySelectorAll("div#menu-list .level1 a");
+      level1And2Items.forEach(item => {
+        item.addEventListener("mouseover", handleMegaMenuHover);
+      });
+
+      const level2Items = document.querySelectorAll("div#menu-list .level2 a");
+      level2Items.forEach((item) => {
+        const currentMenu = item.getAttribute("href");
+        const country_temp = country; // Set the appropriate country value
+        // const debouncedShowMenuDescription = debounce(showMenuDescription, 300);
+
+
+        let hoverTimeout;
+        item.addEventListener("mouseover", function (event) {
+
+          //hoverTimeout = setTimeout(function () {
+          // Add active class to the current li element
+          const activeLis = document.querySelectorAll("div#menu-list .level2 li.mm_active");
+          if (activeLis) {
+            activeLis.forEach(li => {
+              li.classList.remove("mm_active");
+            });
+          }
+
+          const currentLi = event.target.parentElement;
+          if (currentLi) {
+            currentLi.classList.add("mm_active");
+          }
+
+          showMenuDescription(currentMenu, country_temp);
+          //}, 300);
+
+        });
+
+        item.addEventListener('mouseout', function (event) {
+          clearTimeout(hoverTimeout);
+        });
+
+      });
+
+
+
+
+    })
+
+
+    activeDefailtView(submenuContainer);
+
+    // Copy to mobile menu
+    // setTimeout(copyMobileMenu,300);
+  }
+
+
+
+  var level2TimeoutID;
+
+  document.querySelector('#menu-list #mega_menu_level3').addEventListener("mouseover", function () {
+    clearTimeout(level2TimeoutID);
+  });
+
+  function showMenuDescription(currentMenu, country) {
+    var currentMenuHREF = "";
+    if (typeof currentMenu === 'string') {
+      currentMenuHREF = currentMenu;
+    } else {
+      currentMenuHREF = currentMenu.getAttribute("href");
+    }
+    const delay = 100; // Adjust this value as needed
+
+    // Clear any existing timeout
+    clearTimeout(level2TimeoutID);
+
+    // Debounce the function to prevent rapid calls
+    level2TimeoutID = setTimeout(() => {
+      const mega_menu_level3 = document.querySelector('#menu-list #mega_menu_level3');
+
+      for (let i = 0; i < loaded_menu.length; i++) {
+        if (loaded_menu[i] && loaded_menu[i][0] == country) {
+          data = loaded_menu[i][1];
+        }
+      }
+
+      mega_menu_level3.innerHTML = "";
+
+      Object.keys(data).forEach(function (sectionKey) {
+        var section = data[sectionKey];
+        var subGuides = section.sub_guides;
+
+        subGuides.forEach((subGuide, index) => {
+          if (currentMenuHREF == "/doing-business-guide/" + subGuide.slug) {
+            var thumb_image = subGuide.thumb_image;
+
+            if (!thumb_image.startsWith('https://')) {
+              thumb_image = 'https://resource.dezshira.com/resize/350x150/' + thumb_image;
+            }
+
+            mega_menu_level3.innerHTML = `
+              <div class="level3_content active">
+              <div class="briefing-news">
+                  <div class="posts">
+                  <div class="thumbnail">
+                      <a href="/doing-business-guide/${subGuide.slug}" class="megamenu_l3_link">
+                      <img src="${thumb_image}" width="227" height="127" data-main-src="${thumb_image}" class="img-responsive megamenu_l3_image">
+                      </a>
+                      
+                  </div>
+                  <div class="news-content">
+                      <h3>
+                      <a href="/doing-business-guide/${subGuide.slug}" class="megamenu_l3_link megamenu_l3_title">${subGuide.title}</a>
+                      </h3>
+                      <span class="tag"></span>
+                      <p class="megamenu_l3_teaser">${subGuide.teaser}</p>
+                      <a class="find-out-m-link" href="/doing-business-guide/${subGuide.slug}" class="megamenu_l3_link">Find out more</a>
+                  </div>
+                  </div>
+              </div>
+              </div>
+              `;
+
+            // var l3_descriptionImage = mega_menu_level3.querySelector(".megamenu_l3_image");
+            // l3_descriptionImage.addEventListener("load", function () {
+            //   l3_descriptionImage.src = l3_descriptionImage.getAttribute("data-main-src");
+            //   l3_descriptionImage.style.opacity = "1";
+            // });
+          }
+        });
+      });
+    }, delay);
+  }
+
+
+  load_country_menu(country_default);
+
+  var country_switcher = document.querySelectorAll("a[data-switch_country]");
+  var country_switcher_dropdown = document.querySelector("#dropdownchangecountry .dropdown-btn");
+
+  for (i = 0; i <= country_switcher.length; i++) {
+    if (country_switcher[i]) {
+      country_switcher[i].addEventListener('click', function (e) {
+        
+        var country_switcher_dropdown_content = document.querySelectorAll("#dropdownchangecountry .dropdown-btn .dropdown-content");
+        if(country_switcher_dropdown_content) var defaultCountrySelected = document.querySelectorAll(".defaultCountrySelected");
+
+        var selectedCountryForSwitch = this.getAttribute("data-switch_country");
+        if (selectedCountryForSwitch) {
+          load_country_menu(selectedCountryForSwitch);
+          if(defaultCountrySelected) {
+            for(i=0;i<=defaultCountrySelected.length;i++){
+              if(defaultCountrySelected[i]) defaultCountrySelected[i].innerHTML = this.innerHTML;
+            }
+          }
+          
+          for(j=0;j<=defaultCountrySelected.length;j++){
+            if(country_switcher_dropdown_content[j]) country_switcher_dropdown_content[j].style.display = 'none';
+          }
+          setTimeout(() => {
+            for(j=0;j<=defaultCountrySelected.length;j++){
+              if(country_switcher_dropdown_content[j]) country_switcher_dropdown_content[j].removeAttribute("style");
+            }
+          }, 200);
+        }
+      })
+    }
+  }
+
+  // Function to handle the hover event for level 1 and level 2 items
+  function handleMegaMenuHover(event) {
+    // Get the data-show attribute value
+    const showAttr = event.target.getAttribute("data-show");
+    const parentDiv = event.target.parentElement.parentElement.parentElement;
+    const parentSubmenuContainer = event.target.closest('.submenu-container-new');
+    // Delay in milliseconds before showing the next level
+    const delay = 300; // Adjust this value as needed
+
+    // Clear any existing timeouts
+    clearTimeout(handleMegaMenuHover.timeoutId);
+
+
+    // Set a new timeout to show the next level
+    handleMegaMenuHover.timeoutId = setTimeout(() => {
+      // Hide all level 3 elements
+      const level3Elements = parentSubmenuContainer.querySelectorAll(".level3 > div");
+      level3Elements.forEach(element => {
+        //   element.style.display = "none";
+        element.classList.add("hide");
+      });
+
+      // Show the corresponding level 2 or level 3 element based on the data-show attribute value
+      if (parentDiv) {
+
+        let openLevels = [];
+        let activeLis = [];
+        if (parentDiv.classList.contains("level1")) {
+          openLevels = parentSubmenuContainer.querySelectorAll('.level2 > ul');
+          activeLis = parentSubmenuContainer.querySelectorAll(".level1 li");
+        } else {
+          openLevels = parentSubmenuContainer.querySelectorAll('.level3 > div');
+          activeLis = parentSubmenuContainer.querySelectorAll(".level2 li");
+        }
+        // Remove active class from all li elements
+        if (activeLis) {
+          activeLis.forEach(li => {
+            li.classList.remove("mm_active");
+          });
+        }
+
+        if (openLevels) {
+          for (i = 0; i <= openLevels.length; i++) {
+            if (openLevels[i]) {
+              openLevels[i].classList.remove("mm_active");
+              openLevels[i].classList.add("hide");
+            }
+          }
+        }
+      }
+
+      const nextLevelElement = parentSubmenuContainer.querySelector(`ul[data-show="${showAttr}"], div[data-show="${showAttr}"]`);
+      if (nextLevelElement) {
+        //   nextLevelElement.style.display = "block !important";
+        nextLevelElement.classList.remove("hide");
+        // Add active class to the current li element
+        const currentLi = event.target.parentElement;
+        if (currentLi) {
+          currentLi.classList.add("mm_active");
+        }
+      }
+
+
+      // set defaultView for level1 anchor
+      if (parentDiv.classList.contains("level1")) {
+        activeDefailtView(parentDiv.parentElement.parentElement.parentElement.parentElement.parentElement);
+      }
+
+    }, delay);
+  }
+
+
+
+
+  function activeDefailtView(submenuContainer) {
+
+    // console.log(submenuContainer);
+    // check if any item is active on level 1
+    var activeLevel1 = submenuContainer.querySelector(".level1 li.mm_active:has(a)");
+    if (!activeLevel1) {
+      activeLevel1 = submenuContainer.querySelector(".level1 li a").parentElement;
+      // if(activeLevel1) activeLevel1.classList.add("mm_active");
+    }
+
+    // check and set active item for level2
+    if (activeLevel1 && activeLevel1.querySelector("a")) {
+      var l1_dataShow = activeLevel1.querySelector("a").getAttribute("data-show");
+      var activeLevel2 = submenuContainer.querySelectorAll(".level2 > ul");
+      for (i = 0; i <= activeLevel2.length; i++) {
+        if (activeLevel2[i]) {
+          activeLevel2[i].classList.add("hide");
+
+          if (activeLevel2[i].getAttribute("data-show") == l1_dataShow) {
+            activeLevel2[i].classList.remove("hide");
+            if (activeLevel2[i].querySelector("a")) {
+              activeLevel2[i].querySelector("li:nth-child(2)").classList.add("mm_active");
+              showMenuDescription(activeLevel2[i].querySelector("li:nth-child(2) a"), country_default);
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+
+
+  // Level Hovers
+  var levels = document.querySelectorAll(".multilevel .level1,.multilevel .level2");
+  for (i = 0; i <= levels.length; i++) {
+    if (levels[i]) {
+      levels[i].addEventListener('mouseover', function (e) {
+
+        let parent = this.parentElement.parentElement.parentElement.parentElement;
+        // console.log(parent);
+        let bgAfter = parent.querySelector(".bg-after");
+
+        if (bgAfter) {
+          if (this.classList.contains("level2")) {
+
+            bgAfter.innerHTML = '<div class="mm_left"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_left.png?v4" /></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_right.png?v4" /></div>';
+
+            bgAfter.classList.remove("level1");
+            bgAfter.classList.add("level2");
+
+            const computedStyle = window.getComputedStyle(this);
+
+            // Calculate the total left offset including margin
+            const marginLeft = parseFloat(computedStyle.marginLeft.replace('px', ''));
+            const paddingLeft = parseFloat(computedStyle.paddingLeft.replace('px', ''));
+            const totalLeftOffset = this.offsetLeft + marginLeft + paddingLeft - 30;
+
+
+
+            const rect = this.getBoundingClientRect();
+            bgAfter.style.left = `${totalLeftOffset}px`;
+            bgAfter.style.width = `${rect.width + 55}px`;
+
+
+
+          } else if (this.classList.contains("level1")) {
+
+            bgAfter.innerHTML = '<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l1_right.png?v4" /></div>';
+
+            bgAfter.classList.remove("level2");
+            bgAfter.classList.add("level1");
+
+            bgAfter.style.left = '';
+            bgAfter.style.width = '';
+
+          } else {
+            bgAfter.innerHTML = '<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="/assets/images/mega-menu/aseanb/l1_right.png?v4" /></div>';
+            bgAfter.classList.remove("level2");
+            bgAfter.classList.remove("level1");
+          }
+        }
+
+      });
+    }
+  }
+
+}
+
+let mmCheckNews = document.getElementById("MMnews");
+console.log('mmCheckNews: ',mmCheckNews);
+if (mmCheckNews) {
+  initMegaMenuNews();
+}
 </script>
   <script src="/js/main.min.js"></script>
   
