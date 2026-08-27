@@ -3113,6 +3113,30 @@ ul, ol {
     width: 100%;
   }
 }
+.tabs__list.partner-tabs.p-tab-ab {
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+@media (min-width: 768px) {
+  .tabs__list.partner-tabs.p-tab-ab {
+    width: 100%;
+    padding: 0;
+    flex-direction: inherit;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    padding: 1rem;
+    justify-content: center;
+  }
+}
+.tabs__list.partner-tabs.p-tab-ab .tabs__tab[aria-selected=false] {
+  margin: 0.5rem;
+}
+.tabs__list.partner-tabs.p-tab-ab .tabs__tab {
+  line-height: normal;
+}
 
 .tabs__tab {
   flex-shrink: 0;

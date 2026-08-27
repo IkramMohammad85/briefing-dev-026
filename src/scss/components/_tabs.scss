@@ -21,6 +21,13 @@
   &.partner-tabs{ margin-top: 3rem;
     @include bp(md) {  width: 100%; padding: 0; flex-direction: row;}
   @include bp(xl) {  width: 100%;}
+  &.p-tab-ab{display: inherit; flex-direction: inherit; justify-content: center; flex-wrap: wrap; gap: 0.5rem;
+     @include bp(md) {  width: 100%; padding: 0; flex-direction: inherit; flex-wrap: wrap; border-radius: 8px; padding: 1rem; justify-content: center;}
+         .tabs__tab[aria-selected=false] {
+  margin: 0.5rem;
+  }
+  .tabs__tab{line-height: normal;}
+  }
   }
 }
 
