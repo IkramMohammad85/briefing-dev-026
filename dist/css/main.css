@@ -994,12 +994,12 @@ ul, ol {
   stroke: var(--primary-color);
 }
 
-.briefing-drop a {
+.briefing-drop a, .user-drop a {
   border-bottom: solid 1px #e4e4e4;
   padding: 7px 0;
   border-radius: 0;
 }
-.briefing-drop a:last-child {
+.briefing-drop a:last-child, .user-drop a:last-child {
   border-bottom: 0;
   padding-bottom: 0;
 }
@@ -1069,6 +1069,19 @@ ul, ol {
     opacity: 0;
   }
 }
+.user-icon {
+  background-color: #f3f4f2;
+  width: 38px;
+  font-weight: bold;
+}
+
+.user-drop span {
+  font-size: 15px;
+  padding: 3px 0px;
+  border-bottom: solid 1px var(--primary-color-light);
+  color: var(--primary-color);
+}
+
 @media (min-width: 1024px) {
   .site-header__nav {
     max-height: 4rem;
@@ -6081,6 +6094,13 @@ ul.unordered-list li::marker {
   margin-top: var(--space-2);
   color: var(--black);
   font-weight: 600;
+}
+.insight-card__title a {
+  color: var(--black);
+  text-decoration: none;
+}
+.insight-card__title a:hover {
+  color: var(--primary-color);
 }
 .insight-card__meta {
   font-size: var(--text-xs);

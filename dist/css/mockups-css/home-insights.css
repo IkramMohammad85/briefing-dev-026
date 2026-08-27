@@ -269,6 +269,13 @@
   color: var(--black);
   font-weight: 600;
 }
+.insight-card__title a {
+  color: var(--black);
+  text-decoration: none;
+}
+.insight-card__title a:hover {
+  color: var(--primary-color);
+}
 .insight-card__meta {
   font-size: var(--text-xs);
   color: var(--text-on-paper-muted);

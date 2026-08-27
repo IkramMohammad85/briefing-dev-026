@@ -343,7 +343,7 @@
   svg, path{stroke: var(--primary-color);}
 }
 
-.briefing-drop{
+.briefing-drop, .user-drop{
   a{
     border-bottom: solid 1px #e4e4e4;
     padding: 7px 0;
@@ -405,6 +405,9 @@
         opacity: 0;
     }
 }
+
+.user-icon{background-color: #f3f4f2;  width: 38px;  font-weight: bold;}
+.user-drop span{font-size: 15px; padding: 3px 0px;  border-bottom: solid 1px var(--primary-color-light); color: var(--primary-color);}
 
 .site-header__nav {
 
