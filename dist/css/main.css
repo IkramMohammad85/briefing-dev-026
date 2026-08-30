@@ -410,6 +410,9 @@ ul, ol {
 .section--top-3 {
   padding-top: 3rem;
 }
+.section--top-2 {
+  padding-top: 2rem;
+}
 .section--top-0 {
   padding-top: 0;
 }
@@ -569,6 +572,11 @@ ul, ol {
     grid-template-columns: minmax(0, 1fr) 340px;
     gap: var(--space-8);
     align-items: start;
+  }
+}
+@media (min-width: 1024px) {
+  .inner-page__grid--col-rev {
+    grid-template-columns: minmax(340px, 0) 1fr;
   }
 }
 
@@ -1350,6 +1358,85 @@ ul, ol {
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.v-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v-nav li {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.v-nav a {
+  position: relative;
+  display: block;
+  padding: 0.85rem 1rem 0.85rem 1rem;
+  color: #151515;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.v-nav a::before {
+  content: "";
+  position: absolute;
+  left: 0rem;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  transform: translateY(-50%) rotate(-135deg);
+  transition: transform 0.25s ease;
+}
+
+.v-nav a:hover,
+.v-nav a:focus {
+  color: #840d18;
+}
+
+.v-nav li.active > a {
+  color: #840d18;
+}
+
+.available-language {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.available-language strong {
+  font-weight: 600;
+  font-size: 14px;
+}
+.available-language .choose-language {
+  width: auto;
+  margin-bottom: 0;
+}
+.available-language .choose-language li {
+  width: 35px;
+  padding: 0;
+  border: none;
+}
+.available-language span {
+  margin-right: 1rem;
+}
+.available-language.lang-aside .choose-language {
+  gap: 0.5rem;
+}
+
+ul.choose-language {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  height: 34px;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  width: 98%;
 }
 
 .personnel-wrapper {
@@ -3668,7 +3755,7 @@ ul, ol {
   }
 }
 
-.right-aside-cta-ab .expert-form {
+.right-aside-cta-ab .expert-form, .filter-search .expert-form {
   margin-top: 0px;
 }
 
@@ -5636,6 +5723,10 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
   padding-bottom: 4rem;
 }
 
+.mb-3 {
+  margin-bottom: var(--space-7);
+}
+
 .pb-6 {
   padding-bottom: 6rem;
 }
@@ -6453,6 +6544,18 @@ ul.unordered-list li::marker {
 .pub-card img {
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   width: 146px;
+}
+.pub-card--block-view {
+  flex-direction: column;
+}
+.pub-card--block-view img {
+  width: auto;
+}
+.pub-card--block-view .mag-detail {
+  width: auto;
+}
+.pub-card--block-view .pub-card__date {
+  margin-bottom: 0;
 }
 
 .advisory-carousel {

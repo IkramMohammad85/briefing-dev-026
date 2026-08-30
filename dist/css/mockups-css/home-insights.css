@@ -604,6 +604,18 @@
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   width: 146px;
 }
+.pub-card--block-view {
+  flex-direction: column;
+}
+.pub-card--block-view img {
+  width: auto;
+}
+.pub-card--block-view .mag-detail {
+  width: auto;
+}
+.pub-card--block-view .pub-card__date {
+  margin-bottom: 0;
+}
 
 .advisory-carousel {
   background: #FCEBDF;

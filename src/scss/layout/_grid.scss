@@ -21,6 +21,7 @@
   &--top-4 { padding-top: 4.5rem; }
   &--bottom-3 { padding-bottom: 3rem; }
   &--top-3 { padding-top: 3rem; }
+  &--top-2 { padding-top: 2rem; }
   &--top-0 { padding-top: 0; }
 }
 
@@ -100,7 +101,15 @@
   
     grid-template-columns: minmax(0, 1fr) 340px;
     gap: var(--space-8);
-    align-items: start;
+    align-items: start; 
+  }
+  &--col-rev{
+    
+  @include bp(lg) {
+  
+    grid-template-columns: minmax(340px,0) 1fr;
+
+  }
   }
 }
 

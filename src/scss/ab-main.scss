@@ -4,7 +4,7 @@
 
 :root {
   --brief-theme-color:#82131B !important;
-  --brief-theme-color-light:#82131B !important;
+  --brief-theme-color-light:#fa9299 !important;
   --brief-theme-color-dark:#82131B !important;
 }
 .footer-newsletter{ background-color: #DDDDDD;}
@@ -15,4 +15,51 @@
     color: #666;
     opacity: 1;
 }
+.publication-card-title{color: #000; text-decoration: none; font-weight: 500;
+h2{font-size: 1.5rem; font-weight: 500; line-height: 34px;}
+}
+.btn-view{text-align: center;}
+.publication-card {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        
+          
+        
+    }
 
+    .publication-card-text {
+        width: 100%;
+
+    }
+
+    .publication-card-text.publication-card-100per {
+        width: 100%;
+    }
+
+    .publication-card-thumb {
+        width: 100%;
+    }
+
+    .publication-card-thumb.publication-card-thumb-30per {
+        width: 100%;
+        margin-bottom: 2rem;
+        
+    }
+
+    .publication-card-thumb img {
+        min-height: auto;
+        margin-bottom: 1rem;
+        margin-top: 0
+    }
+
+    
+@media (min-width:786px){
+  .publication-card {flex-direction: row;}
+  .publication-card-text{ padding: 0 1.5rem 0 3rem}
+  .publication-card-thumb.publication-card-thumb-30per{width: 30%; margin-bottom: 0;}
+  
+    .publication-card-thumb {
+        width: 55%
+    }
+ }

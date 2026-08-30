@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initFeatureToggle();
   initAdvisoryCarousel();
   initMobileSliders();
+  initSplideSliders();
   initAccordions();
   //initCalculator();
   //initCalcReadyName();
@@ -1141,6 +1142,59 @@ function initMobileSliders() {
         [breakpoint]: { destroy: true }, 
       },
     }).mount();
+  });
+}
+
+function initSplideSliders() {
+  const els = document.querySelectorAll("[data-splide]");
+  if (!els.length || typeof Splide === "undefined") return;
+
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  els.forEach((el) => {
+
+    let opts = {};
+    const raw = el.getAttribute("data-splide");
+    if (raw && raw.trim()) {
+      try {
+        opts = JSON.parse(raw);
+      } catch (e) {
+        console.warn("Invalid data-splide JSON on", el, e);
+        return;
+      }
+    }
+
+
+    const config = {
+      arrows: false,
+      pagination: true,
+      gap: "1rem",
+      ...opts,
+    };
+
+  
+    if (prefersReduced) config.autoplay = false;
+
+  
+    if (config.autoplay && !config.type) config.type = "loop";
+
+    if (config.autoplay) {
+      config.pauseOnHover = config.pauseOnHover ?? true;
+      config.pauseOnFocus = config.pauseOnFocus ?? true;
+    }
+
+  
+    const destroyAbove = Number(opts.destroyAbove);
+    if (destroyAbove) {
+      delete config.destroyAbove; 
+      config.mediaQuery = "min";
+      config.breakpoints = {
+        ...(config.breakpoints || {}),
+        [destroyAbove]: { destroy: true },
+      };
+    }
+
+    new Splide(el, config).mount();
   });
 }
 

@@ -331,6 +331,12 @@
   .btn{max-width: 104px;padding: var(--space-3) var(--space-3); text-align: center;}
   .mag-detail{width: 58%;}
   img{ box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px; width: 146px;}
+  &--block-view{
+    flex-direction: column;
+    img{width: auto;}
+    .mag-detail{width: auto;}
+    .pub-card__date{margin-bottom: 0;}
+  }
 }
 
 
