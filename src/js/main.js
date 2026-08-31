@@ -1127,21 +1127,54 @@ function initMobileSliders() {
   if (!els.length || typeof Splide === "undefined") return;
 
   els.forEach((el) => {
-    const breakpoint = Number(el.dataset.sliderBreakpoint) || 1000;
-    const peek = el.dataset.sliderPeek || "";
+    const breakpoint = Number(el.dataset.sliderBreakpoint) || 768;
+    const peek = el.dataset.sliderPeek || "18%";
     const perPage = Number(el.dataset.sliderPerpage) || 1;
 
-    new Splide(el, {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const autoplay = el.hasAttribute("data-slider-autoplay") && !prefersReduced;
+    const interval = Number(el.dataset.sliderInterval) || 3500;
+
+
+    const config = {
       mediaQuery: "min",
+      type: autoplay ? "rewind" : "slide", 
       perPage,
       gap: "1rem",
       arrows: false,
       pagination: true,
-      padding: { right: peek }, 
+      padding: { right: peek },
+      autoplay, 
+      interval, 
+      pauseOnHover: true,
+      pauseOnFocus: true,
+      resetProgress: false,
       breakpoints: {
         [breakpoint]: { destroy: true }, 
       },
-    }).mount();
+    };
+
+    
+    const raw = el.getAttribute("data-splide");
+    if (raw && raw.trim()) {
+      try {
+        const extra = JSON.parse(raw);
+       
+        config.breakpoints = { ...config.breakpoints, ...(extra.breakpoints || {}) };
+        Object.assign(config, { ...extra, breakpoints: config.breakpoints });
+       
+        if (prefersReduced) config.autoplay = false;
+        
+        if (config.autoplay) {
+          config.pauseOnHover = config.pauseOnHover ?? true;
+          config.pauseOnFocus = config.pauseOnFocus ?? true;
+        }
+      } catch (e) {
+        console.warn("Invalid data-splide JSON on", el, e);
+      }
+    }
+
+    new Splide(el, config).mount();
   });
 }
 
@@ -1152,6 +1185,8 @@ function initSplideSliders() {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   els.forEach((el) => {
+
+    if (el.hasAttribute("data-mobile-slider")) return;
 
     let opts = {};
     const raw = el.getAttribute("data-splide");
@@ -1164,7 +1199,6 @@ function initSplideSliders() {
       }
     }
 
-
     const config = {
       arrows: false,
       pagination: true,
@@ -1172,21 +1206,20 @@ function initSplideSliders() {
       ...opts,
     };
 
-  
+    
     if (prefersReduced) config.autoplay = false;
 
-  
-    if (config.autoplay && !config.type) config.type = "loop";
+    if (config.autoplay && !config.type) config.type = "rewind";
 
     if (config.autoplay) {
       config.pauseOnHover = config.pauseOnHover ?? true;
       config.pauseOnFocus = config.pauseOnFocus ?? true;
     }
 
-  
+    // Optional "slider below X, plain grid above" behaviour.
     const destroyAbove = Number(opts.destroyAbove);
     if (destroyAbove) {
-      delete config.destroyAbove; 
+      delete config.destroyAbove; // not a real Splide option
       config.mediaQuery = "min";
       config.breakpoints = {
         ...(config.breakpoints || {}),

@@ -129,6 +129,16 @@
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 34px;
+  margin-bottom: 0.5rem;
+}
+
+.publication-card-date {
+  color: #999999;
+  font-size: 14px;
+}
+
+.publication-card-desc {
+  margin-top: 1rem;
 }
 
 .btn-view {
