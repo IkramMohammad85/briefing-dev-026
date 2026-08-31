@@ -13,6 +13,15 @@ $text-muted: #58585b;
 $profile-size: 120px;
 $breakpoint-tablet: 753px;
 
+.list-inline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    li {display: flex; justify-content: space-between; align-items: center; gap: 0.5rem;}
+}
 .v-nav ul {
     margin: 0;
     padding: 0;
