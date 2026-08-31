@@ -127,7 +127,11 @@
 .field-placeholder .required {
     color: #d32f2f !important;
 }
-
+.login-form{ width: 100%;
+@include bp(md) { width: 50%; margin: 0 auto; }
+}
+.required-field{
+  color: #d32f2f !important;}
 // .input-wrap input:focus + .field-placeholder, .input-wrap textarea:focus + .field-placeholder,
 // .input-wrap input:not(:placeholder-shown) + .field-placeholder, .input-wrap textarea:not(:placeholder-shown) + .field-placeholder {
 //     display: none;

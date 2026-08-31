@@ -202,3 +202,13 @@ ul.unordered-list{
 
 }
 }
+.alert {
+    display: block;
+    margin: 30px 0;
+    padding: 10px;
+    border: 1px solid #ececec;
+    background-image: none !important;
+    color: gray;
+    font-size: .75rem;
+    background-color: white;
+}

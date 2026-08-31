@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASIA BRIEFING</title>
+  <meta name="description" content="China Briefing hosts a wealth of business intelligence on legal, tax, and operational issues in China from a practical perspective.">
+  <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="/css/ab-main.min.css" type="text/css" />
+  <link rel="stylesheet" href="/css/mockups-css/contact.min.css">
+  
+</head>
+<body>
+
+
+ @@include('./site_AB/includes/header.html')
+  
+  <main id="main">
+<section class="section section--top-4" aria-labelledby="pubs-heading">
+
+    <div class="container">
+
+        <div class="inner-page">
+            <div class="expert-form expert-form--m-top-none login-form">
+                <h2 class="expert-form__title">Login</h2>
+                <p class="expert-form__intro">Do not have an account? <a href="/customer/register"> Register</a></p>
+
+
+                <form action="" method="post" id="customer" name="customer" data-hs-cf-bound="true" data-gtm-form-interact-id="0">
+
+                    <div>
+
+                        <div id="message"><div class="alert alert-success">Please proceed with your account password.</div></div>
+
+                        
+            <input type="hidden" class="TokenNameKey" name="csrf_name" value="csrf6a951176b44fe">
+            <input type="hidden" class="TokenValueKey" name="csrf_value" value="0de13fc94d0c3803c4ef0d6af346fa05">
+                                <input type="hidden" value="" name="goto">
+                        
+
+                        <div class="field-two-column">
+                            <div class="field">
+                                <label for="exampleInputEmail1" class="field__label"> Email (username) <span class="required-field">*</span></label>
+                                <input type="email" class="input form-control required" required="" id="email" name="email" placeholder="Enter email" data-gtm-form-interact-field-id="0">
+                            </div>
+                            <div class="field">
+                                <label for="password" class="field__label">Password <span class="required-field">*</span> </label>
+                                <input type="password" class="input form-control required valid" required="" id="password" name="password" data-gtm-form-interact-field-id="1">
+                            </div>
+                        </div>
+
+
+                        <div class="mb-1rem"><input type="submit" name="submit" value="LOGIN" id="submit" class="btn btn--primary primary-animation"></div>
+
+
+
+                        
+                        <a href="https://www.asiabriefing.com/customer/register?autologin=true" target="_blank" class="submit btn btn--sm btn--secondary secondary-animation">Create a free account to subscribe</a>
+                        <a href="https://www.asiabriefing.com/customer/forgot-password" target="_blank" class="submit btn btn--sm btn--secondary secondary-animation">Forgot Password</a>
+
+
+
+                    </div>
+
+                </form>
+
+
+                <form action="/send_welcome_email" id="send_welcome_email" data-hs-cf-bound="true">
+                    
+            <input type="hidden" class="TokenNameKey" name="csrf_name" value="csrf6a951176b44fe">
+            <input type="hidden" class="TokenValueKey" name="csrf_value" value="0de13fc94d0c3803c4ef0d6af346fa05">
+                            <input type="hidden" name="email" id="send_welcome_email_email" value="">
+                    <input type="hidden" name="lead_registeredfrom" id="lead_registeredfrom" value="China Briefing">
+                </form>
+
+
+                
+            </div>
+
+            <!-- <div class="signup-cta"></div> -->
+
+
+
+
+        </div>
+    </div>
+</section>
+  </main>
+  @@include('./site_AB/includes/footer.html')
+
+  <!-- ============ CONTACT MODAL ============ -->
+  <div class="modal-overlay" id="contactPopup">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading" style="padding: 0;">
+      <button class="modal__close" type="button" aria-label="Close contact form">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <!-- <h2 id="modal-heading" class="text-2xl" style="margin-bottom: var(--space-5);">Talk to our team</h2> -->
+          <div class="contact-popup">
+            <div class="expert-form expert-form--m-top-none">
+              <p class="expert-form__title">Get Expert Advice</p>
+              <p class="expert-form__intro">Tell us where you wish to grow, and we’ll connect you with the right team
+                across our global network.</p>
+              <form class="stack" novalidate>
+                <div class="field">
+                  <label class="field__label" for="modal-name">First Name <span class="rstar">*</span></label>
+                  <input class="input" type="text" id="eag-name" name="name" autocomplete="name" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-name">Last Name <span class="rstar">*</span></label>
+                  <input class="input" type="text" id="eag-lname" name="name" autocomplete="name" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-email">Email <span class="rstar">*</span></label>
+                  <input class="input" type="email" id="eag-email" name="email" autocomplete="email" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label>
+                  <input class="input" type="tel" id="eag-company" name="phone" autocomplete="tel" placeholder=""
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="modal-message">Message <span class="rstar">*</span></label>
+                  <textarea class="required input" cols="4" rows="1" name="message" aria-required="true" value=""
+                    placeholder="" required=""></textarea>
+                </div>
+
+
+                <div class="field text-xs">
+
+                  <label class="margin-top-2 flex items-tops" for="agree_privary_policy">
+                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>
+                      I have read Ascentium's <a href="https://www.dezshira.com/privacy-policy"> Privacy Statement</a>
+                      and agree to Ascentium using my information provided to contact me about related content and
+                      services. <span class="rstar">*</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="g-recaptcha" data-sitekey="">
+                  <div class="captcha-card">
+                  <img src="../img/capcha.svg" alt="captcha" loading="lazy">
+                  </div>
+                </div>
+                <button class="btn btn--primary" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <script src="/js/main.min.js"></script>
+</body>
+</html>
