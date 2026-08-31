@@ -6152,7 +6152,7 @@ ul.unordered-list li::marker {
   line-height: var(--leading-tight);
   font-family: var(--font-display);
   font-weight: 500;
-  max-width: 52ch;
+  max-width: 24ch;
 }
 
 .home-hero__lead {
