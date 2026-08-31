@@ -189,3 +189,44 @@
     width: 55%;
   }
 }
+.multiselect input {
+  margin-right: 10px;
+}
+
+.multiselect select {
+  margin-bottom: 10px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.checkboxes {
+  display: none;
+  padding-left: 18px;
+  padding-bottom: 18px;
+}
+
+.checkboxes label {
+  display: block;
+}
+
+.checkboxes label input {
+  margin-bottom: 0;
+}
+
+.checkboxes.show {
+  display: block;
+}

@@ -316,41 +316,126 @@
             <div class="expert-form">
               <p class="expert-form__title">Filter Search</p>
           
-              <form class="stack" novalidate>
-            
-                <div class="field input-wrap">
-                  <select class="select" id="type_region" name="type_region" required="">
+              <form class="search-publication" action="/store/search" method="GET">
+    <input type="hidden" name="page" id="page" value="1">
+    <!-- <div class="form-block-single">
+        <input type="text" placeholder="Search by Keyword" value="" id="search" name="s">
+    </div> -->
+    <div class="multiselect">
+        <div class="selectBox multiselect-region" onclick="toggleShowHide('checkboxes-multiselect-region')">
+            <select class="select">
                 <option>Select Region(s)</option>
             </select>
-                    
-                </div>
-                <div class="field input-wrap">
-                  <select class="select" id="type_of" name="type_of" required="">
+            <div class="overSelect"></div>
+        </div>
+        <div class="checkboxes" id="checkboxes-multiselect-region">
+                        <label for="location_all"><input name="location[]" type="checkbox" id="location_all" value="all">All</label>
+                                        <label for="ASEAN">
+                    <input name="location[]" checked="checked" ;="" value="38" type="checkbox" id="ASEAN" data-label="ASEAN">ASEAN                </label>
+                            <label for="Brunei">
+                    <input name="location[]" value="76" type="checkbox" id="Brunei" data-label="Brunei">Brunei                </label>
+                            <label for="Cambodia">
+                    <input name="location[]" value="77" type="checkbox" id="Cambodia" data-label="Cambodia">Cambodia                </label>
+                            <label for="China">
+                    <input name="location[]" value="32" type="checkbox" id="China" data-label="China">China                </label>
+                            <label for="DubaiUAE">
+                    <input name="location[]" value="449" type="checkbox" id="DubaiUAE" data-label="Dubai UAE">Dubai UAE                </label>
+                            <label for="India">
+                    <input name="location[]" value="33" type="checkbox" id="India" data-label="India">India                </label>
+                            <label for="Indonesia">
+                    <input name="location[]" value="72" type="checkbox" id="Indonesia" data-label="Indonesia">Indonesia                </label>
+                            <label for="Laos">
+                    <input name="location[]" value="78" type="checkbox" id="Laos" data-label="Laos">Laos                </label>
+                            <label for="Malaysia">
+                    <input name="location[]" value="73" type="checkbox" id="Malaysia" data-label="Malaysia">Malaysia                </label>
+                            <label for="Myanmar">
+                    <input name="location[]" value="43" type="checkbox" id="Myanmar" data-label="Myanmar">Myanmar                </label>
+                            <label for="Singapore">
+                    <input name="location[]" value="35" type="checkbox" id="Singapore" data-label="Singapore">Singapore                </label>
+                            <label for="Thailand">
+                    <input name="location[]" value="75" type="checkbox" id="Thailand" data-label="Thailand">Thailand                </label>
+                            <label for="ThePhilippines">
+                    <input name="location[]" value="74" type="checkbox" id="ThePhilippines" data-label="The Philippines">The Philippines                </label>
+                            <label for="Vietnam">
+                    <input name="location[]" value="34" type="checkbox" id="Vietnam" data-label="Vietnam">Vietnam                </label>
+                    </div>
+    </div>
+    <div class="multiselect">
+        <div class="selectBox multiselect-type" onclick="toggleShowHide('checkboxes-multiselect-type')">
+            <select class="select">
                 <option>Select Type(s)</option>
             </select>
-                    
-                </div>
-                <div class="field input-wrap">
-                  <select class="select" id="type_language" name="type_language" required="">
+            <div class="overSelect"></div>
+        </div>
+        <div class="checkboxes" id="checkboxes-multiselect-type">
+                        <label for="type_all"><input name="type_detail[]" type="checkbox" id="type_all" value="all" data-label="All">All</label>
+            <label for="magazine"><input name="type_detail[]" type="checkbox" id="magazine" value="magazine" data-label="Magazine">Magazine</label>
+            <label for="guide"><input name="type_detail[]" type="checkbox" id="guide" value="report-guide" data-label="Guide">Guide</label>
+            <label for="report"><input name="type_detail[]" type="checkbox" id="report" value="report" data-label="Report">Report</label>
+            <label for="partner-publication"><input name="type_detail[]" type="checkbox" id="partner-publication" value="partner-publication" data-label="Partner Publication">Partner Publication</label>
+        </div>
+    </div>
+    <!--   <div class="form-block-single">
+    <input type="text"   placeholder="date" value="Publish Time" name="published_date">
+</div> -->
+    <div class="multiselect">
+        <div class="selectBox multiselect-language" onclick="toggleShowHide('checkboxes-multiselect-language')">
+            <select class="select">
                 <option>Select Language(s)</option>
             </select>
-                    
-                </div>
-                <div class="field input-wrap">
-                  <select class="select" id="type_free_paid" name="type_free_paid" required="">
+            <div class="overSelect"></div>
+        </div>
+        <div class="checkboxes" id="checkboxes-multiselect-language">
+                        <label for="language_all"><input name="language[]" value="all" type="checkbox" id="language_all">All</label>
+            <label for="15"><input name="language[]" type="checkbox" id="15" value="15" data-label="English">English</label>
+            <label for="21"><input name="language[]" type="checkbox" id="21" value="21" data-label="French">French</label>
+            <label for="19"><input name="language[]" type="checkbox" id="19" value="19" data-label="German">German</label>
+            <label for="20"><input name="language[]" type="checkbox" id="20" value="20" data-label="Spanish">Spanish</label>
+            <label for="18"><input name="language[]" type="checkbox" id="18" value="18" data-label="Italian">Italian</label>
+            <!-- <label for="120"><input name="language[]"  type="checkbox" id="120" value="120" data-label="Russian">Russian</label> -->
+             <label for="112"><input name="language[]" type="checkbox" id="112" value="112" data-label="Chinese">Chinese</label>
+        </div>
+    </div>
+    <div class="multiselect">
+        <div class="selectBox multiselect-free-paid" onclick="toggleShowHide('checkboxes-multiselect-free-paid')">
+            <select class="select">
                 <option>Select Free or Paid</option>
             </select>
-                    
-                </div>
-
-       
-                               <div class="field input-wrap">
-                  <select class="select" id="type_brand" name="type_brand" required="">
+            <div class="overSelect"></div>
+        </div>
+        <div class="checkboxes" id="checkboxes-multiselect-free-paid" style="padding-left:0;">
+            <select class="select" name="price" id="price" style="padding:10px;background:white;border:1px solid #efefef;">
+                <option value="all">All</option>
+                <option value="free">Only Free</option>
+                <option value="paid">Only Paid</option>
+            </select>
+        </div>
+    </div>
+    <div class="multiselect">
+        <div class="selectBox multiselect-brand" onclick="toggleShowHide('checkboxes-multiselect-brand')">
+            <select class="select">
                 <option>Select Brand(s)</option>
             </select>
-                    
-                </div>
-              </form>
+            <div class="overSelect"></div>
+        </div>
+        <div class="checkboxes" id="checkboxes-multiselect-brand">
+            
+            <label for="brand_all"><input name="brand[]" type="checkbox" id="brand_all" value="all" data-label="All">All</label>
+            <label for="dsa"><input name="brand[]" type="checkbox" id="dsa" value="dsa" data-label="Dezan Shira &amp; Associates">Dezan Shira &amp; Associates </label>
+            <label for="ab"><input name="brand[]" type="checkbox" id="ab" value="ab" data-label="Asia Briefing">Asia Briefing</label>
+            <label for="cb"><input name="brand[]" type="checkbox" id="cb" value="cb" data-label="China Briefing">China Briefing</label>
+            <label for="ib"><input name="brand[]" type="checkbox" id="ib" value="ib" data-label="India Briefing">India Briefing </label>
+            <label for="vb"><input name="brand[]" type="checkbox" id="vb" value="vb" data-label="Vietnam Briefing">Vietnam Briefing </label>
+            <label for="aseanb"><input name="brand[]" type="checkbox" id="aseanb" value="aseanb" data-label="ASEAN Briefing">ASEAN Briefing</label>
+            <!-- <label for="rb"><input name="brand[]"  type="checkbox" id="rb" value="rb" data-label="Russia Briefing">Russia Briefing</label>
+            <label for="srb"><input name="brand[]"  type="checkbox" id="srb" value="srb" data-label="Silk Road Briefing">Silk Road Briefing</label> -->
+            <!-- <label for="indob"><input name="brand[]"  type="checkbox" id="indob" value="indob" data-label="Indonesia Briefing">Indonesia Briefing</label> -->
+            <!-- <label for="air"><input name="brand[]"  type="checkbox" id="air" value="air" data-label="Asia Investment Research">Asia Investment Research</label> -->
+            <label for="others"><input name="brand[]" type="checkbox" id="others" value="others" data-label="Others">Others</label>
+        </div>
+    </div>
+    <!-- <button type="submit" class="btn btn-theme ">Search</button> -->
+</form>
             </div>
           </div>
         </aside>
@@ -1188,6 +1273,397 @@ document.addEventListener('DOMContentLoaded', () => {
   new SocialShare();
 });
   </script>
+  <script>
+    function toggleShowHide(e){var t=document.getElementById(e),o=document.querySelectorAll(".dropdown-content.show");[].forEach.call(o,function(e){e.classList.remove("show")}),t.classList.contains("show")?t.classList.remove("show"):t.classList.add("show")}
+    // Polyfill
+    // missing forEach on NodeList for IE11
+    if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+
+    var checkboxes = document.querySelectorAll(".search-publication input[type=checkbox]");
+    var selectboxes = document.querySelectorAll(".search-publication select");
+    for (var i = 0; i < checkboxes.length; i++) {
+        var checkbox = checkboxes[i];
+        checkbox.addEventListener("change", function(e) {
+            searchAndHideAlerts();
+            search_form_post(true);
+        })
+    }
+
+    for (var i = 0; i < selectboxes.length; i++) {
+        var selectbox = selectboxes[i];
+        selectbox.addEventListener("change", function(e) {
+            searchAndHideAlerts();
+            search_form_post(true);
+        })
+    }
+
+
+    function searchAndHideAlerts(){
+        var alertDiv=document.querySelector(".article-content .alert");
+        if(alertDiv){
+            alertDiv.classList.add("d-none");
+        }
+    }
+
+
+    function search_form_post(resetPage=false) {
+
+        // Loading
+        var loader = document.getElementById("loader");
+        var searchResult = document.getElementById("search_results");
+
+        if(loader){
+            loader.classList.remove("hide");
+        }
+
+        // All checkbox click handler
+        var allLocationClicked = false;
+        var allLanguageClicked = false;
+        var allTypeClicked = false;
+        var allBrandClicked = false;
+
+        // Get the checked or selected values from the form.
+        document.getElementById("location_all").addEventListener('click', function() {
+            if (this.checked) {
+                [].filter.call(document.getElementsByName('location[]'), function(c) {
+                    if (c.value != "all") c.checked = false;
+                });
+
+                allLocationClicked = true;
+            }
+        });
+
+        document.getElementById("type_all").addEventListener('click', function() {
+            if (this.checked) {
+                [].filter.call(document.getElementsByName('type_detail[]'), function(c) {
+                    if (c.value != "all") c.checked = false;
+                });
+
+                allTypeClicked = true;
+            }
+        });
+
+        document.getElementById("language_all").addEventListener('click', function() {
+            if (this.checked) {
+                [].filter.call(document.getElementsByName('language[]'), function(c) {
+                    if (c.value != "all") c.checked = false;
+                });
+
+                allLanguageClicked = true;
+            }
+        });
+
+        document.getElementById("brand_all").addEventListener('click', function() {
+            if (this.checked) {
+                [].filter.call(document.getElementsByName('brand[]'), function(c) {
+                    if (c.value != "all") c.checked = false;
+                });
+
+                allBrandClicked = true;
+            }
+        });
+
+
+
+        // Collecting data from the form
+        // Locations
+        var allLocationCheck = document.getElementById("location_all");
+        var locationsChecked = [].filter.call(document.getElementsByName('location[]'), function(c) {
+
+            if (allLocationCheck.checked && c.value != "all") {
+                c.checked = false;
+            } {
+                allLocationCheck.checked = false;
+                return c.checked;
+            }
+
+        }).map(function(c) {
+            return c.value;
+        });
+
+        // Types
+        var allTypeCheck = document.getElementById("type_all");
+        var typesChecked = [].filter.call(document.getElementsByName('type_detail[]'), function(c) {
+            if (allTypeCheck.checked && c.value != "all") {
+                c.checked = false;
+            } {
+                allTypeCheck.checked = false;
+                return c.checked;
+            }
+        }).map(function(c) {
+            return c.value;
+        });
+
+        // Languages
+        var allLanguageCheck = document.getElementById("language_all");
+        var languageChecked = [].filter.call(document.getElementsByName('language[]'), function(c) {
+            if (allLanguageCheck.checked && c.value != "all") {
+                c.checked = false;
+            } else {
+                allLanguageCheck.checked = false;
+                return c.checked;
+            }
+        }).map(function(c) {
+            return c.value;
+        });
+
+        // Brand
+        var allBrandCheck = document.getElementById("brand_all");
+        var brandChecked = [].filter.call(document.getElementsByName('brand[]'), function(c) {
+            if (allBrandCheck.checked && c.value != "all") {
+                c.checked = false;
+            } else {
+                allBrandCheck.checked = false;
+                return c.checked;
+            }
+        }).map(function(c) {
+            return c.value;
+        });
+
+        // Price
+        var priceChecked=document.getElementById("price").value;
+
+        // Switcher Updates
+        var allLanguagesFlags = document.querySelectorAll("ul.choose-language li");
+        for (var i = 0; i < allLanguagesFlags.length; i++) {
+            var language = allLanguagesFlags[i].getAttribute("data-language");
+            var languageLI = allLanguagesFlags[i];
+
+            if (languageChecked.indexOf(language)!== -1) {
+                languageLI.classList.add("active");
+                languageLI.querySelector("a").classList.add("active");
+            } else {
+                languageLI.classList.remove("active");
+                languageLI.querySelector("a").classList.remove("active");
+            }
+        }
+
+        // Query Building
+        var page = 1;
+        if(!resetPage) page = document.getElementById("page").value;
+
+        var queryString = "";
+        var and = "";
+
+        if (locationsChecked && locationsChecked.length > 0) {
+            var selectBox = document.getElementById("checkboxes-multiselect-region");
+            if (selectBox) selectBox.classList.add("show");
+
+            queryString += and + "location=" + locationsChecked.toString();
+            and = "&";
+        }
+
+        if (typesChecked && typesChecked.length > 0) {
+            var selectBox = document.getElementById("checkboxes-multiselect-type");
+            if (selectBox) selectBox.classList.add("show");
+
+            queryString += and + "type_detail=" + typesChecked.toString();
+            and = "&";
+        }
+
+        if (languageChecked && languageChecked.length > 0) {
+            var selectBox = document.getElementById("checkboxes-multiselect-language");
+            if (selectBox) selectBox.classList.add("show");
+
+            queryString += and + "language=" + languageChecked.toString();
+            and = "&";
+        }
+
+        if (brandChecked && brandChecked.length > 0) {
+            var selectBox = document.getElementById("checkboxes-multiselect-brand");
+            if (selectBox) selectBox.classList.add("show");
+
+            queryString += and + "brand=" + brandChecked.toString();
+            and = "&";
+        }
+
+        if(priceChecked && priceChecked!="" && priceChecked!="all"){
+            var selectBox = document.getElementById("checkboxes-multiselect-free-paid");
+            if (selectBox) selectBox.classList.add("show");
+
+            queryString += and + "price=" + priceChecked.toString();
+            and = "&";
+        }
+
+        // if No QueryString show Region as default selection
+        if (queryString == "") {
+            var selectBox = document.getElementById("checkboxes-multiselect-region");
+            if (selectBox) selectBox.classList.add("show");
+        }
+
+        queryString += and + 'page=' + page;
+
+        // console.log(locationsChecked,typesChecked,languageChecked);
+
+                // Ajax request
+        goTo("Bookstore Search", "Asia Briefing Book Search", "https://www.asiabriefing.com/store/search?" + queryString);
+        var api_url = "/store/searchAPI?" + queryString;
+
+        var xhttp_store = new XMLHttpRequest();
+        xhttp_store.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById('search_results').innerHTML = xhttp_store.responseText;
+
+                var scrollTop = searchResult.offsetTop+100;
+                window.scrollTo({
+                    top: scrollTop,
+                    behavior: 'smooth'
+                });
+
+                loader.classList.add("hide");
+                setTimeout(initiateModelsOnPage,1000);
+            }
+        };
+        xhttp_store.open("GET", api_url, true);
+        xhttp_store.send();
+
+
+        // Update Tags cloud
+        generateSearchTags();
+            }
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+        search_form_post();
+    });
+    
+
+
+
+    // Helper Functions
+    function goTo(page, title, url) {
+        if ("undefined" !== typeof history.pushState) {
+            history.pushState({
+                page: page
+            }, title, url);
+        } else {
+            window.location.assign(url);
+        }
+    }
+
+
+    function clickCheckbox(el,name,value){
+
+        // Hide Alerts
+        searchAndHideAlerts();
+
+        // Reset all active nav items
+        var parentNode=el.parentNode.parentNode;
+        if(parentNode.nodeName=="UL"){
+            var parentNodeActive=parentNode.querySelectorAll("li.active");
+            for (var i = 0; i < parentNodeActive.length; i++) parentNodeActive[i].classList.remove("active");
+        }
+
+        var checkboxTarget=document.querySelector('input[name="'+name+'"][value="'+value+'"]');
+        if(checkboxTarget) {
+
+            // Reset all other checkbox with that name
+            var allCheckboxTarget=document.querySelectorAll('input[name="'+name+'"]:checked');
+            for (var i = 0; i < allCheckboxTarget.length; i++) {
+                 allCheckboxTarget[i].checked=false;
+            }
+
+            var checkboxTargetLi=el.parentNode;
+            if(checkboxTargetLi) checkboxTargetLi.classList.add("active");
+
+            checkboxTarget.checked=true;
+            search_form_post(true);
+        }
+
+    }
+
+    function generateSearchTags() {
+        var selectedTagsDiv = document.getElementById("search_tags");
+        selectedTagsDiv.innerHTML = "";
+
+        var searchTagHTML = "";
+
+        // Checkboxes
+        for (var i = 0; i < checkboxes.length; i++) {
+            var checkbox = checkboxes[i];
+            if (checkbox.checked) {
+                if(checkbox.getAttribute("data-label")){
+                var tempButton = document.createElement('button');
+                tempButton.classList = 'btn badge';
+                tempButton.title = "Remove " + checkbox.getAttribute("data-label") + " from filter";
+                tempButton.innerHTML = '<span>' + checkbox.getAttribute("data-label") + '</span> <span class="close">✕</span>';
+
+                //add listener
+                var handleSearchBadgeClick = function(checkbox) {
+                    checkbox.checked = false;
+                    search_form_post(true);
+                }
+                tempButton.addEventListener('click', handleSearchBadgeClick.bind(event, checkbox), false);
+
+
+                selectedTagsDiv.appendChild(tempButton);
+                }
+            }
+
+        }
+
+        // Select Boxes
+        for (var i = 0; i < selectboxes.length; i++) {
+            var selectbox = selectboxes[i];
+            if(selectbox.getAttribute("name")){
+
+                if(selectbox.value && selectbox.value!="all"){
+                var tempButton = document.createElement('button');
+                tempButton.classList = 'btn badge';
+                tempButton.title = "Remove " + selectbox.options[selectbox.selectedIndex].text + " from filter";
+                tempButton.innerHTML = '<span>' + selectbox.options[selectbox.selectedIndex].text + '</span> <span class="close">✕</span>';
+
+                //add listener
+                var handleSearchBadgeClick = function(selectbox) {
+                    selectbox.value="all";
+                    search_form_post(true);
+                }
+                tempButton.addEventListener('click', handleSearchBadgeClick.bind(event, selectbox), false);
+
+
+                selectedTagsDiv.appendChild(tempButton);
+                }
+            }
+        }
+        
+
+        // Remove all filters
+        var checkboxesChecked = [].filter.call(checkboxes, function(c) {
+            return c.checked;
+        }).map(function(c) {
+            return c.value;
+        });
+
+        if (checkboxesChecked.length > 0) {
+            var tempButton = document.createElement('button');
+            tempButton.classList = 'btn badge grey';
+            tempButton.title = "Remove all filter";
+            tempButton.innerHTML = '<span>Clear filters</span> <span class="close">✕</span>';
+
+            var handleRemoveALLFilterClick = function(checkboxes) {
+                for (var i = 0; i < checkboxes.length; i++) {
+                    checkboxes[i].checked = false;
+                }
+                search_form_post(true);
+
+                var activeChooseLanguage=document.querySelectorAll(".choose-language li.active");
+                var activeStoreNav=document.querySelectorAll(".nav .nav-list li.active");
+
+                for (var i = 0; i < activeChooseLanguage.length; i++) activeChooseLanguage[i].classList.remove("active");
+                for (var i = 0; i < activeStoreNav.length; i++) activeStoreNav[i].classList.remove("active");
+            }
+            tempButton.addEventListener('click', handleRemoveALLFilterClick.bind(event, checkboxes), false);
+
+            selectedTagsDiv.appendChild(tempButton);
+        }
+        return searchTagHTML;
+
+
+
+    }
+</script>
   <script src="/js/main.min.js"></script>
 
 </body>
