@@ -2028,6 +2028,9 @@ ul.choose-language {
   color: #535353;
   line-height: 22px;
 }
+.country-card__text svg {
+  display: inline;
+}
 
 .country-card__link {
   margin: 1rem 0 0 0;
