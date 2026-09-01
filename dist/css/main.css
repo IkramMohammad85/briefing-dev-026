@@ -3226,13 +3226,13 @@ ul.choose-language {
   text-decoration: none;
   color: currentColor;
   border-radius: 0.2rem;
-  color: #840d18;
+  color: var(--primary-color);
 }
 
 .crumb.crumb-active {
-  background-color: #840d18;
+  background-color: var(--primary-color);
   color: #fdfdfd;
-  border-color: #840d18;
+  border-color: var(--primary-color);
 }
 
 .crumb.crumb-active a {
@@ -3245,9 +3245,9 @@ ul.choose-language {
 }
 
 .crumb-active, .crumb:hover {
-  background-color: #840d18;
+  background-color: var(--primary-color);
   color: #fdfdfd;
-  border-color: #840d18;
+  border-color: var(--primary-color);
 }
 
 .crumb-prev {
@@ -3281,14 +3281,14 @@ ul.choose-language {
 }
 
 .pagination-search-result .pagination-form span {
-  color: #840d18;
+  color: var(--primary-color);
 }
 
 .pagination-search-result .pagination-form input {
   width: 30px;
   margin: 0 0.5rem;
   padding: 0.5rem;
-  color: #840d18;
+  color: var(--primary-color);
   text-align: center;
   border-radius: 0.2rem;
   display: inline-block;
