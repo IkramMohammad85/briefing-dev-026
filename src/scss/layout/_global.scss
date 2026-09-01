@@ -13,6 +13,16 @@ $text-muted: #58585b;
 $profile-size: 120px;
 $breakpoint-tablet: 753px;
 
+.round-circle {
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  background-color: #FFF0E7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .list-inline {
     list-style: none;
     margin: 0;
