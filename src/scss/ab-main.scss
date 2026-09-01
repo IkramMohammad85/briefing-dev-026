@@ -106,3 +106,20 @@ h2{font-size: 1.5rem; font-weight: 500; line-height: 34px; margin-bottom: 0.5rem
     .checkboxes.show {
         display: block;
     }
+@media (min-width: 1024px) {
+    .nav {gap: 1.5rem;}
+}
+    @media screen and (min-width: 1024px) and (max-width: 1160px) {
+  .nav{gap: 1.5rem;}
+  .nav__link{ font-size: 0.813rem;;}
+}
+
+@media screen and (min-width: 1161px) and (max-width: 1280px) {
+  .nav{gap: 1.5rem;}
+  .nav__link{ font-size:0.813rem;;}
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1442px) {
+  .nav{gap: 1.5rem;}
+  .nav__link{ font-size:0.813rem;}
+}
