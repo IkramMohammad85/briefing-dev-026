@@ -3208,6 +3208,99 @@ ul.choose-language {
   color: #939598;
 }
 
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.3rem;
+  padding-left: 0 !important;
+}
+
+.crumb {
+  display: block;
+  padding: 0.1rem 0.8rem;
+  text-decoration: none;
+  color: currentColor;
+  border-radius: 0.2rem;
+  color: #840d18;
+}
+
+.crumb.crumb-active {
+  background-color: #840d18;
+  color: #fdfdfd;
+  border-color: #840d18;
+}
+
+.crumb.crumb-active a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.crumb:hover {
+  text-decoration: none;
+}
+
+.crumb-active, .crumb:hover {
+  background-color: #840d18;
+  color: #fdfdfd;
+  border-color: #840d18;
+}
+
+.crumb-prev {
+  margin-right: 0.5rem;
+  cursor: w-resize;
+}
+
+.crumb-next {
+  margin-left: 0.5rem;
+  cursor: e-resize;
+}
+
+/* ================================
+   Search Result Pagination
+================================ */
+.pagination-search-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pagination-search-result .pagination {
+  width: auto;
+}
+
+.pagination-search-result .pagination-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-search-result .pagination-form span {
+  color: #840d18;
+}
+
+.pagination-search-result .pagination-form input {
+  width: 30px;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  color: #840d18;
+  text-align: center;
+  border-radius: 0.2rem;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+@media only screen and (min-width: 753px) {
+  .pagination-search-result {
+    flex-direction: row;
+  }
+}
 .tabs__list {
   display: flex;
   gap: var(--space-4);
