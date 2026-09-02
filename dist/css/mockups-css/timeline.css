@@ -105,7 +105,6 @@
 }
 .content .img-thumbnail {
   margin-bottom: 2rem;
-  border: 1px solid #f2f2f2;
   border-radius: 50%;
 }
 @media only screen and (min-width: 753px) {

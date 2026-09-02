@@ -12,7 +12,23 @@ $border-color: #e9ecef;
 $text-muted: #58585b;
 $profile-size: 120px;
 $breakpoint-tablet: 753px;
-
+.dedicated-more-resource-block{
+  background: var(--line-light-gray);
+  .heading{font-size: 1.2rem; font-weight: 600; margin-bottom: var(--space-2);}
+  .list-unstyled{
+    list-style: circle;
+    padding: 0;
+    margin: 0 0 0 1rem;
+    li{margin-bottom: var(--space-1);
+    a{font-size: var(--text-sm); color: var(--dark-gray); text-decoration: none;
+    &:hover{color: var(--primary-color);}}
+    &:hover::marker {
+    color: var(--primary-color);
+}
+    }
+    
+  }
+}
 .round-circle {
   border-radius: 50%;
   height: 36px;

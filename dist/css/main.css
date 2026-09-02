@@ -487,6 +487,14 @@ ul, ol {
   gap: var(--space-2);
 }
 
+.grid--gap-4 {
+  gap: var(--space-4);
+}
+
+.grid--gap-6 {
+  gap: var(--space-6);
+}
+
 @media (min-width: 768px) {
   .grid--2 {
     grid-template-columns: repeat(2, 1fr);
@@ -1358,6 +1366,34 @@ ul, ol {
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.dedicated-more-resource-block {
+  background: var(--line-light-gray);
+}
+.dedicated-more-resource-block .heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+.dedicated-more-resource-block .list-unstyled {
+  list-style: circle;
+  padding: 0;
+  margin: 0 0 0 1rem;
+}
+.dedicated-more-resource-block .list-unstyled li {
+  margin-bottom: var(--space-1);
+}
+.dedicated-more-resource-block .list-unstyled li a {
+  font-size: var(--text-sm);
+  color: var(--dark-gray);
+  text-decoration: none;
+}
+.dedicated-more-resource-block .list-unstyled li a:hover {
+  color: var(--primary-color);
+}
+.dedicated-more-resource-block .list-unstyled li:hover::marker {
+  color: var(--primary-color);
 }
 
 .round-circle {
@@ -5877,6 +5913,10 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
 
 .pt-4 {
   padding-top: 4rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
 }
 
 .pb-4 {
