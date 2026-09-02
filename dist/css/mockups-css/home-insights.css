@@ -282,6 +282,12 @@
   margin-top: var(--space-2);
   position: relative;
 }
+.insight-card__desc {
+  font-size: var(--text-base);
+  color: var(--black);
+  margin-top: var(--space-3);
+  position: relative;
+}
 .insight-card:hover .insight-card__title {
   color: var(--accent);
 }
