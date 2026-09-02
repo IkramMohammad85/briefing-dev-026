@@ -4103,6 +4103,57 @@ ul.choose-language {
 .login-form {
   width: 100%;
 }
+.login-form .expert-form__intro {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--gray-light);
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.login-form .expert-form__intro a {
+  color: var(--primary-color);
+}
+.login-form .expert-form__intro a:hover {
+  text-decoration: none;
+  color: var(--black);
+}
+@media (min-width: 480px) {
+  .login-form .expert-form__intro {
+    margin-top: 0rem;
+  }
+}
+.login-form .field {
+  margin-bottom: var(--space-5);
+}
+.login-form .expert-form__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.login-form #submit {
+  width: 100%;
+  margin-top: 0.5rem !important;
+  cursor: pointer;
+}
+.login-form #submit:hover {
+  color: var(--white);
+}
+.login-form .field__label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  align-items: center;
+}
+.login-form .field__label a {
+  color: var(--black);
+  font-weight: 500;
+}
+.login-form .field__label a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
 @media (min-width: 768px) {
   .login-form {
     width: 50%;

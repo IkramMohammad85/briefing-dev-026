@@ -127,8 +127,27 @@
 .field-placeholder .required {
     color: #d32f2f !important;
 }
-.login-form{ width: 100%;
+.login-form{ width: 100%; 
+    .expert-form__intro{font-size: 14px; font-style: normal; font-weight: 400; color: var(--gray-light); margin-top: 1rem; margin-bottom: 0;
+  a{ 
+    color: var(--primary-color);
+    &:hover{text-decoration: none; color: var(--black);}
+  }
+   @include bp(sm) { margin-top: 0rem; }
+  }
+  .field{margin-bottom: var(--space-5); }
+  .expert-form__title{display: flex; justify-content: space-between;align-items:center;flex-wrap: wrap;
+  }
+#submit{width: 100%; margin-top: 0.5rem !important; cursor: pointer;
+&:hover{color:var(--white);}
+}
+.field__label{display: flex; justify-content: space-between; font-size: var(--text-sm); align-items: center;
+a{ color: var(--black); font-weight:500;
+&:hover{color: var(--primary-color); text-decoration: none;}
+}
+}
 @include bp(md) { width: 50%; margin: 0 auto; }
+
 }
 .required-field{
   color: #d32f2f !important;}
