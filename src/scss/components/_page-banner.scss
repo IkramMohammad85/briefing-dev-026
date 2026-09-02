@@ -130,6 +130,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%,
   background: linear-gradient(135deg, #00302C 0%, #00302C 100%); // Dark teal gradient
   padding: 2rem 1.5rem;
   color: #ffffff;
+  min-height: 180px;
 
   @media (min-width: 768px) {
     padding: 3rem 2rem;
