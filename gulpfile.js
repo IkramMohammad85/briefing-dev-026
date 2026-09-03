@@ -19,7 +19,7 @@ const paths = {
   img: "src/assets/img/**/*",
   fonts: "src/assets/fonts/**/*",
   // html: ["src/html/**/*.html", "!src/html/includes/**", "!src/html/sections/**", "!src/html/site_VB/**", "!src/html/site_IB/includes/**"],
-  html: ["src/html/**/*.html", "!src/html/**/includes/**", "!src/html/**/sections/**", "!src/html/site_VB/**", "!src/html/site_IB/includes/**", "!src/html/site_AB/includes/**"],
+  html: ["src/html/**/*.html", "!src/html/**/includes/**", "!src/html/**/sections/**", "!src/html/site_VB/includes/**", "!src/html/site_IB/includes/**", "!src/html/site_AB/includes/**"],
   dist: "dist",
 };
 
