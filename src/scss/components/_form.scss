@@ -69,6 +69,14 @@
   .stack>*+*{margin-top: var(--space-3);}
 
 }
+
+.filter-search{
+  &.filter-serach__ab{
+    .expert-form{ display: flex;
+    .search-publication{display: flex;}
+    }
+  }
+}
 @media (max-height: 1100px) {
     .expert-aside .expert-form {
         max-height: calc(100vh - 10rem);

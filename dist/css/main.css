@@ -3762,6 +3762,13 @@ ul.choose-language {
     font-size: 24px;
   }
 }
+.publication-guide__description {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  color: #ffffff;
+}
 .publication-guide__meta {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.9);
@@ -3800,6 +3807,9 @@ ul.choose-language {
   width: 1.2rem;
   height: 1.2rem;
   flex-shrink: 0;
+}
+.publication-guide--store-banner .publication-guide__content {
+  max-width: 700px;
 }
 
 .article-callout {
@@ -4048,6 +4058,13 @@ ul.choose-language {
 }
 .expert-form .stack > * + * {
   margin-top: var(--space-3);
+}
+
+.filter-search.filter-serach__ab .expert-form {
+  display: flex;
+}
+.filter-search.filter-serach__ab .expert-form .search-publication {
+  display: flex;
 }
 
 @media (max-height: 1100px) {
@@ -4337,48 +4354,48 @@ th {
   margin: 0;
 }
 
-.table.cb thead tr, .table.vb thead tr {
+.table.cb thead tr, .table.vb thead tr, .table.ib thead tr {
   background: var(--primary-color);
 }
-.table.cb thead td, .table.vb thead td {
+.table.cb thead td, .table.vb thead td, .table.ib thead td {
   color: #ffffff;
   font-weight: 600;
 }
-.table.cb thead strong, .table.vb thead strong {
+.table.cb thead strong, .table.vb thead strong, .table.ib thead strong {
   font-weight: 500;
 }
-.table.cb th, .table.vb th {
+.table.cb th, .table.vb th, .table.ib th {
   background: var(--primary-color);
   color: #ffffff;
   font-weight: 600;
 }
-.table.cb tr.primary-bg, .table.vb tr.primary-bg {
+.table.cb tr.primary-bg, .table.vb tr.primary-bg, .table.ib tr.primary-bg {
   background: var(--primary-color);
   color: #ffffff;
 }
-.table.cb td.primary-bg, .table.vb td.primary-bg {
+.table.cb td.primary-bg, .table.vb td.primary-bg, .table.ib td.primary-bg {
   background: var(--primary-color);
   color: #ffffff;
 }
-.table.cb tr.grey-bg, .table.vb tr.grey-bg {
+.table.cb tr.grey-bg, .table.vb tr.grey-bg, .table.ib tr.grey-bg {
   background: #dddddd;
 }
-.table.cb td.grey-bg, .table.vb td.grey-bg {
+.table.cb td.grey-bg, .table.vb td.grey-bg, .table.ib td.grey-bg {
   background: #dddddd;
 }
-.table.cb tr.grey-bg-dark, .table.vb tr.grey-bg-dark {
+.table.cb tr.grey-bg-dark, .table.vb tr.grey-bg-dark, .table.ib tr.grey-bg-dark {
   background: #666666;
 }
-.table.cb td.grey-bg-dark, .table.vb td.grey-bg-dark {
+.table.cb td.grey-bg-dark, .table.vb td.grey-bg-dark, .table.ib td.grey-bg-dark {
   background: #666666;
 }
 
-.table.cb thead tr.light-bg, .table.vb thead tr.light-bg {
+.table.cb thead tr.light-bg, .table.vb thead tr.light-bg, .table.ib thead tr.light-bg {
   color: var(--primary-color);
   background-color: transparent;
 }
 
-.table.cb thead tr.light-bg td, .table.vb thead tr.light-bg td {
+.table.cb thead tr.light-bg td, .table.vb thead tr.light-bg td, .table.ib thead tr.light-bg td {
   color: var(--primary-color);
 }
 
