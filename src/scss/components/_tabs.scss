@@ -21,7 +21,7 @@
   &.partner-tabs{ margin-top: 3rem;
     @include bp(md) {  width: 100%; padding: 0; flex-direction: row;}
   @include bp(xl) {  width: 100%;}
-  &.p-tab-ab{display: inherit; flex-direction: inherit; justify-content: center; flex-wrap: wrap; gap: 0.5rem;
+  &.p-tab-ab,.s-tabs-ab{display: inherit; flex-direction: inherit; justify-content: center; flex-wrap: wrap; gap: 0.5rem;
      @include bp(md) {  width: 100%; padding: 0; flex-direction: inherit; flex-wrap: wrap; border-radius: 8px; padding: 1rem; justify-content: center;}
          .tabs__tab[aria-selected=false], .tabs__tab[aria-selected=true] {
   margin: 0.5rem;
@@ -40,7 +40,29 @@
   }
   }
   }
+&.s-tabs-ab{flex-wrap: wrap; gap: 0.5rem;padding: 0rem; background-color: #fff; border-radius: 0;
+     @include bp(md) {  width: 100%; padding: 0; border-radius: 8px; padding: 0%; justify-content: start; gap:1rem;}
+  .tabs__tab[aria-selected=false], .tabs__tab[aria-selected=true] {
+  margin: 0rem; padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.12);
+ 
   }
+  .tabs__tab{line-height: normal; background-color:#fff;
+   &[aria-selected="false"] {
+    background: var(--white);
+    color: #000;
+    border-radius: 12px;
+    border: solid 1px var(--primary-color);
+  }
+   &[aria-selected="true"] {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 12px;
+  }
+  }
+  }
+  }
+
 }
 
 .tabs__tab {

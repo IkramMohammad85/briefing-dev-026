@@ -29,6 +29,10 @@
     @include bp(lg) { grid-template-columns: repeat(3, 1fr); }
    
   }
+  &--five-column{
+    @include bp(lg) { grid-template-columns: repeat(5, 1fr); gap: 80px; }
+   
+  }
 }
 .country-guides__grid:not(.splide__list) { display: grid; }
 

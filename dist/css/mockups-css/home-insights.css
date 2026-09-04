@@ -622,6 +622,26 @@
 .pub-card--block-view .pub-card__date {
   margin-bottom: 0;
 }
+.pub-card--block-view p {
+  margin-top: 1rem;
+  font-size: var(--text-sm);
+  margin-bottom: 0;
+}
+.pub-card__badge {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #E3F1F0;
+  color: #006960;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+  line-height: 12px;
+  margin-right: 0.5rem;
+}
 
 .advisory-carousel {
   background: #FCEBDF;

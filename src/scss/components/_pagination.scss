@@ -1,5 +1,21 @@
 @use "../base/tokens" as *;
 
+.pagination-info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+    span {
+    margin-right: 4px;
+}
+strong {
+    margin-right: 4px;
+    color: #222;
+    font-weight: 400;
+}
+}
+
+
 .pagination {
   display: flex;
   flex-direction: column;

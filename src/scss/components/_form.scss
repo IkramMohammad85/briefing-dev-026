@@ -72,8 +72,16 @@
 
 .filter-search{
   &.filter-serach__ab{
-    .expert-form{ display: flex;
-    .search-publication{display: flex;}
+    .expert-form{ display: flex; gap:1rem;  flex-wrap: wrap; background: #fff;align-items: center;
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+    .search-publication{display: flex; gap:1rem;}
+    .expert-form__title{padding: 0; margin: 0; font-size: var(--text-sm); font-weight: 600; color: var(--black); }
+    }
+    .multiselect{position: relative;
+      select{margin:0; background-color: #F4F4F4; border:0;}
+    .checkboxes{position: absolute; top: 100%; left: 0; width: 100%; z-index: 10; background: #fff; border: solid 1px #F4F4F4; border-radius: var(--radius-md); box-shadow: var(--shadow-md);}
     }
   }
 }
