@@ -4130,6 +4130,7 @@ ul.choose-language {
 }
 .filter-search.filter-serach__ab .expert-form .search-publication {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .filter-search.filter-serach__ab .expert-form .expert-form__title {
@@ -6976,7 +6977,7 @@ ul.unordered-list li::marker {
   letter-spacing: 0.5px;
   backdrop-filter: blur(10px);
   line-height: 12px;
-  margin-right: 0.5rem;
+  margin-right: 0.3rem;
 }
 
 .advisory-carousel {
