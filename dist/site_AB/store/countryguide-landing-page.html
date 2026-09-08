@@ -8,7 +8,55 @@
   <link rel="stylesheet" href="/css/main.min.css">
   <link rel="stylesheet" href="/css/ab-main.min.css" type="text/css" />
   <link rel="stylesheet" href="/css/mockups-css/stats-counter.min.css">
-
+<style>
+.publication-guide {
+    position: relative;
+    overflow: hidden;
+}
+.publication-guide__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+.publication-guide__breadcrumb,
+.publication-guide__container {
+    position: relative;
+    z-index: 1;
+}
+.publication-guide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+.publication-guide__video {
+    z-index: -1;
+}
+.publication-guide__breadcrumb,
+.publication-guide__container {
+    position: relative;
+    z-index: 1;
+}
+.publication-guide__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+.publication-guide__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+</style>
 
 </head>
 <body>
@@ -261,24 +309,50 @@
 
   <main id="main">
 <section class="publication-guide publication-guide--store-banner">
-  <!-- Breadcrumb Navigation -->
-  <nav class="publication-guide__breadcrumb">
-    <ul class="publication-guide__breadcrumb-list">
-      <li><a href="/">Home</a></li>
-      <li><span>Country Guide Portal</span></li>
-    </ul>
-  </nav>
 
-  <!-- Main Content Container -->
-  <div class="publication-guide__container">
-    <div class="publication-guide__content">
-      <!-- Title -->
-      <h1 class="publication-guide__title">
-        Asia Briefing Country Guide Portal
-      </h1>
-      <p class="publication-guide__description">Explore business magazines, guides and special issues covering China, ASEAN, India, Vietnam and other key markets across emerging Asia — with on-the-ground insights and practical information to help foreign investors navigate the region.</p>
+    <!-- Background Video -->
+    <video
+        class="publication-guide__video"
+        autoplay
+        loop
+        muted
+        playsinline
+    >
+        <source
+            src="https://media.istockphoto.com/id/1151210444/video/day-to-night-hyperlapse-or-dronelapse-scene-of-singapore-business-district-downtown-at-sunset.mp4?s=mp4-640x640-is&k=20&c=ud5YXetfajeoOhM_4Bltxqz4n-JqSJZdGD5FFhsXg0k="
+            type="video/mp4"
+        >
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="publication-guide__overlay"></div>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="publication-guide__breadcrumb">
+        <ul class="publication-guide__breadcrumb-list">
+            <li><a href="/">Home</a></li>
+            <li><span>Country Guide Portal</span></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="publication-guide__container">
+        <div class="publication-guide__content">
+
+            <h1 class="publication-guide__title">
+                Asia Briefing Country Guide Portal
+            </h1>
+
+            <p class="publication-guide__description">
+                Explore business magazines, guides and special issues covering
+                China, ASEAN, India, Vietnam and other key markets across
+                emerging Asia — with on-the-ground insights and practical
+                information to help foreign investors navigate the region.
+            </p>
+
+        </div>
     </div>
-  </div>
+
 </section>
     <!-- ============ PUBLICATIONS ============ -->
 <article class="inner-page">
