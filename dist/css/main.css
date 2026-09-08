@@ -3515,6 +3515,12 @@ ul.choose-language {
     margin: 2rem auto;
   }
 }
+@media (min-width: 1280px) {
+  .tabs__panel .expert-form--ab {
+    width: 78%;
+    margin: 0rem auto;
+  }
+}
 @media (min-width: 768px) {
   .tabs__panel .panel-consult {
     width: 78%;
@@ -3535,12 +3541,12 @@ ul.choose-language {
 }
 @media (min-width: 768px) {
   .tabs.contact-tabs--ab .tabs__list {
-    width: 50.1%;
+    width: 76.3%;
   }
 }
 @media (min-width: 1280px) {
   .tabs.contact-tabs--ab .tabs__list {
-    width: 30.3%;
+    width: 46.3%;
   }
 }
 

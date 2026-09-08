@@ -102,6 +102,9 @@
 
   .expert-form{
       @include bp(md) {  margin: 2rem auto; }
+      &--ab{
+         @include bp(xl) {  width: 78%; margin:0rem auto}
+      }
   }
     .panel-consult{
       @include bp(md) {  width: 78%; margin: 2rem auto; }
@@ -117,8 +120,8 @@
     
     &--ab{
       .tabs__list{
-      @include bp(md) {  width: 50.1%;}
-  @include bp(xl) {  width: 30.3%;}
+      @include bp(md) {  width: 76.3%;}
+  @include bp(xl) {  width: 46.3%;}
     }
     }
   }

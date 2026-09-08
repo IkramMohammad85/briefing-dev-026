@@ -281,337 +281,244 @@
             aria-controls="panel-china" aria-selected="false" type="button">
       China
     </button>
+            <button class="tabs__tab" role="tab" id="tab-send-enquiry"
+            aria-controls="panel-send-enquiry" aria-selected="false" type="button">
+      Send an enquiry
+    </button>
           </div>
 
 <div class="tabs__panel" role="tabpanel" id="panel-india" aria-labelledby="tab-india" hidden>
-<div class="inner-page__grid">
-            <div class="expert-form expert-form--m-top-none">
-              <h2 class="expert-form__title">Get Expert Advice</h2>
-              <p class="expert-form__intro">Tell us where you wish to grow, and we'll connect you with the right team
-                across our global network.</p>
-              <form class="stack" novalidate>
-                <div class="field-two-column">
-                  <div class="field">
-                    <label class="field__label" for="fname">First Name <span class="rstar">*</span></label>
-                    <input class="input" type="text" id="name" name="name" autocomplete="name" placeholder=""
-                      required="">
-                  </div>
-                  <div class="field">
-                    <label class="field__label" for="last-name">Last Name <span class="rstar">*</span></label>
-                    <input class="input" type="text" id="lname" name="name" autocomplete="name" placeholder=""
-                      required="">
-                  </div>
-                </div>
-                
-                  <div class="field">
-                    <label class="field__label" for="email">Email <span class="rstar">*</span></label>
-                    <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder=""
-                      required="">
-                  
-         
-                </div>
-               
-                <div class="field-two-column">
-                  <div class="field">
-                    <label class="field__label" for="company">Company <span class="rstar">*</span></label>
-                    <input class="input" type="tel" id="organization" name="phone" autocomplete="tel" placeholder=""
-                      required="">
-                  </div>
-                  <div class="field">
-                    <label class="field__label" for="modal-phone">Phone <span class="rstar">*</span></label>
+            <div class="panel-consult">
+              <h2 id="scheduler-static-heading" class="scheduler-heading">Schedule a
+                discovery call<span style="color: var(--primary-color);">.</span></h2>
 
-                    
-                  <input id="telephone" name="" required="" placeholder="" type="tel" class="input" inputmode="tel" autocomplete="tel" value="+91 "></div>
-                  </div>
-                  
-                
-<!-- 
-                <div class="field-two-column">
-                  <div class="field">
-                    <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label>
-                    <input class="input" type="tel" id="eag-company" name="phone" autocomplete="tel" placeholder=""
-                      required="">
-                  </div>
-                                    <div class="field">
-                    <label class="field__label" for="modal-title">Title <span class="rstar">*</span></label>
-                    <input class="input" type="email" id="eag-title" name="title" autocomplete="title" placeholder=""
-                      required="">
-                  </div>
-                </div> !-->
-                <div class="field-two-column">
-                  <div class="field">
-                    <label class="field__label" for="modal-interested">Which market are you interested in? <span class="rstar">*</span></label>
-                    <select class="select" id="investment_destination" name="investment_destination" required="">
-            <option disabled="" selected="">Select Region</option>
+              <div class="scheduler">
 
-            <option value="Bangladesh">Bangladesh</option>
-<option value="China">China</option>
-<option value="Hong Kong SAR">Hong Kong SAR</option>
-<option value="India">India</option>
-<option value="Indonesia">Indonesia</option>
-<option value="Israel">Israel</option>
-<option value="Japan">Japan</option>
-<option value="Malaysia">Malaysia</option>
-<option value="Mongolia">Mongolia</option>
-<option value="Philippines">Philippines</option>
-<option value="Russia">Russia</option>
-<option value="Singapore">Singapore</option>
-<option value="South Korea">South Korea</option>
-<option value="Thailand">Thailand</option>
-<option value="Turkiye">Turkiye</option>
-<option value="United Arab Emirates">United Arab Emirates</option>
-<option value="Vietnam">Vietnam</option>
-        </select>
-                  </div>
-<div class="field">
-                    <label id="type_service_required" class="field__label" for="type_service_required">Which service are you interested in? <span class="rstar">*</span></label>
-                    <select class="select" id="type_service_required" name="type_service_required" required="">
-            <option disabled="" selected="">Select Services</option>
-            <option value="Accounting, Financial Reporting &amp; Review">Accounting, Financial Reporting &amp; Review</option>
-<option value="Audit and Risk Advisory">Audit and Risk Advisory</option>
-<option value="Corporate Establishment and Governance">Corporate Establishment and Governance</option>
-<option value="Country Benchmarking / Location Selection">Country Benchmarking / Location Selection</option>
-<option value="Due Diligence">Due Diligence</option>
-<option value="ESG Sustainability Services">ESG Sustainability Services</option>
-<option value="HR Global Mobility PEO / EOR">HR Global Mobility PEO / EOR</option>
-<option value="HR Advisory and Payroll">HR Advisory and Payroll</option>
-<option value="HR Payroll Software">HR Payroll Software</option>
-<option value="HR Visa &amp; Work Permits">HR Visa &amp; Work Permits</option>
-<option value="Intellectual Property">Intellectual Property</option>
-<option value="Joint Ventures and Match making">Joint Ventures and Match making</option>
-<option value="Legal Services">Legal Services</option>
-<option value="M&amp;A - asiamerger portal">M&amp;A - asiamerger portal</option>
-<option value="Market Research &amp; Business Intelligence">Market Research &amp; Business Intelligence</option>
-<option value="Mergers and Acquisitions">Mergers and Acquisitions</option>
-<option value="Recruitment">Recruitment</option>
-<option value="Tax Advisory &amp; Planning">Tax Advisory &amp; Planning</option>
-<option value="Tax International &amp; Transfer Pricing">Tax International &amp; Transfer Pricing</option>
-<option value="Technology, Cyber / Data Privacy">Technology, Cyber / Data Privacy</option>
-<option value="Technology, IT and ERP Services">Technology, IT and ERP Services</option>
-<option value="Other">Other</option>
-<option value="Other, Journalist Comment or Quote">Other, Journalist Comment or Quote</option>
-<option value="Other, Asia Briefing Media/Ad Placement">Other, Asia Briefing Media/Ad Placement</option>
-        </select>
+                <!-- Left: who you're meeting -->
+<div>
+                <div class="scheduler__advisor">
+                  <img class="scheduler__avatar" src="https://d2h56l9e5xqoi4.cloudfront.net/dsa/images/personnel/rect_1/umair-ul-haque.webp" alt="" loading="lazy">
+                  <div>
+                    <p class="scheduler__name">Umair Ul Haque</p>
+                    <p class="scheduler__role">Manager</p>
                   </div>
                 </div>
 
-                <div class="field">
-                  <label class="field__label" for="comments">Message <span class="rstar">*</span></label>
-                  <textarea id="comments" class="required input" cols="4" rows="2" name="comments" aria-required="true" value=""
-                    placeholder="" required=""></textarea>
-                </div>
-                <div class="field text-xs">
+                <p class="scheduler__intro">Book a free 15-minute no-obligation discovery call with Umair. During the
+                  session, we will discuss your business plans and can advise you on the following:</p>
 
-                  <label class="margin-top-2 flex items-top gap-2" for="agree_privary_policy">
-                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>I agree to
-                      receive
-                      communications from Dezan Shira &amp;
-                      Associates and accept the<a href="https://www.dezshira.com/privacy-policy"> Privacy
-                        Policy</a></span>
-                  </label>
-                </div>
-                <div class="g-recaptcha" data-sitekey="">
-                  <div class="captcha-card">
-                    <img src="../img/capcha.svg" alt="captcha" loading="lazy">
-                  </div>
-                </div>
-                <button class="btn btn--primary primary-animation" type="submit">Submit</button>
-              </form>
-            </div>
-            <div class="widget-type-block">
-              <ul>
-                <li>
-                  <h3>Phone</h3>
-                  <a href="tel:+91 124 4001785">+91 124 4001785</a>
-                </li>
-                <li>
-                                    <h3>WhatsApp</h3>
-                  <a  href="tel:+91 85277 09587">+91 85277 09587</a>
-                </li>
-                <li>
-                  <h3>Address</h3>
-                  <a class="more-link " href="Ad"></a>
-<a  href="https://www.dezshira.com/office/map?id=12s" target="_blank" rel="noopener">
-Dezan Shira & Associates<br>
-Gurugram
-Unit No. 1101-A,11th Floor, Emaar Capital Tower 2, MG Road, Near Guru-Dronacharya Metro Station Gurugram-122002, Haryana, India
-    </a>
-                </li>
-            
-              </ul>
+                <ul class="scheduler__points">
+                  <li>Starting and managing your company in India</li>
+                  <li>Setting up and managing your accounting &amp; tax</li>
+                  <li>Working and living legally in India</li>
+                </ul>
 
-            </div>
-    
+                <p class="scheduler__intro">…or answer any other business-related questions you may have.</p>
 
-          </div></div>
+                <p class="scheduler__aside">We can talk online on <strong>MS Teams</strong> or meet you in our office
+                  in India.</p>
+              </div>
+
+                <!-- Right: date and time (display only) -->
+                <div>
+                  <p class="scheduler__heading text-center mb-2">Select a date and time</p>
+<!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/digitalmarketing-dezshira/test-meeting?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0d6a64" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+
+                </div>
+
+              </div>
+            </div></div>
 <div class="tabs__panel" role="tabpanel" id="panel-vietnam" aria-labelledby="tab-vietnam">
 
-<div class="inner-page__grid">
-            <div class="expert-form expert-form--m-top-none">
-              <h2 class="expert-form__title">Get Expert Advice</h2>
-              <p class="expert-form__intro">Tell us where you wish to grow, and we'll connect you with the right team
-                across our global network.</p>
-              <form class="stack" novalidate>
-                <div class="field-two-column">
-                  <div class="field">
-                    <label class="field__label" for="fname">First Name <span class="rstar">*</span></label>
-                    <input class="input" type="text" id="name" name="name" autocomplete="name" placeholder=""
-                      required="">
-                  </div>
-                  <div class="field">
-                    <label class="field__label" for="last-name">Last Name <span class="rstar">*</span></label>
-                    <input class="input" type="text" id="lname" name="name" autocomplete="name" placeholder=""
-                      required="">
-                  </div>
-                </div>
-                
-                  <div class="field">
-                    <label class="field__label" for="email">Email <span class="rstar">*</span></label>
-                    <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder=""
-                      required="">
-                  
-         
-                </div>
-               
-                <div class="field-two-column">
-                  <div class="field">
-                    <label class="field__label" for="company">Company <span class="rstar">*</span></label>
-                    <input class="input" type="tel" id="organization" name="phone" autocomplete="tel" placeholder=""
-                      required="">
-                  </div>
-                  <div class="field">
-                    <label class="field__label" for="modal-phone">Phone <span class="rstar">*</span></label>
+            <div class="panel-consult">
+              <h2 id="scheduler-static-heading" class="scheduler-heading">Schedule a
+                discovery call<span style="color: var(--primary-color);">.</span></h2>
 
-                    
-                  <input id="telephone" name="" required="" placeholder="" type="tel" class="input" inputmode="tel" autocomplete="tel" value="+91 "></div>
-                  </div>
-                  
-                
-<!-- 
-                <div class="field-two-column">
-                  <div class="field">
-                    <label class="field__label" for="modal-company">Company <span class="rstar">*</span></label>
-                    <input class="input" type="tel" id="eag-company" name="phone" autocomplete="tel" placeholder=""
-                      required="">
-                  </div>
-                                    <div class="field">
-                    <label class="field__label" for="modal-title">Title <span class="rstar">*</span></label>
-                    <input class="input" type="email" id="eag-title" name="title" autocomplete="title" placeholder=""
-                      required="">
-                  </div>
-                </div> !-->
-                <div class="field-two-column">
-                  <div class="field">
-                    <label class="field__label" for="modal-interested">Which market are you interested in? <span class="rstar">*</span></label>
-                    <select class="select" id="investment_destination" name="investment_destination" required="">
-            <option disabled="" selected="">Select Region</option>
+              <div class="scheduler">
 
-            <option value="Bangladesh">Bangladesh</option>
-<option value="China">China</option>
-<option value="Hong Kong SAR">Hong Kong SAR</option>
-<option value="India">India</option>
-<option value="Indonesia">Indonesia</option>
-<option value="Israel">Israel</option>
-<option value="Japan">Japan</option>
-<option value="Malaysia">Malaysia</option>
-<option value="Mongolia">Mongolia</option>
-<option value="Philippines">Philippines</option>
-<option value="Russia">Russia</option>
-<option value="Singapore">Singapore</option>
-<option value="South Korea">South Korea</option>
-<option value="Thailand">Thailand</option>
-<option value="Turkiye">Turkiye</option>
-<option value="United Arab Emirates">United Arab Emirates</option>
-<option value="Vietnam">Vietnam</option>
-        </select>
-                  </div>
-<div class="field">
-                    <label id="type_service_required" class="field__label" for="type_service_required">Which service are you interested in? <span class="rstar">*</span></label>
-                    <select class="select" id="type_service_required" name="type_service_required" required="">
-            <option disabled="" selected="">Select Services</option>
-            <option value="Accounting, Financial Reporting &amp; Review">Accounting, Financial Reporting &amp; Review</option>
-<option value="Audit and Risk Advisory">Audit and Risk Advisory</option>
-<option value="Corporate Establishment and Governance">Corporate Establishment and Governance</option>
-<option value="Country Benchmarking / Location Selection">Country Benchmarking / Location Selection</option>
-<option value="Due Diligence">Due Diligence</option>
-<option value="ESG Sustainability Services">ESG Sustainability Services</option>
-<option value="HR Global Mobility PEO / EOR">HR Global Mobility PEO / EOR</option>
-<option value="HR Advisory and Payroll">HR Advisory and Payroll</option>
-<option value="HR Payroll Software">HR Payroll Software</option>
-<option value="HR Visa &amp; Work Permits">HR Visa &amp; Work Permits</option>
-<option value="Intellectual Property">Intellectual Property</option>
-<option value="Joint Ventures and Match making">Joint Ventures and Match making</option>
-<option value="Legal Services">Legal Services</option>
-<option value="M&amp;A - asiamerger portal">M&amp;A - asiamerger portal</option>
-<option value="Market Research &amp; Business Intelligence">Market Research &amp; Business Intelligence</option>
-<option value="Mergers and Acquisitions">Mergers and Acquisitions</option>
-<option value="Recruitment">Recruitment</option>
-<option value="Tax Advisory &amp; Planning">Tax Advisory &amp; Planning</option>
-<option value="Tax International &amp; Transfer Pricing">Tax International &amp; Transfer Pricing</option>
-<option value="Technology, Cyber / Data Privacy">Technology, Cyber / Data Privacy</option>
-<option value="Technology, IT and ERP Services">Technology, IT and ERP Services</option>
-<option value="Other">Other</option>
-<option value="Other, Journalist Comment or Quote">Other, Journalist Comment or Quote</option>
-<option value="Other, Asia Briefing Media/Ad Placement">Other, Asia Briefing Media/Ad Placement</option>
-        </select>
+                <!-- Left: who you're meeting -->
+                <div>
+                <div class="scheduler__advisor">
+                  <img class="scheduler__avatar" src="https://d2h56l9e5xqoi4.cloudfront.net/dsa/images/personnel/rect_1/vincent-li.webp" alt="" loading="lazy">
+                  <div>
+                    <p class="scheduler__name">Vincent Li</p>
+                    <p class="scheduler__role">Head of Business Development</p>
                   </div>
                 </div>
 
-                <div class="field">
-                  <label class="field__label" for="comments">Message <span class="rstar">*</span></label>
-                  <textarea id="comments" class="required input" cols="4" rows="2" name="comments" aria-required="true" value=""
-                    placeholder="" required=""></textarea>
-                </div>
-                <div class="field text-xs">
+                <p class="scheduler__intro">Book a free 15-minute no-obligation discovery call with Vincent. During the
+                  session, we will discuss your business plans and can advise you on the following:</p>
 
-                  <label class="margin-top-2 flex items-top gap-2" for="agree_privary_policy">
-                    <input type="checkbox" name="agree_privary_policy" id="agree_privary_policy"><span>I agree to
-                      receive
-                      communications from Dezan Shira &amp;
-                      Associates and accept the<a href="https://www.dezshira.com/privacy-policy"> Privacy
-                        Policy</a></span>
-                  </label>
+                <ul class="scheduler__points">
+                  <li>Starting and managing your company in Vietnam</li>
+                  <li>Setting up and managing your accounting &amp; tax</li>
+                  <li>Working and living legally in Vietnam</li>
+                </ul>
+
+                <p class="scheduler__intro">…or answer any other business-related questions you may have.</p>
+
+                <p class="scheduler__aside">We can talk online on <strong>MS Teams</strong> or meet you in our office
+                  in Vietnam.</p>
+              </div>
+
+                <!-- Right: date and time (display only) -->
+                <div>
+                  <p class="scheduler__heading text-center mb-2">Select a date and time</p>
+<!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/digitalmarketing-dezshira/test-meeting?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0d6a64" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+
                 </div>
-                <div class="g-recaptcha" data-sitekey="">
-                  <div class="captcha-card">
-                    <img src="../img/capcha.svg" alt="captcha" loading="lazy">
-                  </div>
-                </div>
-                <button class="btn btn--primary primary-animation" type="submit">Submit</button>
-              </form>
+
+              </div>
             </div>
-            <div class="widget-type-block">
-              <ul>
-                <li>
-                  <h3>Phone</h3>
-                  <a href="tel:+84 2839302828">+84 2839302828</a>
-                </li>
-                <li>
-                                    <h3>WhatsApp</h3>
-                  <a  href="tel:+84 352371818">+84 352371818</a>
-                </li>
-                <li>
-                  <h3>Address</h3>
-                  <a class="more-link " href="Ad"></a>
-<a  href="https://www.dezshira.com/office/vietnam/ho-chi-minh-city.html" target="_blank" rel="noopener">
-Dezan Shira & Associates<br>
-Ho Chi Minh City
-9th Floor, TMS Building 172 Hai Ba Trung Street Tan Dinh Ward Ho Chi Minh City, Vietnam
-    </a>
-                </li>
-               
-              </ul>
-
-            </div>
-    
-
-          </div>
           </div>
 
 <div class="tabs__panel" role="tabpanel" id="panel-china" aria-labelledby="tab-china">
 
-<div class="inner-page__grid">
-            <div class="expert-form expert-form--m-top-none">
+            <div class="panel-consult">
+              <h2 id="scheduler-static-heading" class="scheduler-heading">Schedule a
+                discovery call<span style="color: var(--primary-color);">.</span></h2>
+
+              <div class="scheduler">
+
+                <!-- Left: who you're meeting -->
+                <div>
+                <div class="scheduler__advisor">
+                  <img class="scheduler__avatar" src="https://d2h56l9e5xqoi4.cloudfront.net/dsa/images/personnel/rect_1/viktor-rojkov.webp" alt="" loading="lazy">
+                  <div>
+                    <p class="scheduler__name">Viktor Rojkov</p>
+                    <p class="scheduler__role">Manager</p>
+                  </div>
+                </div>
+
+                <p class="scheduler__intro">Book a free 15-minute no-obligation discovery call with Viktor. During the
+                  session, we will discuss your business plans and can advise you on the following:</p>
+
+                <ul class="scheduler__points">
+                  <li>Starting and managing your company in China</li>
+                  <li>Setting up and managing your accounting &amp; tax</li>
+                  <li>Working and living legally in China</li>
+                </ul>
+
+                <p class="scheduler__intro">…or answer any other business-related questions you may have.</p>
+
+                <p class="scheduler__aside">We can talk online on <strong>MS Teams</strong> or meet you in our office
+                  in China.</p>
+              </div>
+<div>
+                <p class="scheduler__heading text-center mb-2">Select a date and time</p>
+
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/digitalmarketing-dezshira/test-meeting?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0d6a64" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+              </div>
+
+            </div>
+                <!-- Right: date and time (display only) -->
+                <!-- <div>
+                  <p class="scheduler__heading">Select a date and time</p>
+
+                  <div class="scheduler__picker">
+                    <div class="calendar">
+                      <div class="calendar__head">
+                        <span class="calendar__month">October 2026</span>
+                        <div class="calendar__nav">
+                          <button class="calendar__nav-btn" type="button" aria-label="Previous month">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                              <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <button class="calendar__nav-btn" type="button" aria-label="Next month">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                     
+                      <div class="calendar__grid">
+                        <div class="calendar__dow" aria-hidden="true">M</div>
+                        <div class="calendar__dow" aria-hidden="true">T</div>
+                        <div class="calendar__dow" aria-hidden="true">W</div>
+                        <div class="calendar__dow" aria-hidden="true">T</div>
+                        <div class="calendar__dow" aria-hidden="true">F</div>
+                        <div class="calendar__dow" aria-hidden="true">S</div>
+                        <div class="calendar__dow" aria-hidden="true">S</div>
+
+                    
+                        <button class="calendar__day is-muted" type="button" disabled>28</button>
+                        <button class="calendar__day is-muted" type="button" disabled>29</button>
+                        <button class="calendar__day is-muted" type="button" disabled>30</button>
+                        <button class="calendar__day" type="button">1</button>
+                        <button class="calendar__day" type="button">2</button>
+                        <button class="calendar__day" type="button">3</button>
+                        <button class="calendar__day" type="button">4</button>
+
+                    
+                        <button class="calendar__day" type="button">5</button>
+                        <button class="calendar__day" type="button">6</button>
+                        <button class="calendar__day" type="button">7</button>
+                        <button class="calendar__day" type="button">8</button>
+                        <button class="calendar__day" type="button">9</button>
+                        <button class="calendar__day" type="button">10</button>
+                        <button class="calendar__day" type="button">11</button>
+
+                      
+                        <button class="calendar__day is-today" type="button">12</button>
+                        <button class="calendar__day" type="button">13</button>
+                        <button class="calendar__day" type="button">14</button>
+                        <button class="calendar__day" type="button">15</button>
+                        <button class="calendar__day" type="button">16</button>
+                        <button class="calendar__day is-selected" type="button" aria-current="date">17</button>
+                        <button class="calendar__day" type="button">18</button>
+
+                      
+                        <button class="calendar__day" type="button">19</button>
+                        <button class="calendar__day" type="button">20</button>
+                        <button class="calendar__day" type="button">21</button>
+                        <button class="calendar__day" type="button">22</button>
+                        <button class="calendar__day" type="button">23</button>
+                        <button class="calendar__day" type="button">24</button>
+                        <button class="calendar__day" type="button">25</button>
+
+                        <button class="calendar__day" type="button">26</button>
+                        <button class="calendar__day" type="button">27</button>
+                        <button class="calendar__day" type="button">28</button>
+                        <button class="calendar__day" type="button">29</button>
+                        <button class="calendar__day" type="button">30</button>
+                        <button class="calendar__day" type="button">31</button>
+                        <button class="calendar__day is-muted" type="button" disabled>1</button>
+                      </div>
+                    </div>
+
+                    <form class="scheduler__slots" novalidate>
+                      <p class="scheduler__slot-date">Thursday, Oct 12, 2026</p>
+
+                      <p style="font-size: var(--text-xs); color: var(--text-on-paper-muted);">China Standard Time</p>
+
+                      <button class="slot" type="button">9:30 AM</button>
+                      <button class="slot is-selected" type="button">11:00 AM</button>
+                      <button class="slot" type="button">02:00 PM</button>
+                      <button class="slot" type="button">04:00 PM</button>
+
+                      <button class="btn btn--primary scheduler__submit" type="submit">Schedule</button>
+                    </form>
+                  </div>
+                </div> -->
+
+              </div>
+          </div>
+          <div class="tabs__panel" role="tabpanel" id="panel-send-enquiry" aria-labelledby="tab-send-enquiry">
+
+<div class="inner-page">
+            <div class="expert-form expert-form--m-top-none expert-form--ab">
               <h2 class="expert-form__title">Get Expert Advice</h2>
               <p class="expert-form__intro">Tell us where you wish to grow, and we'll connect you with the right team
                 across our global network.</p>
@@ -744,33 +651,6 @@ Ho Chi Minh City
                 <button class="btn btn--primary primary-animation" type="submit">Submit</button>
               </form>
             </div>
-            <div class="widget-type-block">
-              <ul>
-                <li>
-                  <h3>Phone</h3>
-                  <a href="tel:+86 (0)21 6358 8686">+86 (0)21 6358 8686</a>
-                </li>
-                <li>
-                                    <h3>WhatsApp</h3>
-                  <a  href="tel:+84 352371818">+84 352371818</a>
-                </li>
-                <li>
-                  <h3>Address</h3>
-                  <a class="more-link " href="Ad"></a>
-<a  href="https://www.dezshira.com/office/china/shanghai.html" target="_blank" rel="noopener">
-Dezan Shira & Associates<br> Shanghai
-Suite 1109-1112, World Trade Tower, No.500 Guangdong Road Huangpu District Shanghai China 200003
-    </a>
-                </li>
-                <li>
-                  <h3>WeChat</h3>
-                  <img src="/img/WeChat.png" alt="WeChat" aria-hidden="true" width="150">
-                </li>
-              </ul>
-
-            </div>
-    
-
           </div>
           </div>
         </div>
