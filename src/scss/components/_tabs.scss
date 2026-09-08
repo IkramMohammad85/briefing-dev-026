@@ -115,5 +115,11 @@
      @include bp(sm) {  background-color: #e3f1f0; border-radius: 30px;  }
     }
     
+    &--ab{
+      .tabs__list{
+      @include bp(md) {  width: 50.1%;}
+  @include bp(xl) {  width: 30.3%;}
+    }
+    }
   }
 }

@@ -3533,6 +3533,16 @@ ul.choose-language {
     border-radius: 30px;
   }
 }
+@media (min-width: 768px) {
+  .tabs.contact-tabs--ab .tabs__list {
+    width: 50.1%;
+  }
+}
+@media (min-width: 1280px) {
+  .tabs.contact-tabs--ab .tabs__list {
+    width: 30.3%;
+  }
+}
 
 .page-banner {
   position: relative;
