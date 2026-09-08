@@ -88,6 +88,21 @@
 
     &:hover { text-decoration: underline; }
   }
+
+}
+
+.country-guides__grid{
+  &--cg-portal{ gap: 0rem;
+    @include bp(md) { grid-template-columns:repeat(2,1fr);gap: 2rem; }
+
+    
+ @include bp(xl) { gap: 2rem; grid-template-columns:repeat(3,1fr);  }
+
+    .guide-card{border:solid 1px var(--line); border-radius: var(--radius-md); background: var(--white);}
+  .guide-card__thumb{border-radius:0; overflow:initial;}
+  .guide-card__title, .guide-card__excerpt{margin-bottom: 0;}
+  .guide-card__link{border-top:solid 1px var(--line); padding-bottom: var(--space-3); margin-top: var(--space-3); padding-top: var(--space-3); padding-bottom:0;}
+  }
 }
 
 // ---- Slider controls ----

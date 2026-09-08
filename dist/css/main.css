@@ -4600,6 +4600,41 @@ thead th {
   text-decoration: underline;
 }
 
+.country-guides__grid--cg-portal {
+  gap: 0rem;
+}
+@media (min-width: 768px) {
+  .country-guides__grid--cg-portal {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .country-guides__grid--cg-portal {
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.country-guides__grid--cg-portal .guide-card {
+  border: solid 1px var(--line);
+  border-radius: var(--radius-md);
+  background: var(--white);
+}
+.country-guides__grid--cg-portal .guide-card__thumb {
+  border-radius: 0;
+  overflow: initial;
+}
+.country-guides__grid--cg-portal .guide-card__title, .country-guides__grid--cg-portal .guide-card__excerpt {
+  margin-bottom: 0;
+}
+.country-guides__grid--cg-portal .guide-card__link {
+  border-top: solid 1px var(--line);
+  padding-bottom: var(--space-3);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  padding-bottom: 0;
+}
+
 .guide-slider .splide__arrow {
   width: 40px;
   height: 40px;
