@@ -625,7 +625,6 @@
 .pub-card--block-view p {
   margin-top: 1rem;
   font-size: var(--text-sm);
-  margin-bottom: 0;
 }
 .pub-card__badge {
   display: inline-block;

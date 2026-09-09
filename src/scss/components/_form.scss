@@ -81,7 +81,7 @@
     }
     .multiselect{position: relative;
       select{margin:0; background-color: #F4F4F4; border:0;}
-    .checkboxes{position: absolute; top: 100%; left: 0; width: 100%; z-index: 10; background: #fff; border: solid 1px #F4F4F4; border-radius: var(--radius-md); box-shadow: var(--shadow-md);}
+    .checkboxes{position: absolute; min-width: 240px; top: 100%; left: 0; width: 100%; z-index: 10; background: #fff; border: solid 1px #F4F4F4; border-radius: var(--radius-md); box-shadow: var(--shadow-md);}
     }
   }
 }

@@ -4166,6 +4166,7 @@ ul.choose-language {
 }
 .filter-search.filter-serach__ab .multiselect .checkboxes {
   position: absolute;
+  min-width: 240px;
   top: 100%;
   left: 0;
   width: 100%;
@@ -4623,9 +4624,6 @@ thead th {
 .country-guides__grid--cg-portal .guide-card__thumb {
   border-radius: 0;
   overflow: initial;
-}
-.country-guides__grid--cg-portal .guide-card__title, .country-guides__grid--cg-portal .guide-card__excerpt {
-  margin-bottom: 0;
 }
 .country-guides__grid--cg-portal .guide-card__link {
   border-top: solid 1px var(--line);
@@ -7013,7 +7011,6 @@ ul.unordered-list li::marker {
 .pub-card--block-view p {
   margin-top: 1rem;
   font-size: var(--text-sm);
-  margin-bottom: 0;
 }
 .pub-card__badge {
   display: inline-block;
