@@ -558,6 +558,10 @@ ul, ol {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .mx-auto {
   margin-inline: auto;
 }
@@ -7011,6 +7015,11 @@ ul.unordered-list li::marker {
 .pub-card--block-view p {
   margin-top: 1rem;
   font-size: var(--text-sm);
+}
+.pub-card--block-view .btn {
+  text-align: left;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
 }
 .pub-card__badge {
   display: inline-block;
