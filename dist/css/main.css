@@ -1861,6 +1861,18 @@ ul.choose-language {
   width: 1.2rem;
   height: 1.2rem;
 }
+.social-share__share-small {
+  font-size: 0.85rem;
+  color: #555;
+}
+.social-share__share-small .social-share__link {
+  width: 2rem;
+  height: 2rem;
+}
+.social-share__share-small .social-share__link .social-share__icon {
+  width: 1rem;
+  height: 1rem;
+}
 
 .signup-cta {
   background: #faf8f5;

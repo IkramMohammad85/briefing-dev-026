@@ -181,7 +181,7 @@
     flex-direction: row;
   }
   .publication-card-text {
-    padding: 0 1.5rem 0 3rem;
+    padding: 0 0rem 0 3rem;
   }
   .publication-card-thumb.publication-card-thumb-30per {
     width: 30%;
