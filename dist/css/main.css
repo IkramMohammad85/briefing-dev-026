@@ -2250,6 +2250,9 @@ ul.choose-language {
   padding: var(--space-4) var(--space-6);
   font-size: var(--text-base);
 }
+.btn--min-w {
+  min-width: 82px;
+}
 
 .cta-button {
   align-items: center;
