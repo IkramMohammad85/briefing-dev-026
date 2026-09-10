@@ -2051,6 +2051,11 @@ ul.choose-language {
     gap: 80px;
   }
 }
+@media (min-width: 1024px) {
+  .country-guides__grid--gap-7 {
+    gap: 7rem;
+  }
+}
 
 .country-guides__grid:not(.splide__list) {
   display: grid;

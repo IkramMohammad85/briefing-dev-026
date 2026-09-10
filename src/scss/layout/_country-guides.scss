@@ -33,6 +33,9 @@
     @include bp(lg) { grid-template-columns: repeat(5, 1fr); gap: 80px; }
    
   }
+  &--gap-7{
+     @include bp(lg) { gap: 7rem; }
+  }
 }
 .country-guides__grid:not(.splide__list) { display: grid; }
 
