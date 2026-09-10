@@ -147,8 +147,8 @@
 
 .publication-card {
   display: flex;
-  flex-direction: column;
   margin-bottom: 2rem;
+  flex-direction: column;
 }
 
 .publication-card-text {
@@ -161,10 +161,12 @@
 
 .publication-card-thumb {
   width: 100%;
+  max-width: 287px;
 }
 
 .publication-card-thumb.publication-card-thumb-30per {
   width: 100%;
+  max-width: 287px;
   margin-bottom: 2rem;
 }
 
@@ -174,7 +176,7 @@
   margin-top: 0;
 }
 
-@media (min-width: 786px) {
+@media (min-width: 768px) {
   .publication-card {
     flex-direction: row;
   }

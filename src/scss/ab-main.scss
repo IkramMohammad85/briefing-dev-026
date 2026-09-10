@@ -23,11 +23,7 @@ h2{font-size: 1.5rem; font-weight: 500; line-height: 34px; margin-bottom: 0.5rem
 .btn-view{text-align: center;}
 .publication-card {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
-        
-          
-        
+        margin-bottom: 2rem;flex-direction:column;
     }
 
     .publication-card-text {
@@ -41,10 +37,12 @@ h2{font-size: 1.5rem; font-weight: 500; line-height: 34px; margin-bottom: 0.5rem
 
     .publication-card-thumb {
         width: 100%;
+        max-width: 287px;
     }
 
     .publication-card-thumb.publication-card-thumb-30per {
         width: 100%;
+        max-width: 287px;
         margin-bottom: 2rem;
         
     }
@@ -56,7 +54,7 @@ h2{font-size: 1.5rem; font-weight: 500; line-height: 34px; margin-bottom: 0.5rem
     }
 
     
-@media (min-width:786px){
+@media (min-width:768px){
   .publication-card {flex-direction: row;}
   .publication-card-text{ padding: 0 1.5rem 0 3rem}
   .publication-card-thumb.publication-card-thumb-30per{width: 30%; margin-bottom: 0;}

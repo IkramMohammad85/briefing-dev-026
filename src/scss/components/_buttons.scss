@@ -54,6 +54,13 @@
     &:hover { border-color: var(--white); color: var(--white); }
   }
 
+  &--light-orange {
+    background: var(--light-orange);
+    border-color: var(--light-orange);
+    color: var(--black);
+    &:hover { border-color: var(--light-orange); color: var(--white); }
+  }
+
   &--on-navy {
     background: transparent;
     border-color: var(--line-dark);
@@ -111,7 +118,7 @@
 }
 
 
-.primary-animation, .secondary-animation, .primary-soft-animation, .cb-btn, .primary-outline-animation {
+.primary-animation, .secondary-animation, .primary-soft-animation, .cb-btn, .primary-outline-animation, .light-orange-animation {
   display: inline-block;
   transition: all .3s;
   position: relative;
@@ -173,6 +180,21 @@
   }
   &:hover {
     color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+.light-orange-animation{
+  &:after {
+    background-color:var(--light-orange);
+  }
+  &:before {
+    background-color: var(--primary-color-light) ;
+  }
+  &:hover {
+    color: var(--black);
     &:before {
       width: 100%;
     }
