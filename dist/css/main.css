@@ -1456,7 +1456,7 @@ ul, ol {
   border-bottom: 1px solid #eaeaea;
 }
 .v-nav li.active > a {
-  color: #840d18;
+  color: var(--primary-color);
 }
 .v-nav a {
   position: relative;
@@ -1480,7 +1480,7 @@ ul, ol {
   transition: transform 0.25s ease;
 }
 .v-nav a:hover, .v-nav a:focus {
-  color: #840d18;
+  color: var(--primary-color);
 }
 @media (min-width: 1024px) {
   .v-nav--inner-page a {
@@ -1491,7 +1491,7 @@ ul, ol {
     display: none;
   }
   .v-nav--inner-page a:hover, .v-nav--inner-page a:focus {
-    color: #840d18;
+    color: var(--primary-color);
     background-color: #f8f8f8;
   }
 }

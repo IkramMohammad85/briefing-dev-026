@@ -59,7 +59,7 @@ $breakpoint-tablet: 753px;
         border-bottom: 1px solid #eaeaea;
 
         &.active > a {
-            color: #840d18;
+            color: var(--primary-color);
         }
     }
 
@@ -87,7 +87,7 @@ $breakpoint-tablet: 753px;
 
         &:hover,
         &:focus {
-            color: #840d18;
+            color: var(--primary-color);
         }
     }
     &--inner-page {
@@ -100,7 +100,7 @@ $breakpoint-tablet: 753px;
 
         &:hover,
         &:focus {
-            color: #840d18;
+            color: var(--primary-color);
             background-color: #f8f8f8;
         }
     }
