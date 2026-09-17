@@ -128,7 +128,7 @@
         .right-aside-cta { order: 2;}
       }
     @include bp(lg) {
-      grid-template-columns: 15% 55% 30%;
+      grid-template-columns: 15% 50% auto;
       gap: var(--space-8);
       align-items: start; 
     }
