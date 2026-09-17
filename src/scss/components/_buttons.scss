@@ -14,7 +14,7 @@
   border-radius: var(--radius-sm);
   text-decoration: none;
   line-height: 1;
-  border: 1px solid transparent;
+  //border: 1px solid transparent;
   transition: background var(--duration-fast) var(--ease-standard),
               border-color var(--duration-fast) var(--ease-standard),
               transform var(--duration-fast) var(--ease-standard);
@@ -38,6 +38,7 @@
     background: transparent;
     border-color: var(--black);
     color: var(--text-on-paper);
+    border: 1px solid var(--black);
     &:hover { border-color: var(--text-on-paper); }
   }
     &--primary-outline {
@@ -173,8 +174,10 @@
 }
 
 .primary-soft-animation{
+  color: #000;
   &:after {
     background-color:#FDBA95;
+    
   }
   &:before {
     background-color: var(--primary-color) ;

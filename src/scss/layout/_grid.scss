@@ -121,6 +121,19 @@
 
   }
   }
+  &--col-3{
+     @media (max-width: 767px) {
+        .left-aside {order: 3;}
+        .inner-page__main { order: 1;}
+        .right-aside-cta { order: 2;}
+      }
+    @include bp(lg) {
+      grid-template-columns: 15% 55% 30%;
+      gap: var(--space-8);
+      align-items: start; 
+    }
+
+  }
 }
 
 .inner-page__main { min-width: 0; }

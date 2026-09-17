@@ -65,11 +65,22 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
-/* ---- Images: optimize -> dist/img ---- */
+/* ---- Images: optimize raster only -> dist/img ---- */
 function images() {
   return gulp
-    .src(paths.img, { encoding: false })
-    .pipe(imagemin())
+    .src(["src/assets/img/**/*", "!src/assets/img/**/*.svg"], { encoding: false })
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 })
+    ]))
+    .pipe(gulp.dest(`${paths.dist}/img`));
+}
+
+/* ---- SVGs: copy as-is (zero processing) ---- */
+function svgs() {
+  return gulp
+    .src("src/assets/img/**/*.svg", { encoding: false })
     .pipe(gulp.dest(`${paths.dist}/img`));
 }
 
@@ -125,13 +136,14 @@ function watchFiles() {
   }
 }
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, fonts, html));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, svgs, fonts, html));
 const dev = gulp.series(build, serve, watchFiles);
 
 exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
+exports.svgs = svgs;
 exports.fonts = fonts;
 exports.html = html;
 exports.build = build;
