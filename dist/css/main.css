@@ -1457,6 +1457,7 @@ ul, ol {
 }
 .v-nav li.active > a {
   color: var(--primary-color);
+  background-color: #f8f8f8;
 }
 .v-nav a {
   position: relative;
@@ -3672,6 +3673,9 @@ ul.choose-language {
   height: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
 }
+.page-banner.ab-regions:after {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 100%);
+}
 
 .page-banner__media {
   position: absolute;
@@ -4363,8 +4367,9 @@ ul.choose-language {
 }
 .login-form #submit {
   width: 100%;
-  margin-top: 0.5rem !important;
+  margin-top: 0rem !important;
   cursor: pointer;
+  border: none;
 }
 .login-form #submit:hover {
   color: var(--white);
