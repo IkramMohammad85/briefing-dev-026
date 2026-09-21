@@ -5486,6 +5486,12 @@ ul.choose-language li a:hover span.sprite-language::before, ul.choose-language l
   width: 50px;
 }
 
+.sprite-dsa-sm:before {
+  background-position: -378px -105px;
+  height: 50px;
+  width: 50px;
+}
+
 .sprite-ab:before {
   background-position: -174px -37px;
   height: 44px;
