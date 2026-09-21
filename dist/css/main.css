@@ -4111,9 +4111,6 @@ ul.choose-language {
   border-bottom: solid 1px #ddd;
   padding-bottom: 2rem;
 }
-.events-filter-form button {
-  width: 50px;
-}
 .events-filter-form button svg {
   max-width: auto;
 }

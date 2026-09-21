@@ -2,7 +2,7 @@
 @use "../base/tokens" as *;
 .events-filter-form{display: flex; flex-direction: column; gap: 0.5rem; flex-wrap: wrap; border-bottom: solid 1px #ddd; padding-bottom: 2rem;
 
-  button{ width: 50px; 
+  button{  
     svg{max-width: auto;}
   }
  @include bp(md) {
