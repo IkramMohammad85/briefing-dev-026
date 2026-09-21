@@ -15,7 +15,7 @@ const paths = {
   scss: "src/scss/**/*.scss",
   scssEntry: ["src/scss/main.scss", "src/scss/vb-main.scss", "src/scss/ab-main.scss", "src/scss/ib-main.scss"],
   scssMockups: "src/scss/mockups-css/**/*.scss",
-  js: ["src/js/vendor/**/*.js", "src/js/main.js"],
+  js: ["src/js/vendor/**/*.js", "src/js/main.js", "src/js/datepicker.js"],
   img: "src/assets/img/**/*",
   fonts: "src/assets/fonts/**/*",
   // html: ["src/html/**/*.html", "!src/html/includes/**", "!src/html/sections/**", "!src/html/site_VB/**", "!src/html/site_IB/includes/**"],
