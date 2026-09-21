@@ -164,7 +164,7 @@
   display: block;
   position: absolute;
   top: 0;
-  left: -51%;
+  left: -46%;
   width: 86.8%;
   height: 100%;
   z-index: -1;
@@ -190,10 +190,9 @@
 }
 
 /* Level 1 Design */
-#menu-list .multilevel .level1 {
-  width: 23%;
-}
 #menu-list .multilevel .level1 ul {
+  width: 100%;
+  width: 370px;
   margin-left: 0;
   padding-right: 1.5rem;
 }
@@ -337,7 +336,7 @@
 .scrollContainer {
   max-height: 47vh;
   overflow-y: auto;
-  overflow-x: visible;
+  overflow-x: hidden;
   margin-bottom: 1rem;
   position: relative;
 }
