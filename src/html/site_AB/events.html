@@ -9,7 +9,17 @@
         content="Vietnam Briefings hosts a wealth of business intelligence on legal, tax, and operational issues in China from a practical perspective.">
     <link rel="stylesheet" href="/css/main.min.css">
     <link rel="stylesheet" href="/css/ab-main.min.css" type="text/css" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+  <script>
+	$(function () {
+    $('.datepicker').datepicker({
+        dateFormat: 'dd-mm-yy'
+    });
+});
+  </script>
 
 </head>
 <body>
@@ -38,7 +48,7 @@
 			          <h1 class="events__title">Events</h1>
        
 <form class="events-filter-form mb-2" action="/events/search" method="GET">
-	<input type="text" value="" class="input" placeholder="Date" id="monthpicker" name="search_date" data-start-year="2006" data-final-year="2021">
+	<input type="text" value="" class="input datepicker"  placeholder="Date" id="datepicker" name="search_date" data-start-year="2006" data-final-year="2021">
 	<select name="location" class="select">
 					<option value="" selected="selected">Location</option>
 					<option value="asia">Asia</option>
@@ -385,6 +395,7 @@
           </div>
     </div>
   </div>
+
 
   <script src="/js/main.min.js"></script>
 </body>
