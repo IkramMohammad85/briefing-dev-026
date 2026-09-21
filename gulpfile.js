@@ -15,13 +15,27 @@ const paths = {
   scss: "src/scss/**/*.scss",
   scssEntry: ["src/scss/main.scss", "src/scss/vb-main.scss", "src/scss/ab-main.scss", "src/scss/ib-main.scss"],
   scssMockups: "src/scss/mockups-css/**/*.scss",
-  js: ["src/js/vendor/**/*.js", "src/js/main.js", "src/js/datepicker.js"],
+  js: ["src/js/vendor/**/*.js", "src/js/main.js"],
+  separateJs: "src/js/separate/**/*.js",
   img: "src/assets/img/**/*",
   fonts: "src/assets/fonts/**/*",
   // html: ["src/html/**/*.html", "!src/html/includes/**", "!src/html/sections/**", "!src/html/site_VB/**", "!src/html/site_IB/includes/**"],
   html: ["src/html/**/*.html", "!src/html/**/includes/**", "!src/html/**/sections/**", "!src/html/site_VB/includes/**", "!src/html/site_IB/includes/**", "!src/html/site_AB/includes/**"],
   dist: "dist",
 };
+
+/* ---- Separate JS Files: minify individually -> dist/js ---- */
+function separateJs() {
+  return gulp
+    .src(paths.separateJs)
+    .pipe(sourcemaps.init())
+    .pipe(gulp.dest(`${paths.dist}/js`))
+    .pipe(uglify())
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest(`${paths.dist}/js`))
+    .pipe(browserSync.stream());
+}
 
 /* ---- Clean ---- */
 function clean() {
@@ -128,6 +142,7 @@ function watchFiles() {
   gulp.watch(paths.js, gulp.series(scripts, reload));
   gulp.watch(paths.img, gulp.series(images, reload));
   gulp.watch(paths.fonts, gulp.series(fonts, reload));
+  gulp.watch(paths.separateJs, gulp.series(separateJs, reload));
 
   if (htmlWatchOptions) {
     gulp.watch(paths.html, htmlWatchOptions, gulp.series(html, reload));
@@ -136,12 +151,13 @@ function watchFiles() {
   }
 }
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, svgs, fonts, html));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, separateJs, images, svgs, fonts, html));
 const dev = gulp.series(build, serve, watchFiles);
 
 exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.separateJs = separateJs;
 exports.images = images;
 exports.svgs = svgs;
 exports.fonts = fonts;
