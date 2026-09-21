@@ -4103,6 +4103,32 @@ ul.choose-language {
   margin-top: var(--space-4);
 }
 
+.events-filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 2rem;
+}
+.events-filter-form button {
+  width: 50px;
+}
+.events-filter-form button svg {
+  max-width: auto;
+}
+@media (min-width: 768px) {
+  .events-filter-form {
+    flex-direction: row;
+  }
+  .events-filter-form .input {
+    max-width: 180px;
+  }
+  .events-filter-form .select {
+    max-width: 200px;
+  }
+}
+
 @media (min-width: 1024px) {
   .expert-aside, .consultation, .right-aside-cta, .right-aside-cta-ab {
     position: sticky;
