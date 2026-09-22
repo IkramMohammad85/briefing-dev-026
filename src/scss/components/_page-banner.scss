@@ -43,7 +43,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%,
 &.ab-regions{
   &:after {
   
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 100%);
+background: linear-gradient(135deg,#00302c 0,#00302c 100%);
 }
 }
 }
@@ -197,6 +197,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 50%,
         opacity: 0.7;
       }
     }
+
   }
 
   &__container {
@@ -349,5 +350,10 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 50%,
   &--store-banner{
     .publication-guide__content{ max-width: 700px; }
   }
+      &--regions{ min-height: auto;  padding: 0;
+      @media (min-width: 1024px) {
+    padding: 0;
+  }
+    }
 }
 
