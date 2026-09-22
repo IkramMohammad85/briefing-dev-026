@@ -4423,6 +4423,9 @@ ul.choose-language {
     margin: 0 auto;
   }
 }
+.login-form .field span {
+  font-size: var(--text-sm);
+}
 
 .required-field {
   color: #d32f2f !important;

@@ -174,7 +174,7 @@ a{ color: var(--black); font-weight:500;
 }
 }
 @include bp(md) { width: 50%; margin: 0 auto; }
-
+.field span{font-size: var(--text-sm);}
 }
 .required-field{
   color: #d32f2f !important;}
