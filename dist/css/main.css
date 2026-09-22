@@ -3976,10 +3976,16 @@ ul.choose-language {
 .publication-guide--regions {
   min-height: auto;
   padding: 0;
+  display: flex;
+  align-items: center;
+}
+.publication-guide--regions .page-banner__title {
+  color: var(--white);
 }
 @media (min-width: 1024px) {
   .publication-guide--regions {
     padding: 0;
+    min-height: 200px;
   }
 }
 
