@@ -166,6 +166,9 @@ ul.choose-language {
 	@media only screen and (min-width: $breakpoint-tablet) {
 		max-width: calc((100% - #{$spacing-xl}) / 2);
 	}
+  &--details{
+    max-width:100%; margin-top: 0;
+  }
 }
 
 .personnel-profile-pic {
