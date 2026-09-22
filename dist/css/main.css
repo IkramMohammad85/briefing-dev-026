@@ -4117,6 +4117,9 @@ ul.choose-language {
   border-bottom: solid 1px #ddd;
   padding-bottom: 2rem;
 }
+.events-filter-form button {
+  display: inherit;
+}
 .events-filter-form button svg {
   max-width: auto;
 }
@@ -4124,11 +4127,8 @@ ul.choose-language {
   .events-filter-form {
     flex-direction: row;
   }
-  .events-filter-form .input {
-    max-width: 180px;
-  }
-  .events-filter-form .select {
-    max-width: 190px;
+  .events-filter-form .input, .events-filter-form .dp-input, .events-filter-form .select {
+    max-width: 176px;
   }
 }
 
