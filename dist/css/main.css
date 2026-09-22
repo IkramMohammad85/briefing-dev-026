@@ -1442,9 +1442,15 @@ ul, ol {
 }
 .list-inline li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.5rem;
+  flex-wrap: wrap;
+}
+@media (min-width: 1024px) {
+  .list-inline li {
+    justify-content: space-between;
+  }
 }
 
 .v-nav ul {
