@@ -3561,6 +3561,9 @@ ul.choose-language {
   color: #fff;
   border-radius: 12px;
 }
+.tabs__list.partner-tabs.mt-0 {
+  margin-top: 0;
+}
 
 .tabs__tab {
   flex-shrink: 0;
