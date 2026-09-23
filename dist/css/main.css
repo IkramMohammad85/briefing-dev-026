@@ -3561,8 +3561,10 @@ ul.choose-language {
   color: #fff;
   border-radius: 12px;
 }
-.tabs__list.partner-tabs.mt-0 {
-  margin-top: 0;
+.tabs__list.personnel-tabs {
+  flex-direction: row;
+  margin: 0 0 1rem 0;
+  width: 249px;
 }
 
 .tabs__tab {
@@ -3618,6 +3620,9 @@ ul.choose-language {
     width: 78%;
     margin: 2rem auto;
   }
+}
+.tabs__panel.border-top {
+  border-top: solid 2px #e6f1f0;
 }
 
 .tabs.contact-tabs .tabs__list {
