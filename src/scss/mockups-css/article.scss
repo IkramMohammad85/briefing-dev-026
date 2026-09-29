@@ -535,6 +535,8 @@ blockquote{position: relative;
     margin-top: 2rem;
     max-width: 130px;
     line-height: 22px;
+    display: block;
+  height: 27px;
   
     @include bp(md) { 
     position: absolute;

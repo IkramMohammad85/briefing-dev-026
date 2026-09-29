@@ -732,6 +732,8 @@ blockquote:before {
   margin-top: 2rem;
   max-width: 130px;
   line-height: 22px;
+  display: block;
+  height: 27px;
 }
 @media (min-width: 768px) {
   .sponsored-post {
