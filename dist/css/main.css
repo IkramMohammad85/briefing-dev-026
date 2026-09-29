@@ -651,6 +651,18 @@ ul, ol {
   background: var(--white);
 }
 
+.top-header-widget {
+  background-color: #FFA370;
+}
+.top-header-widget p {
+  font-size: var(--text-sm);
+  padding: 0.4rem 0;
+}
+.top-header-widget .btn {
+  margin-left: 1rem;
+  padding: 6px 12px;
+}
+
 .contact-bar {
   position: sticky;
   top: 62px;
@@ -2267,6 +2279,15 @@ ul.choose-language {
 }
 .btn--light-orange:hover {
   border-color: var(--light-orange);
+  color: var(--white);
+}
+.btn--black {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
+.btn--black:hover {
+  border-color: var(--black);
   color: var(--white);
 }
 .btn--on-navy {

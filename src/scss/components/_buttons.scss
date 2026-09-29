@@ -61,6 +61,12 @@
     color: var(--black);
     &:hover { border-color: var(--light-orange); color: var(--white); }
   }
+    &--black {
+    background: var(--black);
+    border-color: var(--black);
+    color: var(--white);
+    &:hover { border-color: var(--black); color: var(--white); }
+  }
 
   &--on-navy {
     background: transparent;

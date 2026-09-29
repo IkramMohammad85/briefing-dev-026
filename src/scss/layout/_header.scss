@@ -14,7 +14,10 @@
   background: var(--white);
   //border-bottom: 1px solid var(--line);
 }
-
+.top-header-widget{background-color: #FFA370;
+p{font-size: var(--text-sm); padding: 0.4rem 0;}
+.btn{ margin-left: 1rem;padding: 6px 12px;}
+}
 .contact-bar {
   position: -webkit-sticky;
   position: sticky;
