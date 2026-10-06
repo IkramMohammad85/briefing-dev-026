@@ -85,6 +85,45 @@ function initMegaMenuPortal() {
     }
   }
 
+  // Level Hovers
+var levels = document.querySelectorAll(".multilevel .level1, .multilevel .level2");
+for (i = 0; i <= levels.length; i++) {
+  if (levels[i]) {
+    levels[i].addEventListener('mouseover', function (e) {
+      let parent = this.parentElement.parentElement.parentElement.parentElement.parentElement;
+      let bgAfter = parent.querySelector(".bg-after");
+
+      if (bgAfter) {
+        if (this.classList.contains("level2")) {
+          bgAfter.innerHTML = '<div class="mm_left"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_left.png?v4" /></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l2_right.png?v4" /></div>';
+          bgAfter.classList.remove("level1");
+          bgAfter.classList.add("level2");
+
+          const computedStyle = window.getComputedStyle(this);
+          const marginLeft = parseFloat(computedStyle.marginLeft);
+          const paddingLeft = parseFloat(computedStyle.paddingLeft);
+          const totalLeftOffset = this.offsetLeft + marginLeft + paddingLeft - 30;
+
+          const rect = this.getBoundingClientRect();
+          bgAfter.style.left = `${totalLeftOffset}px`;
+          bgAfter.style.width = `${rect.width + 55}px`;
+        } else if (this.classList.contains("level1")) {
+          bgAfter.innerHTML = '<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l1_right.png?v4" /></div>';
+          bgAfter.classList.remove("level2");
+          bgAfter.classList.add("level1");
+
+          bgAfter.style.left = '';
+          bgAfter.style.width = '';
+        } else {
+          bgAfter.innerHTML = '<div class="mm_left no_shadow"></div><div class="mm_center no_shadow"></div><div class="mm_right"><img src="https://www.china-briefing.com/assets/images/mega-menu/CB_l1_right.png?v4" /></div>';
+          bgAfter.classList.remove("level2");
+          bgAfter.classList.remove("level1");
+        }
+      }
+    });
+  }
+}
+
   function showMenuDescription(currentMenu) {
     const parentDiv = currentMenu.parentElement.parentElement.parentElement.parentElement;
     const mega_menu_level3 = parentDiv.querySelector(".level3");
